@@ -265,8 +265,8 @@ export function Constructor({
           <div className="flex items-center justify-between gap-2">
             <div className="flex rounded-full bg-paper p-1 text-sm" role="group" aria-label="Вид">
               {(["closed", "open"] as const).map((v) => (
-                <button key={v} type="button" onClick={() => setView(v)} aria-pressed={view === v} className="rounded-full px-3 py-1.5 transition aria-pressed:bg-ink aria-pressed:text-white">
-                  {v === "closed" ? "Обложка" : "Разворот"}
+                <button key={v} type="button" onClick={() => setView(v)} aria-pressed={view === v} className="min-h-11 rounded-full px-4 py-2 transition aria-pressed:bg-ink aria-pressed:text-white">
+                  {v === "closed" ? "Обложка" : "Страница"}
                 </button>
               ))}
             </div>
@@ -276,7 +276,7 @@ export function Constructor({
               </div>
             )}
           </div>
-          <NotebookPreview look={look} view={view} label={`Превью: ${F.label}`} className="mx-auto mt-3 max-w-[240px] sm:max-w-[300px] lg:max-w-none" />
+          <NotebookPreview look={look} view={view} label={`${view === "open" ? "Страница" : "Обложка"}: ${F.label}`} className="mx-auto mt-3 max-w-[280px] sm:max-w-[320px] lg:max-w-none" />
           <p className="text-center text-sm text-muted">
             {F.label} · {F.size}
           </p>
