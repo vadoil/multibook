@@ -6,6 +6,8 @@ import { useEffect, useRef, useState } from "react";
 import type { Product } from "@/db/schema";
 import { formatPrice } from "@/lib/money";
 import { PrintWorkshopHero } from "./PrintWorkshopHero";
+import { BrandGlyph } from "./BrandGlyph";
+import { CategoryGlyph, type CategoryKind } from "./CategoryGlyph";
 
 export type ConceptName = "paper" | "journal" | "play";
 const concepts = [
@@ -48,7 +50,7 @@ function PreviewNav({ concept }: { concept: ConceptName }) {
   );
 }
 
-function Header() {
+function Header({ concept }: { concept: ConceptName }) {
   const [open, setOpen] = useState(false);
   const trigger = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -64,8 +66,13 @@ function Header() {
   }, [open]);
   return (
     <header className="mc-header">
-      <Link href="/" className="mc-wordmark" aria-label="Multibook, главная">
-        multibook<span aria-hidden="true">✳</span>
+      <Link
+        href={`/design-preview/${concept}`}
+        className="mc-wordmark"
+        aria-label="Multibook, главная концепции"
+      >
+        <BrandGlyph />
+        multibook
       </Link>
       <nav className="mc-desktop-nav" aria-label="Основное меню">
         <Link href="/catalog">Магазин</Link>
@@ -369,8 +376,60 @@ function Featured({
 }
 
 function Categories({ concept }: { concept: ConceptName }) {
+  const categories: {
+    type: string;
+    title: string;
+    hint: string;
+    kind: CategoryKind;
+  }[] = [
+    {
+      type: "Тетради",
+      title: "Тетради",
+      hint: "Готовые модульные тетради",
+      kind: "notebooks",
+    },
+    {
+      type: "Блокноты",
+      title: "Блокноты",
+      hint: "Для идей и планов",
+      kind: "journals",
+    },
+    {
+      type: "Обложки",
+      title: "Обложки",
+      hint: "Снаружи — ваш характер",
+      kind: "covers",
+    },
+    {
+      type: "Блоки",
+      title: "Блоки листов",
+      hint: "Клетка, точка, линейка",
+      kind: "pages",
+    },
+    {
+      type: "Диски",
+      title: "Диски",
+      hint: "Соединяют всё вместе",
+      kind: "discs",
+    },
+    {
+      type: "Аксессуары",
+      title: "Аксессуары",
+      hint: "Нужные мелочи",
+      kind: "tools",
+    },
+    {
+      type: "Фотокниги",
+      title: "Фотоальбомы",
+      hint: "Для ваших историй",
+      kind: "albums",
+    },
+  ];
   return (
-    <section className={`mc-categories mc-categories-${concept}`}>
+    <section
+      id="shop-details"
+      className={`mc-categories mc-categories-${concept}`}
+    >
       <div className="mc-categories-heading">
         <p className="mc-section-note">У каждой детали своё место</p>
         <h2>
@@ -380,37 +439,18 @@ function Categories({ concept }: { concept: ConceptName }) {
         <p>Начните с готового. Или подберите каждую деталь под себя.</p>
       </div>
       <div className="mc-category-list">
-        {[
-          {
-            type: "Обложки",
-            title: "Снаружи — ваш характер",
-            detail: "Обложки",
-            mark: "↗",
-          },
-          {
-            type: "Блоки",
-            title: "Внутри — ваши мысли",
-            detail: "Блоки листов",
-            mark: "↗",
-          },
-          {
-            type: "Диски",
-            title: "Вместе — ваши правила",
-            detail: "Диски",
-            mark: "↗",
-          },
-        ].map((c, i) => (
+        {categories.map((c) => (
           <Link
             key={c.type}
             href={`/catalog?type=${encodeURIComponent(c.type)}`}
+            className={`mc-category-tile mc-category-tile-${c.kind}`}
           >
-            <span
-              className={`mc-material mc-material-${i}`}
-              aria-hidden="true"
-            />
-            <div>
-              <span>{c.detail}</span>
+            <span className="mc-category-graphic">
+              <CategoryGlyph kind={c.kind} />
+            </span>
+            <div className="mc-category-caption">
               <h3>{c.title}</h3>
+              <span>{c.hint}</span>
             </div>
             <Arrow diagonal />
           </Link>
@@ -445,7 +485,10 @@ function Footer() {
         </nav>
       </div>
       <div className="mc-footer-wordmark" aria-hidden="true">
-        multibook<span aria-hidden="true">✳</span>
+        multibook
+        <span>
+          <BrandGlyph />
+        </span>
       </div>
       <div className="mc-footer-bottom">
         <span>Модульные блокноты на дисках</span>
@@ -719,7 +762,7 @@ export function DesignConcept({
   return (
     <div className={`mc-root mc-${concept}`}>
       <PreviewNav concept={concept} />
-      <Header />
+      <Header concept={concept} />
       <div className="mc-content">
         {concept === "paper" ? (
           <Paper products={products} />

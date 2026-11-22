@@ -1,5 +1,6 @@
 import { Caveat, Cormorant_Garamond, Golos_Text } from "next/font/google";
 import "./concepts.css";
+import "./identity.css";
 
 const golos = Golos_Text({
   subsets: ["latin", "cyrillic"],

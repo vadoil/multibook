@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandGlyph } from "@/components/design/BrandGlyph";
 
 export const metadata = {
   title: "Три направления Multibook",
@@ -8,8 +9,9 @@ export const metadata = {
 export default function ConceptsIndex() {
   return (
     <div className="mc-index">
-      <Link className="mc-wordmark" href="/">
-        multibook<span aria-hidden="true">✳</span>
+      <Link className="mc-wordmark" href="/design-preview">
+        <BrandGlyph />
+        multibook
       </Link>
       <p className="mc-index-label">Три взгляда на один блокнот</p>
       <h1>
