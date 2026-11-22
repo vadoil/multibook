@@ -73,6 +73,7 @@ export function PrintWorkshopHero({ product }: { product?: Product }) {
                       fill
                       unoptimized
                       priority
+                      loading="eager"
                       sizes="(max-width:700px) 100vw, 50vw"
                     />
                   </div>

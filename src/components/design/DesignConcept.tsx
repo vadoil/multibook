@@ -160,6 +160,7 @@ function Photo({
           fill
           unoptimized
           priority={priority}
+          loading={priority ? "eager" : "lazy"}
           sizes="(max-width: 700px) 100vw, 50vw"
         />
       ) : (
