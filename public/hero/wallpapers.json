@@ -5,21 +5,12 @@
     "name": "Золотое время",
     "alt": "Настоящий ежедневник «Золотое время» лежит на столе у окна с видом на Москва-Сити, рядом лампа и живопись",
     "tone": "#6e492f",
-    "desktop": "/hero/lifestyle-desk-2048.webp",
-    "desktopSmall": "/hero/lifestyle-desk-1600.webp",
-    "mobile": "/hero/lifestyle-desk-mobile.webp",
-    "thumb": "/hero/lifestyle-desk-thumb.webp"
-  },
-  {
-    "id": "lifestyle-writing",
-    "uid": "937894370012",
-    "name": "Важная птица",
-    "alt": "Раскрытый ежедневник «Важная птица» на рабочем столе, рука с ручкой над страницей",
-    "tone": "#6e492f",
-    "desktop": "/hero/lifestyle-writing-2048.webp",
-    "desktopSmall": "/hero/lifestyle-writing-1600.webp",
-    "mobile": "/hero/lifestyle-writing-mobile.webp",
-    "thumb": "/hero/lifestyle-writing-thumb.webp"
+    "desktop": "/hero/paper-lifestyle-desk-2048.webp",
+    "desktopSmall": "/hero/paper-lifestyle-desk-1600.webp",
+    "mobile": "/hero/paper-lifestyle-desk-mobile.webp",
+    "thumb": "/hero/paper-lifestyle-desk-thumb.webp",
+    "product": "/hero/paper-lifestyle-desk-product.webp",
+    "pose": "table"
   },
   {
     "id": "lifestyle-gallery",
@@ -27,10 +18,12 @@
     "name": "Важная птица",
     "alt": "Ежедневник «Важная птица» на зелёной мраморной подставке в кабинете с живописью",
     "tone": "#634530",
-    "desktop": "/hero/lifestyle-gallery-2048.webp",
-    "desktopSmall": "/hero/lifestyle-gallery-1600.webp",
-    "mobile": "/hero/lifestyle-gallery-mobile.webp",
-    "thumb": "/hero/lifestyle-gallery-thumb.webp"
+    "desktop": "/hero/paper-lifestyle-gallery-2048.webp",
+    "desktopSmall": "/hero/paper-lifestyle-gallery-1600.webp",
+    "mobile": "/hero/paper-lifestyle-gallery-mobile.webp",
+    "thumb": "/hero/paper-lifestyle-gallery-thumb.webp",
+    "product": "/hero/paper-lifestyle-gallery-product.webp",
+    "pose": "stand"
   },
   {
     "id": "premium-coaching",
@@ -38,10 +31,12 @@
     "name": "Ботаника",
     "alt": "Ежедневник «Ботаника» в светлом кабинете для работы с коучем",
     "tone": "#b39b88",
-    "desktop": "/hero/premium-coaching-2560.webp",
-    "desktopSmall": "/hero/premium-coaching-1600.webp",
-    "mobile": "/hero/premium-coaching-mobile.webp",
-    "thumb": "/hero/premium-coaching-thumb.webp"
+    "desktop": "/hero/paper-premium-coaching-2048.webp",
+    "desktopSmall": "/hero/paper-premium-coaching-1600.webp",
+    "mobile": "/hero/paper-premium-coaching-mobile.webp",
+    "thumb": "/hero/paper-premium-coaching-thumb.webp",
+    "product": "/hero/paper-premium-coaching-product.webp",
+    "pose": "table"
   },
   {
     "id": "premium-academy",
@@ -49,10 +44,12 @@
     "name": "Весна",
     "alt": "Ежедневник «Весна» в современном пространстве корпоративного обучения",
     "tone": "#ac8c72",
-    "desktop": "/hero/premium-academy-2560.webp",
-    "desktopSmall": "/hero/premium-academy-1600.webp",
-    "mobile": "/hero/premium-academy-mobile.webp",
-    "thumb": "/hero/premium-academy-thumb.webp"
+    "desktop": "/hero/paper-premium-academy-2048.webp",
+    "desktopSmall": "/hero/paper-premium-academy-1600.webp",
+    "mobile": "/hero/paper-premium-academy-mobile.webp",
+    "thumb": "/hero/paper-premium-academy-thumb.webp",
+    "product": "/hero/paper-premium-academy-product.webp",
+    "pose": "table"
   },
   {
     "id": "premium-city-night",
@@ -60,9 +57,11 @@
     "name": "Красные кони",
     "alt": "Ежедневник «Красные кони» на рабочем столе с вечерней панорамой Москва-Сити",
     "tone": "#6c564c",
-    "desktop": "/hero/premium-city-night-2560.webp",
-    "desktopSmall": "/hero/premium-city-night-1600.webp",
-    "mobile": "/hero/premium-city-night-mobile.webp",
-    "thumb": "/hero/premium-city-night-thumb.webp"
+    "desktop": "/hero/paper-premium-city-night-2048.webp",
+    "desktopSmall": "/hero/paper-premium-city-night-1600.webp",
+    "mobile": "/hero/paper-premium-city-night-mobile.webp",
+    "thumb": "/hero/paper-premium-city-night-thumb.webp",
+    "product": "/hero/paper-premium-city-night-product.webp",
+    "pose": "table"
   }
 ]

@@ -1,0 +1,9 @@
+{
+  "vazhnaya-ptitsa": {
+    "uid": "937894370012",
+    "name": "Важная птица",
+    "url": "https://static.tildacdn.com/stor3937-3535-4635-b962-366364396166/b3be0c43ac6b6c3fde3c11029f9ce5a3.jpg",
+    "sha256": "2a6c919f6885e44848fbbce28cfa54cc69968d907041ab27885fd2fb250233ac",
+    "maskPath": "docs/design/paper-hero/masks/bird-front.png"
+  }
+}
