@@ -1,0 +1,26 @@
+{
+  "report": [
+    {
+      "width": 1366,
+      "label": "С фонами",
+      "overflow": false,
+      "backgrounds": 1,
+      "active": "page"
+    },
+    {
+      "width": 375,
+      "label": "С фонами",
+      "overflow": false,
+      "backgrounds": 1,
+      "active": "page"
+    },
+    {
+      "width": 320,
+      "label": "С фонами",
+      "overflow": false,
+      "backgrounds": 1,
+      "active": "page"
+    }
+  ],
+  "errors": []
+}

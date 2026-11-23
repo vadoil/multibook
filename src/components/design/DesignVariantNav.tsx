@@ -36,8 +36,8 @@ export function DesignVariantNav() {
             </StoreTabLink>
           ))}
         </div>
-        <StoreTabLink href="/" prefetch={false} icon={<StoreNavIcon kind="shop" />} className="store-tab-compact design-variant-store" aria-label="Текущий магазин" aria-current={pathname === "/" ? "page" : undefined}>
-          <span>Магазин</span>
+        <StoreTabLink href="/" prefetch={false} icon={<StoreNavIcon kind="shop" />} className="store-tab-compact design-variant-store" aria-label="Вариант с интерьерными фонами" aria-current={pathname === "/" ? "page" : undefined}>
+          <span>С фонами</span>
         </StoreTabLink>
       </div>
     </nav>
