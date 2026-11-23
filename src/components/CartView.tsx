@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useActionState, useEffect, useMemo, useState } from "react";
+import { useActionState, useEffect, useMemo, useRef, useState } from "react";
 import { estimateDelivery, placeOrder, quoteProducts, type CheckoutState } from "@/app/cart/actions";
 import type { DeliveryQuote } from "@/lib/delivery";
 import type { QuotedProduct } from "@/lib/orders";
@@ -72,6 +72,14 @@ export function CartView({ profile }: { profile?: Record<string, string> }) {
   const [quotes, setQuotes] = useState<Quotes>({});
   const [state, action, pending] = useActionState<CheckoutState, FormData>(placeOrder, {});
   const [delivery, setDelivery] = useState(state.values?.delivery ?? "cdek-pvz");
+  const formRef = useRef<HTMLFormElement>(null);
+  // После ответа сервера с ошибками — фокус на первое неверное поле (на телефоне оно может быть за экраном).
+  useEffect(() => {
+    if (!state.fieldErrors && !state.error) return;
+    const bad = formRef.current?.querySelector<HTMLElement>('[aria-invalid="true"]');
+    bad?.focus();
+    bad?.scrollIntoView({ block: "center", behavior: "smooth" });
+  }, [state]);
 
   const idsKey = [...new Set(c.lines.map((l) => l.productId))].sort((a, b) => a - b).join(",");
   useEffect(() => setReady(true), []);
@@ -175,7 +183,7 @@ export function CartView({ profile }: { profile?: Record<string, string> }) {
         )}
       </div>
 
-      <form action={action} className="h-fit rounded-[var(--radius-card)] bg-card p-5 lg:sticky lg:top-24" noValidate>
+      <form ref={formRef} action={action} className="h-fit rounded-[var(--radius-card)] bg-card p-5 lg:sticky lg:top-24" noValidate>
         <h2 className="font-display text-2xl font-bold">Оформление</h2>
         <input type="hidden" name="lines" value={payload} />
         <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
@@ -192,7 +200,7 @@ export function CartView({ profile }: { profile?: Record<string, string> }) {
             <Err m={fe.phone} />
           </label>
           <label>
-            <span className="text-sm text-muted">Почта — пришлём номер заказа (необязательно)</span>
+            <span className="text-sm text-muted">Почта для чека (необязательно)</span>
             <input name="email" type="email" defaultValue={v.email} autoComplete="email" className={field} aria-invalid={!!fe.email} />
             <Err m={fe.email} />
           </label>
@@ -204,7 +212,7 @@ export function CartView({ profile }: { profile?: Record<string, string> }) {
             {[
               ["cdek-pvz", "СДЭК, пункт выдачи"],
               ["cdek-door", "СДЭК, курьер до двери"],
-              ["other", "Другой способ — обсудим"],
+              ["other", "Самовывоз или другой способ — обсудим по телефону"],
             ].map(([val, label]) => (
               <label key={val} className="flex cursor-pointer items-center gap-3 rounded-xl border border-line px-4 py-3 has-[:checked]:border-ink">
                 <input type="radio" name="delivery" value={val} checked={delivery === val} onChange={() => setDelivery(val)} className="accent-ink" />
@@ -222,7 +230,7 @@ export function CartView({ profile }: { profile?: Record<string, string> }) {
               <Err m={fe.city} />
             </label>
             <label>
-              <span className="text-sm text-muted">{delivery === "cdek-pvz" ? "Адрес или код пункта СДЭК" : "Улица, дом, квартира"}</span>
+              <span className="text-sm text-muted">{delivery === "cdek-pvz" ? "Адрес пункта СДЭК" : "Улица, дом, квартира"}</span>
               <input name="address" defaultValue={v.address} autoComplete="street-address" className={field} aria-invalid={!!fe.address} />
               <Err m={fe.address} />
             </label>
@@ -254,7 +262,7 @@ export function CartView({ profile }: { profile?: Record<string, string> }) {
           <input type="checkbox" name="consent" defaultChecked={v.consent === "on"} className="mt-1 accent-ink" aria-invalid={!!fe.consent} />
           <span>
             Согласен на обработку персональных данных по{" "}
-            <Link href="https://multi-book.ru/privacy" rel="noopener noreferrer" className="underline underline-offset-2" target="_blank">
+            <Link href="/privacy" className="underline underline-offset-2" target="_blank">
               политике конфиденциальности
             </Link>
           </span>

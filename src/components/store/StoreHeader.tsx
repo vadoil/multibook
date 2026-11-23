@@ -112,7 +112,7 @@ export function StoreHeader() {
           <Link href="/account" onClick={() => setOpen(false)}>
             Личный кабинет<span aria-hidden="true">↗</span>
           </Link>
-          <Link href="/#contacts" onClick={() => setOpen(false)}>
+          <Link href="/contacts" onClick={() => setOpen(false)}>
             Контакты<span aria-hidden="true">↗</span>
           </Link>
         </nav>

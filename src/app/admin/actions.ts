@@ -78,6 +78,7 @@ export async function saveProduct(productId: number, fd: FormData) {
       sortOrder,
       description: s("description", 20000) || null,
       isActive: fd.get("isActive") === "on",
+      featured: fd.get("featured") === "on",
       lockedAt: now, // теперь импорт из Tilda эти поля не трогает
       updatedAt: now,
     })

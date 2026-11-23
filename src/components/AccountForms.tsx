@@ -51,6 +51,13 @@ export function AuthForms({ next }: { next?: string }) {
             <input name="password" type="password" autoComplete="current-password" required className={field} />
           </label>
           <Msg s={ls} />
+          <p className="text-sm text-muted">
+            Забыли пароль? Позвоните нам:{" "}
+            <a href="tel:+79998994114" className="underline underline-offset-2">
+              +7 999 899-41-14
+            </a>
+            , восстановим доступ.
+          </p>
           <button disabled={lp} className="mt-2 rounded-full bg-ink px-6 py-3.5 font-semibold text-white disabled:opacity-50">
             {lp ? "Входим…" : "Войти"}
           </button>
@@ -74,7 +81,7 @@ export function AuthForms({ next }: { next?: string }) {
             <input type="checkbox" name="consent" className="mt-1 accent-ink" />
             <span>
               Согласен на обработку персональных данных по{" "}
-              <Link href="https://multi-book.ru/privacy" rel="noopener noreferrer" target="_blank" className="underline underline-offset-2">
+              <Link href="/privacy" target="_blank" className="underline underline-offset-2">
                 политике конфиденциальности
               </Link>
             </span>
@@ -85,7 +92,7 @@ export function AuthForms({ next }: { next?: string }) {
           </button>
         </form>
       )}
-      <p className="mt-5 text-center text-sm text-muted">Заказывать можно и без кабинета — в нём просто видны все ваши заказы.</p>
+      <p className="mt-5 text-center text-sm text-muted">Заказать можно без регистрации. В кабинете хранятся ваши заказы и адрес доставки.</p>
     </div>
   );
 }

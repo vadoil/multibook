@@ -8,10 +8,14 @@ import { CategoryGlyph } from "./CategoryGlyph";
 export function PrintWorkshopHero({
   product,
   journal = false,
+  secondary = false,
 }: {
   product?: Product;
   journal?: boolean;
+  /** Под обоями на главной: заголовок h2 и без кнопок выбора — они уже на первом экране. */
+  secondary?: boolean;
 }) {
+  const Title = secondary ? "h2" : "h1";
   return (
     <section
       className={`mc-storefront-hero ${journal ? "mc-storefront-journal" : ""}`}
@@ -22,8 +26,14 @@ export function PrintWorkshopHero({
           <span className="mc-small-disc" aria-hidden="true" />
           Модульные блокноты на дисках
         </p>
-        <h1 id="storefront-title">
-          {journal ? (
+        <Title id="storefront-title">
+          {secondary ? (
+            <>
+              Лист снимается
+              <br />
+              и встаёт обратно
+            </>
+          ) : journal ? (
             <>
               Блокноты,
               <br />
@@ -38,12 +48,12 @@ export function PrintWorkshopHero({
               Ваш порядок.
             </>
           )}
-        </h1>
+        </Title>
         <p className="mc-storefront-description">
           Готовые коллекции и конструктор своего блокнота. Снимайте листы,
           добавляйте новые и меняйте их местами — без колец и пружин.
         </p>
-        <ShopChoices />
+        {!secondary && <ShopChoices />}
         <div className="mc-storefront-proof">
           <CategoryGlyph kind="tools" />
           <p>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Caveat, Cormorant_Garamond, Golos_Text } from "next/font/google";
 import { StoreHeader } from "@/components/store/StoreHeader";
 import { StoreFooter } from "@/components/store/StoreFooter";
+import { SITE } from "@/lib/site";
 import "./globals.css";
 import "./design-preview/concepts.css";
 import "./design-preview/identity.css";
@@ -23,12 +24,20 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
   title: {
     default: "Multibook — модульные блокноты на дисках",
     template: "%s · Multibook",
   },
   description:
     "Готовые блокноты, тетради и планеры со сменными листами — или свой блокнот в конструкторе. Листы снимаются и переставляются, обложки и диски меняются.",
+  openGraph: {
+    type: "website",
+    siteName: SITE.name,
+    locale: "ru_RU",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Блокнот Multibook на дисках" }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({

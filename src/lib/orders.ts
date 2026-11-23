@@ -122,7 +122,7 @@ export function getOrderByToken(token: string) {
 export const DELIVERY_LABELS: Record<DeliveryMethod, string> = {
   "cdek-pvz": "СДЭК, пункт выдачи",
   "cdek-door": "СДЭК, курьер до двери",
-  other: "Другой способ — обсудим по телефону",
+  other: "Самовывоз или другой способ — обсудим по телефону",
 };
 
 export const STATUS_LABELS: Record<string, string> = {

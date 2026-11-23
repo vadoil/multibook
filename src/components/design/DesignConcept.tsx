@@ -589,9 +589,18 @@ function Paper({ products }: { products: Product[] }) {
   );
 }
 
-function Journal({ products }: { products: Product[] }) {
+function Journal({ products, hero }: { products: Product[]; hero?: React.ReactNode }) {
   const horse = products.find((p) => p.title.includes("Красные кони"));
-  return (
+  return hero ? (
+    <>
+      {hero}
+      <Featured products={products} concept="journal" />
+      <PrintWorkshopHero product={horse} journal secondary />
+      <ConstructorInvite product={products[0]} concept="journal" />
+      <Mechanics concept="journal" />
+      <Categories concept="journal" />
+    </>
+  ) : (
     <>
       <PrintWorkshopHero product={horse} journal />
       <Featured products={products} concept="journal" />
@@ -688,10 +697,13 @@ export function DesignConcept({
   concept,
   products,
   embedded = false,
+  hero,
 }: {
   concept: ConceptName;
   products: Product[];
   embedded?: boolean;
+  /** Свой первый экран вместо видео-героя (на главной — обои). */
+  hero?: React.ReactNode;
 }) {
   return (
     <div className={`mc-root mc-${concept}`}>
@@ -701,7 +713,7 @@ export function DesignConcept({
         {concept === "paper" ? (
           <Paper products={products} />
         ) : concept === "journal" ? (
-          <Journal products={products} />
+          <Journal products={products} hero={hero} />
         ) : (
           <Play products={products} />
         )}

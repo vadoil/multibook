@@ -10,6 +10,7 @@
     "db:push": "drizzle-kit push",
     "import:tilda": "tsx scripts/import-tilda.ts",
     "admin:grant": "tsx scripts/grant-admin.ts",
+    "wallpapers": "node scripts/make-wallpapers.mjs",
     "dev:admin": "tsx scripts/dev-admin.ts"
   },
   "dependencies": {

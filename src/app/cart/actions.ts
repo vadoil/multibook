@@ -70,13 +70,13 @@ export async function placeOrder(_prev: CheckoutState, fd: FormData): Promise<Ch
 
   const fieldErrors: CheckoutState["fieldErrors"] = {};
   const digits = values.phone.replace(/\D/g, "");
-  if (values.name.length < 2) fieldErrors.name = "Как к вам обращаться?";
+  if (values.name.length < 2) fieldErrors.name = "Укажите имя";
   if (digits.length < 10 || digits.length > 15) fieldErrors.phone = "Нужен телефон для связи, например +7 999 123-45-67";
   if (values.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) fieldErrors.email = "Проверьте адрес почты";
   const delivery = (DELIVERY_METHODS as readonly string[]).includes(values.delivery) ? (values.delivery as DeliveryMethod) : "cdek-pvz";
   if (delivery !== "other") {
     if (values.city.length < 2) fieldErrors.city = "Укажите город";
-    if (values.address.length < 3) fieldErrors.address = delivery === "cdek-pvz" ? "Адрес или код пункта СДЭК" : "Улица, дом, квартира";
+    if (values.address.length < 3) fieldErrors.address = delivery === "cdek-pvz" ? "Укажите адрес пункта СДЭК, например: ул. Ленина, 5" : "Укажите улицу, дом и квартиру";
   }
   if (values.consent !== "on") fieldErrors.consent = "Без согласия мы не сможем связаться с вами по заказу";
   if (Object.keys(fieldErrors).length) return { fieldErrors, values };

@@ -9,12 +9,22 @@ import { selectComplements } from "@/components/product/complements";
 import { ProductVisual } from "@/components/ProductVisual";
 import { formatPrice, getProduct, listProducts, relatedProducts } from "@/lib/catalog";
 import { FORMATS, formatByDb } from "@/lib/formats";
+import { JsonLd } from "@/components/JsonLd";
+import { productDescription, productJsonLd, seoTitle, typeLabel } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const p = getProduct((await params).slug);
-  return p ? { title: p.title, description: p.description?.slice(0, 160) } : {};
+  if (!p || !p.isActive) return {};
+  const title = seoTitle(p.title);
+  const description = productDescription(p);
+  return {
+    title,
+    description,
+    alternates: { canonical: `/product/${p.slug}` },
+    openGraph: { title, description, url: `/product/${p.slug}`, images: p.images.slice(0, 1) },
+  };
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -32,8 +42,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
   return (
     <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
+      <JsonLd data={productJsonLd(p)} />
       <nav aria-label="Навигация" className="text-sm text-muted">
-        <Link href="/catalog">Каталог</Link> / <Link href={`/catalog?type=${encodeURIComponent(p.type)}`}>{p.type}</Link>
+        <Link href="/catalog">Каталог</Link> / <Link href={`/catalog?type=${encodeURIComponent(p.type)}`}>{typeLabel(p.type)}</Link>
       </nav>
 
       <div className="mt-6 grid gap-10 lg:grid-cols-2">
@@ -41,9 +52,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <ProductVisual product={p} size="large" />
           {p.images.length > 1 && (
             <div className="grid grid-cols-4 gap-2">
-              {p.images.slice(1, 9).map((src) => (
+              {p.images.slice(1, 9).map((src, i) => (
                 <div key={src} className="relative aspect-square overflow-hidden rounded-xl bg-[#efe9df]">
-                  <Image src={src} alt="" fill sizes="12vw" className="object-cover" />
+                  <Image src={src} alt={`${seoTitle(p.title, 80)} — фото ${i + 2}`} fill sizes="12vw" className="object-cover" />
                 </div>
               ))}
             </div>
@@ -68,6 +79,16 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               </Link>
             )}
           </div>
+
+          <ul className="mt-5 grid gap-1 text-sm text-muted" aria-label="Доставка и оплата">
+            <li>Доставка СДЭК по России — в пункт выдачи или курьером; самовывоз из Глухово (Красногорский район)</li>
+            <li>Оплата картой на сайте, для организаций — по счёту</li>
+            <li>
+              <Link href="/delivery" className="underline underline-offset-2">
+                Условия доставки, оплаты и возврата
+              </Link>
+            </li>
+          </ul>
 
           {specs.length > 0 && (
             <dl className="mt-8 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 border-t border-line pt-6 text-sm">

@@ -22,6 +22,7 @@ function item(id: number, patch: Partial<Product> = {}): Product {
     sourceUrl: null,
     isActive: true,
     sortOrder: id,
+    featured: false,
     lockedAt: null,
     importedAt: new Date(0),
     updatedAt: new Date(0),

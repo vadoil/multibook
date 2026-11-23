@@ -1,0 +1,347 @@
+/* Первый экран-«рабочий стол»: обои на весь экран, заголовок слева, док с миниатюрами справа внизу. */
+.wp-hero {
+  --wp-ink: #24180f;
+  --wp-h: calc(100svh - 97px);
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(560px, var(--wp-h), 980px);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  overflow: hidden;
+  color: var(--wp-ink);
+  background: #b08a62;
+  touch-action: pan-y;
+}
+
+/* ---------- обои ---------- */
+.wp-stage,
+.wp-slide {
+  position: absolute;
+  inset: 0;
+}
+.wp-stage {
+  z-index: -1;
+}
+.wp-slide {
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  background: var(--wp-tone);
+}
+.wp-slide[data-active] {
+  opacity: 1;
+}
+.wp-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 50%;
+  transform-origin: 72% 50%;
+}
+/* Медленный «наезд» камеры, пока кадр на экране. */
+.wp-hero[data-running] .wp-slide[data-active] img {
+  animation: wp-drift 8.5s linear both;
+}
+@keyframes wp-drift {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.055);
+  }
+}
+/* Светлая вуаль слева под текстом — тон берётся из самих обоев. */
+.wp-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--wp-tone) 42%, #f6efe3) 0%,
+    color-mix(in srgb, var(--wp-tone) 55%, #f6efe3 45%) 26%,
+    transparent 58%
+  );
+  opacity: 0.88;
+}
+
+/* ---------- текст ---------- */
+.wp-copy {
+  align-self: center;
+  padding: 48px 0 24px 5.2vw;
+  max-width: min(46rem, 50vw);
+}
+.wp-copy h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(3.6rem, 7.4vw, 8.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.wp-copy p {
+  margin: 28px 0 0;
+  max-width: 31rem;
+  font-size: clamp(1.05rem, 1.25vw, 1.25rem);
+  line-height: 1.55;
+}
+.wp-actions {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.wp-btn {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 26px;
+  border-radius: 999px;
+  border: 1.5px solid var(--wp-ink);
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--wp-ink);
+  background: color-mix(in srgb, #f6efe3 55%, transparent);
+  backdrop-filter: blur(6px);
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+.wp-btn:hover {
+  background: #f6efe3;
+}
+.wp-btn-main {
+  background: var(--wp-ink);
+  color: #f6efe3;
+}
+.wp-btn-main:hover {
+  background: #3a271b;
+}
+.wp-btn:active {
+  transform: translateY(1px);
+}
+
+/* ---------- нижняя полоса: подпись кадра и док ---------- */
+.wp-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 3.2vw 28px 5.2vw;
+}
+.wp-caption {
+  display: grid;
+  gap: 2px;
+  padding: 10px 0;
+  color: var(--wp-ink);
+}
+.wp-caption-name {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  line-height: 1.1;
+}
+.wp-caption-price {
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+.wp-caption-more {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.wp-dock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px;
+  border-radius: 18px;
+  background: color-mix(in srgb, #1d140d 38%, transparent);
+  backdrop-filter: blur(14px) saturate(1.2);
+  box-shadow:
+    0 1px 0 #ffffff26 inset,
+    0 14px 40px #1d140d40;
+}
+.wp-thumb {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 50px;
+  padding: 0;
+  border: 0;
+  border-radius: 11px;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.wp-thumb img {
+  width: 68px;
+  height: 38px;
+  border-radius: 7px;
+  object-fit: cover;
+  opacity: 0.72;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition:
+    opacity 0.2s,
+    outline-color 0.2s;
+}
+.wp-thumb:hover {
+  transform: translateY(-3px);
+}
+.wp-thumb:hover img,
+.wp-thumb[aria-current] img {
+  opacity: 1;
+}
+.wp-thumb[aria-current] img {
+  outline-color: #f6efe3;
+}
+.wp-progress {
+  position: absolute;
+  left: 7px;
+  right: 7px;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: #f6efe3;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.wp-hero[data-running] .wp-progress {
+  animation: wp-progress 7s linear both;
+}
+.wp-hero:not([data-running]) .wp-progress {
+  transform: scaleX(1);
+  opacity: 0.5;
+}
+@keyframes wp-progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+.wp-pause {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-left: 2px;
+  border: 0;
+  border-radius: 12px;
+  background: #f6efe31f;
+  color: #f6efe3;
+  cursor: pointer;
+}
+.wp-pause svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+.wp-pause:hover {
+  background: #f6efe333;
+}
+.wp-hero :is(a, button):focus-visible {
+  outline: 2px solid var(--wp-ink);
+  outline-offset: 3px;
+}
+.wp-dock :is(button):focus-visible {
+  outline-color: #f6efe3;
+}
+.wp-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- телефон: обои 9:16, текст сверху, док снизу ---------- */
+@media (max-width: 760px) {
+  .wp-hero {
+    --wp-h: calc(100svh - 77px);
+    min-height: clamp(600px, var(--wp-h), 860px);
+  }
+  .wp-slide img {
+    object-position: 50% 100%;
+    transform-origin: 50% 80%;
+  }
+  .wp-slide::after {
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--wp-tone) 40%, #f6efe3) 0%,
+      color-mix(in srgb, var(--wp-tone) 55%, #f6efe3 45%) 30%,
+      transparent 52%
+    );
+  }
+  .wp-copy {
+    align-self: start;
+    padding: 30px 20px 0;
+    max-width: none;
+  }
+  .wp-copy h1 {
+    font-size: clamp(2.9rem, 13.5vw, 3.6rem);
+  }
+  .wp-copy p {
+    margin-top: 12px;
+    font-size: 0.98rem;
+    line-height: 1.45;
+    max-width: 22rem;
+  }
+  .wp-actions {
+    margin-top: 16px;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .wp-btn {
+    min-height: 46px;
+    padding: 0 18px;
+    font-size: 0.96rem;
+  }
+  .wp-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0 12px 14px;
+  }
+  .wp-caption {
+    align-self: start;
+    padding: 6px 12px;
+    border-radius: 12px;
+    background: color-mix(in srgb, #f6efe3 70%, transparent);
+    backdrop-filter: blur(8px);
+  }
+  .wp-caption-name {
+    font-size: 1.3rem;
+  }
+  .wp-caption-more {
+    display: none;
+  }
+  .wp-dock {
+    justify-content: space-between;
+  }
+  .wp-thumb {
+    flex: 1;
+    width: auto;
+    height: 44px;
+  }
+  .wp-thumb img {
+    width: 100%;
+    max-width: 64px;
+    height: 34px;
+  }
+  .wp-thumb:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wp-slide {
+    transition-duration: 0.01s;
+  }
+  .wp-slide img,
+  .wp-progress {
+    animation: none !important;
+  }
+}

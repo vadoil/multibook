@@ -23,11 +23,12 @@ export async function notifyManager(text: string) {
   }
 }
 
-export function newOrderText(o: { number: string; id: number; name: string; phone: string; subtotal: number; delivery: string; city: string | null; items: number }) {
+/** Имя и телефон покупателя в Telegram не отправляем: серверы Telegram за рубежом, а это была бы
+ *  трансграничная передача персональных данных (152-ФЗ). Менеджер видит их по ссылке в админке. */
+export function newOrderText(o: { number: string; id: number; name?: string; phone?: string; subtotal: number; delivery: string; city: string | null; items: number }) {
   const site = process.env.SITE_URL ?? "http://localhost:3000";
   return [
     `🛒 Новый заказ № ${o.number} — ${formatPrice(o.subtotal)}`,
-    `${o.name}, ${o.phone}`,
     `${o.delivery}${o.city ? `, ${o.city}` : ""} · позиций: ${o.items}`,
     `${site}/admin/orders/${o.id}`,
   ].join("\n");

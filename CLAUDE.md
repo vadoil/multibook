@@ -24,3 +24,7 @@
 - Админка: каждая страница и каждый server action сам вызывает `requireAdmin()` — проверки в layout недостаточно.
 - Импорт Tilda — `src/lib/import-tilda.ts` (без `server-only`, его зовёт и CLI). Товары с `lockedAt` импорт не перезаписывает; адрес (slug) существующего товара не меняется.
 - Поиск по-русски без учёта регистра — в JS: `LIKE`/`lower()` в SQLite работают только с латиницей.
+- Сайт работает параллельно с multi-book.ru на Tilda (не замена): без редиректов со старых адресов. Публичные контакты и реквизиты — `src/lib/site.ts`, SEO-хелперы — `src/lib/seo.ts`.
+- **`drizzle-kit push` на SQLite опасен**: 23.11 при добавлении колонки он пересоздал `products` и потерял все строки. Перед push — остановить dev-сервер и скопировать `data/multibook.db*` (вместе с `-wal`). Новую колонку проще добавить `ALTER TABLE … ADD COLUMN` и потом убедиться, что push пишет «No changes detected».
+- Обои первого экрана: `npm run wallpapers` (`scripts/make-wallpapers.mjs`) → `public/hero/*.webp` + `wallpapers.json` + `public/og.jpg`. Слайд ведёт на товар по `uid` (tilda_uid).
+- В Telegram не отправлять персональные данные покупателя (серверы за рубежом, 152-ФЗ) — только номер, сумму и ссылку в админку.

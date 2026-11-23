@@ -52,6 +52,8 @@ export const products = sqliteTable(
     sourceUrl: text("source_url"),
     isActive: integer("is_active", { mode: "boolean" }).notNull().default(true),
     sortOrder: integer("sort_order").notNull().default(0),
+    // Показывать в «Готовой коллекции» на главной (ставится в админке, импорт не трогает).
+    featured: integer("featured", { mode: "boolean" }).notNull().default(false),
     // Товар правили в админке: импорт из Tilda не перезаписывает цену, название, наличие и описание.
     lockedAt: integer("locked_at", { mode: "timestamp" }),
     importedAt: integer("imported_at", { mode: "timestamp" }).notNull(),

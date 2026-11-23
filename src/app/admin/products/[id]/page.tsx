@@ -76,6 +76,10 @@ export default async function AdminProduct({ params, searchParams }: { params: P
             <input type="checkbox" name="isActive" defaultChecked={p.isActive} className="size-5 accent-ink" />
             Показывать на сайте
           </label>
+          <label className="flex items-center gap-3">
+            <input type="checkbox" name="featured" defaultChecked={p.featured} className="size-5 accent-ink" />
+            Показывать на главной в «Готовой коллекции» (до 4 товаров, по порядку сортировки)
+          </label>
           <button className="justify-self-start rounded-full bg-ink px-6 py-3 font-semibold text-white">Сохранить</button>
         </form>
 

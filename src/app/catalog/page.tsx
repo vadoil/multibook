@@ -4,9 +4,22 @@ import { DiscCatalog } from "@/components/DiscCatalog";
 import { ProductCard } from "@/components/ProductCard";
 import { countByType, listProducts, TYPE_LABELS } from "@/lib/catalog";
 import type { ProductType } from "@/db/schema";
+import { plural } from "@/lib/plural";
 
-export const metadata: Metadata = { title: "Каталог" };
 export const dynamic = "force-dynamic";
+const PAGE = 48;
+
+export async function generateMetadata({ searchParams }: { searchParams: Promise<{ type?: string; page?: string }> }): Promise<Metadata> {
+  const sp = await searchParams;
+  const t = TYPE_LABELS.find((x) => x.type === sp.type);
+  const page = Math.max(1, Number(sp.page) || 1);
+  const path = t ? `/catalog?type=${encodeURIComponent(t.type)}${page > 1 ? `&page=${page}` : ""}` : page > 1 ? `/catalog?page=${page}` : "/catalog";
+  const title = t ? `${t.label} на дисках — купить` : "Каталог модульных блокнотов на дисках";
+  const description = t
+    ? `${t.label} Multibook: ${t.hint.toLowerCase()}. Совместимы с блокнотами на дисках, доставка СДЭК по России.`
+    : "Тетради, блокноты, обложки, блоки листов и диски для дискового переплёта Multibook. Готовые блокноты и детали, чтобы собрать свой.";
+  return { title: page > 1 ? `${title}, страница ${page}` : title, description, alternates: { canonical: path } };
+}
 
 const SORTS = [
   { v: "popular", label: "Сначала популярные" },
@@ -19,19 +32,24 @@ type Sort = (typeof SORTS)[number]["v"];
 export default async function CatalogPage({
   searchParams,
 }: {
-  searchParams: Promise<{ type?: string; sort?: string; d?: string; m?: string }>;
+  searchParams: Promise<{ type?: string; sort?: string; d?: string; m?: string; page?: string }>;
 }) {
   const sp = await searchParams;
   const type = TYPE_LABELS.find((t) => t.type === sp.type)?.type as ProductType | undefined;
   const sort = (SORTS.find((s) => s.v === sp.sort)?.v ?? "popular") as Sort;
-  const items = listProducts({ type, sort });
+  const all = listProducts({ type, sort });
+  const pages = Math.max(1, Math.ceil(all.length / PAGE));
+  const page = Math.min(pages, Math.max(1, Number(sp.page) || 1));
+  // Диски показываются группами по цвету (DiscCatalog) — им отдаём весь список.
+  const items = type === "Диски" ? all : all.slice((page - 1) * PAGE, page * PAGE);
   const counts = countByType();
-  const href = (p: { type?: string; sort?: string }) => {
+  const href = (p: { type?: string; sort?: string; page?: number }) => {
     const q = new URLSearchParams();
     const t = "type" in p ? p.type : type;
     const s = p.sort ?? sort;
     if (t) q.set("type", t);
     if (s !== "popular") q.set("sort", s);
+    if (p.page && p.page > 1) q.set("page", String(p.page));
     const qs = q.toString();
     return `/catalog${qs ? `?${qs}` : ""}`;
   };
@@ -64,7 +82,9 @@ export default async function CatalogPage({
       </nav>
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-sm">
-        <span className="text-muted">{items.length} товаров</span>
+        <span className="text-muted">
+          {all.length} {plural(all.length, ["товар", "товара", "товаров"])}
+        </span>
         <div className="flex flex-wrap gap-1">
           {SORTS.map((s) => (
             <Link
@@ -96,8 +116,24 @@ export default async function CatalogPage({
         </div>
       ) : (
         <p className="mt-16 text-center text-muted">
-          Каталог пуст. Запустите импорт: <code>npm run import:tilda</code>
+          Здесь пока пусто. Загляните в <Link href="/catalog" className="underline underline-offset-2">весь каталог</Link> или соберите
+          блокнот в <Link href="/constructor" className="underline underline-offset-2">конструкторе</Link>.
         </p>
+      )}
+
+      {type !== "Диски" && pages > 1 && (
+        <nav aria-label="Страницы каталога" className="mt-10 flex flex-wrap justify-center gap-2">
+          {Array.from({ length: pages }, (_, i) => i + 1).map((n) => (
+            <Link
+              key={n}
+              href={href({ page: n })}
+              aria-current={n === page ? "page" : undefined}
+              className="grid min-h-11 min-w-11 place-items-center rounded-full border border-line px-3 aria-[current=page]:border-ink aria-[current=page]:bg-ink aria-[current=page]:text-white"
+            >
+              {n}
+            </Link>
+          ))}
+        </nav>
       )}
     </div>
   );
