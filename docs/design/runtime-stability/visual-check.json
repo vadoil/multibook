@@ -1,0 +1,25 @@
+{
+  "report": [
+    {
+      "width": 1366,
+      "overflow": false,
+      "title": "Multibook — модульные блокноты на дисках",
+      "hero": true
+    },
+    {
+      "width": 1366,
+      "constructorInteractive": true
+    },
+    {
+      "width": 375,
+      "overflow": false,
+      "title": "Multibook — модульные блокноты на дисках",
+      "hero": true
+    },
+    {
+      "width": 375,
+      "constructorInteractive": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,303 @@
+{
+  "pagesBefore": [
+    {
+      "path": "/",
+      "status": 200,
+      "seconds": 0.209,
+      "bytes": 100402,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/catalog",
+      "status": 200,
+      "seconds": 0.235,
+      "bytes": 247816,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/constructor",
+      "status": 200,
+      "seconds": 0.287,
+      "bytes": 200844,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/cart",
+      "status": 200,
+      "seconds": 0.121,
+      "bytes": 27485,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/account",
+      "status": 200,
+      "seconds": 0.232,
+      "bytes": 29434,
+      "type": "text/html; charset=utf-8"
+    }
+  ],
+  "images": [
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F476653632312-front.webp&w=640&q=75",
+      "status": 200,
+      "seconds": 0.8,
+      "bytes": 104335,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F476653632312-front.webp&w=750&q=75",
+      "status": 200,
+      "seconds": 0.829,
+      "bytes": 145889,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F476653632312-front.webp&w=828&q=75",
+      "status": 200,
+      "seconds": 0.807,
+      "bytes": 178161,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F476653632312-front.webp&w=1080&q=75",
+      "status": 200,
+      "seconds": 0.808,
+      "bytes": 220255,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F301240250332-front.webp&w=640&q=75",
+      "status": 200,
+      "seconds": 0.604,
+      "bytes": 90930,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F301240250332-front.webp&w=750&q=75",
+      "status": 200,
+      "seconds": 0.381,
+      "bytes": 128535,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F301240250332-front.webp&w=828&q=75",
+      "status": 200,
+      "seconds": 0.369,
+      "bytes": 157135,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F301240250332-front.webp&w=1080&q=75",
+      "status": 200,
+      "seconds": 0.778,
+      "bytes": 193582,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F158141743702-front.webp&w=640&q=75",
+      "status": 200,
+      "seconds": 0.503,
+      "bytes": 107347,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F158141743702-front.webp&w=750&q=75",
+      "status": 200,
+      "seconds": 0.46,
+      "bytes": 149972,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F158141743702-front.webp&w=828&q=75",
+      "status": 200,
+      "seconds": 0.483,
+      "bytes": 182803,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F158141743702-front.webp&w=1080&q=75",
+      "status": 200,
+      "seconds": 0.576,
+      "bytes": 225272,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F207343502342-front.webp&w=640&q=75",
+      "status": 200,
+      "seconds": 0.41,
+      "bytes": 99571,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F207343502342-front.webp&w=750&q=75",
+      "status": 200,
+      "seconds": 0.584,
+      "bytes": 140361,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F207343502342-front.webp&w=828&q=75",
+      "status": 200,
+      "seconds": 0.436,
+      "bytes": 170991,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F207343502342-front.webp&w=1080&q=75",
+      "status": 200,
+      "seconds": 0.658,
+      "bytes": 212222,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F178439980972-front.webp&w=640&q=75",
+      "status": 200,
+      "seconds": 0.391,
+      "bytes": 94849,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F178439980972-front.webp&w=750&q=75",
+      "status": 200,
+      "seconds": 0.437,
+      "bytes": 136538,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F178439980972-front.webp&w=828&q=75",
+      "status": 200,
+      "seconds": 0.45,
+      "bytes": 170121,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F178439980972-front.webp&w=1080&q=75",
+      "status": 200,
+      "seconds": 0.789,
+      "bytes": 216680,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F725412101973-front.webp&w=640&q=75",
+      "status": 200,
+      "seconds": 0.594,
+      "bytes": 18851,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F725412101973-front.webp&w=750&q=75",
+      "status": 200,
+      "seconds": 0.588,
+      "bytes": 24935,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F725412101973-front.webp&w=828&q=75",
+      "status": 200,
+      "seconds": 0.59,
+      "bytes": 29840,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F725412101973-front.webp&w=1080&q=75",
+      "status": 200,
+      "seconds": 0.209,
+      "bytes": 32828,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F389882593103-front.webp&w=640&q=75",
+      "status": 200,
+      "seconds": 0.436,
+      "bytes": 72173,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F389882593103-front.webp&w=750&q=75",
+      "status": 200,
+      "seconds": 0.423,
+      "bytes": 105384,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F389882593103-front.webp&w=828&q=75",
+      "status": 200,
+      "seconds": 0.409,
+      "bytes": 132064,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F389882593103-front.webp&w=1080&q=75",
+      "status": 200,
+      "seconds": 0.472,
+      "bytes": 172863,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F127530831733-front.webp&w=640&q=75",
+      "status": 200,
+      "seconds": 0.397,
+      "bytes": 101605,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F127530831733-front.webp&w=750&q=75",
+      "status": 200,
+      "seconds": 0.451,
+      "bytes": 133487,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F127530831733-front.webp&w=828&q=75",
+      "status": 200,
+      "seconds": 0.367,
+      "bytes": 157929,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/_next/image?url=%2Fconstructor-assets%2Fcovers%2F127530831733-front.webp&w=1080&q=75",
+      "status": 200,
+      "seconds": 0.368,
+      "bytes": 178989,
+      "type": "image/jpeg"
+    }
+  ],
+  "pagesAfter": [
+    {
+      "path": "/",
+      "status": 200,
+      "seconds": 0.199,
+      "bytes": 100402,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/catalog",
+      "status": 200,
+      "seconds": 0.283,
+      "bytes": 247816,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/constructor",
+      "status": 200,
+      "seconds": 0.205,
+      "bytes": 200844,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/cart",
+      "status": 200,
+      "seconds": 0.164,
+      "bytes": 27485,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/account",
+      "status": 200,
+      "seconds": 0.118,
+      "bytes": 29434,
+      "type": "text/html; charset=utf-8"
+    }
+  ],
+  "failures": []
+}
