@@ -13,9 +13,7 @@ export const TYPE_LABELS: { type: ProductType; label: string; hint: string }[] =
   { type: "Фотокниги", label: "Фотоальбомы", hint: "Альбомы на дисках" },
 ];
 
-export function formatPrice(kopecks: number): string {
-  return `${Math.round(kopecks / 100).toLocaleString("ru-RU")} ₽`;
-}
+export { formatPrice } from "./money";
 
 export function listProducts(opts: { type?: ProductType; sort?: "popular" | "price-asc" | "price-desc" | "new" } = {}) {
   const where = and(eq(schema.products.isActive, true), opts.type ? eq(schema.products.type, opts.type) : undefined);

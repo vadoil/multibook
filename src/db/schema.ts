@@ -69,5 +69,55 @@ export const importRuns = sqliteTable("import_runs", {
   warnings: text("warnings", { mode: "json" }).$type<string[]>().notNull().default(sql`'[]'`),
 });
 
+export const ORDER_STATUSES = ["new", "confirmed", "paid", "shipped", "done", "cancelled"] as const;
+export type OrderStatus = (typeof ORDER_STATUSES)[number];
+export const DELIVERY_METHODS = ["cdek-pvz", "cdek-door", "other"] as const;
+export type DeliveryMethod = (typeof DELIVERY_METHODS)[number];
+
+/** Заказ. Онлайн-оплаты пока нет: менеджер подтверждает заказ и считает доставку. */
+export const orders = sqliteTable(
+  "orders",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    number: text("number").notNull().unique(), // видит покупатель: «1042»
+    token: text("token").notNull().unique(), // ссылка на страницу заказа без входа
+    status: text("status").$type<OrderStatus>().notNull().default("new"),
+    customerName: text("customer_name").notNull(),
+    phone: text("phone").notNull(),
+    email: text("email"),
+    deliveryMethod: text("delivery_method").$type<DeliveryMethod>().notNull(),
+    deliveryCity: text("delivery_city"),
+    deliveryAddress: text("delivery_address"),
+    comment: text("comment"),
+    subtotal: integer("subtotal").notNull(), // копейки
+    deliveryPrice: integer("delivery_price"), // null — ещё не посчитана
+    total: integer("total").notNull(),
+    createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
+    updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
+  },
+  (t) => [index("orders_status_idx").on(t.status)],
+);
+
+export const orderItems = sqliteTable(
+  "order_items",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    orderId: integer("order_id")
+      .notNull()
+      .references(() => orders.id, { onDelete: "cascade" }),
+    productId: integer("product_id").references(() => products.id, { onDelete: "set null" }),
+    title: text("title").notNull(), // снимок на момент заказа
+    sku: text("sku"),
+    image: text("image"),
+    price: integer("price").notNull(), // копейки, за штуку
+    qty: integer("qty").notNull(),
+    bundle: text("bundle"), // название набора из конструктора, если позиция из него
+  },
+  (t) => [index("order_items_order_idx").on(t.orderId)],
+);
+
+export type Order = typeof orders.$inferSelect;
+export type OrderItem = typeof orderItems.$inferSelect;
+
 export type Product = typeof products.$inferSelect;
 export type NewProduct = typeof products.$inferInsert;

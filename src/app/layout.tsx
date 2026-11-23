@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Unbounded } from "next/font/google";
 import Link from "next/link";
+import { CartLink } from "@/components/CartLink";
 import "./globals.css";
 
 const manrope = Manrope({ subsets: ["latin", "cyrillic"], variable: "--font-manrope" });
@@ -27,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           К содержанию
         </a>
         <header className="sticky top-0 z-40 border-b border-line/70 bg-paper/85 backdrop-blur">
-          <div className="mx-auto flex max-w-7xl items-center gap-6 px-4 py-3 sm:px-6">
+          <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3 sm:gap-6 sm:px-6">
             <Link href="/" className="font-display text-lg font-bold tracking-tight">
               MULTIBOOK
             </Link>
@@ -38,16 +39,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </Link>
               ))}
             </nav>
-            <div className="ml-auto flex items-center gap-2 whitespace-nowrap text-[15px]">
-              <Link href="/catalog" className="rounded-full px-3 py-2 hover:bg-card lg:hidden">
+            <div className="ml-auto flex items-center gap-1 whitespace-nowrap text-[15px] sm:gap-2">
+              <Link href="/catalog" className="rounded-full px-2.5 py-2 hover:bg-card sm:px-3 lg:hidden">
                 Каталог
               </Link>
-              <Link href="/account" className="rounded-full px-3 py-2 hover:bg-card">
+              <Link href="/account" className="hidden rounded-full px-3 py-2 hover:bg-card sm:block">
                 Кабинет
               </Link>
-              <Link href="/cart" className="rounded-full bg-ink px-4 py-2 text-white">
-                Корзина
-              </Link>
+              <CartLink />
             </div>
           </div>
         </header>

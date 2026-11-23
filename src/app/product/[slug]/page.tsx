@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AddToCart } from "@/components/AddToCart";
 import { ProductCard } from "@/components/ProductCard";
 import { ProductVisual } from "@/components/ProductVisual";
 import { formatPrice, getProduct, relatedProducts } from "@/lib/catalog";
@@ -52,16 +53,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <button
-              type="button"
-              disabled
-              title="Корзина появится на этапе 1"
-              className="rounded-full bg-ink px-7 py-3.5 font-semibold text-white disabled:opacity-60"
-            >
-              {out ? "Нет в наличии" : "В корзину"}
-            </button>
+            <AddToCart productId={p.id} disabled={out || p.price <= 0} />
             {drawn && (
-              <Link href="/constructor" className="rounded-full border border-ink px-7 py-3.5 font-semibold">
+              <Link href={`/constructor?with=${encodeURIComponent(p.slug)}`} className="rounded-full border border-ink px-7 py-3.5 font-semibold">
                 Собрать с этим блокнот
               </Link>
             )}
