@@ -4,8 +4,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AddToCart } from "@/components/AddToCart";
 import { ProductCard } from "@/components/ProductCard";
+import { ProductComplements } from "@/components/product/ProductComplements";
+import { selectComplements } from "@/components/product/complements";
 import { ProductVisual } from "@/components/ProductVisual";
-import { formatPrice, getProduct, relatedProducts } from "@/lib/catalog";
+import { formatPrice, getProduct, listProducts, relatedProducts } from "@/lib/catalog";
 import { FORMATS, formatByDb } from "@/lib/formats";
 
 export const dynamic = "force-dynamic";
@@ -18,7 +20,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const p = getProduct((await params).slug);
   if (!p || !p.isActive) notFound();
-  const related = relatedProducts(p.type, p.id);
+  const complements = selectComplements(p, listProducts());
+  const related = complements ? [] : relatedProducts(p.type, p.id);
   const out = p.stock !== null && p.stock <= 0;
   const fmt = formatByDb(p.attrs.format);
   const drawn =
@@ -83,6 +86,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         </div>
       </div>
 
+      {complements && <ProductComplements selection={complements} />}
       {related.length > 0 && (
         <section className="mt-20">
           <h2 className="font-display text-2xl font-bold">Ещё в разделе «{p.type}»</h2>
