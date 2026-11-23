@@ -15,7 +15,7 @@ export function ShopChoices() {
       <Link href="/constructor" className="mc-shop-choice">
         <CategoryGlyph kind="pages" />
         <span>
-          <strong>Собрать свой</strong>
+          <strong>Конструктор</strong>
           <small>Обложка, листы и диски на ваш вкус</small>
         </span>
         <span aria-hidden="true">↗</span>

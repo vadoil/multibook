@@ -1,81 +1,55 @@
 import type { Metadata } from "next";
-import { Manrope, Unbounded } from "next/font/google";
-import Link from "next/link";
-import { CartLink } from "@/components/CartLink";
+import { Caveat, Cormorant_Garamond, Golos_Text } from "next/font/google";
+import { StoreHeader } from "@/components/store/StoreHeader";
+import { StoreFooter } from "@/components/store/StoreFooter";
 import "./globals.css";
+import "./design-preview/concepts.css";
+import "./design-preview/identity.css";
+import "./design-preview/storefront.css";
+import "./store.css";
 
-const manrope = Manrope({ subsets: ["latin", "cyrillic"], variable: "--font-manrope" });
-const unbounded = Unbounded({ subsets: ["latin", "cyrillic"], variable: "--font-unbounded", weight: ["500", "700"] });
+const golos = Golos_Text({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-concept-sans",
+});
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-concept-serif",
+});
+const caveat = Caveat({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-concept-hand",
+});
 
 export const metadata: Metadata = {
-  title: { default: "Multibook — модульные блокноты на дисках", template: "%s · Multibook" },
+  title: {
+    default: "Multibook — модульные блокноты на дисках",
+    template: "%s · Multibook",
+  },
   description:
-    "Блокноты, тетради и планеры с дисковым переплётом: листы снимаются и переставляются, блоки и обложки меняются. Соберите свой в конструкторе.",
+    "Готовые блокноты, тетради и планеры со сменными листами — или свой блокнот в конструкторе. Листы снимаются и переставляются, обложки и диски меняются.",
 };
 
-const nav = [
-  { href: "/catalog", label: "Каталог" },
-  { href: "/constructor", label: "Конструктор" },
-  { href: "/how-it-works", label: "Как это работает" },
-  { href: "/corporate", label: "Корпоративным" },
-];
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="ru" className={`${manrope.variable} ${unbounded.variable}`}>
-      <body className="min-h-dvh flex flex-col">
-        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-white">
+    <html
+      lang="ru"
+      className={`${golos.variable} ${cormorant.variable} ${caveat.variable}`}
+    >
+      <body className="store-body min-h-dvh flex flex-col">
+        <a href="#main" className="store-skip">
           К содержанию
         </a>
-        <header className="sticky top-0 z-40 border-b border-line/70 bg-paper/85 backdrop-blur">
-          <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3 sm:gap-6 sm:px-6">
-            <Link href="/" className="font-display text-lg font-bold tracking-tight">
-              MULTIBOOK
-            </Link>
-            <nav aria-label="Основное меню" className="hidden gap-5 whitespace-nowrap text-[15px] lg:flex">
-              {nav.map((n) => (
-                <Link key={n.href} href={n.href} className="text-ink/80 transition hover:text-ink">
-                  {n.label}
-                </Link>
-              ))}
-            </nav>
-            <div className="ml-auto flex items-center gap-1 whitespace-nowrap text-[15px] sm:gap-2">
-              <Link href="/catalog" className="rounded-full px-2.5 py-2 hover:bg-card sm:px-3 lg:hidden">
-                Каталог
-              </Link>
-              <Link href="/account" aria-label="Кабинет" className="grid place-items-center rounded-full p-2 hover:bg-card sm:px-3">
-                <svg viewBox="0 0 24 24" className="size-5 sm:hidden" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden>
-                  <circle cx="12" cy="8" r="4" />
-                  <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" strokeLinecap="round" />
-                </svg>
-                <span className="hidden sm:inline">Кабинет</span>
-              </Link>
-              <CartLink />
-            </div>
-          </div>
-        </header>
-        <main id="main" className="flex-1">
+        <StoreHeader />
+        <main id="main" className="store-main flex-1">
           {children}
         </main>
-        <footer className="mt-24 border-t border-line">
-          <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 text-sm text-muted sm:grid-cols-3 sm:px-6">
-            <div>
-              <p className="font-display text-ink">MULTIBOOK</p>
-              <p className="mt-2">Модульные блокноты, тетради и альбомы на дисках.</p>
-            </div>
-            <div className="flex flex-col gap-1">
-              <Link href="/delivery">Оплата и доставка</Link>
-              <Link href="/contacts">Контакты</Link>
-              <Link href="/privacy">Политика конфиденциальности</Link>
-            </div>
-            <div className="flex flex-col gap-1">
-              <a href="tel:+79998994114">+7 999 899-41-14</a>
-              <a href="https://www.ozon.ru/brand/multibook-100511115/" rel="noopener" target="_blank">
-                Multibook на Ozon
-              </a>
-            </div>
-          </div>
-        </footer>
+        <StoreFooter />
       </body>
     </html>
   );

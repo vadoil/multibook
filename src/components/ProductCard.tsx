@@ -8,7 +8,7 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/product/${product.slug}`}
-      className="group flex flex-col gap-3 rounded-[calc(var(--radius-card)+6px)] p-2 transition hover:bg-card"
+      className="group flex flex-col gap-3 rounded-[var(--radius-card)] p-2 transition hover:bg-card"
     >
       <div className="transition duration-300 group-hover:-translate-y-1">
         <ProductVisual product={product} />

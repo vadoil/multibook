@@ -84,7 +84,7 @@ export function DiscCatalog({ products, d, m }: { products: Product[]; d?: strin
         {groups.map((g) => {
           const a = g.rep.attrs;
           return (
-            <article key={g.key} className="group flex flex-col gap-3 rounded-[24px] p-2 transition hover:bg-card">
+            <article key={g.key} className="group flex flex-col gap-3 rounded-[var(--radius-card)] p-2 transition hover:bg-card">
               <Link href={`/product/${g.rep.slug}`} className="relative block overflow-hidden rounded-[var(--radius-card)]">
                 <div className="transition duration-500 group-hover:scale-[1.03]">
                   <ProductVisual product={g.rep} />
@@ -100,7 +100,7 @@ export function DiscCatalog({ products, d, m }: { products: Product[]; d?: strin
                     <Link
                       key={p.id}
                       href={`/product/${p.slug}`}
-                      className="rounded-full border border-line bg-card px-3 py-1.5 text-sm transition hover:border-ink"
+                      className="inline-flex min-h-11 items-center rounded-full border border-line bg-card px-3 py-1.5 text-sm transition hover:border-ink"
                       title={p.attrs.inferred?.includes("pack") ? "Фасовка определена по цене — уточните в карточке" : undefined}
                     >
                       {p.attrs.pack ?? 8} шт · <b>{formatPrice(p.price)}</b>

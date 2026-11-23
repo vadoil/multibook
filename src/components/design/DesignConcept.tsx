@@ -78,7 +78,7 @@ function Header({ concept }: { concept: ConceptName }) {
       </Link>
       <nav className="mc-desktop-nav" aria-label="Основное меню">
         <Link href="/catalog">Магазин</Link>
-        <Link href="/constructor">Собрать свой</Link>
+        <Link href="/constructor">Конструктор</Link>
         <a href="#how-it-works">Идея Multibook</a>
       </nav>
       <div className="mc-header-actions">
@@ -137,7 +137,7 @@ function Header({ concept }: { concept: ConceptName }) {
           aria-label="Мобильное меню"
         >
           <Link href="/catalog">Магазин</Link>
-          <Link href="/constructor">Собрать свой блокнот</Link>
+          <Link href="/constructor">Конструктор</Link>
           <a href="#how-it-works" onClick={() => setOpen(false)}>
             Как работает переплёт
           </a>
@@ -687,14 +687,16 @@ function Play({ products }: { products: Product[] }) {
 export function DesignConcept({
   concept,
   products,
+  embedded = false,
 }: {
   concept: ConceptName;
   products: Product[];
+  embedded?: boolean;
 }) {
   return (
     <div className={`mc-root mc-${concept}`}>
-      <PreviewNav concept={concept} />
-      <Header concept={concept} />
+      {!embedded && <PreviewNav concept={concept} />}
+      {!embedded && <Header concept={concept} />}
       <div className="mc-content">
         {concept === "paper" ? (
           <Paper products={products} />
@@ -704,7 +706,7 @@ export function DesignConcept({
           <Play products={products} />
         )}
       </div>
-      <Footer />
+      {!embedded && <Footer />}
     </div>
   );
 }

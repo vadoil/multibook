@@ -74,7 +74,7 @@ export function AuthForms({ next }: { next?: string }) {
             <input type="checkbox" name="consent" className="mt-1 accent-ink" />
             <span>
               Согласен на обработку персональных данных по{" "}
-              <Link href="/privacy" target="_blank" className="underline underline-offset-2">
+              <Link href="https://multi-book.ru/privacy" rel="noopener noreferrer" target="_blank" className="underline underline-offset-2">
                 политике конфиденциальности
               </Link>
             </span>
