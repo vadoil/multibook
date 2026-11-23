@@ -18,6 +18,14 @@ export type Wallpaper = {
 };
 
 const HOLD = 7000; // сколько стоит один кадр, мс
+const SCENES: Record<string, string> = {
+  "premium-city": "Москва-Сити",
+  "premium-meeting": "Переговоры",
+  "premium-coaching": "С коучем",
+  "premium-academy": "Новые знания",
+  "premium-city-night": "Вечерний Сити",
+  "premium-executive": "Рабочий день",
+};
 
 /** Первый экран-«рабочий стол»: полноэкранные обои из фото блокнотов меняются сами,
  *  а в доке справа внизу можно выбрать любые — как обои в настройках компьютера. */
@@ -74,7 +82,7 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
       ref={hero}
       className="wp-hero"
       aria-roledescription="карусель"
-      aria-label="Блокноты Multibook"
+      aria-label="Премиальные ежедневники Multibook"
       data-running={running || undefined}
       onPointerMove={(e) => {
         if (still || e.pointerType !== "mouse" || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
@@ -117,16 +125,16 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
 
       <div className="wp-copy">
         <h1>
-          Блокноты,
+          Ежедневники
           <br />
-          которые можно
+          для больших
           <br />
-          менять
+          планов.
         </h1>
-        <p>Листы снимаются с дисков и встают в любое место. Обложку и диски можно поменять, не покупая новый блокнот.</p>
+        <p>Премиальная коллекция со сменными листами. Готовый ежедневник или ваша сборка в конструкторе.</p>
         <div className="wp-actions">
           <Link href="/catalog?type=%D0%91%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82%D1%8B" className="wp-btn wp-btn-main">
-            Выбрать готовый
+            Готовые ежедневники
           </Link>
           <Link href="/constructor" className="wp-btn">
             Конструктор
@@ -139,7 +147,7 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
           <Link href={cur.href} className="wp-caption">
             <span className="wp-caption-name">«{cur.name}»</span>
             {cur.price && <span className="wp-caption-price">{cur.price}</span>}
-            <span className="wp-caption-more">Посмотреть блокнот</span>
+            <span className="wp-caption-more">Посмотреть ежедневник</span>
           </Link>
         ) : (
           <p className="wp-caption">
@@ -151,7 +159,7 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
           <div
             className="wp-dock"
             role="group"
-            aria-label="Выбор обоев"
+            aria-label="Выбор сцены и ежедневника"
             onPointerEnter={(e) => e.pointerType === "mouse" && setHold(true)}
             onPointerLeave={() => setHold(false)}
             onFocus={() => setHold(true)}
@@ -162,8 +170,8 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
                 key={s.id}
                 type="button"
                 className="wp-thumb"
-                data-name={s.name}
-                aria-label={`Обои «${s.name}»`}
+                data-name={SCENES[s.id] ?? s.name}
+                aria-label={`${SCENES[s.id] ?? "Коллекция"}: ежедневник «${s.name}»`}
                 aria-current={i === index || undefined}
                 onClick={() => go(i)}
               >
@@ -173,7 +181,7 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
               </button>
             ))}
             {!still && (
-              <button type="button" className="wp-pause" onClick={() => setPaused(!paused)} aria-label={paused ? "Листать обои" : "Остановить смену обоев"}>
+              <button type="button" className="wp-pause" onClick={() => setPaused(!paused)} aria-label={paused ? "Продолжить просмотр" : "Остановить смену кадров"}>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   {paused ? <path d="M8 5.5v13l10-6.5z" /> : <path d="M8 5h3v14H8zM13 5h3v14h-3z" />}
                 </svg>
@@ -183,7 +191,7 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
         )}
       </div>
       <p className="wp-sr" aria-live={running ? "off" : "polite"}>
-        Обои {index + 1} из {n}: {cur.alt}
+        Коллекция {index + 1} из {n}: {cur.alt}
       </p>
     </section>
   );

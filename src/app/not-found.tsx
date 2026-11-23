@@ -18,7 +18,7 @@ export default function NotFound() {
           <Link href="/constructor">Конструктор</Link>
         </div>
       </div>
-      <div className="not-found-photo"><Image src="/hero/botanika-herbarium-1600.webp" alt="Блокнот «Ботаника» со сменными листами" fill sizes="(max-width: 760px) 100vw, 45vw" priority /></div>
+      <div className="not-found-photo"><Image src="/hero/premium-city-1600.webp" alt="Ежедневник «Важная птица» на фоне Москва-Сити" fill sizes="(max-width: 760px) 100vw, 45vw" priority /></div>
       <nav className="not-found-categories" aria-label="Категории магазина">
         {TYPE_LABELS.map((t, i) => <Link key={t.type} href={`/catalog?type=${encodeURIComponent(t.type)}`}><CategoryGlyph kind={glyphs[i]} /><span>{t.label}</span></Link>)}
       </nav>
