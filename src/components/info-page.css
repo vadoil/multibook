@@ -1,0 +1,36 @@
+.info-page { width: min(100% - 8%, 1180px); margin-inline: auto; padding: 64px 0 32px; }
+.info-heading { max-width: 850px; padding-bottom: 44px; }
+.info-symbol {
+  display: grid; place-items: center; width: 70px; height: 70px; margin-bottom: 24px;
+  border: 1px solid var(--color-line); border-radius: 50%; color: var(--color-accent); background: var(--color-card);
+}
+.info-symbol svg { width: 34px; height: 34px; }
+.info-heading h1 { font-family: var(--font-display); font-size: clamp(42px, 5.5vw, 76px); font-weight: 500; letter-spacing: -.035em; line-height: 1; }
+.info-heading > p { max-width: 720px; margin-top: 24px; font-size: 18px; line-height: 1.65; color: var(--color-muted); }
+.info-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 70px; align-items: start; border-top: 1px solid var(--color-line); padding-top: 36px; }
+.info-nav { position: sticky; top: 122px; display: grid; gap: 6px; }
+.info-nav a { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 10px 12px; border-radius: var(--radius-card); font-size: 13px; color: var(--color-muted); }
+.info-nav a:hover, .info-nav a[aria-current] { background: var(--color-card); color: var(--color-ink); }
+.info-nav svg { width: 24px; height: 24px; flex: none; }
+.info-content { min-width: 0; display: grid; gap: 40px; }
+.info-section + .info-section { border-top: 1px solid var(--color-line); padding-top: 32px; }
+.info-section h2 { display: flex; gap: 14px; align-items: start; font-family: var(--font-display); font-size: 32px; line-height: 1.1; font-weight: 600; letter-spacing: -.02em; }
+.info-section h2 svg { width: 22px; height: 22px; margin-top: 6px; flex: none; color: var(--color-accent); }
+.info-section-body { display: grid; gap: 14px; margin-top: 20px; font-size: 15px; line-height: 1.8; overflow-wrap: anywhere; }
+.info-section-body a { text-decoration: underline; text-underline-offset: 4px; }
+.info-section-body a:hover { color: var(--color-accent); }
+.info-section-body ul { display: grid; gap: 14px; list-style: disc; padding-left: 20px; }
+.info-section-body li::marker { color: var(--color-accent); }
+@media (max-width: 760px) {
+  .info-page { width: calc(100% - 40px); padding-top: 30px; }
+  .info-symbol { width: 56px; height: 56px; margin-bottom: 20px; }
+  .info-heading { padding-bottom: 28px; }
+  .info-heading h1 { font-size: 42px; line-height: 1.02; overflow-wrap: anywhere; }
+  .info-heading > p { margin-top: 18px; font-size: 15px; }
+  .info-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 18px; }
+  .info-nav { position: static; display: flex; gap: 6px; overflow-x: auto; padding: 3px 3px 12px; scrollbar-width: thin; }
+  .info-nav a { flex: none; border: 1px solid var(--color-line); padding: 10px 12px; font-size: 12px; }
+  .info-nav svg { width: 20px; height: 20px; }
+  .info-section h2 { font-size: 29px; }
+  .info-section-body { font-size: 15px; line-height: 1.75; }
+}

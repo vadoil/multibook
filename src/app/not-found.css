@@ -1,0 +1,23 @@
+.not-found { max-width: 1366px; margin: auto; padding: 48px 4% 24px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px 6%; align-items: center; }
+.not-found-code { font-family: var(--font-display); font-size: clamp(100px, 14vw, 200px); font-weight: 400; line-height: .8; letter-spacing: -.06em; color: var(--color-accent); margin-bottom: 24px; }
+.not-found h1 { font-family: var(--font-display); font-size: clamp(40px, 4vw, 62px); line-height: 1; letter-spacing: -.035em; }
+.not-found-copy > p:not(.not-found-code) { max-width: 400px; margin-top: 22px; color: var(--color-muted); font-size: 15px; line-height: 1.75; }
+.not-found-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.not-found-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border: 1px solid var(--color-ink); border-radius: 999px; padding: 12px 20px; font-size: 14px; }
+.not-found-actions a:first-child { background: var(--color-ink); color: var(--color-card); }
+.not-found-actions a:hover { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-card); }
+.not-found-photo { position: relative; height: 440px; overflow: hidden; border-radius: var(--radius-card); }
+.not-found-photo img { object-fit: cover; object-position: 100% 50%; }
+.not-found-categories { grid-column: 1/-1; display: flex; flex-wrap: wrap; gap: 8px 20px; padding-top: 24px; border-top: 1px solid var(--color-line); }
+.not-found-categories a { min-height: 48px; display: inline-flex; align-items: center; gap: 8px; font-size: 13px; }
+.not-found-categories a:hover { color: var(--color-accent); }
+.not-found-categories svg { width: 30px; height: 30px; }
+@media (max-width: 760px) {
+  .not-found { grid-template-columns: minmax(0, 1fr); padding: 36px 20px 20px; gap: 28px; }
+  .not-found-code { font-size: 110px; margin-bottom: 20px; }
+  .not-found h1 { font-size: 41px; }
+  .not-found-actions { gap: 8px; }
+  .not-found-actions a { padding-inline: 15px; font-size: 13px; }
+  .not-found-photo { height: 260px; }
+  .not-found-categories { gap: 8px 16px; }
+}

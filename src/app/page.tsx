@@ -1,4 +1,8 @@
+import "./design-preview/concepts.css";
+import "./design-preview/identity.css";
+import "./design-preview/storefront.css";
 import { DesignConcept } from "@/components/design/DesignConcept";
+import { DesignCategories } from "@/components/design/DesignCategories";
 import { WallpaperHero, type Wallpaper } from "@/components/hero/WallpaperHero";
 import { JsonLd } from "@/components/JsonLd";
 import wallpapers from "../../public/hero/wallpapers.json";
@@ -26,7 +30,7 @@ export default function Home() {
   return (
     <>
       <JsonLd data={organizationJsonLd()} />
-      <DesignConcept concept="journal" products={featured} embedded hero={<WallpaperHero slides={slides} />} />
+      <DesignConcept concept="journal" products={featured} embedded hero={<WallpaperHero slides={slides} />} categories={<DesignCategories concept="journal" />} />
     </>
   );
 }

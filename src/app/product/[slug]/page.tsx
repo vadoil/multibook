@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AddToCart } from "@/components/AddToCart";
 import { ProductCard } from "@/components/ProductCard";
 import { ProductComplements } from "@/components/product/ProductComplements";
 import { selectComplements } from "@/components/product/complements";
-import { ProductVisual } from "@/components/ProductVisual";
+import { ProductGallery } from "@/components/product/ProductGallery";
+import { ServiceIcon } from "@/components/store/ServiceIcon";
 import { formatPrice, getProduct, listProducts, relatedProducts } from "@/lib/catalog";
 import { FORMATS, formatByDb } from "@/lib/formats";
 import { JsonLd } from "@/components/JsonLd";
 import { productDescription, productJsonLd, seoTitle, typeLabel } from "@/lib/seo";
+import "./product.css";
 
 export const dynamic = "force-dynamic";
 
@@ -41,25 +42,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const specs = Object.entries(p.specs).filter(([k]) => k !== "Тип");
 
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
+    <div className="product-page mx-auto max-w-7xl px-4 pt-8 sm:px-6">
       <JsonLd data={productJsonLd(p)} />
       <nav aria-label="Навигация" className="text-sm text-muted">
         <Link href="/catalog">Каталог</Link> / <Link href={`/catalog?type=${encodeURIComponent(p.type)}`}>{typeLabel(p.type)}</Link>
       </nav>
 
-      <div className="mt-6 grid gap-10 lg:grid-cols-2">
-        <div className="grid gap-3">
-          <ProductVisual product={p} size="large" />
-          {p.images.length > 1 && (
-            <div className="grid grid-cols-4 gap-2">
-              {p.images.slice(1, 9).map((src, i) => (
-                <div key={src} className="relative aspect-square overflow-hidden rounded-xl bg-[#efe9df]">
-                  <Image src={src} alt={`${seoTitle(p.title, 80)} — фото ${i + 2}`} fill sizes="12vw" className="object-cover" />
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+      <div className="product-layout mt-6 grid gap-10 lg:grid-cols-2">
+        <ProductGallery key={p.id} product={p} />
 
         <div className="lg:sticky lg:top-24 lg:self-start">
           <p className="text-sm uppercase tracking-wider text-muted">{p.type}</p>
@@ -80,9 +70,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             )}
           </div>
 
-          <ul className="mt-5 grid gap-1 text-sm text-muted" aria-label="Доставка и оплата">
-            <li>Доставка СДЭК по России — в пункт выдачи или курьером; самовывоз из Глухово (Красногорский район)</li>
-            <li>Оплата картой на сайте, для организаций — по счёту</li>
+          <ul className="product-delivery" aria-label="Доставка и оплата">
+            <li><ServiceIcon kind="delivery" /><span>Доставка СДЭК по России — в пункт выдачи или курьером; самовывоз из Глухово (Красногорский район)</span></li>
+            <li><ServiceIcon kind="privacy" /><span>Оплата картой на сайте, для организаций — по счёту</span></li>
             <li>
               <Link href="/delivery" className="underline underline-offset-2">
                 Условия доставки, оплаты и возврата
@@ -105,6 +95,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <div className="mt-8 whitespace-pre-line border-t border-line pt-6 leading-relaxed text-ink/85">{p.description}</div>
           )}
         </div>
+      </div>
+
+      <div className="product-purchase" aria-label="Покупка товара">
+        <div className="product-purchase-price">
+          <span>{p.attrs.format ?? p.shortTitle}</span>
+          <b>{formatPrice(p.price)}</b>
+        </div>
+        <div className="product-purchase-action"><AddToCart productId={p.id} disabled={out || p.price <= 0} /></div>
       </div>
 
       {complements && <ProductComplements selection={complements} />}

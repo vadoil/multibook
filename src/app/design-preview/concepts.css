@@ -430,7 +430,7 @@ body:has(.mc-preview) {
   top: 12px;
   padding: 6px 10px;
   background: var(--mc-light);
-  font-size: 10px;
+  font-size: 12px;
 }
 .mc-product-open {
   position: absolute;
@@ -465,7 +465,7 @@ body:has(.mc-preview) {
 }
 .mc-product-detail {
   color: var(--mc-muted);
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 7px !important;
 }
 .mc-material-1 {
@@ -1824,7 +1824,7 @@ body:has(.mc-preview) {
     line-height: 1.07;
   }
   .mc-section-note {
-    font-size: 11px;
+    font-size: 12px;
   }
   .mc-button {
     min-height: 56px;
@@ -1943,14 +1943,14 @@ body:has(.mc-preview) {
     font-size: 12px;
   }
   .mc-product-detail {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.5;
     margin-top: 6px !important;
   }
   .mc-product-label {
     top: 8px;
     left: 8px;
-    font-size: 8px;
+    font-size: 12px;
     padding: 4px 7px;
   }
   .mc-product-open {
