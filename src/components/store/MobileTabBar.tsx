@@ -33,7 +33,7 @@ export function MobileTabBar() {
   }, [pathname, rememberConstructor]);
   if (pathname.startsWith("/admin")) return null;
   const shop = pathname === "/" || pathname.startsWith("/catalog") || pathname.startsWith("/product/");
-  const constructor = pathname.startsWith("/constructor");
+  const constructor = pathname === "/constructor";
   const account = pathname.startsWith("/account");
   const cart = pathname === "/cart" ? "page" : /^\/(order|pay)\//.test(pathname) ? "location" : undefined;
   return (
