@@ -2,13 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useState } from "react";
 import { cart } from "@/lib/cart";
 import { FORMATS, type FormatKey } from "@/lib/formats";
 import { formatPrice } from "@/lib/money";
 import { NotebookPreview, type NotebookLook, type Ruling } from "./NotebookPreview";
-import { DiscSwatch, PageSwatch } from "./Swatches";
-import { StoreTabButton } from "./store/StoreTab";
+import { PageSwatch } from "./Swatches";
+import { CategoryTabIcon, StoreTabButton, StoreTabLink } from "./store/StoreTab";
+import coverArtwork from "./constructor/cover-artwork.json";
+import discPhotos from "./constructor/disc-photos.json";
 
 export type CoverOpt = {
   id: number;
@@ -36,6 +38,7 @@ export type DiscOpt = {
   id: number;
   title: string;
   price: number;
+  image: string | null;
   hex: string;
   diameter: 18 | 24;
   metal: boolean;
@@ -44,16 +47,18 @@ export type DiscOpt = {
   available: boolean;
 };
 /** disc: null — оставить диски из комплекта мини-блокнота. */
-export type Initial = { cover?: number; blocks: Record<number, number>; disc?: number | null };
+export type Initial = { cover?: number; back?: number; blocks: Record<number, number>; disc?: number | null };
 
 /** Сколько листов держат диски: 18 мм — до 64, 24 мм — до 86. */
 const CAPACITY = { 18: 64, 24: 86 } as const;
-const MAX_SPARES = 3;
+const MAX_A5_BLOCKS = 4;
 const MAX_MINI_BLOCKS = 5;
 const RULING: Record<Ruling, string> = { grid: "клетка", dot: "точка", line: "линейка", blank: "без линовки", plan: "планер" };
 const PRINT_HEX = "#33403f";
 const KIT_DISCS = { hex: "#2f2f30", diameter: 18 };
 const MINI_SHEETS = 40; // для толщины превью, у мини-блоков нет числа листов в данных
+type Artwork = { front: string; back?: string; binding?: "top"; discs?: number; accessory?: string };
+const artwork = (image: string | null | undefined): Artwork | undefined => image ? (coverArtwork as Record<string, Artwork>)[image] : undefined;
 
 function Step({ n, title, hint, done, children, aside }: { n: number; title: string; hint?: string; done: boolean; children: React.ReactNode; aside?: React.ReactNode }) {
   return (
@@ -80,14 +85,14 @@ function Step({ n, title, hint, done, children, aside }: { n: number; title: str
 
 function Qty({ value, min, max, onChange, label }: { value: number; min: number; max: number; onChange: (n: number) => void; label: string }) {
   return (
-    <div className="flex items-center rounded-full border border-line bg-paper">
-      <button type="button" onClick={() => onChange(value - 1)} disabled={value <= min} className="grid size-9 place-items-center text-lg disabled:opacity-30" aria-label={`Меньше: ${label}`}>
+    <div className="constructor-qty" role="group" aria-label={`Количество: ${label}`}>
+      <button type="button" onClick={() => onChange(value - 1)} disabled={value <= min} aria-label={`Меньше: ${label}`}>
         −
       </button>
-      <span className="min-w-6 text-center tabular-nums" aria-live="polite">
+      <output aria-label={`Количество: ${label}`} aria-live="polite">
         {value}
-      </span>
-      <button type="button" onClick={() => onChange(value + 1)} disabled={value >= max} className="grid size-9 place-items-center text-lg disabled:opacity-30" aria-label={`Больше: ${label}`}>
+      </output>
+      <button type="button" onClick={() => onChange(value + 1)} disabled={value >= max} aria-label={`Больше: ${label}`}>
         +
       </button>
     </div>
@@ -118,22 +123,29 @@ export function Constructor({
   const parts = F.mode === "parts";
 
   const [coverId, setCoverId] = useState(initial.cover);
-  // А5: один блок в блокноте + запасные. Мини: любые запасные блоки в любом количестве.
+  const [backId, setBackId] = useState(initial.back);
   const [blockQty, setBlockQty] = useState<Record<number, number>>(initial.blocks);
   const startDisc = initial.disc ? discs.find((d) => d.id === initial.disc) : undefined;
   const [variant, setVariant] = useState<string | null>(startDisc?.variant ?? (parts ? (discs[0]?.variant ?? null) : null));
   const [wantD, setWantD] = useState<18 | 24>(startDisc?.diameter ?? (parts ? 24 : 18));
-  const [view, setView] = useState<"closed" | "open">("closed");
+  const [view, setView] = useState<"closed" | "open" | "back">("closed");
   const [allCovers, setAllCovers] = useState(false);
   const [coverKind, setCoverKind] = useState<"all" | "set" | "print" | "soft">("all");
   const [added, setAdded] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [compositionOpen, setCompositionOpen] = useState(false);
+  const compositionId = useId();
 
   const cover = covers.find((c) => c.id === coverId);
+  const backIncluded = !parts || !!cover?.isSet;
+  const back = backIncluded ? undefined : covers.find((c) => c.id === backId && !c.isSet);
+  const rearOptions = covers.filter((c) => !c.isSet);
+  const frontArt = artwork(cover?.image);
+  const rearArt = artwork(back?.image);
   const chosen = blocks.filter((b) => blockQty[b.id]).map((b) => ({ ...b, qty: blockQty[b.id] }));
-  const main = parts ? chosen[0] : undefined; // блок, который стоит в А5
-  const spares = parts ? Math.max(0, (main?.qty ?? 1) - 1) : chosen.reduce((s, b) => s + b.qty, 0);
-  const sheets = parts ? (main?.sheets ?? 52) : MINI_SHEETS;
+  const main = parts ? chosen[0] : undefined;
+  const blockCount = chosen.reduce((s, b) => s + b.qty, 0);
+  const sheets = parts ? chosen.reduce((s, b) => s + (b.sheets ?? 52) * b.qty, 0) : MINI_SHEETS;
   const tooMany = parts && sheets > CAPACITY[24];
   const diameter: 18 | 24 = parts && sheets > CAPACITY[18] ? 24 : wantD;
   const forced = parts && sheets > CAPACITY[18] && wantD === 18;
@@ -159,28 +171,34 @@ export function Constructor({
         (want && shown.find((v) => colorOf(v.key) === colorOf(want.variant))?.by[diameter]) ??
         (parts ? shown[0]?.by[diameter] : undefined));
 
-  const total = (cover?.price ?? 0) + chosen.reduce((s, b) => s + b.price * b.qty, 0) + (disc?.price ?? 0);
-  const ready = parts ? !!cover?.available && !!main?.available && !!disc?.available : !!cover?.available && chosen.every((b) => b.available);
+  const total = (cover?.price ?? 0) + (back?.price ?? 0) + chosen.reduce((s, b) => s + b.price * b.qty, 0) + (disc?.price ?? 0);
+  const ready = !!cover?.available && chosen.every((b) => b.available) && (parts ? blockCount > 0 && !!disc?.available && (backIncluded || !!back?.available) : true);
+  const missing = !cover ? "Выберите обложку" : parts && !backIncluded && !back ? "Выберите заднюю обложку" : parts && !blockCount ? "Добавьте хотя бы один блок листов" : !ready ? "Проверьте наличие выбранных деталей" : "";
 
   const ruling = parts ? main?.ruling : (cover?.ruling ?? chosen[0]?.ruling);
   const look: NotebookLook = {
-    front: cover ? { hex: cover.hex ?? PRINT_HEX, print: cover.print } : undefined,
-    back: cover ? { hex: cover.hex ?? PRINT_HEX } : undefined,
+    front: cover ? { hex: cover.hex ?? PRINT_HEX, print: cover.print, artwork: frontArt?.front } : undefined,
+    back: back ? { hex: back.hex ?? PRINT_HEX, artwork: rearArt?.front } : backIncluded && cover ? { hex: cover.hex ?? PRINT_HEX, artwork: frontArt?.back } : undefined,
     discs: disc ? { hex: disc.hex, diameter: disc.diameter, metal: disc.metal || disc.finishKind === "metal" } : !parts && cover ? KIT_DISCS : undefined,
     sheets,
     paper: (main ?? chosen[0])?.paper,
     pages: [ruling, ruling],
-    shape: { w: F.w, h: F.h, discs: F.discs },
+    shape: { w: F.w, h: F.h, discs: frontArt?.discs ?? F.discs },
+    binding: frontArt?.binding,
+    coverAspect: parts ? 5 / 6 : undefined,
   };
 
   // Сборка — в адресной строке, чтобы ей можно было поделиться.
   const query = useMemo(() => {
     const q = new URLSearchParams({ f: format });
     if (cover) q.set("c", String(cover.id));
+    if (back) q.set("r", String(back.id));
+    // Distinguish an intentionally empty selection from an old link with defaults.
+    if (!chosen.length) q.set("b", "0");
     if (chosen.length) q.set("b", chosen.map((b) => (b.qty > 1 ? `${b.id}.${b.qty}` : String(b.id))).join(","));
     if (disc) q.set("d", String(disc.id));
     return q.toString();
-  }, [format, cover, chosen, disc]);
+  }, [format, cover, back, chosen, disc]);
   useEffect(() => {
     window.history.replaceState(null, "", `/constructor?${query}`);
     setAdded(false);
@@ -198,10 +216,9 @@ export function Constructor({
 
   const setQty = (id: number, n: number) =>
     setBlockQty((q) => {
-      if (parts) return n > 0 ? { [id]: n } : q; // в А5 блок один, меняем целиком
       const next = { ...q };
       if (n <= 0) delete next[id];
-      else next[id] = Math.min(MAX_MINI_BLOCKS, n);
+      else next[id] = Math.min(parts ? MAX_A5_BLOCKS : MAX_MINI_BLOCKS, n);
       return next;
     });
 
@@ -209,9 +226,13 @@ export function Constructor({
     if (!ready || !cover) return;
     const label = parts
       ? `Блокнот ${F.label}: ${cover.title}, ${sheets} л., диски ${diameter} мм`
-      : `${F.label}: ${cover.title}${spares ? ` + ${spares} запасн. блок.` : ""}`;
+      : `${F.label}: ${cover.title}${blockCount ? ` + ${blockCount} запасн. блок.` : ""}`;
+    const items = [{ productId: cover.id, qty: 1 }, ...(back ? [{ productId: back.id, qty: 1 }] : []), ...chosen.map((b) => ({ productId: b.id, qty: b.qty })), ...(disc ? [{ productId: disc.id, qty: 1 }] : [])];
+    // Front and rear may be the same SKU. The existing cart expects one line per SKU.
+    const quantities = new Map<number, number>();
+    for (const item of items) quantities.set(item.productId, (quantities.get(item.productId) ?? 0) + item.qty);
     cart.addBundle(
-      [{ productId: cover.id, qty: 1 }, ...chosen.map((b) => ({ productId: b.id, qty: b.qty })), ...(disc ? [{ productId: disc.id, qty: 1 }] : [])],
+      [...quantities].map(([productId, qty]) => ({ productId, qty })),
       label,
       look,
     );
@@ -223,19 +244,24 @@ export function Constructor({
 
   const summary = (
     <>
+      <h2 className="mb-3 hidden items-center gap-2 font-display text-xl lg:flex"><CategoryTabIcon type="Тетради" />Ваша комплектация</h2>
       <ul className="grid gap-1.5 text-sm">
         {cover && (
           <li className="flex justify-between gap-3">
             <span className="min-w-0 truncate">
-              {parts ? "Обложка" : "Блокнот"} · {cover.title}
+              {parts ? cover.isSet ? "Комплект из двух обложек" : "Передняя обложка" : "Блокнот"} · {cover.title}
             </span>
             <span className="shrink-0 tabular-nums">{formatPrice(cover.price)}</span>
           </li>
         )}
+        {back && <li className="flex justify-between gap-3"><span>Задняя обложка · {back.title}</span><span className="shrink-0 tabular-nums">{formatPrice(back.price)}</span></li>}
+        {backIncluded && cover && <li className="text-muted">Задняя обложка — входит в комплект</li>}
+        {!parts && cover && <li className="text-muted">Блок листов и {frontArt?.accessory ?? "пишущий инструмент"} — входят в комплект</li>}
+        {!backIncluded && !back && <li className="text-accent">Задняя обложка ещё не выбрана</li>}
         {chosen.map((b) => (
           <li key={b.id} className="flex justify-between gap-3">
             <span className="min-w-0 truncate">
-              {parts ? `${b.title}${b.sheets ? `, ${b.sheets} л.` : ""}${spares ? ` + ${spares} запасн.` : ""}` : `Запасной блок · ${b.title}${b.qty > 1 ? ` × ${b.qty}` : ""}`}
+              {parts ? b.title : `Запасной блок · ${b.title}`} × {b.qty}{b.sheets ? ` · по ${b.sheets} л.` : ""}
             </span>
             <span className="shrink-0 tabular-nums">{formatPrice(b.price * b.qty)}</span>
           </li>
@@ -251,33 +277,29 @@ export function Constructor({
           !parts && cover && <li className="text-muted">Диски — из комплекта</li>
         )}
       </ul>
+      <p className="mt-3 text-sm text-muted" data-block-count>{parts ? "Блоков листов" : "Запасных блоков"}: {blockCount}{parts ? ` · всего ${sheets} л.` : ""}</p>
       <div className="mt-4 flex items-baseline justify-between border-t border-line pt-4">
         <span>Итого</span>
-        <b className="font-display text-3xl tabular-nums">{formatPrice(total)}</b>
+        <b className="font-display text-3xl tabular-nums" data-constructor-total>{formatPrice(total)}</b>
       </div>
     </>
   );
 
   return (
-    <div className="mt-8 grid gap-10 pb-28 lg:grid-cols-[minmax(0,1fr)_400px] lg:pb-0">
+    <div className="constructor-builder mt-8 grid gap-10 pb-28 lg:grid-cols-[minmax(0,1fr)_400px] lg:pb-0">
       {/* Превью: на телефоне сверху, на десктопе — липкая колонка справа. */}
-      <aside className="lg:order-2 lg:sticky lg:top-20 lg:self-start">
-        <div className="rounded-[28px] bg-[#ece5d9] p-5">
+      <aside className="constructor-preview lg:order-2 lg:self-start">
+        <div className="constructor-stage">
           <div className="flex items-center justify-between gap-2">
             <div className="store-tabs-row" role="group" aria-label="Вид">
-              {(["closed", "open"] as const).map((v) => (
+              {(["closed", "back", "open"] as const).map((v) => (
                 <StoreTabButton key={v} onClick={() => setView(v)} aria-pressed={view === v} className="store-tab-compact">
-                  {v === "closed" ? "Обложка" : "Страница"}
+                  {v === "closed" ? "Спереди" : v === "back" ? "Сзади" : "Страница"}
                 </StoreTabButton>
               ))}
             </div>
-            {cover?.image && (
-              <div className="relative size-12 overflow-hidden rounded-xl ring-2 ring-paper" title="Так выглядит на фото">
-                <Image src={cover.image} alt={`Фото: ${cover.title}`} fill sizes="48px" className="object-cover" />
-              </div>
-            )}
           </div>
-          <NotebookPreview look={look} view={view} label={`${view === "open" ? "Страница" : "Обложка"}: ${F.label}`} className="mx-auto mt-3 max-w-[280px] sm:max-w-[320px] lg:max-w-none" />
+          <NotebookPreview look={look} view={view} label={`${view === "open" ? "Страница" : view === "back" ? "Задняя обложка" : "Передняя обложка"}: ${F.label}`} className="constructor-main-book mx-auto mt-2 sm:max-w-[320px] lg:max-w-none" />
           <p className="text-center text-sm text-muted">
             {F.label} · {F.size}
           </p>
@@ -285,25 +307,27 @@ export function Constructor({
             <div className="mt-3">
               <div className="flex justify-between text-sm">
                 <span>
-                  {sheets} листов из {cap}
+                  {sheets} л. выбрано · вместимость {cap}
                 </span>
                 <span className="text-muted">диски {diameter} мм</span>
               </div>
               <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-paper" aria-hidden>
                 <div className={`h-full rounded-full transition-all duration-500 ${tooMany ? "bg-warn" : "bg-ink"}`} style={{ width: `${meter}%` }} />
               </div>
-              {tooMany && <p className="mt-2 text-sm font-medium text-warn">Это больше, чем держат диски 24 мм (до {CAPACITY[24]} листов). Подтвердим комплектацию при звонке.</p>}
+              {tooMany && <p className="mt-2 text-sm font-medium text-warn" role="status">Все {sheets} листов сразу не поместятся: диски 24 мм держат до {CAPACITY[24]} л. Часть листов можно оставить на замену.</p>}
               {forced && !tooMany && <p className="mt-2 text-sm text-muted">Листов больше {CAPACITY[18]} — поставили диски 24 мм.</p>}
             </div>
           )}
         </div>
 
-        <div className="mt-4 hidden rounded-[var(--radius-card)] bg-card p-5 lg:block">
+        <div className="constructor-composition mt-4 rounded-[var(--radius-card)] bg-card p-5">
+          <StoreTabButton icon={<CategoryTabIcon type="Тетради" />} aria-expanded={compositionOpen} aria-controls={compositionId} onClick={() => setCompositionOpen(!compositionOpen)} className="constructor-summary-toggle">Состав комплекта <span aria-hidden>{compositionOpen ? "−" : "+"}</span></StoreTabButton>
+          <div id={compositionId} className={`constructor-summary-body ${compositionOpen ? "is-open" : ""}`}>
           {summary}
-          <AddButton ready={ready} added={added} total={total} onAdd={add} />
+          <div className="hidden lg:block"><AddButton ready={ready} added={added} total={total} onAdd={add} /></div>
           <button
             type="button"
-            className="mt-3 w-full text-sm text-muted underline underline-offset-4"
+            className="mt-2 min-h-11 w-full text-sm text-muted underline underline-offset-4"
             onClick={() => {
               navigator.clipboard?.writeText(window.location.href).then(() => setCopied(true));
               setTimeout(() => setCopied(false), 2000);
@@ -311,14 +335,16 @@ export function Constructor({
           >
             {copied ? "Ссылка скопирована" : "Скопировать ссылку на сборку"}
           </button>
+          </div>
+          {missing && <p className="mt-3 text-sm text-accent" role="status">{missing}</p>}
         </div>
       </aside>
 
       <div className="grid gap-12 lg:order-1">
         <Step
           n={1}
-          title={parts ? "Обложка" : "Блокнот"}
-          hint={parts ? undefined : "В комплекте блок, диски и ручка"}
+          title={parts ? "Передняя обложка" : "Блокнот"}
+          hint={parts ? "Одиночная обложка или готовый комплект из двух" : `В комплекте обложки, блок, диски и ${frontArt?.accessory ?? "пишущий инструмент"}`}
           done={!!cover}
           aside={
             parts && (
@@ -343,9 +369,9 @@ export function Constructor({
         >
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
             {visibleCovers.map((c) => (
-              <button key={c.id} type="button" onClick={() => setCoverId(c.id)} disabled={!c.available} aria-pressed={coverId === c.id} className={`group relative rounded-[20px] p-1.5 text-left ${pick}`}>
+              <button key={c.id} type="button" onClick={() => { setCoverId(c.id); if (c.isSet) setBackId(undefined); }} disabled={!c.available} aria-pressed={coverId === c.id} className={`constructor-cover group relative p-1.5 text-left ${pick}`}>
                 <div className="relative aspect-square overflow-hidden rounded-2xl bg-[#efe9df]">
-                  {c.image && <Image src={c.image} alt="" fill sizes="(min-width:1280px) 200px, 45vw" className="object-cover transition duration-500 group-hover:scale-105" />}
+                  {c.image && <Image src={artwork(c.image)?.front ?? c.image} alt="" fill sizes="(min-width:1280px) 200px, 45vw" className="object-contain transition duration-500 group-hover:scale-105" />}
                   {c.hex && <span className="absolute bottom-2 left-2 size-4 rounded-full ring-2 ring-white" style={{ background: c.hex }} />}
                 </div>
                 <Check />
@@ -357,27 +383,40 @@ export function Constructor({
             ))}
           </div>
           {coverList.length > 9 && (
-            <button type="button" onClick={() => setAllCovers((v) => !v)} className="mt-4 rounded-full border border-line px-5 py-2.5 text-sm">
+            <StoreTabButton onClick={() => setAllCovers((v) => !v)} aria-expanded={allCovers} className="mt-4 store-tab-compact">
               {allCovers ? "Свернуть" : `Показать все ${coverList.length}`}
-            </button>
+            </StoreTabButton>
           )}
         </Step>
 
+        {parts && <Step n={2} title="Задняя обложка" hint={backIncluded ? "В выбранном комплекте уже две обложки" : "Нужна для полной сборки. Можно выбрать ту же модель или сочетать разные"} done={backIncluded || !!back?.available}>
+          {backIncluded ? <div className="constructor-included">
+            <NotebookPreview look={look} view="back" className="w-24 shrink-0" label="Задняя обложка из комплекта" />
+            <div><b>Входит в комплект</b><p className="mt-1 text-sm text-muted">Передняя и задняя обложки уже учтены в цене. Доплачивать за вторую не нужно.</p></div>
+          </div> : <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
+            {rearOptions.map(c => <button key={c.id} type="button" onClick={() => { setBackId(c.id); setView("back"); }} disabled={!c.available} aria-pressed={back?.id === c.id} className={`constructor-cover group relative p-1.5 text-left ${pick}`}>
+              <div className="relative aspect-square overflow-hidden rounded-2xl bg-card">{c.image && <Image src={artwork(c.image)?.front ?? c.image} alt="" fill sizes="(min-width:1280px) 200px, 45vw" className="object-contain" />}</div>
+              <Check /><span className="mt-2 block px-1 text-sm font-medium leading-snug">{c.title}</span><b className="block px-1 text-sm">{formatPrice(c.price)}</b>
+            </button>)}
+          </div>}
+        </Step>}
+
         <Step
-          n={2}
+          n={parts ? 3 : 2}
           title={parts ? "Листы" : "Запасные блоки"}
-          hint={parts ? "Один блок встаёт в блокнот" : "По желанию: сменные блоки, когда листы закончатся"}
-          done={parts ? !!main : chosen.length > 0}
+          hint={parts ? "Сочетайте разные линовки. Количество каждого блока — под его фотографией" : "По желанию: сменные блоки, когда листы закончатся"}
+          done={chosen.length > 0}
+          aside={<span className="text-sm text-muted" aria-live="polite">Блоков: <b className="text-ink" data-block-counter>{blockCount}</b></span>}
         >
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
             {blocks.map((b) => {
               const n = blockQty[b.id] ?? 0;
               return (
-                <div key={b.id} className={`relative flex flex-col rounded-[22px] p-2 ring-2 transition ${n ? "bg-card ring-ink" : "ring-transparent hover:bg-card"} ${b.available ? "" : "opacity-40"}`}>
+                <div key={b.id} data-block={b.id} className={`constructor-block relative flex flex-col p-2 ring-2 transition ${n ? "bg-card ring-ink" : "ring-transparent hover:bg-card"} ${b.available ? "" : "opacity-40"}`}>
                   <button
                     type="button"
                     disabled={!b.available}
-                    onClick={() => setQty(b.id, parts ? 1 : n ? 0 : 1)}
+                    onClick={() => setQty(b.id, n ? 0 : 1)}
                     aria-pressed={n > 0}
                     className="group flex flex-1 flex-col text-left"
                   >
@@ -393,27 +432,21 @@ export function Constructor({
                     </span>
                     <b className="mt-1 block px-1">{formatPrice(b.price)}</b>
                   </button>
-                  {!parts && n > 0 && (
+                  {b.available && (
                     <div className="mt-2 px-1">
-                      <Qty value={n} min={0} max={MAX_MINI_BLOCKS} onChange={(v) => setQty(b.id, v)} label={`блок «${b.title}»`} />
+                      <Qty value={n} min={0} max={parts ? MAX_A5_BLOCKS : MAX_MINI_BLOCKS} onChange={(v) => setQty(b.id, v)} label={`блок «${b.title}»`} />
                     </div>
                   )}
                 </div>
               );
             })}
           </div>
-          {parts && main && (
-            <div className="mt-5 flex flex-wrap items-center gap-3 rounded-[20px] bg-card px-4 py-3">
-              <span className="min-w-0 flex-1 text-sm">Запасные блоки «{main.title}» — чтобы заменить, когда листы закончатся</span>
-              <Qty value={spares} min={0} max={MAX_SPARES} onChange={(v) => setQty(main.id, v + 1)} label="запасные блоки" />
-            </div>
-          )}
         </Step>
 
         <Step
-          n={3}
+          n={parts ? 4 : 3}
           title="Диски"
-          hint={parts ? "Упаковка 8 дисков — ровно на один блокнот" : "В комплекте свои диски 19 мм. Хотите цветные — замените"}
+          hint={parts ? "Упаковка 8 дисков — ровно на один блокнот" : "Свои диски уже в комплекте. Цветные наборы можно добавить отдельно"}
           done={parts ? !!disc : true}
           aside={
             parts && (
@@ -437,10 +470,8 @@ export function Constructor({
         >
           <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 xl:grid-cols-5">
             {!parts && (
-              <button type="button" onClick={() => setVariant(null)} aria-pressed={!disc} className={`group flex flex-col items-center gap-2 rounded-[22px] p-3 text-center ${pick}`}>
-                <span className="grid h-24 place-items-center">
-                  <DiscSwatch hex={KIT_DISCS.hex} kind="matte" diameter={18} size={84} />
-                </span>
+              <button type="button" onClick={() => setVariant(null)} aria-pressed={!disc} className={`constructor-disc group flex flex-col items-center gap-2 p-2 text-center ${pick}`}>
+                <span className="relative aspect-square w-full overflow-hidden rounded-lg bg-card">{cover?.image && <Image src={cover.image} alt="" fill sizes="(min-width:1280px) 120px, 30vw" className="object-contain" />}</span>
                 <span className="text-sm font-medium leading-tight">Из комплекта</span>
                 <b className="text-sm">0 ₽</b>
               </button>
@@ -455,10 +486,11 @@ export function Constructor({
                   onClick={() => setVariant(v.key)}
                   disabled={!d.available}
                   aria-pressed={on}
-                  className={`group flex flex-col items-center gap-2 rounded-[22px] p-3 text-center ${pick}`}
+                  data-disc={d.id}
+                  className={`constructor-disc group flex flex-col items-center gap-2 p-2 text-center ${pick}`}
                 >
-                  <span className={`grid h-24 place-items-center transition duration-300 ${on ? "scale-110" : "group-hover:-translate-y-1 group-hover:rotate-12"}`}>
-                    <DiscSwatch hex={d.hex} kind={d.finishKind} metal={d.metal} diameter={diameter} size={84} />
+                  <span className="relative aspect-square w-full overflow-hidden rounded-lg bg-card">
+                    {d.image ? <Image src={(discPhotos as Record<string,string>)[d.image] ?? d.image} alt="" fill sizes="(min-width:1280px) 120px, 30vw" className="object-contain transition duration-300 group-hover:scale-105" /> : <span className="constructor-no-photo"><CategoryTabIcon type="Диски" /><span>Нет фото</span></span>}
                   </span>
                   <span className="text-sm font-medium leading-tight">{v.title}</span>
                   <b className="text-sm">{formatPrice(d.price)}</b>
@@ -466,10 +498,12 @@ export function Constructor({
               );
             })}
           </div>
-          <Link href="/catalog?type=Диски" className="mt-4 inline-block text-sm underline underline-offset-4">
+          <StoreTabLink href="/catalog?type=Диски" icon={<CategoryTabIcon type="Диски" />} className="mt-4 store-tab-compact constructor-catalog-link">
             Нужно больше дисков? Упаковки по 100 и 1000 — в каталоге
-          </Link>
+          </StoreTabLink>
         </Step>
+
+        <section className="border-t border-line pt-6" aria-labelledby="constructor-extra"><h2 id="constructor-extra" className="flex items-center gap-2 font-display text-2xl"><CategoryTabIcon type="Аксессуары" />Что ещё добавить?</h2><p className="mt-2 text-sm text-muted">Ручки, держатель для ручки, дырокол и коробка — по желанию, отдельно от сборки.</p><div className="store-tabs-row mt-4"><StoreTabLink href="/catalog?type=Аксессуары" icon={<CategoryTabIcon type="Аксессуары" />}>Аксессуары</StoreTabLink><StoreTabLink href={`/catalog?type=Блоки&format=${encodeURIComponent(F.db)}`} icon={<CategoryTabIcon type="Блоки" />}>Блоки {F.label}</StoreTabLink></div></section>
       </div>
 
       {/* Телефон: итог и кнопка всегда под пальцем. */}
@@ -480,7 +514,7 @@ export function Constructor({
           <div className="min-w-0 flex-1">
             <b className="block font-display text-xl tabular-nums">{formatPrice(total)}</b>
             <span className="block truncate text-xs text-muted">
-              {F.label} · {cover?.title}
+              {missing || `${F.label} · блоков: ${blockCount}`}
             </span>
           </div>
           <AddButton ready={ready} added={added} total={total} onAdd={add} compact />

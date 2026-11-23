@@ -6,14 +6,17 @@ import { shade } from "@/lib/color";
 export type Ruling = "grid" | "dot" | "line" | "blank" | "plan";
 
 export type NotebookLook = {
-  front?: { hex: string; print?: boolean };
-  back?: { hex: string };
+  front?: { hex: string; print?: boolean; artwork?: string };
+  back?: { hex: string; artwork?: string };
   discs?: { hex: string; diameter?: number; metal?: boolean };
   sheets?: number;
   paper?: "white" | "cream";
   pages?: [Ruling?, Ruling?];
   /** Размер страницы в единицах превью и число дисков; по умолчанию — А5. */
   shape?: { w: number; h: number; discs: number };
+  binding?: "top";
+  /** Обложка А5+ шире листа А5; рисунок и клапан не сжимаются до ширины бумаги. */
+  coverAspect?: number;
 };
 
 const VB_W = 360;
@@ -26,13 +29,14 @@ function discYs(top: number, h: number, n: number) {
   return Array.from({ length: n }, (_, i) => top + pad + (i * (h - 2 * pad)) / Math.max(1, n - 1));
 }
 
-function Discs({ cx, ys, discs }: { cx: number; ys: number[]; discs: NonNullable<NotebookLook["discs"]> }) {
+function Discs({ cx, ys, discs, top = false }: { cx: number; ys: number[]; discs: NonNullable<NotebookLook["discs"]>; top?: boolean }) {
   const r = discs.diameter === 24 ? 15 : discs.diameter === 18 ? 12 : 13.5;
   const c = discs.hex;
   return (
     <g key={`${c}-${discs.diameter}-${cx}-${ys.length}`}>
       {ys.map((y, i) => (
-        <g key={i} className="nb-disc" style={{ animationDelay: `${i * 45}ms` }}>
+        <g key={i} transform={top ? `translate(${y - cx} ${cx - y})` : undefined}>
+        <g className="nb-disc" style={{ animationDelay: `${i * 45}ms` }}>
           <circle cx={cx} cy={y} r={r} fill={c} stroke={shade(c, -0.3)} />
           <circle cx={cx} cy={y} r={r - 4} fill="none" stroke={shade(c, discs.metal ? 0.6 : 0.35)} strokeWidth={1.4} opacity={0.7} />
           <path
@@ -43,6 +47,7 @@ function Discs({ cx, ys, discs }: { cx: number; ys: number[]; discs: NonNullable
             opacity={discs.metal ? 0.8 : 0.45}
             strokeLinecap="round"
           />
+        </g>
         </g>
       ))}
     </g>
@@ -86,7 +91,7 @@ function Patterns({ id }: { id: string }) {
   );
 }
 
-/** Живое превью блокнота: рисуется из выбранных частей, без фотографий. Пропорции — по формату. */
+/** Real cover photographs, rectified into textures; sheets and binding follow the selected parts. */
 export function NotebookPreview({
   look,
   view = "closed",
@@ -94,7 +99,7 @@ export function NotebookPreview({
   label = "Превью блокнота",
 }: {
   look: NotebookLook;
-  view?: "closed" | "open";
+  view?: "closed" | "open" | "back";
   className?: string;
   label?: string;
 }) {
@@ -105,13 +110,19 @@ export function NotebookPreview({
   const bc = look.back?.hex ?? look.front?.hex ?? "#e2dbcf";
   const paper = PAPER[look.paper ?? "white"];
   const t = look.sheets ? Math.min(18, 3 + look.sheets / 8) : 2;
-  const { w, h, discs: nDiscs } = look.shape ?? A5;
+  const shape = look.shape ?? A5;
+  const { h, discs: nDiscs } = shape;
+  const w = view !== "open" && look.coverAspect ? Math.min(316, h * look.coverAspect) : shape.w;
 
   // Закрытый блокнот: по центру, корешок с дисками слева.
-  const x = (VB_W - w) / 2 + 5;
+  const x = (VB_W - w) / 2 + 5 - (view === "open" ? 0 : t / 2);
   const y = FLOOR - 20 - h;
-  const k = w / A5.w; // масштаб декора относительно А5
-  const ys = discYs(y, h, nDiscs);
+  const rear = view === "back";
+  const face = rear ? look.back : look.front;
+  const faceColor = (rear ? bc : fc);
+  const topBinding = look.binding === "top";
+  const ys = topBinding ? discYs(x + 12, w - 24, nDiscs) : discYs(y, h, nDiscs);
+  const binding = topBinding ? y + 1 : rear ? x + w - 1 : x + 1;
 
   // Одна страница в пропорциях выбранного формата: разметка видна крупно.
   const pw = w - 12;
@@ -134,13 +145,14 @@ export function NotebookPreview({
     >
       <svg viewBox={`0 0 ${VB_W} 440`} role="img" aria-label={label} className={`nb-svg h-auto w-full max-w-[380px] ${view === "open" ? "nb-page" : ""}`} style={{ transform: tilt }}>
         <Patterns id={id} />
+        <defs><clipPath id={`${id}-cover`}><rect x={x} y={y} width={w} height={h} rx="6" /></clipPath></defs>
         {view === "open" ? (
           <>
             <ellipse cx={x + w / 2 + 5} cy={FLOOR} rx={w / 2 + 10} ry="9" fill="#000" opacity=".1" />
             <rect className="nb-t" x={x} y={y} width={w} height={h} rx="10" style={{ fill: fc, stroke: shade(fc, -0.25) }} />
             <rect className="nb-t" x={ox} y={oy} width={pw} height={ph} rx="4" style={{ fill: paper }} />
             <rect x={ox + 19} y={oy + 15} width={pw - 31} height={ph - 30} fill={`url(#${id}-${look.pages?.[0] ?? "blank"})`} />
-            {look.discs ? <Discs cx={x + 1} ys={ys} discs={look.discs} /> : ys.map((dy) => <rect key={dy} x={ox} y={dy - 3} width="8" height="6" rx="3" fill={shade(paper, -0.25)} />)}
+            {look.discs ? <Discs cx={topBinding ? y + 1 : x + 1} ys={ys} discs={look.discs} top={topBinding} /> : !topBinding && ys.map((dy) => <rect key={dy} x={ox} y={dy - 3} width="8" height="6" rx="3" fill={shade(paper, -0.25)} />)}
           </>
         ) : (
           <>
@@ -150,31 +162,15 @@ export function NotebookPreview({
               <rect x={x + 3} y={y + 4} width={w - 7} height={h - 7} rx="3" fill={paper} />
               <rect x={x + 3} y={y + 4} width={w - 7} height={h - 7} rx="3" fill={`url(#${id}-edge)`} />
             </g>
-            {look.discs && <Discs cx={x + 1} ys={ys} discs={look.discs} />}
-            <g key={fc} className={look.front ? "nb-bump" : ""}>
-              <rect className="nb-t" x={x} y={y} width={w} height={h} rx="10" style={{ fill: fc, stroke: shade(fc, -0.25) }} />
-              <rect x={x} y={y} width={w} height={h} rx="10" fill="#808080" filter={`url(#${id}-noise)`} style={{ mixBlendMode: "overlay" }} />
-              {look.front?.print && (
-                <g fill="none" stroke={shade(fc, 0.45)} strokeWidth={2 / k} opacity=".55" transform={`translate(${x} ${y}) scale(${k} ${h / A5.h})`}>
-                  <path d="M10 90c40-30 80 30 120 0s80-30 140 0" />
-                  <path d="M10 150c40-30 80 30 120 0s80-30 140 0" />
-                  <path d="M10 270c40-30 80 30 120 0s80-30 140 0" />
-                  <circle cx="200" cy="310" r="34" />
-                </g>
-              )}
-              <rect x={x} y={y} width={w} height={h} rx="10" fill={`url(#${id}-light)`} />
-              <text
-                x={x + w / 2 + 6}
-                y={y + h / 2 + 6}
-                textAnchor="middle"
-                fontSize={Math.max(10, 17 * k)}
-                fontWeight="700"
-                letterSpacing={5 * k}
-                style={{ fill: shade(fc, look.front ? 0.22 : -0.15), opacity: 0.55 }}
-              >
-                MULTIBOOK
-              </text>
-              {!look.discs && ys.map((dy) => <rect key={dy} x={x} y={dy - 3} width="11" height="6" rx="3" fill={shade(fc, -0.35)} opacity=".55" />)}
+            {look.discs && <Discs cx={binding} ys={ys} discs={look.discs} top={topBinding} />}
+            <g key={`${view}-${face?.artwork ?? faceColor}`} className={face ? "nb-bump" : ""}>
+              <rect className="nb-t" x={x} y={y} width={w} height={h} rx="6" style={{ fill: face?.artwork ? faceColor : "#e9e3d8", stroke: shade(faceColor, -0.25) }} />
+              {face?.artwork ? <image data-cover-artwork href={face.artwork} x={x} y={y} width={w} height={h} preserveAspectRatio="none" clipPath={`url(#${id}-cover)`} /> : <>
+                <path d={`M${x + w * .4} ${y + h * .4}h${w * .2}m-${w * .2} 12h${w * .2}m-${w * .2} 12h${w * .14}`} stroke="#796b5c" strokeWidth="2" />
+                <text x={x + w / 2} y={y + h * .6} textAnchor="middle" fontSize="12" fill="#534a40">{!face ? "Выберите обложку" : rear ? "Задняя обложка" : "Обложка"}</text>
+                {face && <text x={x + w / 2} y={y + h * .6 + 18} textAnchor="middle" fontSize="10" fill="#534a40">Фото этой стороны не добавлено</text>}
+              </>}
+              {!look.discs && !topBinding && ys.map((dy) => <rect key={dy} x={rear ? x + w - 11 : x} y={dy - 3} width="11" height="6" rx="3" fill={shade(faceColor, -0.35)} opacity=".55" />)}
             </g>
           </>
         )}
@@ -188,7 +184,7 @@ export function NotebookPreview({
         @keyframes nb-pop{from{transform:scale(0)}to{transform:scale(1)}}
         @keyframes nb-bump{40%{transform:scale(1.025)}}
         @keyframes nb-float{50%{translate:0 -4px}}
-        @media (prefers-reduced-motion: reduce){.nb-svg,.nb-disc,.nb-bump{animation:none}}
+        @media (prefers-reduced-motion: reduce){.nb-svg,.nb-disc,.nb-bump{animation:none;transition:none}.nb-t{transition:none}}
       `}</style>
     </div>
   );
