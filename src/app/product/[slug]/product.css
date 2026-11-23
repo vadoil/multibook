@@ -29,7 +29,7 @@
 .product-delivery svg { width: 25px; height: 25px; flex: none; color: var(--color-accent); }
 .product-delivery li:last-child { padding-left: 37px; }
 .product-purchase { display: none; }
-@media (max-width: 767px) {
+@media (max-width: 767px), (max-width: 1000px) and (max-height: 500px) and (pointer: coarse) {
   html:has(.product-purchase) { scroll-padding-bottom: 130px; }
   .product-page { padding-top: 18px; }
   body:has(.product-purchase) { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }

@@ -1,0 +1,672 @@
+[
+  {
+    "width": 375,
+    "height": 812,
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 65,
+      "width": 375,
+      "height": 675,
+      "top": 65,
+      "right": 375,
+      "bottom": 740,
+      "left": 0
+    },
+    "copy": {
+      "x": 0,
+      "y": 65,
+      "width": 375,
+      "height": 269.203125,
+      "top": 65,
+      "right": 375,
+      "bottom": 334.203125,
+      "left": 0
+    },
+    "actions": {
+      "x": 20,
+      "y": 288.203125,
+      "width": 335,
+      "height": 46,
+      "top": 288.203125,
+      "right": 355,
+      "bottom": 334.203125,
+      "left": 20
+    },
+    "caption": {
+      "x": 12,
+      "y": 606,
+      "width": 351,
+      "height": 52,
+      "top": 606,
+      "right": 363,
+      "bottom": 658,
+      "left": 12
+    },
+    "dock": {
+      "x": 12,
+      "y": 668,
+      "width": 351,
+      "height": 58,
+      "top": 668,
+      "right": 363,
+      "bottom": 726,
+      "left": 12
+    },
+    "nav": {
+      "x": 0,
+      "y": 740,
+      "width": 375,
+      "height": 72,
+      "top": 740,
+      "right": 375,
+      "bottom": 812,
+      "left": 0
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 65,
+      "top": 0,
+      "right": 375,
+      "bottom": 65,
+      "left": 0
+    },
+    "navDisplay": "grid",
+    "navLinks": [
+      {
+        "text": "Магазин",
+        "rect": {
+          "x": 12,
+          "y": 747,
+          "width": 77.84375,
+          "height": 59,
+          "top": 747,
+          "right": 89.84375,
+          "bottom": 806,
+          "left": 12
+        },
+        "current": "location"
+      },
+      {
+        "text": "Конструктор",
+        "rect": {
+          "x": 97.84375,
+          "y": 747,
+          "width": 101.21875,
+          "height": 59,
+          "top": 747,
+          "right": 199.0625,
+          "bottom": 806,
+          "left": 97.84375
+        },
+        "current": null
+      },
+      {
+        "text": "Корзина",
+        "rect": {
+          "x": 207.0625,
+          "y": 747,
+          "width": 70.078125,
+          "height": 59,
+          "top": 747,
+          "right": 277.140625,
+          "bottom": 806,
+          "left": 207.0625
+        },
+        "current": null
+      },
+      {
+        "text": "Кабинет",
+        "rect": {
+          "x": 285.140625,
+          "y": 747,
+          "width": 77.859375,
+          "height": 59,
+          "top": 747,
+          "right": 363,
+          "bottom": 806,
+          "left": 285.140625
+        },
+        "current": null
+      }
+    ]
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 65,
+      "width": 320,
+      "height": 620,
+      "top": 65,
+      "right": 320,
+      "bottom": 685,
+      "left": 0
+    },
+    "copy": {
+      "x": 0,
+      "y": 65,
+      "width": 320,
+      "height": 252.5625,
+      "top": 65,
+      "right": 320,
+      "bottom": 317.5625,
+      "left": 0
+    },
+    "actions": {
+      "x": 16,
+      "y": 271.5625,
+      "width": 288,
+      "height": 46,
+      "top": 271.5625,
+      "right": 304,
+      "bottom": 317.5625,
+      "left": 16
+    },
+    "caption": {
+      "x": 12,
+      "y": 551,
+      "width": 296,
+      "height": 52,
+      "top": 551,
+      "right": 308,
+      "bottom": 603,
+      "left": 12
+    },
+    "dock": {
+      "x": 12,
+      "y": 613,
+      "width": 296,
+      "height": 58,
+      "top": 613,
+      "right": 308,
+      "bottom": 671,
+      "left": 12
+    },
+    "nav": {
+      "x": 0,
+      "y": 496,
+      "width": 320,
+      "height": 72,
+      "top": 496,
+      "right": 320,
+      "bottom": 568,
+      "left": 0
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 65,
+      "top": 0,
+      "right": 320,
+      "bottom": 65,
+      "left": 0
+    },
+    "navDisplay": "grid",
+    "navLinks": [
+      {
+        "text": "Магазин",
+        "rect": {
+          "x": 12,
+          "y": 503,
+          "width": 64.75,
+          "height": 59,
+          "top": 503,
+          "right": 76.75,
+          "bottom": 562,
+          "left": 12
+        },
+        "current": "location"
+      },
+      {
+        "text": "Конструктор",
+        "rect": {
+          "x": 84.75,
+          "y": 503,
+          "width": 84.1875,
+          "height": 59,
+          "top": 503,
+          "right": 168.9375,
+          "bottom": 562,
+          "left": 84.75
+        },
+        "current": null
+      },
+      {
+        "text": "Корзина",
+        "rect": {
+          "x": 176.9375,
+          "y": 503,
+          "width": 58.296875,
+          "height": 59,
+          "top": 503,
+          "right": 235.234375,
+          "bottom": 562,
+          "left": 176.9375
+        },
+        "current": null
+      },
+      {
+        "text": "Кабинет",
+        "rect": {
+          "x": 243.234375,
+          "y": 503,
+          "width": 64.765625,
+          "height": 59,
+          "top": 503,
+          "right": 308,
+          "bottom": 562,
+          "left": 243.234375
+        },
+        "current": null
+      }
+    ]
+  },
+  {
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 65,
+      "width": 430,
+      "height": 795,
+      "top": 65,
+      "right": 430,
+      "bottom": 860,
+      "left": 0
+    },
+    "copy": {
+      "x": 0,
+      "y": 65,
+      "width": 430,
+      "height": 277.828125,
+      "top": 65,
+      "right": 430,
+      "bottom": 342.828125,
+      "left": 0
+    },
+    "actions": {
+      "x": 20,
+      "y": 296.828125,
+      "width": 390,
+      "height": 46,
+      "top": 296.828125,
+      "right": 410,
+      "bottom": 342.828125,
+      "left": 20
+    },
+    "caption": {
+      "x": 12,
+      "y": 726,
+      "width": 406,
+      "height": 52,
+      "top": 726,
+      "right": 418,
+      "bottom": 778,
+      "left": 12
+    },
+    "dock": {
+      "x": 12,
+      "y": 788,
+      "width": 406,
+      "height": 58,
+      "top": 788,
+      "right": 418,
+      "bottom": 846,
+      "left": 12
+    },
+    "nav": {
+      "x": 0,
+      "y": 860,
+      "width": 430,
+      "height": 72,
+      "top": 860,
+      "right": 430,
+      "bottom": 932,
+      "left": 0
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 65,
+      "top": 0,
+      "right": 430,
+      "bottom": 65,
+      "left": 0
+    },
+    "navDisplay": "grid",
+    "navLinks": [
+      {
+        "text": "Магазин",
+        "rect": {
+          "x": 12,
+          "y": 867,
+          "width": 90.9375,
+          "height": 59,
+          "top": 867,
+          "right": 102.9375,
+          "bottom": 926,
+          "left": 12
+        },
+        "current": "location"
+      },
+      {
+        "text": "Конструктор",
+        "rect": {
+          "x": 110.9375,
+          "y": 867,
+          "width": 118.25,
+          "height": 59,
+          "top": 867,
+          "right": 229.1875,
+          "bottom": 926,
+          "left": 110.9375
+        },
+        "current": null
+      },
+      {
+        "text": "Корзина",
+        "rect": {
+          "x": 237.1875,
+          "y": 867,
+          "width": 81.859375,
+          "height": 59,
+          "top": 867,
+          "right": 319.046875,
+          "bottom": 926,
+          "left": 237.1875
+        },
+        "current": null
+      },
+      {
+        "text": "Кабинет",
+        "rect": {
+          "x": 327.046875,
+          "y": 867,
+          "width": 90.953125,
+          "height": 59,
+          "top": 867,
+          "right": 418,
+          "bottom": 926,
+          "left": 327.046875
+        },
+        "current": null
+      }
+    ]
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 97,
+      "width": 1366,
+      "height": 671,
+      "top": 97,
+      "right": 1366,
+      "bottom": 768,
+      "left": 0
+    },
+    "copy": {
+      "x": 0,
+      "y": 128.703125,
+      "width": 655.671875,
+      "height": 470.875,
+      "top": 128.703125,
+      "right": 655.671875,
+      "bottom": 599.578125,
+      "left": 0
+    },
+    "actions": {
+      "x": 71.03125,
+      "y": 527.578125,
+      "width": 584.640625,
+      "height": 52,
+      "top": 527.578125,
+      "right": 655.671875,
+      "bottom": 579.578125,
+      "left": 71.03125
+    },
+    "caption": {
+      "x": 71.03125,
+      "y": 631.28125,
+      "width": 217.59375,
+      "height": 108.71875,
+      "top": 631.28125,
+      "right": 288.625,
+      "bottom": 740,
+      "left": 71.03125
+    },
+    "dock": {
+      "x": 942.296875,
+      "y": 676,
+      "width": 380,
+      "height": 64,
+      "top": 676,
+      "right": 1322.296875,
+      "bottom": 740,
+      "left": 942.296875
+    },
+    "nav": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1366,
+      "height": 97,
+      "top": 0,
+      "right": 1366,
+      "bottom": 97,
+      "left": 0
+    },
+    "navDisplay": "none",
+    "navLinks": [
+      {
+        "text": "Магазин",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "current": "location"
+      },
+      {
+        "text": "Конструктор",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "current": null
+      },
+      {
+        "text": "Корзина",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "current": null
+      },
+      {
+        "text": "Кабинет",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "current": null
+      }
+    ]
+  },
+  {
+    "width": 812,
+    "height": 375,
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 97,
+      "width": 812,
+      "height": 615.28125,
+      "top": 97,
+      "right": 812,
+      "bottom": 712.28125,
+      "left": 0
+    },
+    "copy": {
+      "x": 0,
+      "y": 97,
+      "width": 389.75,
+      "height": 478.5625,
+      "top": 97,
+      "right": 389.75,
+      "bottom": 575.5625,
+      "left": 0
+    },
+    "actions": {
+      "x": 42.21875,
+      "y": 439.5625,
+      "width": 347.53125,
+      "height": 116,
+      "top": 439.5625,
+      "right": 389.75,
+      "bottom": 555.5625,
+      "left": 42.21875
+    },
+    "caption": {
+      "x": 42.21875,
+      "y": 575.5625,
+      "width": 217.59375,
+      "height": 108.71875,
+      "top": 575.5625,
+      "right": 259.8125,
+      "bottom": 684.28125,
+      "left": 42.21875
+    },
+    "dock": {
+      "x": 406.03125,
+      "y": 620.28125,
+      "width": 380,
+      "height": 64,
+      "top": 620.28125,
+      "right": 786.03125,
+      "bottom": 684.28125,
+      "left": 406.03125
+    },
+    "nav": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 812,
+      "height": 97,
+      "top": 0,
+      "right": 812,
+      "bottom": 97,
+      "left": 0
+    },
+    "navDisplay": "none",
+    "navLinks": [
+      {
+        "text": "Магазин",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "current": "location"
+      },
+      {
+        "text": "Конструктор",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "current": null
+      },
+      {
+        "text": "Корзина",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "current": null
+      },
+      {
+        "text": "Кабинет",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "current": null
+      }
+    ]
+  }
+]

@@ -16,6 +16,7 @@ export function StoreHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
+  useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
     if (!open) return;
     const close = (event: KeyboardEvent) => {
@@ -24,8 +25,15 @@ export function StoreHeader() {
         toggle.current?.focus();
       }
     };
+    const closeFromTabs = (event: MouseEvent) => {
+      if (event.target instanceof Element && event.target.closest(".mobile-tabbar a")) setOpen(false);
+    };
     window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
+    document.addEventListener("click", closeFromTabs);
+    return () => {
+      window.removeEventListener("keydown", close);
+      document.removeEventListener("click", closeFromTabs);
+    };
   }, [open]);
   const current = (href: string) =>
     pathname === href ||

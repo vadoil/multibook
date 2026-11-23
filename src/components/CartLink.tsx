@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { cartCount, useCart } from "@/lib/cart";
 
-export function CartLink() {
+export function CartLink({ current }: { current?: "page" | "location" } = {}) {
   const n = cartCount(useCart());
   return (
     <Link
       href="/cart"
       className="store-cart"
+      aria-current={current}
       aria-label={n ? `Корзина, ${n} шт` : "Корзина"}
     >
       <svg

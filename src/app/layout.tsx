@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Caveat, Cormorant_Garamond, Golos_Text } from "next/font/google";
 import { StoreHeader } from "@/components/store/StoreHeader";
 import { StoreFooter } from "@/components/store/StoreFooter";
+import { MobileTabBar } from "@/components/store/MobileTabBar";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 import "./store.css";
+import "./mobile-app.css";
 
 const golos = Golos_Text({
   subsets: ["latin", "cyrillic"],
@@ -19,6 +21,13 @@ const caveat = Caveat({
   subsets: ["latin", "cyrillic"],
   variable: "--font-concept-hand",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#eee7db",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -56,6 +65,7 @@ export default function RootLayout({
           {children}
         </main>
         <StoreFooter />
+        <MobileTabBar />
       </body>
     </html>
   );
