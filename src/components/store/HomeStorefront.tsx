@@ -2,10 +2,9 @@ import Link from "next/link";
 import type { Product } from "@/db/schema";
 import { TYPE_LABELS } from "@/lib/catalog";
 import { ProductCard, PRODUCT_PHOTO_INDEX } from "../ProductCard";
-import { CategoryGlyph, type CategoryKind } from "../design/CategoryGlyph";
+import { CategoryTabIcon, StoreTabLink } from "./StoreTab";
 import "./shop.css";
 
-const icons: Record<string, CategoryKind> = { Тетради: "notebooks", Блокноты: "journals", Обложки: "covers", Блоки: "pages", Диски: "discs", Аксессуары: "tools", Фотокниги: "albums" };
 
 /** A real shop shelf replaces the second explanatory hero. No invented items. */
 export function HomeStorefront({ products }: { products: Product[] }) {
@@ -21,9 +20,9 @@ export function HomeStorefront({ products }: { products: Product[] }) {
       </div>
       <nav className="home-shop-categories" aria-label="Что ищете в магазине">
         {TYPE_LABELS.filter(({type})=>products.some((p)=>p.type===type)).map(({type,label})=>(
-          <Link href={`/catalog?type=${encodeURIComponent(type)}`} key={type}>
-            <CategoryGlyph kind={icons[type]} /><span>{type === "Блокноты" ? "Ежедневники" : label}</span>
-          </Link>
+          <StoreTabLink href={`/catalog?type=${encodeURIComponent(type)}`} key={type} icon={<CategoryTabIcon type={type} />}>
+            <span>{type === "Блокноты" ? "Ежедневники" : label}</span>
+          </StoreTabLink>
         ))}
       </nav>
       <div className="home-shop-products">

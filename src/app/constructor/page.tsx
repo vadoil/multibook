@@ -5,6 +5,7 @@ import type { Ruling } from "@/components/NotebookPreview";
 import { getProduct, listProducts } from "@/lib/catalog";
 import { FORMAT_KEYS, FORMATS, formatByDb, type FormatKey } from "@/lib/formats";
 import type { Product } from "@/db/schema";
+import { StoreTabLink } from "@/components/store/StoreTab";
 
 export const metadata: Metadata = {
   title: "Конструктор блокнота",
@@ -121,7 +122,7 @@ function Silhouette({ w, h, on }: { w: number; h: number; on: boolean }) {
   const k = 40 / 380;
   return (
     <span className="grid h-11 w-9 place-items-end justify-center" aria-hidden>
-      <span className={`block rounded-[3px] border-2 transition ${on ? "border-white bg-white/20" : "border-ink/60"}`} style={{ width: w * k, height: h * k }} />
+      <span className={`block rounded-[3px] border-2 transition ${on ? "border-accent bg-accent/10" : "border-ink/60"}`} style={{ width: w * k, height: h * k }} />
     </span>
   );
 }
@@ -147,18 +148,18 @@ export default async function ConstructorPage({ searchParams }: { searchParams: 
           const F = FORMATS[k];
           const on = k === f;
           return (
-            <Link
+            <StoreTabLink
               key={k}
               href={`/constructor?f=${k}`}
               aria-current={on ? "page" : undefined}
-              className={`flex flex-col items-center gap-1 rounded-[20px] border-2 px-2 py-2 text-center transition sm:flex-row sm:gap-3 sm:pl-3 sm:pr-5 sm:text-left ${on ? "border-ink bg-ink text-white" : "border-line hover:border-ink"}`}
+              className="constructor-format-tab"
             >
               <Silhouette w={F.w} h={F.h} on={on} />
               <span>
                 <span className="block text-sm font-semibold sm:text-base">{F.label}</span>
-                <span className={`block text-xs ${on ? "text-white/70" : "text-muted"}`}>{F.size}</span>
+                <span className="block text-xs text-muted">{F.size}</span>
               </span>
-            </Link>
+            </StoreTabLink>
           );
         })}
       </nav>

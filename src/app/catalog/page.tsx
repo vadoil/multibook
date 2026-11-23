@@ -6,6 +6,7 @@ import { countByType, listProducts, TYPE_LABELS } from "@/lib/catalog";
 import type { ProductType } from "@/db/schema";
 import { plural } from "@/lib/plural";
 import { StoreNavIcon } from "@/components/store/StoreNavIcon";
+import { CategoryTabIcon } from "@/components/store/StoreTab";
 import "@/components/store/shop.css";
 
 export const dynamic = "force-dynamic";
@@ -89,18 +90,18 @@ export default async function CatalogPage({
         <Link
           href={href({ type: undefined })}
           aria-current={!type ? "page" : undefined}
-          className="shrink-0 rounded-full border border-line px-4 py-2 text-sm aria-[current=page]:border-ink aria-[current=page]:bg-ink aria-[current=page]:text-white"
+          className="store-tab"
         >
-          Всё
+          <StoreNavIcon kind="shop" />Всё
         </Link>
         {TYPE_LABELS.filter((t) => counts[t.type]).map((t) => (
           <Link
             key={t.type}
             href={href({ type: t.type })}
             aria-current={type === t.type ? "page" : undefined}
-            className="shrink-0 rounded-full border border-line px-4 py-2 text-sm aria-[current=page]:border-ink aria-[current=page]:bg-ink aria-[current=page]:text-white"
+            className="store-tab"
           >
-            {t.label} <span className="opacity-60">{counts[t.type]}</span>
+            <CategoryTabIcon type={t.type} />{t.type === "Блокноты" ? "Ежедневники" : t.label} <span className="store-tab-count">{counts[t.type]}</span>
           </Link>
         ))}
       </nav>
@@ -109,27 +110,27 @@ export default async function CatalogPage({
         {formats.length > 0 && <div className="catalog-filter-group">
           <span className="catalog-filter-label"><StoreNavIcon kind="shop" />Формат</span>
           <nav className="catalog-filter-options" aria-label="Формат">
-            <Link href={href({format:undefined})} aria-current={!format ? "true" : undefined}>Все форматы</Link>
-            {formats.map((f)=><Link key={f} href={href({format:f})} aria-current={format===f ? "true" : undefined}>{formatLabel(f)}<small>{collection.filter((p)=>p.attrs.format===f).length}</small></Link>)}
+            <Link className="store-tab store-tab-compact" href={href({format:undefined})} aria-current={!format ? "true" : undefined}>Все форматы</Link>
+            {formats.map((f)=><Link className="store-tab store-tab-compact" key={f} href={href({format:f})} aria-current={format===f ? "true" : undefined}>{formatLabel(f)}<small>{collection.filter((p)=>p.attrs.format===f).length}</small></Link>)}
           </nav>
         </div>}
         {rulings.length > 0 && <div className="catalog-filter-group">
           <span className="catalog-filter-label"><StoreNavIcon kind="binding" />Линовка</span>
           <nav className="catalog-filter-options" aria-label="Линовка">
-            <Link href={href({ruling:undefined})} aria-current={!ruling ? "true" : undefined}>Любая</Link>
-            {rulings.map((r)=><Link key={r.value} href={href({ruling:r.value})} aria-current={ruling===r.value ? "true" : undefined}>{r.label}</Link>)}
+            <Link className="store-tab store-tab-compact" href={href({ruling:undefined})} aria-current={!ruling ? "true" : undefined}>Любая</Link>
+            {rulings.map((r)=><Link className="store-tab store-tab-compact" key={r.value} href={href({ruling:r.value})} aria-current={ruling===r.value ? "true" : undefined}>{r.label}</Link>)}
           </nav>
         </div>}
         <div className="catalog-filter-extra">
           {materials.length > 0 && <details className="catalog-material" key={`${type ?? "all"}-${material ?? "all"}`}>
-            <summary>{material ?? "Материал"}<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="m5 8 5 5 5-5" /></svg></summary>
+            <summary className="store-tab store-tab-compact">{material ?? "Материал"}<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="m5 8 5 5 5-5" /></svg></summary>
             <nav className="catalog-material-options" aria-label="Материал">
-              <Link href={href({material:undefined})} aria-current={!material ? "true" : undefined}>Любой материал</Link>
-              {materials.map((m)=><Link key={m} href={href({material:m})} aria-current={material===m ? "true" : undefined}>{m}</Link>)}
+              <Link className="store-tab store-tab-compact" href={href({material:undefined})} aria-current={!material ? "true" : undefined}>Любой материал</Link>
+              {materials.map((m)=><Link className="store-tab store-tab-compact" key={m} href={href({material:m})} aria-current={material===m ? "true" : undefined}>{m}</Link>)}
             </nav>
           </details>}
-          <Link href={href({available:available ? undefined : "1"})} aria-current={available ? "true" : undefined} aria-label={available ? "Показать товары с любым наличием" : "Показать только товары в наличии"}>Только в наличии</Link>
-          {(format || ruling || material || available) && <Link className="catalog-filter-reset" href={href({format:undefined,ruling:undefined,material:undefined,available:undefined})}>Сбросить фильтры</Link>}
+          <Link className="store-tab store-tab-compact" href={href({available:available ? undefined : "1"})} aria-current={available ? "true" : undefined} aria-label={available ? "Показать товары с любым наличием" : "Показать только товары в наличии"}>Только в наличии</Link>
+          {(format || ruling || material || available) && <Link className="store-tab store-tab-compact catalog-filter-reset" href={href({format:undefined,ruling:undefined,material:undefined,available:undefined})}>Сбросить фильтры</Link>}
         </div>
       </section>
 
@@ -143,7 +144,7 @@ export default async function CatalogPage({
               key={s.v}
               href={href({ sort: s.v })}
               aria-current={sort === s.v ? "true" : undefined}
-              className="rounded-full px-3 py-1.5 text-muted aria-[current=true]:bg-card aria-[current=true]:text-ink"
+              className="store-tab store-tab-compact"
             >
               {s.label}
             </Link>
@@ -181,7 +182,7 @@ export default async function CatalogPage({
               key={n}
               href={href({ page: n })}
               aria-current={n === page ? "page" : undefined}
-              className="grid min-h-11 min-w-11 place-items-center rounded-full border border-line px-3 aria-[current=page]:border-ink aria-[current=page]:bg-ink aria-[current=page]:text-white"
+              className="store-tab store-tab-compact"
             >
               {n}
             </Link>
