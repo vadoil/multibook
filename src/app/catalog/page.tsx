@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DiscCatalog } from "@/components/DiscCatalog";
 import { ProductCard } from "@/components/ProductCard";
 import { countByType, listProducts, TYPE_LABELS } from "@/lib/catalog";
 import type { ProductType } from "@/db/schema";
@@ -15,7 +16,11 @@ const SORTS = [
 ] as const;
 type Sort = (typeof SORTS)[number]["v"];
 
-export default async function CatalogPage({ searchParams }: { searchParams: Promise<{ type?: string; sort?: string }> }) {
+export default async function CatalogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ type?: string; sort?: string; d?: string; m?: string }>;
+}) {
   const sp = await searchParams;
   const type = TYPE_LABELS.find((t) => t.type === sp.type)?.type as ProductType | undefined;
   const sort = (SORTS.find((s) => s.v === sp.sort)?.v ?? "popular") as Sort;
@@ -81,7 +86,9 @@ export default async function CatalogPage({ searchParams }: { searchParams: Prom
         </Link>
       )}
 
-      {items.length ? (
+      {type === "Диски" ? (
+        <DiscCatalog products={items} d={sp.d} m={sp.m} />
+      ) : items.length ? (
         <div className="mt-6 grid grid-cols-2 gap-x-3 gap-y-6 md:grid-cols-3 lg:grid-cols-4">
           {items.map((p) => (
             <ProductCard key={p.id} product={p} />

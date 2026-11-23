@@ -30,7 +30,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <div className="mt-6 grid gap-10 lg:grid-cols-2">
         <div className="grid gap-3">
           <ProductVisual product={p} size="large" />
-          {!drawn && p.images.length > 1 && (
+          {p.images.length > 1 && (
             <div className="grid grid-cols-4 gap-2">
               {p.images.slice(1, 9).map((src) => (
                 <div key={src} className="relative aspect-square overflow-hidden rounded-xl bg-[#efe9df]">

@@ -16,6 +16,8 @@ export type ProductAttrs = {
   colorHex?: string;
   metal?: boolean; // алюминиевые диски
   finish?: string; // матовые / глянцевые / перламутровые
+  finishKind?: "matte" | "gloss" | "pearl" | "metal" | "clear"; // как рисовать диск
+  inferred?: string[]; // какие свойства угаданы при импорте — данные в Tilda стоит поправить
 };
 
 export const PRODUCT_TYPES = [

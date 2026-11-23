@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useRef, useState } from "react";
+import { shade } from "@/lib/color";
 
 export type Ruling = "grid" | "dot" | "line" | "blank" | "plan";
 
@@ -16,14 +17,6 @@ export type NotebookLook = {
 const DISC_Y = Array.from({ length: 8 }, (_, i) => 52 + i * (316 / 7));
 const PAPER = { white: "#fbfaf6", cream: "#f3e9d3" };
 
-export function shade(hex: string, k: number): string {
-  if (!/^#[0-9a-f]{6}$/i.test(hex)) return hex;
-  const n = parseInt(hex.slice(1), 16);
-  const c = [n >> 16, (n >> 8) & 255, n & 255].map((v) =>
-    Math.max(0, Math.min(255, Math.round(k < 0 ? v * (1 + k) : v + (255 - v) * k))),
-  );
-  return `#${((1 << 24) + (c[0] << 16) + (c[1] << 8) + c[2]).toString(16).slice(1)}`;
-}
 
 function Discs({ cx, discs }: { cx: number; discs: NonNullable<NotebookLook["discs"]> }) {
   const r = discs.diameter === 24 ? 15 : discs.diameter === 18 ? 12 : 13.5;

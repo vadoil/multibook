@@ -147,6 +147,16 @@ export function normalizeProduct(
         : /глянц/i.test(title)
           ? "глянцевые"
           : undefined;
+    attrs.finishKind = /прозрачн/i.test(title)
+      ? "clear"
+      : attrs.metal || /металлик|пластик\s+(золото|серебро|розовое)/i.test(title)
+        ? "metal"
+        : /перламутр/i.test(title)
+          ? "pearl"
+          : /глянц/i.test(title)
+            ? "gloss"
+            : "matte";
+    if (/золотист/i.test(title)) Object.assign(attrs, { color: "золото", colorHex: "#c9a24e" });
     const plural = attrs.color?.replace(/(ый|ой)$/, "ые").replace(/ий$/, "ие");
     shortTitle = cap(
       [plural ?? "диски", attrs.finish, attrs.metal ? "алюминий" : undefined]
