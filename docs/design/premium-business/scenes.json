@@ -1,0 +1,8 @@
+[
+  { "id": "premium-city", "environment": "city", "product": "vazhnaya-ptitsa", "alt": "Ежедневник «Важная птица» с золотым тиснением в панорамном офисе с видом на Москва-Сити" },
+  { "id": "premium-meeting", "environment": "meeting", "product": "zolotoe-vremya", "alt": "Ежедневник «Золотое время» на ореховом столе в деловой переговорной" },
+  { "id": "premium-coaching", "environment": "coaching", "product": "botanika", "alt": "Ежедневник «Ботаника» в светлом кабинете для работы с коучем" },
+  { "id": "premium-academy", "environment": "academy", "product": "vesna", "alt": "Ежедневник «Весна» в современном пространстве корпоративного обучения" },
+  { "id": "premium-city-night", "environment": "city-night", "product": "krasnye-koni", "alt": "Ежедневник «Красные кони» на рабочем столе с вечерней панорамой Москва-Сити" },
+  { "id": "premium-executive", "environment": "executive", "product": "zolotoe-vremya", "alt": "Ежедневник «Золотое время» в кабинете руководителя с кожаным креслом и латунными деталями" }
+]

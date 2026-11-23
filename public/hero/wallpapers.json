@@ -1,79 +1,68 @@
 [
   {
-    "id": "botanika-oak",
-    "uid": "760853733322",
-    "name": "Ботаника",
-    "alt": "Блокнот «Ботаника» из эко-замши с зелёными дисками и резинкой на крафтовой бумаге",
-    "tone": "#cb965e",
-    "desktop": "/hero/botanika-oak-2560.webp",
-    "desktopSmall": "/hero/botanika-oak-1600.webp",
-    "mobile": "/hero/botanika-oak-mobile.webp",
-    "thumb": "/hero/botanika-oak-thumb.webp"
-  },
-  {
-    "id": "vesna-linen",
-    "uid": "725111859732",
-    "name": "Весна",
-    "alt": "Светлый блокнот «Весна» с веткой и птицей на обложке",
-    "tone": "#c9a179",
-    "desktop": "/hero/vesna-linen-2560.webp",
-    "desktopSmall": "/hero/vesna-linen-1600.webp",
-    "mobile": "/hero/vesna-linen-mobile.webp",
-    "thumb": "/hero/vesna-linen-thumb.webp"
-  },
-  {
-    "id": "koni-walnut",
-    "uid": "763698818122",
-    "name": "Красные кони",
-    "alt": "Блокнот «Красные кони»: оливковая эко-замша, красные кони и красные диски",
-    "tone": "#512a14",
-    "desktop": "/hero/koni-walnut-2560.webp",
-    "desktopSmall": "/hero/koni-walnut-1600.webp",
-    "mobile": "/hero/koni-walnut-mobile.webp",
-    "thumb": "/hero/koni-walnut-thumb.webp"
-  },
-  {
-    "id": "botanika-herbarium",
-    "uid": "760853733322",
-    "name": "Ботаника",
-    "alt": "Блокнот «Ботаника» из эко-замши с зелёными дисками и резинкой на крафтовой бумаге",
-    "tone": "#dfd3c5",
-    "desktop": "/hero/botanika-herbarium-2560.webp",
-    "desktopSmall": "/hero/botanika-herbarium-1600.webp",
-    "mobile": "/hero/botanika-herbarium-mobile.webp",
-    "thumb": "/hero/botanika-herbarium-thumb.webp"
-  },
-  {
-    "id": "gold-workshop",
-    "uid": "556041946942",
-    "name": "Золотое время",
-    "alt": "Блокнот «Золотое время» с золотым гербом-часами, ручкой и сменным блоком",
-    "tone": "#c79b6f",
-    "desktop": "/hero/gold-workshop-2560.webp",
-    "desktopSmall": "/hero/gold-workshop-1600.webp",
-    "mobile": "/hero/gold-workshop-mobile.webp",
-    "thumb": "/hero/gold-workshop-thumb.webp"
-  },
-  {
-    "id": "vesna-winter",
-    "uid": "725111859732",
-    "name": "Весна",
-    "alt": "Светлый блокнот «Весна» с веткой и птицей на обложке",
-    "tone": "#d3c4b4",
-    "desktop": "/hero/vesna-winter-2560.webp",
-    "desktopSmall": "/hero/vesna-winter-1600.webp",
-    "mobile": "/hero/vesna-winter-mobile.webp",
-    "thumb": "/hero/vesna-winter-thumb.webp"
-  },
-  {
-    "id": "bird-study",
+    "id": "premium-city",
     "uid": "937894370012",
     "name": "Важная птица",
-    "alt": "Чёрный блокнот «Важная птица» с золотым тиснением и золотыми дисками",
-    "tone": "#512a14",
-    "desktop": "/hero/bird-study-2560.webp",
-    "desktopSmall": "/hero/bird-study-1600.webp",
-    "mobile": "/hero/bird-study-mobile.webp",
-    "thumb": "/hero/bird-study-thumb.webp"
+    "alt": "Ежедневник «Важная птица» с золотым тиснением в панорамном офисе с видом на Москва-Сити",
+    "tone": "#ad937e",
+    "desktop": "/hero/premium-city-2560.webp",
+    "desktopSmall": "/hero/premium-city-1600.webp",
+    "mobile": "/hero/premium-city-mobile.webp",
+    "thumb": "/hero/premium-city-thumb.webp"
+  },
+  {
+    "id": "premium-meeting",
+    "uid": "556041946942",
+    "name": "Золотое время",
+    "alt": "Ежедневник «Золотое время» на ореховом столе в деловой переговорной",
+    "tone": "#9d7e67",
+    "desktop": "/hero/premium-meeting-2560.webp",
+    "desktopSmall": "/hero/premium-meeting-1600.webp",
+    "mobile": "/hero/premium-meeting-mobile.webp",
+    "thumb": "/hero/premium-meeting-thumb.webp"
+  },
+  {
+    "id": "premium-coaching",
+    "uid": "760853733322",
+    "name": "Ботаника",
+    "alt": "Ежедневник «Ботаника» в светлом кабинете для работы с коучем",
+    "tone": "#b39b88",
+    "desktop": "/hero/premium-coaching-2560.webp",
+    "desktopSmall": "/hero/premium-coaching-1600.webp",
+    "mobile": "/hero/premium-coaching-mobile.webp",
+    "thumb": "/hero/premium-coaching-thumb.webp"
+  },
+  {
+    "id": "premium-academy",
+    "uid": "725111859732",
+    "name": "Весна",
+    "alt": "Ежедневник «Весна» в современном пространстве корпоративного обучения",
+    "tone": "#ac8c72",
+    "desktop": "/hero/premium-academy-2560.webp",
+    "desktopSmall": "/hero/premium-academy-1600.webp",
+    "mobile": "/hero/premium-academy-mobile.webp",
+    "thumb": "/hero/premium-academy-thumb.webp"
+  },
+  {
+    "id": "premium-city-night",
+    "uid": "763698818122",
+    "name": "Красные кони",
+    "alt": "Ежедневник «Красные кони» на рабочем столе с вечерней панорамой Москва-Сити",
+    "tone": "#6c564c",
+    "desktop": "/hero/premium-city-night-2560.webp",
+    "desktopSmall": "/hero/premium-city-night-1600.webp",
+    "mobile": "/hero/premium-city-night-mobile.webp",
+    "thumb": "/hero/premium-city-night-thumb.webp"
+  },
+  {
+    "id": "premium-executive",
+    "uid": "556041946942",
+    "name": "Золотое время",
+    "alt": "Ежедневник «Золотое время» в кабинете руководителя с кожаным креслом и латунными деталями",
+    "tone": "#997356",
+    "desktop": "/hero/premium-executive-2560.webp",
+    "desktopSmall": "/hero/premium-executive-1600.webp",
+    "mobile": "/hero/premium-executive-mobile.webp",
+    "thumb": "/hero/premium-executive-thumb.webp"
   }
 ]

@@ -69,26 +69,26 @@
 /* ---------- текст ---------- */
 .wp-copy {
   align-self: center;
-  padding: 48px 0 24px 5.2vw;
-  max-width: min(46rem, 50vw);
+  padding: 36px 0 20px 5.2vw;
+  max-width: min(44rem, 48vw);
 }
 .wp-copy h1 {
   margin: 0;
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(3.6rem, 7.4vw, 8.4rem);
-  line-height: 0.9;
+  font-size: clamp(4rem, 6.8vw, 7.5rem);
+  line-height: 0.94;
   letter-spacing: -0.025em;
   text-wrap: balance;
 }
 .wp-copy p {
-  margin: 28px 0 0;
+  margin: 22px 0 0;
   max-width: 31rem;
   font-size: clamp(1.05rem, 1.25vw, 1.25rem);
   line-height: 1.55;
 }
 .wp-actions {
-  margin-top: 32px;
+  margin-top: 26px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -321,15 +321,16 @@
   }
   .wp-copy {
     align-self: start;
-    padding: 30px 20px 0;
+    padding: 22px 20px 0;
     max-width: none;
   }
   .wp-copy h1 {
-    font-size: clamp(2.5rem, 11.5vw, 3rem);
+    font-size: clamp(2.25rem, 10.4vw, 2.75rem);
+    line-height: 0.96;
   }
   .wp-copy p {
     margin-top: 12px;
-    font-size: 0.98rem;
+    font-size: 14px;
     line-height: 1.45;
     max-width: 22rem;
   }
@@ -340,8 +341,9 @@
   }
   .wp-btn {
     min-height: 46px;
-    padding: 0 18px;
-    font-size: 0.96rem;
+    padding: 0 14px;
+    font-size: 13px;
+    white-space: nowrap;
   }
   .wp-bar {
     flex-direction: column;
@@ -350,14 +352,22 @@
     padding: 0 12px 14px;
   }
   .wp-caption {
-    align-self: start;
-    padding: 6px 12px;
-    border-radius: 12px;
-    background: color-mix(in srgb, #f6efe3 70%, transparent);
+    align-self: stretch;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    min-height: 52px;
+    padding: 10px 14px;
+    border: 1px solid color-mix(in srgb, var(--color-card) 70%, transparent);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--color-card) 94%, transparent);
     backdrop-filter: blur(8px);
   }
   .wp-caption-name {
-    font-size: 1.3rem;
+    font-size: 24px;
+  }
+  .wp-caption-price {
+    font-size: 16px;
+    font-weight: 600;
   }
   .wp-caption-more {
     display: none;
