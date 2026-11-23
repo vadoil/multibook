@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <style>:root{--paper:#f5f1ea;--ink:#252820;--accent:#b63028}</style>
+  <rect width="48" height="48" rx="9" fill="var(--paper)"/>
+  <path d="M15 36V13h5l7 13 7-13h5v23M20 36V23l7 12 7-12v13" fill="none" stroke="var(--ink)" stroke-width="2.7" stroke-linejoin="round"/>
+  <path d="M6 15h9M6 24h9M6 33h9" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+</svg>
