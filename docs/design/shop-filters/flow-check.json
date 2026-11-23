@@ -1,0 +1,99 @@
+{
+  "report": [
+    {
+      "home": {
+        "shop": "wp-hero",
+        "cards": 8,
+        "kinds": [
+          "Еженедельник",
+          "Еженедельник",
+          "Еженедельник",
+          "Еженедельник",
+          "Тетради",
+          "Тетради",
+          "Тетради",
+          "Тетради"
+        ],
+        "videos": 1,
+        "secondHero": 0,
+        "overflow": false
+      }
+    },
+    {
+      "label": "whole catalogue",
+      "count": 250,
+      "displayed": 48,
+      "url": "http://127.0.0.1:3001/catalog"
+    },
+    {
+      "label": "blocks",
+      "count": 30,
+      "displayed": 30,
+      "url": "http://127.0.0.1:3001/catalog?type=%D0%91%D0%BB%D0%BE%D0%BA%D0%B8"
+    },
+    {
+      "label": "A5 blocks",
+      "count": 16,
+      "displayed": 16,
+      "url": "http://127.0.0.1:3001/catalog?type=%D0%91%D0%BB%D0%BE%D0%BA%D0%B8&format=%D0%905"
+    },
+    {
+      "label": "A5 dot blocks",
+      "count": 2,
+      "displayed": 2,
+      "url": "http://127.0.0.1:3001/catalog?type=%D0%91%D0%BB%D0%BE%D0%BA%D0%B8&format=%D0%905&ruling=dot"
+    },
+    {
+      "label": "sorted A5 dot blocks",
+      "count": 2,
+      "displayed": 2,
+      "url": "http://127.0.0.1:3001/catalog?type=%D0%91%D0%BB%D0%BE%D0%BA%D0%B8&sort=price-desc&format=%D0%905&ruling=dot"
+    },
+    {
+      "label": "reset preserves category and sorting",
+      "count": 30,
+      "displayed": 30,
+      "url": "http://127.0.0.1:3001/catalog?type=%D0%91%D0%BB%D0%BE%D0%BA%D0%B8&sort=price-desc"
+    },
+    {
+      "label": "suede notebooks",
+      "count": 9,
+      "displayed": 9,
+      "url": "http://127.0.0.1:3001/catalog?type=%D0%91%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82%D1%8B&sort=price-desc&material=%D0%AD%D0%BA%D0%BE-%D0%B7%D0%B0%D0%BC%D1%88%D0%B0"
+    },
+    {
+      "label": "empty contradictory selection",
+      "count": 0,
+      "displayed": 0,
+      "url": "http://127.0.0.1:3001/catalog?type=%D0%91%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82%D1%8B&sort=price-desc&format=%D0%904&material=%D0%AD%D0%BA%D0%BE-%D0%B7%D0%B0%D0%BC%D1%88%D0%B0"
+    },
+    {
+      "label": "empty-state recovery",
+      "count": 17,
+      "displayed": 17,
+      "url": "http://127.0.0.1:3001/catalog?type=%D0%91%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82%D1%8B&sort=price-desc"
+    },
+    {
+      "label": "A5 catalogue",
+      "count": 98,
+      "displayed": 48,
+      "url": "http://127.0.0.1:3001/catalog?format=%D0%905"
+    },
+    {
+      "label": "A5 page two",
+      "count": 98,
+      "displayed": 48,
+      "url": "http://127.0.0.1:3001/catalog?format=%D0%905&page=2"
+    },
+    {
+      "label": "availability resets page and preserves format",
+      "count": 98,
+      "displayed": 48,
+      "url": "http://127.0.0.1:3001/catalog?format=%D0%905&available=1"
+    },
+    {
+      "discFiltersPreserved": true
+    }
+  ],
+  "errors": []
+}
