@@ -1,0 +1,373 @@
+[
+  {
+    "uid": "158141743702",
+    "face": "front",
+    "file": "public/constructor-assets/covers/158141743702-front.webp",
+    "bytes": 413824,
+    "sha256": "1813f93d54a475e1191b952113c9f55724d8f70296f5eb3cd40af417f0dfcc18"
+  },
+  {
+    "uid": "492795133352",
+    "face": "front",
+    "file": "public/constructor-assets/covers/492795133352-front.webp",
+    "bytes": 404244,
+    "sha256": "105f006c85675c5653d4b6801ddd7c51fe3071a505e91d3df9323e2256a02812"
+  },
+  {
+    "uid": "824394301742",
+    "face": "front",
+    "file": "public/constructor-assets/covers/824394301742-front.webp",
+    "bytes": 412316,
+    "sha256": "d4af657842df5c7896c20f390a5ba8005279d45368e82462ce9be4757f62f18f"
+  },
+  {
+    "uid": "979780158342",
+    "face": "front",
+    "file": "public/constructor-assets/covers/979780158342-front.webp",
+    "bytes": 405010,
+    "sha256": "3a5aec48fb45e9ccc2b92aa6594163d5340dd126f9998930e61d33409e0f0f01"
+  },
+  {
+    "uid": "301240250332",
+    "face": "front",
+    "file": "public/constructor-assets/covers/301240250332-front.webp",
+    "bytes": 383424,
+    "sha256": "a01c398a2bb53a12a4a9cf8e777e3e6ede9a4d6fd2f3545e9227cd455141007e"
+  },
+  {
+    "uid": "878898343712",
+    "face": "front",
+    "file": "public/constructor-assets/covers/878898343712-front.webp",
+    "bytes": 117486,
+    "sha256": "0996627d0909f1b670ce468132bde23dac4fe59142ef41c0a1186285f392e044"
+  },
+  {
+    "uid": "476653632312",
+    "face": "front",
+    "file": "public/constructor-assets/covers/476653632312-front.webp",
+    "bytes": 425220,
+    "sha256": "adb111708de26d82aa939bbe15eaef4f0b3c38cf4ad906f7bfbbdaf24cf2cb0f"
+  },
+  {
+    "uid": "207343502342",
+    "face": "front",
+    "file": "public/constructor-assets/covers/207343502342-front.webp",
+    "bytes": 394658,
+    "sha256": "225445d3256e9005a82d2d483bef83d6680dd677e1c5a1713bdec6c708fb9189"
+  },
+  {
+    "uid": "486206522782",
+    "face": "front",
+    "file": "public/constructor-assets/covers/486206522782-front.webp",
+    "bytes": 378398,
+    "sha256": "50fc71613ab0ba6e90c43cb67f2bd8efdb867d23f77b9e0484e02fced0244240"
+  },
+  {
+    "uid": "178439980972",
+    "face": "front",
+    "file": "public/constructor-assets/covers/178439980972-front.webp",
+    "bytes": 425452,
+    "sha256": "04c368da94974381b8053f9a0481108ca1d2893c100070510718295f34c5ab4d"
+  },
+  {
+    "uid": "176145010382",
+    "face": "front",
+    "file": "public/constructor-assets/covers/176145010382-front.webp",
+    "bytes": 360458,
+    "sha256": "c4094652f8a6e190238f4f465aeb01dc6b256ab3e82f27f76cddeebd9236cdc2"
+  },
+  {
+    "uid": "258162974583",
+    "face": "front",
+    "file": "public/constructor-assets/covers/258162974583-front.webp",
+    "bytes": 238076,
+    "sha256": "76fbc130b2ef04475f6adbafc5a835b6b5d6b09738eeb5c380540f89cd0b16bd"
+  },
+  {
+    "uid": "258162974583",
+    "face": "back",
+    "file": "public/constructor-assets/covers/258162974583-back.webp",
+    "bytes": 317122,
+    "sha256": "b9866c34387a6cb628354a7108d5ba42a9a54ac85a17d47c301d7ce124075b92"
+  },
+  {
+    "uid": "725412101973",
+    "face": "front",
+    "file": "public/constructor-assets/covers/725412101973-front.webp",
+    "bytes": 53520,
+    "sha256": "e8cb1ce580291692835f48951109fb761c081e4f1c2d494ba16da8d4cfd81d70"
+  },
+  {
+    "uid": "725412101973",
+    "face": "back",
+    "file": "public/constructor-assets/covers/725412101973-back.webp",
+    "bytes": 40864,
+    "sha256": "6731a3d373bee007324ca789563b776f8d5c1a5eba19810f0b39172d3561c7a4"
+  },
+  {
+    "uid": "389882593103",
+    "face": "front",
+    "file": "public/constructor-assets/covers/389882593103-front.webp",
+    "bytes": 340476,
+    "sha256": "2a86abab993ecdf2f5d8ee04816a9379c1a7ae3b165d1bd04e4fe694cfb95038"
+  },
+  {
+    "uid": "389882593103",
+    "face": "back",
+    "file": "public/constructor-assets/covers/389882593103-back.webp",
+    "bytes": 305748,
+    "sha256": "4ab0bac30596b0762283944fd6e64f954ff8c4a803eee183a39c1ee883d67c04"
+  },
+  {
+    "uid": "158023048453",
+    "face": "front",
+    "file": "public/constructor-assets/covers/158023048453-front.webp",
+    "bytes": 364594,
+    "sha256": "18fad05980438042be5d2ed6b83a2175fb85df2c731acbaa5ad024e53e7d1eac"
+  },
+  {
+    "uid": "158023048453",
+    "face": "back",
+    "file": "public/constructor-assets/covers/158023048453-back.webp",
+    "bytes": 365872,
+    "sha256": "326a089be0e7320f9959fd740aeb05e0ad604813a8343346883fedcc4e33b1fe"
+  },
+  {
+    "uid": "765701836933",
+    "face": "front",
+    "file": "public/constructor-assets/covers/765701836933-front.webp",
+    "bytes": 367708,
+    "sha256": "57eb6e7aa56d24760a20ee444c74357631447be12e15554afea88f86b5fd85ca"
+  },
+  {
+    "uid": "765701836933",
+    "face": "back",
+    "file": "public/constructor-assets/covers/765701836933-back.webp",
+    "bytes": 336466,
+    "sha256": "533e2836bfd1128961349ac8545b40538cc68d2c42b4e3ea82f898a9664eb5bb"
+  },
+  {
+    "uid": "651437072333",
+    "face": "front",
+    "file": "public/constructor-assets/covers/651437072333-front.webp",
+    "bytes": 376662,
+    "sha256": "8945fd9bbe7ed0c7b7ec9767b470803047f68786bb65ea40f9e299ad5e7265dd"
+  },
+  {
+    "uid": "651437072333",
+    "face": "back",
+    "file": "public/constructor-assets/covers/651437072333-back.webp",
+    "bytes": 329992,
+    "sha256": "a7dbcb165705faeb491d7fd4bf77b1b290df0af18a5bb5c80a2eca60ebbf6917"
+  },
+  {
+    "uid": "454183634123",
+    "face": "front",
+    "file": "public/constructor-assets/covers/454183634123-front.webp",
+    "bytes": 337098,
+    "sha256": "73b6cd20bdfd503b5eab95ce190d2f44a3f755214da9fc2936d1aad6163c98b5"
+  },
+  {
+    "uid": "454183634123",
+    "face": "back",
+    "file": "public/constructor-assets/covers/454183634123-back.webp",
+    "bytes": 321622,
+    "sha256": "1fd32327d073ab7ffa57bb3f7f3be5ba1714f06d3f49e486d1b952df4a94b671"
+  },
+  {
+    "uid": "676418208653",
+    "face": "front",
+    "file": "public/constructor-assets/covers/676418208653-front.webp",
+    "bytes": 360912,
+    "sha256": "b832532a65ce8999b88eb881be77976605cc13d7c243c3ad48dfef585983cd87"
+  },
+  {
+    "uid": "676418208653",
+    "face": "back",
+    "file": "public/constructor-assets/covers/676418208653-back.webp",
+    "bytes": 317122,
+    "sha256": "b9866c34387a6cb628354a7108d5ba42a9a54ac85a17d47c301d7ce124075b92"
+  },
+  {
+    "uid": "127530831733",
+    "face": "front",
+    "file": "public/constructor-assets/covers/127530831733-front.webp",
+    "bytes": 301004,
+    "sha256": "53e544fc04d6bad10ee5a32aa7d232f2ff34f698718fb134529319634b29027f"
+  },
+  {
+    "uid": "127530831733",
+    "face": "back",
+    "file": "public/constructor-assets/covers/127530831733-back.webp",
+    "bytes": 317122,
+    "sha256": "b9866c34387a6cb628354a7108d5ba42a9a54ac85a17d47c301d7ce124075b92"
+  },
+  {
+    "uid": "112269405633",
+    "face": "front",
+    "file": "public/constructor-assets/covers/112269405633-front.webp",
+    "bytes": 312912,
+    "sha256": "e71259887b50eacc80e4512d9502365a7b5e0d29bbbabcf87bbcc7cf7d765629"
+  },
+  {
+    "uid": "112269405633",
+    "face": "back",
+    "file": "public/constructor-assets/covers/112269405633-back.webp",
+    "bytes": 317122,
+    "sha256": "b9866c34387a6cb628354a7108d5ba42a9a54ac85a17d47c301d7ce124075b92"
+  },
+  {
+    "uid": "591901005413",
+    "face": "front",
+    "file": "public/constructor-assets/covers/591901005413-front.webp",
+    "bytes": 340070,
+    "sha256": "6fa2547199848527b96326306d64fb3c4eb47553a6cef644d8b5432036946cc1"
+  },
+  {
+    "uid": "591901005413",
+    "face": "back",
+    "file": "public/constructor-assets/covers/591901005413-back.webp",
+    "bytes": 317122,
+    "sha256": "b9866c34387a6cb628354a7108d5ba42a9a54ac85a17d47c301d7ce124075b92"
+  },
+  {
+    "uid": "923337193273",
+    "face": "front",
+    "file": "public/constructor-assets/covers/923337193273-front.webp",
+    "bytes": 271344,
+    "sha256": "9c019759ced37cc51db79ae3d5f5c08cebe6163e59fd8ae4f3411ead6fb29d94"
+  },
+  {
+    "uid": "923337193273",
+    "face": "back",
+    "file": "public/constructor-assets/covers/923337193273-back.webp",
+    "bytes": 317122,
+    "sha256": "b9866c34387a6cb628354a7108d5ba42a9a54ac85a17d47c301d7ce124075b92"
+  },
+  {
+    "uid": "658786933553",
+    "face": "front",
+    "file": "public/constructor-assets/covers/658786933553-front.webp",
+    "bytes": 245184,
+    "sha256": "f7505d2645ed96c51a8be8c900adc28d68801d7a15d7f954360f8430d19743e8"
+  },
+  {
+    "uid": "658786933553",
+    "face": "back",
+    "file": "public/constructor-assets/covers/658786933553-back.webp",
+    "bytes": 317122,
+    "sha256": "b9866c34387a6cb628354a7108d5ba42a9a54ac85a17d47c301d7ce124075b92"
+  },
+  {
+    "uid": "734030183423",
+    "face": "front",
+    "file": "public/constructor-assets/covers/734030183423-front.webp",
+    "bytes": 286994,
+    "sha256": "784f6828338f01d07548d591273962e68ccee82d63c480068fc8aaf369afd3d6"
+  },
+  {
+    "uid": "734030183423",
+    "face": "back",
+    "file": "public/constructor-assets/covers/734030183423-back.webp",
+    "bytes": 317122,
+    "sha256": "b9866c34387a6cb628354a7108d5ba42a9a54ac85a17d47c301d7ce124075b92"
+  },
+  {
+    "uid": "240038172873",
+    "face": "front",
+    "file": "public/constructor-assets/covers/240038172873-front.webp",
+    "bytes": 357878,
+    "sha256": "48c1e607e9be8f2afc70bdd37f7a094ccd0a3fb81562a7044cdba4839e6cd7e8"
+  },
+  {
+    "uid": "240038172873",
+    "face": "back",
+    "file": "public/constructor-assets/covers/240038172873-back.webp",
+    "bytes": 317122,
+    "sha256": "b9866c34387a6cb628354a7108d5ba42a9a54ac85a17d47c301d7ce124075b92"
+  },
+  {
+    "uid": "675381731332",
+    "face": "front",
+    "file": "public/constructor-assets/covers/675381731332-front.webp",
+    "bytes": 202876,
+    "sha256": "ef12aeafa266f8a8f9bdeb5e26a7f3e68def17b1821057c7be9b2a6660f597a3"
+  },
+  {
+    "uid": "415892771372",
+    "face": "front",
+    "file": "public/constructor-assets/covers/415892771372-front.webp",
+    "bytes": 216228,
+    "sha256": "0fc2ac2064e96f2d8f7b6abfe88df109eec258f47636ce03872ec2285f53cc98"
+  },
+  {
+    "uid": "415892771372",
+    "face": "back",
+    "file": "public/constructor-assets/covers/415892771372-back.webp",
+    "bytes": 53844,
+    "sha256": "42ef78894bbb5d94d2521a3c57b54fc1a85fc0ba1ebda015557015d678f65222"
+  },
+  {
+    "uid": "556603302972",
+    "face": "front",
+    "file": "public/constructor-assets/covers/556603302972-front.webp",
+    "bytes": 64376,
+    "sha256": "27f5caf38ee3c27369ef41d8114f15ef7b2dd1e4fba6d1fadf0a38049392a439"
+  },
+  {
+    "uid": "556603302972",
+    "face": "back",
+    "file": "public/constructor-assets/covers/556603302972-back.webp",
+    "bytes": 69652,
+    "sha256": "d6e87c8bf99400d69cdaa5d65ae15412a2c11025afeb62644cf6a3f31961b025"
+  },
+  {
+    "uid": "723348476402",
+    "face": "front",
+    "file": "public/constructor-assets/covers/723348476402-front.webp",
+    "bytes": 220492,
+    "sha256": "a4e0d2b3ca659c531687cbc590b7b3f80a1ce0b86bf5ddacc7732b0e81fb4ece"
+  },
+  {
+    "uid": "384641525952",
+    "face": "front",
+    "file": "public/constructor-assets/covers/384641525952-front.webp",
+    "bytes": 218994,
+    "sha256": "f38a9cbbd7b1b2f32e322112740b998277586282abeebc25439fd5c005c45b27"
+  },
+  {
+    "uid": "170390006762",
+    "face": "front",
+    "file": "public/constructor-assets/covers/170390006762-front.webp",
+    "bytes": 151386,
+    "sha256": "e7a1c33db77052588e235b4eea5198144ee7ad51e7f643188eef46b2d7389041"
+  },
+  {
+    "uid": "295703685182",
+    "face": "front",
+    "file": "public/constructor-assets/covers/295703685182-front.webp",
+    "bytes": 172512,
+    "sha256": "112dc29cffbe62c79d68494395335ff07fb07b77a51cd76731361b6c245babf3"
+  },
+  {
+    "uid": "366455669952",
+    "face": "front",
+    "file": "public/constructor-assets/covers/366455669952-front.webp",
+    "bytes": 206424,
+    "sha256": "aff60951b58d6f36d81712150f0f241a9382ef866902e50578923a184dc43564"
+  },
+  {
+    "uid": "688087953432",
+    "face": "front",
+    "file": "public/constructor-assets/covers/688087953432-front.webp",
+    "bytes": 325640,
+    "sha256": "ec16324a3c7ae626da6bb0d6029514556e5e3aeca08cb502733b8610439b605a"
+  },
+  {
+    "uid": "514198838482",
+    "face": "front",
+    "file": "public/constructor-assets/covers/514198838482-front.webp",
+    "bytes": 243400,
+    "sha256": "6c72a5451857056603c6154578928c212bf875fcfa5faa3a8775593b1f4cc6f9"
+  }
+]

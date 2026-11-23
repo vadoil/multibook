@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Constructor, type BlockOpt, type CoverOpt, type DiscOpt, type Initial } from "@/components/Constructor";
 import type { Ruling } from "@/components/NotebookPreview";
 import { getProduct, listProducts } from "@/lib/catalog";
@@ -77,6 +76,7 @@ function discs(): DiscOpt[] {
         id: p.id,
         title: p.shortTitle,
         price: p.price,
+        image: p.images[0] ?? null,
         hex: a.colorHex ?? (a.finishKind === "clear" ? "#dfe5ea" : "#cfcfcf"),
         diameter: a.diameter as 18 | 24,
         metal: !!a.metal,
@@ -91,8 +91,9 @@ function discs(): DiscOpt[] {
 function initial(f: FormatKey, sp: Record<string, string | undefined>, o: { covers: CoverOpt[]; blocks: BlockOpt[]; discs: DiscOpt[] }): Initial {
   const parts = FORMATS[f].mode === "parts";
   const num = (s?: string) => (s && /^\d+$/.test(s) ? Number(s) : undefined);
-  const init: Initial = { cover: num(sp.c), blocks: {}, disc: num(sp.d) ?? null };
-  for (const part of (sp.b ?? "").split(",").slice(0, parts ? 1 : 6)) {
+  const init: Initial = { cover: num(sp.c), back: num(sp.r), blocks: {}, disc: num(sp.d) ?? null };
+  if (!o.covers.some(c => c.id === init.back && !c.isSet)) init.back = undefined;
+  for (const part of (sp.b ?? "").split(",").slice(0, o.blocks.length)) {
     const [id, q] = part.split(".");
     const n = num(id);
     if (n && o.blocks.some((b) => b.id === n)) init.blocks[n] = Math.min(parts ? 4 : 5, Math.max(1, num(q) ?? 1));
@@ -107,7 +108,8 @@ function initial(f: FormatKey, sp: Record<string, string | undefined>, o: { cove
   }
 
   if (!o.covers.some((c) => c.id === init.cover)) init.cover = o.covers.find((c) => c.available)?.id;
-  if (parts && !Object.keys(init.blocks).length) {
+  if (!parts || o.covers.find(c => c.id === init.cover)?.isSet) init.back = undefined;
+  if (parts && sp.b !== "0" && !Object.keys(init.blocks).length) {
     const first = o.blocks.find((b) => b.available && b.ruling === "grid") ?? o.blocks.find((b) => b.available);
     if (first) init.blocks[first.id] = 1;
   }
@@ -136,11 +138,11 @@ export default async function ConstructorPage({ searchParams }: { searchParams: 
   const available = FORMAT_KEYS.filter((k) => k === f || covers(k).length > 0);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6">
+    <div className="constructor-page mx-auto max-w-7xl px-4 pt-6 sm:px-6 sm:pt-8">
       <p className="text-sm uppercase tracking-[0.18em] text-muted">Конструктор</p>
       <h1 className="mt-2 font-display text-4xl font-bold sm:text-5xl">Соберите свой блокнот</h1>
       <p className="mt-3 max-w-2xl text-muted">
-        Выберите формат, потом обложку, листы и диски — превью меняется сразу. Если листов больше, чем держат диски, конструктор подскажет.
+        Обложки, блоки листов и диски — ваш блокнот по частям. Превью и стоимость меняются сразу.
       </p>
 
       <nav aria-label="Формат" className="mt-6 grid grid-cols-3 gap-2 sm:flex">

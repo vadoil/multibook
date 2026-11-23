@@ -1,0 +1,39 @@
+.constructor-stage { padding: 20px; border: 1px solid var(--color-line); border-radius: 16px; background: var(--color-card); }
+.constructor-main-book { max-width: 280px; }
+.constructor-summary-toggle { display: none; }
+.constructor-composition h2 > svg { width: 28px; height: 28px; flex: none; }
+.constructor-composition li > span:first-child { white-space: normal; overflow: visible; }
+.constructor-cover, .constructor-block, .constructor-disc { border-radius: 10px; }
+.constructor-cover > div { border-radius: 8px; }
+.constructor-no-photo { display: grid; height: 100%; place-content: center; justify-items: center; gap: 6px; font-size: 12px; color: var(--color-muted); }
+.constructor-no-photo svg { width: 30px; height: 30px; }
+.constructor-qty { display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-card); }
+.constructor-qty button { width: 44px; height: 44px; flex: none; font-size: 22px; touch-action: manipulation; border-radius: 9px; }
+.constructor-qty button:hover:not(:disabled) { background: var(--color-paper); }
+.constructor-qty button:disabled { opacity: .3; }
+.constructor-qty output { min-width: 20px; text-align: center; font-weight: 600; font-variant-numeric: tabular-nums; }
+.constructor-included { display: flex; align-items: center; gap: 20px; padding: 12px 20px; background: var(--color-card); border: 1px solid var(--color-line); border-radius: 10px; }
+.constructor-catalog-link { white-space: normal; justify-content: flex-start; }
+.constructor-builder button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
+@media (min-width: 1024px) {
+ .constructor-preview { position: sticky; top: 112px; max-height: calc(100svh - 128px); overflow-y: auto; padding: 3px; scrollbar-width: thin; overscroll-behavior: contain; }
+}
+@media (max-width: 760px) {
+ .constructor-page > p:not(:first-child) { font-size: 14px; line-height: 1.55; }
+ .constructor-page .constructor-format-tab { min-height: 76px; }
+ .constructor-page .constructor-format-tab > span:first-child { height: 24px; }
+ .constructor-page .constructor-format-tab > span:first-child > span { max-height: 24px; width: 18px !important; }
+ .constructor-builder { margin-top: 24px; }
+ .constructor-main-book { max-width: 200px; }
+ .constructor-stage { padding: 16px 12px; }
+ .constructor-stage .store-tabs-row { gap: 6px; }
+ .constructor-included { padding: 12px; gap: 12px; }
+}
+@media (max-width: 1023px) {
+ .constructor-summary-toggle { display: flex; justify-content: flex-start; width: 100%; }
+ .constructor-summary-toggle > span:last-child { margin-left: auto; }
+ .constructor-summary-body:not(.is-open) { display: none; }
+ .constructor-summary-body.is-open { margin-top: 16px; }
+ .constructor-composition { padding: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .constructor-builder *, .constructor-builder *::before, .constructor-builder *::after { transition: none !important; animation: none !important; } }

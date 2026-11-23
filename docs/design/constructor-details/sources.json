@@ -1,0 +1,1503 @@
+[
+  {
+    "uid": "158141743702",
+    "catalogueImage": "https://static.tildacdn.com/stor3562-3631-4235-b763-303037666638/785df9bcc234e85548e25c9d493d85bd.jpg",
+    "title": "Обложка \"МояПланета\", оливковая, А5+",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3339-6439-4461-b065-656635353038/0fe560c96cd33c850a9d8f0a785519ac.jpg",
+        "sha256": "b912e748cb92fb0e29f9fcac4c097bea295948b0a8ddb22568a7534ca8562d09",
+        "quad": [
+          [
+            0.126,
+            0.177
+          ],
+          [
+            0.855,
+            0.177
+          ],
+          [
+            0.855,
+            0.819
+          ],
+          [
+            0.126,
+            0.819
+          ]
+        ],
+        "filename": "158141743702-front.webp"
+      }
+    }
+  },
+  {
+    "uid": "492795133352",
+    "catalogueImage": "https://static.tildacdn.com/stor3765-6663-4461-a537-323265666335/64f19e378954e3fb1efcb010abd49fd9.jpg",
+    "title": "Обложка \"МояПланета\", золотая, А5+",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6634-6366-4537-a162-306333323031/c7db04ccac1db55eacb6a66ffac47dc6.jpg",
+        "sha256": "27d9c54340dab3a17759406cf1ae12aed0dc3df89df63cab6fde4d10cc48848a",
+        "quad": [
+          [
+            0.126,
+            0.177
+          ],
+          [
+            0.855,
+            0.177
+          ],
+          [
+            0.855,
+            0.819
+          ],
+          [
+            0.126,
+            0.819
+          ]
+        ],
+        "filename": "492795133352-front.webp"
+      }
+    }
+  },
+  {
+    "uid": "824394301742",
+    "catalogueImage": "https://static.tildacdn.com/stor3532-6333-4838-a363-616265633236/713012f6b7793b636a6c9a08a02b1197.jpg",
+    "title": "Обложка \"МояПланета\", серая, А5+",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3834-3632-4262-b334-373637346638/7bb69631128aeb07072881f12677205c.jpg",
+        "sha256": "b6c740a132a2696ecf2e4c3c81338c0c0ea04f0eab1279bf9209444f19bc783f",
+        "quad": [
+          [
+            0.126,
+            0.177
+          ],
+          [
+            0.855,
+            0.177
+          ],
+          [
+            0.855,
+            0.819
+          ],
+          [
+            0.126,
+            0.819
+          ]
+        ],
+        "filename": "824394301742-front.webp"
+      }
+    }
+  },
+  {
+    "uid": "979780158342",
+    "catalogueImage": "https://static.tildacdn.com/stor3935-3765-4833-b363-623464626137/ab20db8f9d5492f5e42f0dc9ac97fedc.jpg",
+    "title": "Обложка \"Ватикан\", оранжевая, А5+",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3838-6636-4565-b661-313936636165/351add13ee54541bc6293f2c87ae2584.jpg",
+        "sha256": "a157f4bc50b84bf22b0ca7e35b8ee67dadb450fba105e319563b573f323f10b9",
+        "quad": [
+          [
+            0.126,
+            0.177
+          ],
+          [
+            0.855,
+            0.177
+          ],
+          [
+            0.855,
+            0.819
+          ],
+          [
+            0.126,
+            0.819
+          ]
+        ],
+        "filename": "979780158342-front.webp"
+      }
+    }
+  },
+  {
+    "uid": "301240250332",
+    "catalogueImage": "https://static.tildacdn.com/stor3735-3164-4464-b335-636335623235/b3e8d261eaad3e13aa2b69bd5b418495.jpg",
+    "title": "Обложка \"Ватикан\", оранжевая, А5+",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3962-3261-4434-b130-663761353236/c77acf8598b0dc7f53758d9ebc9b16c8.jpg",
+        "sha256": "c03eee5e869571a8a74e091cd01dc42d1ff1ccbc99274112d34db311e7efc82d",
+        "quad": [
+          [
+            0.126,
+            0.177
+          ],
+          [
+            0.855,
+            0.177
+          ],
+          [
+            0.855,
+            0.819
+          ],
+          [
+            0.126,
+            0.819
+          ]
+        ],
+        "filename": "301240250332-front.webp"
+      }
+    }
+  },
+  {
+    "uid": "878898343712",
+    "catalogueImage": "https://static.tildacdn.com/stor3230-6366-4330-a636-323962353735/2f9a8079e2567543584bbd7ab59f0cc1.jpg",
+    "title": "Обложка с клапаном, бежевая, А5+",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3539-3261-4965-b939-633131373564/81b4f3ef5abfd5ed6dabee2558761550.jpg",
+        "sha256": "ece5097c7ff6b8641c79f93511ec8081b95824788cb07c082563c4ee46684c33",
+        "quad": [
+          [
+            0.443,
+            0.349
+          ],
+          [
+            0.909,
+            0.286
+          ],
+          [
+            0.978,
+            0.663
+          ],
+          [
+            0.508,
+            0.719
+          ]
+        ],
+        "filename": "878898343712-front.webp"
+      }
+    }
+  },
+  {
+    "uid": "476653632312",
+    "catalogueImage": "https://static.tildacdn.com/stor3537-6132-4236-b732-316533346438/b89c7f8f196b5b9a40a3c677b8b0bca9.jpg",
+    "title": "Обложка с клапаном, оранжевая, А5+",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3636-3034-4262-b235-303430616463/541363ec02cb9110c5d2bedb97375bb0.jpg",
+        "sha256": "657bb631a095163971782f4bd18b77b7a7660948f3fbc4987831a4acbabb1b25",
+        "quad": [
+          [
+            0.127,
+            0.177
+          ],
+          [
+            0.855,
+            0.177
+          ],
+          [
+            0.855,
+            0.819
+          ],
+          [
+            0.127,
+            0.819
+          ]
+        ],
+        "filename": "476653632312-front.webp"
+      }
+    }
+  },
+  {
+    "uid": "207343502342",
+    "catalogueImage": "https://static.tildacdn.com/stor3333-6438-4130-b835-333762376535/c5213da7d00f479d82636fcb408aa475.jpg",
+    "title": "Обложка с клапаном, оливковая, А5+",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3333-6438-4130-b835-333762376535/c5213da7d00f479d82636fcb408aa475.jpg",
+        "sha256": "a341e74027fad7af37ba95e66751fdd149469f915491f5069a99d9ebbd0e4f28",
+        "quad": [
+          [
+            0.127,
+            0.177
+          ],
+          [
+            0.855,
+            0.177
+          ],
+          [
+            0.855,
+            0.819
+          ],
+          [
+            0.127,
+            0.819
+          ]
+        ],
+        "filename": "207343502342-front.webp"
+      }
+    }
+  },
+  {
+    "uid": "486206522782",
+    "catalogueImage": "https://static.tildacdn.com/stor3166-3761-4664-b162-616131663930/3ef597704864c2b618af3f04bac50ff5.jpg",
+    "title": "Обложка с клапаном, коричневая, А5+",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3264-3032-4866-b334-636361313862/7ffaada02b6ebab39ca80a14bed0d7a2.jpg",
+        "sha256": "a7063c39cfa3b314bd97af1afd36ecc8681808cbd67b62051b3a56b1312a5f8c",
+        "quad": [
+          [
+            0.127,
+            0.177
+          ],
+          [
+            0.855,
+            0.177
+          ],
+          [
+            0.855,
+            0.819
+          ],
+          [
+            0.127,
+            0.819
+          ]
+        ],
+        "filename": "486206522782-front.webp"
+      }
+    }
+  },
+  {
+    "uid": "178439980972",
+    "catalogueImage": "https://static.tildacdn.com/stor6439-3562-4565-b938-353562663731/d238971c4ebef4e4bee1b495bd20cc95.jpg",
+    "title": "Обложка с клапаном, золотая, А5+",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6365-3038-4539-b466-346632656662/8a76c069d9122e8ee00b0d54b07047f6.jpg",
+        "sha256": "239d08cf9e7d557fdbb1ddc42471130e6731fb89df09a66f78f74f05f32657c3",
+        "quad": [
+          [
+            0.127,
+            0.177
+          ],
+          [
+            0.855,
+            0.177
+          ],
+          [
+            0.855,
+            0.819
+          ],
+          [
+            0.127,
+            0.819
+          ]
+        ],
+        "filename": "178439980972-front.webp"
+      }
+    }
+  },
+  {
+    "uid": "176145010382",
+    "catalogueImage": "https://static.tildacdn.com/stor3538-6435-4537-b835-626635323832/0c0cafe83f98586ccdc0f58dbb56eb42.jpg",
+    "title": "Обложка с клапаном, бежевая, А5+",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3430-3862-4430-b332-633330363864/31e178ca784d9b28baf85a54eb333aaa.jpg",
+        "sha256": "db3c5e3d59a6983a5f87966819af54302e958a183d69d95c6d5381a304c4df22",
+        "quad": [
+          [
+            0.127,
+            0.177
+          ],
+          [
+            0.855,
+            0.177
+          ],
+          [
+            0.855,
+            0.819
+          ],
+          [
+            0.127,
+            0.819
+          ]
+        ],
+        "filename": "176145010382-front.webp"
+      }
+    }
+  },
+  {
+    "uid": "258162974583",
+    "catalogueImage": "https://static.tildacdn.com/stor6232-6437-4562-a562-343836616333/05ff43c8205a0ba6b23bfc08855c3244.jpg",
+    "title": "Комплект твердых обложек «Дело» (экокожа, черный) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6232-6437-4562-a562-343836616333/05ff43c8205a0ba6b23bfc08855c3244.jpg",
+        "sha256": "40f4eb9479b21de23bfb92405f490adeef3e412cfbe3fcd99dc4330ee0b5a1ed",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "258162974583-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor6231-3036-4339-a166-333961353639/7cf3e4a156edfb332314e6e80eef871d.jpg",
+        "sha256": "b6515be80471e3d2657e587e5374b6d23ff69c317d9e7b545db242aae7b41e2f",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "258162974583-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "725412101973",
+    "catalogueImage": "https://static.tildacdn.com/stor6432-3566-4231-b035-393737393861/d4112dfe8e179d2a826edd2360c19ecc.jpg",
+    "title": "Комплект твердых обложек «Дело» (экокожа, жасмин) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3733-3431-4264-a664-333338333831/1067cfbde300e3414d08d890b7ebe0cd.jpg",
+        "sha256": "3b2d48de0981e2fce8fb8ac1ac55b187f8d4f9dde8b64255971cdcf160a02b3c",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "725412101973-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3864-3761-4337-b338-303362376434/184f7e1c55a7ffb9d66dd67b4b4197bb.jpg",
+        "sha256": "fdd079f43ef4ec04967c4fe7e78d16f5bef2d6a3332bb423a21fd7a7cde62657",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "725412101973-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "389882593103",
+    "catalogueImage": "https://static.tildacdn.com/stor6531-3338-4463-b938-353238623262/4ec1baf0696174dd88a20c7ea875ee11.jpg",
+    "title": "Комплект твердых обложек «Дело» (экозамша, асфальт) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6535-3739-4063-a162-316639643863/1806a6e91dd21a3a3129a8ffc8752a88.jpg",
+        "sha256": "cc1ba59dabce5ae83543b33b84ab464cbf0887ee00cd40feeb22d870e66d57cf",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "389882593103-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3433-3030-4838-b336-376238343938/538c8f3946c93a1e5d58c8efa8ad5234.jpg",
+        "sha256": "c8e0fa16e34f01f592d7a4e4fa9ff295dd1ed79b7d8088b331f2947f842ba6e3",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "389882593103-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "158023048453",
+    "catalogueImage": "https://static.tildacdn.com/stor3533-3836-4732-b265-623563636661/9fc3811969dc037408f00be42f5d6ce8.jpg",
+    "title": "Комплект твердых обложек «Дело» (экозамша, оливка) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3731-3531-4437-a532-333761623735/11a4c3e74b35095212087c8d455bdee4.jpg",
+        "sha256": "987f30e8648be1ca7478a3aeca62c6347142b8adc7d39274fa43d3482f044a63",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "158023048453-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3538-6136-4536-a534-363136623361/447e1fec07cc94f40da82c21489d35f3.jpg",
+        "sha256": "33d92affa1b0ff021746cef7f85d0161a67e326908b07244120f3fad27b66442",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "158023048453-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "765701836933",
+    "catalogueImage": "https://static.tildacdn.com/stor3162-6437-4930-b131-666233353230/bcb12b5bd23aca4b1db1b056d62f5ad1.jpg",
+    "title": "Комплект твердых обложек «Дело» (экозамша, серебро) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3262-3461-4836-b439-306262626365/1e4ecd580b8954f4e43d32a1e9e9a056.jpg",
+        "sha256": "7c2222be19b048276ce9c3ff9fa20a33a763a77b02b6a732c4f5b930cbddad1a",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "765701836933-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3031-3464-4230-a332-653935376231/570911569e0578b213e0699db1a7826b.jpg",
+        "sha256": "edee957be18c9065b05f4af66039ebd76c212a64ee1335224495adde9a9340db",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "765701836933-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "651437072333",
+    "catalogueImage": "https://static.tildacdn.com/stor3733-3963-4334-b537-393530303630/729b47b445e9df14a3307cd871536f76.jpg",
+    "title": "Комплект твердых обложек «Дело» (экозамша, хурма) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6338-3932-4264-b338-316630303464/12598996d5b1de492c5bcc0b8e79653d.jpg",
+        "sha256": "04d8f12d17936298e10b1eb30bf97cb235360ba25b881329a804bae0a8daf292",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "651437072333-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3461-3166-4964-b239-366430343035/66f68c5a6ca8c9b3761c075a17f34fbc.jpg",
+        "sha256": "55ea8d36f52b031959112fc6b3298856d8c1019e5d7c1fc29c618f709d567a20",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "651437072333-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "454183634123",
+    "catalogueImage": "https://static.tildacdn.com/stor6263-6638-4632-b262-386634633162/d1257f3988690a9ae430760a3eea8c7c.jpg",
+    "title": "Комплект твердых обложек «Дело» (экозамша, охра) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6233-3138-4137-a265-306430626636/223dedb444396a106704533beeab36e4.jpg",
+        "sha256": "7bba41f6b776763e85d673fcc665f66f923f05cbeaeb1f3fc73ee0cf7a03d3c9",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "454183634123-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor6266-3866-4363-b030-666539393132/f17c28ae82fd19a40d33d57db68d0292.jpg",
+        "sha256": "92ec58cfcb68673f1258c5e71f2d4d1e8b7b19f919e6d4da6dbb9b00ae7b15fa",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "454183634123-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "676418208653",
+    "catalogueImage": "https://static.tildacdn.com/stor6130-3763-4335-b035-633837316263/0dff93e20be1585d11881bf7dec45e19.jpg",
+    "title": "Комплект твердых обложек «Кайдзен» (принт/экокожа НАГАРЕКИККОУ) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6130-3763-4335-b035-633837316263/0dff93e20be1585d11881bf7dec45e19.jpg",
+        "sha256": "52a187c4047e356cba803c0eb212657612a738834534bb025eb77672e672edc1",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "676418208653-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3733-6435-4464-b463-373432656161/8c1aa8d92d7db1c14c3fcf9c432fb8c9.jpg",
+        "sha256": "1052e2a74e630c0ea7d410558db5f5eee785fc9c70ed8af683deb4ad45f83009",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "676418208653-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "127530831733",
+    "catalogueImage": "https://static.tildacdn.com/stor6164-3563-4432-b364-646133366365/c84a93dfe253649100a5b3920ff4bc9d.jpg",
+    "title": "Комплект твердых обложек «Кайдзен» (принт/экокожа ХИН) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6164-3563-4432-b364-646133366365/c84a93dfe253649100a5b3920ff4bc9d.jpg",
+        "sha256": "c2c6aaea8d1134bdce290497b37ff5c7ac0845e216a60b241ecb020f5dd5d3fa",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "127530831733-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3861-6664-4932-a539-303761313636/f9ce31a44905eac4fe276ab4a9a0fb31.jpg",
+        "sha256": "cfdb715c30fb5afd276e01871740bcde6f3be5e85821a3bcbbbe1e78613eed4e",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "127530831733-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "112269405633",
+    "catalogueImage": "https://static.tildacdn.com/stor3231-6130-4663-a165-333734336661/78dc2c29a76005a80e70690df1a1376d.jpg",
+    "title": "Комплект твердых обложек «Кайдзен» (принт/экокожа ОН) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3231-6130-4663-a165-333734336661/78dc2c29a76005a80e70690df1a1376d.jpg",
+        "sha256": "25f888c9178dea1e2de59950d3aa208e463c6570b0b1226ffbe479f9a8cabc35",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "112269405633-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3861-6664-4932-a539-303761313636/f9ce31a44905eac4fe276ab4a9a0fb31.jpg",
+        "sha256": "cfdb715c30fb5afd276e01871740bcde6f3be5e85821a3bcbbbe1e78613eed4e",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "112269405633-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "591901005413",
+    "catalogueImage": "https://static.tildacdn.com/stor6666-3461-4730-a339-303261616437/7ff85293f1573d8c37e884b04649c9b6.jpg",
+    "title": "Комплект твердых обложек «Кайдзен» (принт/экокожа АИ) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6666-3461-4730-a339-303261616437/7ff85293f1573d8c37e884b04649c9b6.jpg",
+        "sha256": "40b83a1c95c6fa7390d228101f47b921bcdcca213d7bf58a966ed521c70d897e",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "591901005413-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3861-6664-4932-a539-303761313636/f9ce31a44905eac4fe276ab4a9a0fb31.jpg",
+        "sha256": "cfdb715c30fb5afd276e01871740bcde6f3be5e85821a3bcbbbe1e78613eed4e",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "591901005413-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "923337193273",
+    "catalogueImage": "https://static.tildacdn.com/stor3635-3036-4633-b930-313238663831/cbc851aeeb8e1b4188786295b2e86e5a.jpg",
+    "title": "Комплект твердых обложек «Кайдзен» (принт/экокожа ДЗЁ) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3635-3036-4633-b930-313238663831/cbc851aeeb8e1b4188786295b2e86e5a.jpg",
+        "sha256": "b9ff2f45b6950712d6a1256e693091d7ee9172ecdf3cbfe218c4a13d51a9ed48",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "923337193273-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3861-6664-4932-a539-303761313636/f9ce31a44905eac4fe276ab4a9a0fb31.jpg",
+        "sha256": "cfdb715c30fb5afd276e01871740bcde6f3be5e85821a3bcbbbe1e78613eed4e",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "923337193273-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "658786933553",
+    "catalogueImage": "https://static.tildacdn.com/stor3466-3435-4932-b137-343632363139/26863a8a9f2e1b35b4d9e9ef6f206405.jpg",
+    "title": "Комплект твердых обложек «Кайдзен» (принт/экокожа КОУГАКИ) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3466-3435-4932-b137-343632363139/26863a8a9f2e1b35b4d9e9ef6f206405.jpg",
+        "sha256": "b04e55a986f110b283f0825b3dadbfbdde84578554d475b59267bfa05dab337d",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "658786933553-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3861-6664-4932-a539-303761313636/f9ce31a44905eac4fe276ab4a9a0fb31.jpg",
+        "sha256": "cfdb715c30fb5afd276e01871740bcde6f3be5e85821a3bcbbbe1e78613eed4e",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "658786933553-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "734030183423",
+    "catalogueImage": "https://static.tildacdn.com/stor3463-6331-4161-a332-663537666531/158ecb25b3a59196ae98055797a94a9f.jpg",
+    "title": "Комплект твердых обложек «Кайдзен» (принт/экокожа КОУ) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3463-6331-4161-a332-663537666531/158ecb25b3a59196ae98055797a94a9f.jpg",
+        "sha256": "a03fa734a4c877d625003c4ad6e0e90b5c73bb0e7feb03ae786d4893018877fe",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "734030183423-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3733-6435-4464-b463-373432656161/8c1aa8d92d7db1c14c3fcf9c432fb8c9.jpg",
+        "sha256": "1052e2a74e630c0ea7d410558db5f5eee785fc9c70ed8af683deb4ad45f83009",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "734030183423-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "240038172873",
+    "catalogueImage": "https://static.tildacdn.com/stor3038-6262-4033-b033-356330616335/a504e7afa06f7952967e00771ed42816.jpg",
+    "title": "Комплект твердых обложек «Кайдзен» (принт/экокожа РЕЙ) А5 + для тетрадей и блокнотов Multibook c дисковым переплетом",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3038-6262-4033-b033-356330616335/a504e7afa06f7952967e00771ed42816.jpg",
+        "sha256": "cbf87af4f3bfeb96ef5ee55c652c3af8f37ef844f700184755608bac116eb429",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "240038172873-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor3861-6664-4932-a539-303761313636/f9ce31a44905eac4fe276ab4a9a0fb31.jpg",
+        "sha256": "cfdb715c30fb5afd276e01871740bcde6f3be5e85821a3bcbbbe1e78613eed4e",
+        "quad": [
+          [
+            0.121,
+            0.162
+          ],
+          [
+            0.899,
+            0.162
+          ],
+          [
+            0.899,
+            0.861
+          ],
+          [
+            0.121,
+            0.861
+          ]
+        ],
+        "filename": "240038172873-back.webp"
+      }
+    }
+  },
+  {
+    "uid": "675381731332",
+    "catalogueImage": "https://static.tildacdn.com/stor3230-6535-4537-a136-333863613532/e456fd48ee60fb48ff1cf0b06cc67b78.jpg",
+    "title": "Мини блокнот для заметок из эко-кожи",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6664-6336-4536-a337-623639363132/c184d866a3ead0282d50c1f5963b0111.jpg",
+        "sha256": "860223566f10356f870e2da6d02330c794311cfd77201188907fbbc1339ce9b9",
+        "quad": [
+          [
+            0.203,
+            0.306
+          ],
+          [
+            0.533,
+            0.262
+          ],
+          [
+            0.696,
+            0.742
+          ],
+          [
+            0.342,
+            0.791
+          ]
+        ],
+        "filename": "675381731332-front.webp"
+      }
+    },
+    "binding": "top",
+    "discs": 3,
+    "accessory": "ручка"
+  },
+  {
+    "uid": "415892771372",
+    "catalogueImage": "https://static.tildacdn.com/stor3934-6365-4834-b432-323838613232/936e6530205e67e52406571794d5bb0f.jpg",
+    "title": "Мини блокнот для заметок из эко-кожи \"Винтаж\"",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6337-6134-4639-a261-373730383261/01c85c085d5c216a0408d58804360174.jpg",
+        "sha256": "81333c03087a2b72fb78046daa604f40a7b2142458ab3cb56db1ffdee552da80",
+        "quad": [
+          [
+            0.308,
+            0.184
+          ],
+          [
+            0.721,
+            0.184
+          ],
+          [
+            0.721,
+            0.821
+          ],
+          [
+            0.308,
+            0.821
+          ]
+        ],
+        "filename": "415892771372-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor6635-3462-4330-b439-336435666630/2f7178077f073e02be30cfa263330289.jpg",
+        "sha256": "ba7efe08847ec4ca93612d19be26bffb105c7d53195ac01bfa8e78ede6a3c621",
+        "quad": [
+          [
+            0.306,
+            0.183
+          ],
+          [
+            0.724,
+            0.183
+          ],
+          [
+            0.724,
+            0.817
+          ],
+          [
+            0.306,
+            0.817
+          ]
+        ],
+        "filename": "415892771372-back.webp"
+      }
+    },
+    "binding": "top",
+    "discs": 3,
+    "accessory": "ручка"
+  },
+  {
+    "uid": "556603302972",
+    "catalogueImage": "https://static.tildacdn.com/stor3966-3066-4464-b964-653766333364/a4446a65c5f112cbac5e4c37cec40378.jpg",
+    "title": "Мини блокнот для заметок из эко-кожи \"Баухауз\"",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3966-3066-4464-b964-653766333364/a4446a65c5f112cbac5e4c37cec40378.jpg",
+        "sha256": "e0aeb53b78c3f3b2251e9818c2fa450775aff5d2a35ed1119407de27f8f1f827",
+        "quad": [
+          [
+            0.31,
+            0.252
+          ],
+          [
+            0.695,
+            0.227
+          ],
+          [
+            0.692,
+            0.738
+          ],
+          [
+            0.331,
+            0.768
+          ]
+        ],
+        "filename": "556603302972-front.webp"
+      },
+      "back": {
+        "url": "https://static.tildacdn.com/stor6236-3730-4864-b736-646563303333/f8699375af89e04fd4fc4c94a05c0215.jpg",
+        "sha256": "ead3aff6db0dc08215abe85af37fddb877d209ea0b2a90e61dc373e82a871e30",
+        "quad": [
+          [
+            0.305,
+            0.181
+          ],
+          [
+            0.717,
+            0.181
+          ],
+          [
+            0.717,
+            0.813
+          ],
+          [
+            0.305,
+            0.813
+          ]
+        ],
+        "filename": "556603302972-back.webp"
+      }
+    },
+    "binding": "top",
+    "discs": 3,
+    "accessory": "ручка"
+  },
+  {
+    "uid": "723348476402",
+    "catalogueImage": "https://static.tildacdn.com/stor3235-3034-4239-b338-646233643166/05f4f490263629ca0284e624a8f1fe07.jpg",
+    "title": "Мини блокнот для заметок из эко-кожи \"Игра\"",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3235-3034-4239-b338-646233643166/05f4f490263629ca0284e624a8f1fe07.jpg",
+        "sha256": "b858a3c1f1402cb77a6c9c4d96c8519e8e4483b6723a6464db44b0ab493a0510",
+        "quad": [
+          [
+            0.304,
+            0.205
+          ],
+          [
+            0.716,
+            0.245
+          ],
+          [
+            0.694,
+            0.787
+          ],
+          [
+            0.296,
+            0.749
+          ]
+        ],
+        "filename": "723348476402-front.webp"
+      }
+    },
+    "binding": "top",
+    "discs": 3,
+    "accessory": "ручка"
+  },
+  {
+    "uid": "384641525952",
+    "catalogueImage": "https://static.tildacdn.com/stor6239-6238-4363-b532-366136646331/5f42df4793f851f55f9fcd84a0accb9c.jpg",
+    "title": "Мини блокнот для заметок из эко-кожи \"Энигма\"",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6239-6238-4363-b532-366136646331/5f42df4793f851f55f9fcd84a0accb9c.jpg",
+        "sha256": "0b21a2a8dc4240258e611962c0b35d0f3d73705b21139f72dd0fe4a7f6a50d74",
+        "quad": [
+          [
+            0.327,
+            0.204
+          ],
+          [
+            0.734,
+            0.208
+          ],
+          [
+            0.733,
+            0.793
+          ],
+          [
+            0.343,
+            0.819
+          ]
+        ],
+        "filename": "384641525952-front.webp"
+      }
+    },
+    "binding": "top",
+    "discs": 3,
+    "accessory": "ручка"
+  },
+  {
+    "uid": "170390006762",
+    "catalogueImage": "https://static.tildacdn.com/stor6461-6561-4736-b339-623238613933/01579e6fd30dc8c6641d1af479f938c7.jpg",
+    "title": "Мини блокнот для заметок из крафтового картона \"Борд\"",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor6461-6561-4736-b339-623238613933/01579e6fd30dc8c6641d1af479f938c7.jpg",
+        "sha256": "6a30f9cd5eee54a92969789a1b12e5872150e92d2b845452a8d5c8c5d8e21ec1",
+        "quad": [
+          [
+            0.337,
+            0.209
+          ],
+          [
+            0.716,
+            0.202
+          ],
+          [
+            0.739,
+            0.799
+          ],
+          [
+            0.365,
+            0.82
+          ]
+        ],
+        "filename": "170390006762-front.webp"
+      }
+    },
+    "binding": "top",
+    "discs": 3,
+    "accessory": "карандаш"
+  },
+  {
+    "uid": "295703685182",
+    "catalogueImage": "https://static.tildacdn.com/stor3637-3262-4536-b031-333564653338/2d8b9e558ce6c3f9cd55bd9368da6364.jpg",
+    "title": "Мини блокнот Multibоok куба",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3830-6339-4462-b439-666130613738/de8740007d0b0875e5b8500932846aa2.jpg",
+        "sha256": "62712976162119f1952f1be838852bbbc4daa66dd8d664f85e48ce5a6f16a749",
+        "quad": [
+          [
+            0.258,
+            0.33
+          ],
+          [
+            0.657,
+            0.331
+          ],
+          [
+            0.729,
+            0.7
+          ],
+          [
+            0.335,
+            0.703
+          ]
+        ],
+        "filename": "295703685182-front.webp"
+      }
+    },
+    "binding": "top",
+    "discs": 3,
+    "accessory": "карандаш"
+  },
+  {
+    "uid": "366455669952",
+    "catalogueImage": "https://static.tildacdn.com/stor3963-6330-4864-b264-313861633834/e860226aa70de3c702bf79aca5cc87bf.jpg",
+    "title": "Мини блокнот Multibоok Дело",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3964-3033-4434-b638-363462363930/a58fcbc3d53291006e1daa4e7c7b31c0.jpg",
+        "sha256": "c47494c5cddef8e4be22b3f07ff2ac341b9351ffbe48d1844a84314f6d200b5d",
+        "quad": [
+          [
+            0.266,
+            0.142
+          ],
+          [
+            0.709,
+            0.142
+          ],
+          [
+            0.709,
+            0.821
+          ],
+          [
+            0.266,
+            0.821
+          ]
+        ],
+        "filename": "366455669952-front.webp"
+      }
+    },
+    "binding": "top",
+    "discs": 3,
+    "accessory": "ручка"
+  },
+  {
+    "uid": "688087953432",
+    "catalogueImage": "https://static.tildacdn.com/stor3761-3634-4566-a633-386664353864/e18ea3361ea45dfc016c16ddccc5e5a9.jpg",
+    "title": "Мини блокнот Multibоok Дело",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3232-6234-4036-a235-353231393834/7f5b8cb09ec8becb322f2ed629df5915.jpg",
+        "sha256": "49582abde08ba554e7800ead277208bc89f2d43ac757ad5f13dd167a17533281",
+        "quad": [
+          [
+            0.266,
+            0.142
+          ],
+          [
+            0.709,
+            0.142
+          ],
+          [
+            0.709,
+            0.821
+          ],
+          [
+            0.266,
+            0.821
+          ]
+        ],
+        "filename": "688087953432-front.webp"
+      }
+    },
+    "binding": "top",
+    "discs": 3,
+    "accessory": "ручка"
+  },
+  {
+    "uid": "514198838482",
+    "catalogueImage": "https://static.tildacdn.com/stor3130-6162-4530-b632-363262613432/f5f0f250922f4193a07e7045a0c50c64.jpg",
+    "title": "Мини блокнот Multibоok Дело",
+    "faces": {
+      "front": {
+        "url": "https://static.tildacdn.com/stor3663-3834-4738-b530-316564393031/f99152cd5d7671bc3317b233b7ada3fe.jpg",
+        "sha256": "e6214c5399c48d8228423a5a275ce0b7c01111408e5eaa6d26066547d1f10cec",
+        "quad": [
+          [
+            0.266,
+            0.142
+          ],
+          [
+            0.709,
+            0.142
+          ],
+          [
+            0.709,
+            0.821
+          ],
+          [
+            0.266,
+            0.821
+          ]
+        ],
+        "filename": "514198838482-front.webp"
+      }
+    },
+    "binding": "top",
+    "discs": 3,
+    "accessory": "ручка"
+  }
+]
