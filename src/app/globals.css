@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Базовые токены. Финальная палитра — по макетам Codex: меняется здесь, компоненты не трогаем. */
+@theme {
+  --color-paper: #f5f1ea;
+  --color-card: #fffdf9;
+  --color-ink: #1d1c1a;
+  --color-muted: #716b62;
+  --color-line: #e3dcd0;
+  --color-accent: #c8302a;
+  --color-ok: #2f7d4f;
+  --color-warn: #b3541e;
+  --font-display: var(--font-unbounded), system-ui, sans-serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --radius-card: 18px;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.ruling-grid {
+  background-image: linear-gradient(#cbd3da 1px, transparent 1px), linear-gradient(90deg, #cbd3da 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+.ruling-dot {
+  background-image: radial-gradient(#9fa8b1 1px, transparent 1.4px);
+  background-size: 10px 10px;
+}
+.ruling-line {
+  background-image: linear-gradient(transparent 9px, #cbd3da 9px, #cbd3da 10px);
+  background-size: 100% 10px;
+}
+.ruling-plan {
+  background-image: linear-gradient(#e6ded0 0 16px, transparent 16px),
+    linear-gradient(90deg, transparent 32%, #d7cfc1 32%, #d7cfc1 calc(32% + 1px), transparent 0),
+    linear-gradient(transparent 13px, #d9d2c6 13px, #d9d2c6 14px);
+  background-size: 100% 100%, 100% 100%, 100% 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
