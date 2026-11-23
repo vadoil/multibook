@@ -113,18 +113,18 @@ export function NotebookPreview({
   const k = w / A5.w; // масштаб декора относительно А5
   const ys = discYs(y, h, nDiscs);
 
-  // Разворот: две страницы по бокам от дисков, вписываем в ширину превью.
-  const pw = Math.min(160, w * 0.6);
-  const ph = h - 8;
-  const spread = pw * 2 + 28;
-  const ox = (VB_W - spread) / 2;
-  const oy = FLOOR - 14 - ph;
+  // Одна страница в пропорциях выбранного формата: разметка видна крупно.
+  const pw = w - 12;
+  const ph = h - 12;
+  const ox = x + 6;
+  const oy = y + 6;
 
   return (
     <div
       ref={stage}
       className={`grid place-items-center [perspective:1100px] ${className}`}
       onPointerMove={(e) => {
+        if (e.pointerType !== "mouse" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
         const r = stage.current!.getBoundingClientRect();
         const px = (e.clientX - r.left) / r.width - 0.5;
         const py = (e.clientY - r.top) / r.height - 0.5;
@@ -132,17 +132,15 @@ export function NotebookPreview({
       }}
       onPointerLeave={() => setTilt("")}
     >
-      <svg viewBox={`0 0 ${VB_W} 440`} role="img" aria-label={label} className="nb-svg h-auto w-full max-w-[380px]" style={{ transform: tilt }}>
+      <svg viewBox={`0 0 ${VB_W} 440`} role="img" aria-label={label} className={`nb-svg h-auto w-full max-w-[380px] ${view === "open" ? "nb-page" : ""}`} style={{ transform: tilt }}>
         <Patterns id={id} />
         {view === "open" ? (
           <>
-            <ellipse cx="180" cy={FLOOR} rx={spread / 2 + 6} ry="9" fill="#000" opacity=".1" />
-            <rect className="nb-t" x={ox - 10} y={oy - 6} width={spread + 20} height={ph + 12} rx="10" style={{ fill: fc, stroke: shade(fc, -0.25) }} />
-            <rect className="nb-t" x={ox} y={oy} width={pw} height={ph} rx="3" style={{ fill: paper }} />
-            <rect x={ox + 8} y={oy + 12} width={pw - 14} height={ph - 22} fill={`url(#${id}-${look.pages?.[0] ?? "blank"})`} />
-            <rect className="nb-t" x={ox + pw + 28} y={oy} width={pw} height={ph} rx="3" style={{ fill: paper }} />
-            <rect x={ox + pw + 34} y={oy + 12} width={pw - 14} height={ph - 22} fill={`url(#${id}-${look.pages?.[1] ?? look.pages?.[0] ?? "blank"})`} />
-            {look.discs && <Discs cx={180} ys={discYs(oy, ph, nDiscs)} discs={look.discs} />}
+            <ellipse cx={x + w / 2 + 5} cy={FLOOR} rx={w / 2 + 10} ry="9" fill="#000" opacity=".1" />
+            <rect className="nb-t" x={x} y={y} width={w} height={h} rx="10" style={{ fill: fc, stroke: shade(fc, -0.25) }} />
+            <rect className="nb-t" x={ox} y={oy} width={pw} height={ph} rx="4" style={{ fill: paper }} />
+            <rect x={ox + 19} y={oy + 15} width={pw - 31} height={ph - 30} fill={`url(#${id}-${look.pages?.[0] ?? "blank"})`} />
+            {look.discs ? <Discs cx={x + 1} ys={ys} discs={look.discs} /> : ys.map((dy) => <rect key={dy} x={ox} y={dy - 3} width="8" height="6" rx="3" fill={shade(paper, -0.25)} />)}
           </>
         ) : (
           <>
@@ -183,6 +181,7 @@ export function NotebookPreview({
       </svg>
       <style>{`
         .nb-svg{transition:transform .35s ease-out;animation:nb-float 6s ease-in-out infinite}
+        .nb-page{animation:none}
         .nb-t{transition:fill .45s ease,stroke .45s ease,transform .45s cubic-bezier(.3,1.3,.5,1)}
         .nb-disc{transform-box:fill-box;transform-origin:center;animation:nb-pop .5s cubic-bezier(.3,1.7,.5,1) both}
         .nb-bump{transform-box:fill-box;transform-origin:center;animation:nb-bump .5s cubic-bezier(.3,1.5,.5,1)}
