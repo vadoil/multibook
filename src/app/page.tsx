@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { HeroNotebook } from "@/components/HeroNotebook";
+import { HeroGallery } from "@/components/HeroGallery";
 import { ProductCard } from "@/components/ProductCard";
-import { countByType, listProducts, TYPE_LABELS } from "@/lib/catalog";
+import { countByType, formatPrice, listProducts, TYPE_LABELS } from "@/lib/catalog";
 
 export const dynamic = "force-dynamic";
 
@@ -14,6 +14,10 @@ const STEPS = [
 export default function Home() {
   const counts = countByType();
   const notebooks = listProducts({ type: "Тетради" }).slice(0, 4);
+  const slides = listProducts({ type: "Блокноты" })
+    .filter((p) => p.images.length)
+    .slice(0, 5)
+    .map((p) => ({ src: p.images[0], title: p.shortTitle, href: `/product/${p.slug}`, price: formatPrice(p.price) }));
 
   return (
     <>
@@ -39,10 +43,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="relative">
-          <div aria-hidden className="absolute inset-[8%] -z-10 rounded-full bg-[radial-gradient(circle,#efe3cf,transparent_70%)]" />
-          <HeroNotebook />
-        </div>
+        <HeroGallery slides={slides} />
       </section>
 
       <section className="bg-ink text-white">
