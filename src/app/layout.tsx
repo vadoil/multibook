@@ -9,6 +9,7 @@ import "./store.css";
 import "./mobile-app.css";
 import "./store-tabs.css";
 import "./constructor.css";
+import "./design-variants.css";
 
 const golos = Golos_Text({
   subsets: ["latin", "cyrillic"],
@@ -62,7 +63,7 @@ export default function RootLayout({
         <a href="#main" className="store-skip">
           К содержанию
         </a>
-        <StoreHeader />
+        <StoreHeader previewEnabled={process.env.DESIGN_PREVIEW === "1"} />
         <main id="main" className="store-main flex-1">
           {children}
         </main>

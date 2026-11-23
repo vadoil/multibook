@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { CartLink } from "../CartLink";
 import { BrandGlyph } from "../design/BrandGlyph";
 import { StoreNavIcon, type StoreNavKind } from "./StoreNavIcon";
+import { DesignVariantNav } from "../design/DesignVariantNav";
 
 const navigation = [
   { href: "/catalog", label: "Магазин", icon: "shop" },
@@ -13,7 +14,7 @@ const navigation = [
   { href: "/#how-it-works", label: "Как устроен блокнот", icon: "binding" },
 ];
 
-export function StoreHeader() {
+export function StoreHeader({ previewEnabled = false }: { previewEnabled?: boolean }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
@@ -103,6 +104,7 @@ export function StoreHeader() {
           </button>
         </div>
       </div>
+      {previewEnabled && pathname === "/" && <DesignVariantNav />}
       {open && (
         <nav
           id="store-mobile-menu"

@@ -12,11 +12,6 @@ import { ShopChoices } from "./ShopChoices";
 import { CategoryGlyph } from "./CategoryGlyph";
 
 export type ConceptName = "paper" | "journal" | "play";
-const concepts = [
-  { id: "paper", n: "01", name: "Бумажная мастерская" },
-  { id: "journal", n: "02", name: "Предметный журнал" },
-  { id: "play", n: "03", name: "Конструктор идей" },
-] as const;
 
 function Arrow() {
   return (
@@ -29,26 +24,6 @@ function Arrow() {
     >
       <path d="M4 12h16m-6-6 6 6-6 6" />
     </svg>
-  );
-}
-
-function PreviewNav({ concept }: { concept: ConceptName }) {
-  return (
-    <nav className="mc-preview-nav" aria-label="Визуальные концепции">
-      <Link href="/design-preview">Концепции Multibook</Link>
-      <div>
-        {concepts.map((c) => (
-          <Link
-            key={c.id}
-            href={`/design-preview/${c.id}`}
-            aria-current={c.id === concept ? "page" : undefined}
-          >
-            <span>{c.n}</span>
-            <span className="mc-preview-name"> {c.name}</span>
-          </Link>
-        ))}
-      </div>
-    </nav>
   );
 }
 
@@ -616,7 +591,6 @@ export function DesignConcept({
 }) {
   return (
     <div className={`mc-root mc-${concept}`}>
-      {!embedded && <PreviewNav concept={concept} />}
       {!embedded && <Header concept={concept} />}
       <div className="mc-content">
         {concept === "paper" ? (
