@@ -65,7 +65,7 @@ function Err({ m }: { m?: string }) {
   return m ? <span className="mt-1 block text-sm text-accent">{m}</span> : null;
 }
 
-export function CartView() {
+export function CartView({ profile }: { profile?: Record<string, string> }) {
   const c = useCart();
   const [ready, setReady] = useState(false);
   const [quotes, setQuotes] = useState<Quotes>({});
@@ -94,7 +94,7 @@ export function CartView() {
       ),
     [c],
   );
-  const v = state.values ?? {};
+  const v = state.values ?? profile ?? {};
   const fe = state.fieldErrors ?? {};
 
   if (!ready) return <div className="mt-10 h-64 animate-pulse rounded-[var(--radius-card)] bg-card" />;

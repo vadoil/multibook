@@ -1,8 +1,11 @@
 "use server";
 
 import { redirect } from "next/navigation";
+import { after } from "next/server";
 import { DELIVERY_METHODS, type DeliveryMethod } from "@/db/schema";
-import { createOrder, quote, type QuotedProduct } from "@/lib/orders";
+import { currentUser } from "@/lib/auth";
+import { newOrderText, notifyManager } from "@/lib/notify";
+import { createOrder, DELIVERY_LABELS, quote, type QuotedProduct } from "@/lib/orders";
 
 export async function quoteProducts(ids: number[]): Promise<Record<number, QuotedProduct>> {
   return quote(Array.isArray(ids) ? ids.map(Number) : []);
@@ -60,6 +63,7 @@ export async function placeOrder(_prev: CheckoutState, fd: FormData): Promise<Ch
   if (values.consent !== "on") fieldErrors.consent = "Без согласия мы не сможем связаться с вами по заказу";
   if (Object.keys(fieldErrors).length) return { fieldErrors, values };
 
+  const user = await currentUser();
   const res = createOrder({
     name: values.name,
     phone: values.phone,
@@ -68,10 +72,25 @@ export async function placeOrder(_prev: CheckoutState, fd: FormData): Promise<Ch
     city: values.city || null,
     address: values.address || null,
     comment: values.comment || null,
+    userId: user?.id ?? null,
     lines,
   });
   if ("unavailable" in res) return { error: `Уже нет в продаже: ${res.unavailable.join(", ")}. Уберите их из корзины.`, values };
 
-  console.info(`[order] новый заказ №${res.number}`);
+  // Уведомление уходит после ответа покупателю — оформление не ждёт Telegram.
+  after(() =>
+    notifyManager(
+      newOrderText({
+        number: res.number,
+        id: res.id,
+        name: values.name,
+        phone: values.phone,
+        subtotal: res.subtotal,
+        delivery: DELIVERY_LABELS[delivery],
+        city: values.city || null,
+        items: lines.length,
+      }),
+    ),
+  );
   redirect(`/order/${res.token}?new=1`);
 }

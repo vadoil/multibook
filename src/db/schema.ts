@@ -52,6 +52,8 @@ export const products = sqliteTable(
     sourceUrl: text("source_url"),
     isActive: integer("is_active", { mode: "boolean" }).notNull().default(true),
     sortOrder: integer("sort_order").notNull().default(0),
+    // Товар правили в админке: импорт из Tilda не перезаписывает цену, название, наличие и описание.
+    lockedAt: integer("locked_at", { mode: "timestamp" }),
     importedAt: integer("imported_at", { mode: "timestamp" }).notNull(),
     updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
   },
@@ -81,7 +83,9 @@ export const orders = sqliteTable(
     id: integer("id").primaryKey({ autoIncrement: true }),
     number: text("number").notNull().unique(), // видит покупатель: «1042»
     token: text("token").notNull().unique(), // ссылка на страницу заказа без входа
+    userId: integer("user_id").references(() => users.id, { onDelete: "set null" }), // если оформлял вошедший покупатель
     status: text("status").$type<OrderStatus>().notNull().default("new"),
+    managerNote: text("manager_note"), // видит только админка
     customerName: text("customer_name").notNull(),
     phone: text("phone").notNull(),
     email: text("email"),
@@ -116,6 +120,51 @@ export const orderItems = sqliteTable(
   (t) => [index("order_items_order_idx").on(t.orderId)],
 );
 
+/** История заказа для админки: кто и когда менял статус, доставку, заметку. */
+export const orderEvents = sqliteTable(
+  "order_events",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    orderId: integer("order_id")
+      .notNull()
+      .references(() => orders.id, { onDelete: "cascade" }),
+    at: integer("at", { mode: "timestamp" }).notNull(),
+    by: text("by"), // почта сотрудника; null — система
+    text: text("text").notNull(),
+  },
+  (t) => [index("order_events_order_idx").on(t.orderId)],
+);
+
+export const USER_ROLES = ["customer", "admin"] as const;
+export type UserRole = (typeof USER_ROLES)[number];
+
+export const users = sqliteTable("users", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  email: text("email").notNull().unique(), // в нижнем регистре
+  passwordHash: text("password_hash").notNull(), // scrypt$соль$хеш
+  role: text("role").$type<UserRole>().notNull().default("customer"),
+  name: text("name"),
+  phone: text("phone"),
+  city: text("city"),
+  address: text("address"),
+  createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
+});
+
+/** Сессии: в cookie — случайный токен, в базе — только его SHA-256. */
+export const sessions = sqliteTable(
+  "sessions",
+  {
+    id: text("id").primaryKey(), // sha256(token)
+    userId: integer("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    expiresAt: integer("expires_at", { mode: "timestamp" }).notNull(),
+    createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
+  },
+  (t) => [index("sessions_user_idx").on(t.userId)],
+);
+
+export type User = typeof users.$inferSelect;
 export type Order = typeof orders.$inferSelect;
 export type OrderItem = typeof orderItems.$inferSelect;
 

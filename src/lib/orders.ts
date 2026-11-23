@@ -1,6 +1,6 @@
 import "server-only";
 import { randomBytes } from "node:crypto";
-import { eq, inArray, sql } from "drizzle-orm";
+import { eq, inArray } from "drizzle-orm";
 import { db, schema } from "@/db";
 import type { DeliveryMethod } from "@/db/schema";
 
@@ -45,11 +45,12 @@ export type OrderInput = {
   city: string | null;
   address: string | null;
   comment: string | null;
+  userId: number | null;
   lines: { productId: number; qty: number; bundle: string | null }[];
 };
 
 /** Создаёт заказ по ценам из базы. Возвращает токен страницы заказа или список недоступных товаров. */
-export function createOrder(input: OrderInput): { token: string; number: string } | { unavailable: string[] } {
+export function createOrder(input: OrderInput): { token: string; number: string; id: number; subtotal: number } | { unavailable: string[] } {
   const q = quote(input.lines.map((l) => l.productId));
   const unavailable = input.lines.filter((l) => !q[l.productId]?.available).map((l) => q[l.productId]?.shortTitle ?? `товар #${l.productId}`);
   if (unavailable.length) return { unavailable };
@@ -59,13 +60,13 @@ export function createOrder(input: OrderInput): { token: string; number: string 
   const token = randomBytes(18).toString("base64url");
 
   return db.transaction((tx) => {
-    const next = tx.select({ n: sql<number>`coalesce(max(${schema.orders.id}), 0) + 1` }).from(schema.orders).get()!.n;
-    const number = String(1000 + next);
+    // Номер = 1000 + id: id в SQLite не переиспользуется (AUTOINCREMENT), значит и номера не повторятся.
     const order = tx
       .insert(schema.orders)
       .values({
-        number,
+        number: `tmp-${token}`,
         token,
+        userId: input.userId,
         customerName: input.name,
         phone: input.phone,
         email: input.email,
@@ -81,6 +82,8 @@ export function createOrder(input: OrderInput): { token: string; number: string 
       })
       .returning({ id: schema.orders.id })
       .get();
+    const number = String(1000 + order.id);
+    tx.update(schema.orders).set({ number }).where(eq(schema.orders.id, order.id)).run();
     const products = tx.select().from(schema.products).where(inArray(schema.products.id, input.lines.map((l) => l.productId))).all();
     const byId = new Map(products.map((p) => [p.id, p]));
     tx.insert(schema.orderItems)
@@ -100,7 +103,8 @@ export function createOrder(input: OrderInput): { token: string; number: string 
         }),
       )
       .run();
-    return { token, number };
+    tx.insert(schema.orderEvents).values({ orderId: order.id, at: now, by: null, text: "Заказ оформлен на сайте" }).run();
+    return { token, number, id: order.id, subtotal };
   });
 }
 

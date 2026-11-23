@@ -43,8 +43,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/catalog" className="rounded-full px-2.5 py-2 hover:bg-card sm:px-3 lg:hidden">
                 Каталог
               </Link>
-              <Link href="/account" className="hidden rounded-full px-3 py-2 hover:bg-card sm:block">
-                Кабинет
+              <Link href="/account" aria-label="Кабинет" className="grid place-items-center rounded-full p-2 hover:bg-card sm:px-3">
+                <svg viewBox="0 0 24 24" className="size-5 sm:hidden" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden>
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" strokeLinecap="round" />
+                </svg>
+                <span className="hidden sm:inline">Кабинет</span>
               </Link>
               <CartLink />
             </div>

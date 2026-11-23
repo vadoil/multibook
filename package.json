@@ -8,7 +8,9 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "db:push": "drizzle-kit push",
-    "import:tilda": "tsx scripts/import-tilda.ts"
+    "import:tilda": "tsx scripts/import-tilda.ts",
+    "admin:grant": "tsx scripts/grant-admin.ts",
+    "dev:admin": "tsx scripts/dev-admin.ts"
   },
   "dependencies": {
     "better-sqlite3": "^13.2.0",

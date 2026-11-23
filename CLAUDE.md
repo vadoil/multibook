@@ -7,6 +7,8 @@
 - `npm run import:tilda` — импорт/обновление каталога из публичного API Tilda Store
 - `npx drizzle-kit push` — применить схему к SQLite (`data/multibook.db`)
 - `npx tsc --noEmit` — проверка типов
+- `npm run admin:grant -- почта` — сделать зарегистрированного пользователя админом (`--revoke` — снять)
+- `npm run dev:admin` — локальный админ admin@multibook.test, пароль пишется в `.env.local`
 
 ## Правила
 - Цены в базе — в копейках (`integer`), вывод через `formatPrice`.
@@ -19,3 +21,6 @@
 - Если Tailwind-классы из нового файла не применяются — остановить dev-сервер, удалить `.next`, запустить снова (кэш Turbopack).
 - Корзина — `src/lib/cart.ts` (localStorage, без цен). Любая сумма для заказа считается на сервере по базе (`src/lib/orders.ts`), клиентским ценам не верим.
 - `formatPrice` — в `src/lib/money.ts` (общий для клиента и сервера); `catalog.ts` — только сервер.
+- Админка: каждая страница и каждый server action сам вызывает `requireAdmin()` — проверки в layout недостаточно.
+- Импорт Tilda — `src/lib/import-tilda.ts` (без `server-only`, его зовёт и CLI). Товары с `lockedAt` импорт не перезаписывает; адрес (slug) существующего товара не меняется.
+- Поиск по-русски без учёта регистра — в JS: `LIKE`/`lower()` в SQLite работают только с латиницей.

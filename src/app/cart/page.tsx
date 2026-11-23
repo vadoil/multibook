@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
 import { CartView } from "@/components/CartView";
+import { currentUser } from "@/lib/auth";
 
 export const metadata: Metadata = { title: "Корзина", robots: { index: false } };
+export const dynamic = "force-dynamic";
 
-export default function CartPage() {
+export default async function CartPage() {
+  const u = await currentUser();
+  // Вошедшему покупателю подставляем данные из кабинета.
+  const profile = u
+    ? { name: u.name ?? "", phone: u.phone ?? "", email: u.email, city: u.city ?? "", address: u.address ?? "" }
+    : undefined;
   return (
     <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
       <h1 className="font-display text-4xl font-bold sm:text-5xl">Корзина</h1>
-      <CartView />
+      <CartView profile={profile} />
     </div>
   );
 }

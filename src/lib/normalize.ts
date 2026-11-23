@@ -73,7 +73,8 @@ export function parseType(chars: Record<string, string>, title = ""): ProductTyp
 }
 
 export function isTestProduct(title: string): boolean {
-  return /\btest\b|тестов/i.test(title);
+  // \b в JS не работает с кириллицей, поэтому «Тест1» ловим отдельно: название в кавычках целиком «Тест» + цифры.
+  return /\btest\b|тестов|["«]\s*тест\s*\d*\s*["»]/i.test(title);
 }
 
 function cap(s: string): string {
