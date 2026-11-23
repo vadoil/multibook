@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CategoryGlyph } from "@/components/design/CategoryGlyph";
 import { BrandGlyph } from "@/components/design/BrandGlyph";
 
 export const metadata = {
@@ -45,6 +46,15 @@ export default function ConceptsIndex() {
             href={`/design-preview/${c.id}`}
             className={`mc-index-card mc-index-${c.id}`}
           >
+            <CategoryGlyph
+              kind={
+                c.id === "paper"
+                  ? "pages"
+                  : c.id === "journal"
+                    ? "journals"
+                    : "discs"
+              }
+            />
             <span>{c.n}</span>
             <h2>{c.title}</h2>
             <p>{c.text}</p>
