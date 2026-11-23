@@ -36,11 +36,11 @@ function Stepper({ line }: { line: CartLine }) {
 
 function Line({ line, q, compact }: { line: CartLine; q?: QuotedProduct; compact?: boolean }) {
   return (
-    <li className="flex items-center gap-3 py-3">
+    <li className="flex flex-wrap items-center gap-x-3 gap-y-2 py-3">
       <div className={`relative shrink-0 overflow-hidden rounded-xl bg-[#efe9df] ${compact ? "size-14" : "size-20"}`}>
         {q?.image && <Image src={q.image} alt="" fill sizes="80px" className="object-cover" />}
       </div>
-      <div className="min-w-0 flex-1">
+      <div className="min-w-0 flex-1 basis-40">
         {q ? (
           <Link href={`/product/${q.slug}`} className="line-clamp-2 font-medium leading-snug hover:underline">
             {q.shortTitle}
@@ -51,8 +51,10 @@ function Line({ line, q, compact }: { line: CartLine; q?: QuotedProduct; compact
         <span className="text-sm text-muted">{q?.type}</span>
         {q && !q.available && <span className="block text-sm font-medium text-accent">Нет в продаже</span>}
       </div>
-      <Stepper line={line} />
-      <b className="w-20 shrink-0 text-right tabular-nums">{q ? formatPrice(q.price * line.qty) : "…"}</b>
+      <div className="ml-auto flex items-center gap-3">
+        <Stepper line={line} />
+        <b className="w-20 shrink-0 text-right tabular-nums">{q ? formatPrice(q.price * line.qty) : "…"}</b>
+      </div>
     </li>
   );
 }

@@ -6,6 +6,7 @@ import { AddToCart } from "@/components/AddToCart";
 import { ProductCard } from "@/components/ProductCard";
 import { ProductVisual } from "@/components/ProductVisual";
 import { formatPrice, getProduct, relatedProducts } from "@/lib/catalog";
+import { FORMATS, formatByDb } from "@/lib/formats";
 
 export const dynamic = "force-dynamic";
 
@@ -19,7 +20,11 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   if (!p || !p.isActive) notFound();
   const related = relatedProducts(p.type, p.id);
   const out = p.stock !== null && p.stock <= 0;
-  const drawn = p.type === "Обложки" || p.type === "Блоки" || p.type === "Диски";
+  const fmt = formatByDb(p.attrs.format);
+  const drawn =
+    p.type === "Диски" ||
+    ((p.type === "Обложки" || p.type === "Блоки") && !/9,5/.test(p.title)) ||
+    (p.type === "Блокноты" && !!fmt && FORMATS[fmt].mode === "base");
   const specs = Object.entries(p.specs).filter(([k]) => k !== "Тип");
 
   return (
