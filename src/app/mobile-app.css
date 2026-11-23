@@ -1,0 +1,96 @@
+.mobile-tabbar { display: none; }
+
+@media (max-width: 760px), (max-width: 1000px) and (max-height: 500px) and (pointer: coarse) {
+  .store-body:has(.mobile-tabbar) {
+    --mobile-nav-height: 72px;
+    --mobile-header-height: 65px;
+    padding-bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom));
+  }
+  html:has(.mobile-tabbar) {
+    scroll-padding-top: 85px;
+    scroll-padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  }
+  .mobile-tabbar {
+    position: fixed; inset: auto 0 0; z-index: 50;
+    display: grid; grid-template-columns: 1fr 1.3fr .9fr 1fr; gap: 8px;
+    height: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom));
+    padding: 6px max(12px, env(safe-area-inset-right)) calc(6px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+    border-top: 1px solid var(--color-line); background: var(--color-card);
+    box-shadow: 0 -4px 22px color-mix(in srgb, var(--color-ink) 6%, transparent);
+  }
+  .mobile-tabbar a {
+    position: relative; min-width: 44px; min-height: 56px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+    padding: 4px 0; border-radius: 10px; color: var(--color-muted);
+    font-size: 12px; line-height: 16px; font-weight: 400;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation; transition: background-color .15s, color .15s;
+  }
+  .mobile-tabbar a > svg { width: 23px; height: 23px; flex: none; }
+  .mobile-tabbar a[aria-current] { color: var(--color-ink); background: var(--color-paper); font-weight: 600; }
+  .mobile-tabbar a:active { background: var(--color-paper); color: var(--color-accent); }
+  .mobile-tabbar a:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+  .mobile-tabbar .store-cart-label { display: block; }
+  .mobile-tabbar .store-cart-count { position: absolute; top: 0; right: 12%; min-width: 20px; min-height: 20px; padding: 1px 4px; font-size: 12px; line-height: 18px; }
+  .store-body:has(.mobile-tabbar) .store-header-inner { min-height: 64px; padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+  .store-body:has(.mobile-tabbar) .store-wordmark { min-height: 44px; font-size: 35px; }
+  .store-body:has(.mobile-tabbar) .store-wordmark .mc-brand-symbol { width: 23px; height: 27px; }
+  .store-body:has(.mobile-tabbar) .store-header .store-cart { display: none; }
+  .store-body:has(.mobile-tabbar) .store-navigation,
+  .store-body:has(.mobile-tabbar) .store-account { display: none; }
+  .store-body:has(.mobile-tabbar) .store-menu-toggle { display: grid; }
+  .store-body:has(.mobile-tabbar) .store-mobile-menu {
+    display: grid; padding: 8px 20px 20px;
+    background: var(--color-card); border-top: 1px solid var(--color-line);
+    overflow-y: auto; overscroll-behavior: contain;
+    position: fixed; top: var(--mobile-header-height); left: 0; right: 0;
+    max-height: calc(100svh - var(--mobile-header-height) - var(--mobile-nav-height) - env(safe-area-inset-bottom));
+    box-shadow: var(--shadow-paper);
+  }
+  .store-body:has(.mobile-tabbar) .wp-hero {
+    --wp-h: calc(100svh - var(--mobile-header-height) - var(--mobile-nav-height) - env(safe-area-inset-bottom));
+    min-height: clamp(620px, var(--wp-h), 860px);
+  }
+  .store-body:has(.mobile-tabbar) .wp-copy h1 { font-size: clamp(34px, 10.4vw, 42px); }
+  .store-body:has(.mobile-tabbar):has(.product-purchase) { padding-bottom: calc(var(--mobile-nav-height) + 144px + env(safe-area-inset-bottom)); }
+  html:has(.mobile-tabbar):has(.product-purchase),
+  html:has(.mobile-tabbar):has([data-constructor-purchase]) { scroll-padding-bottom: calc(220px + env(safe-area-inset-bottom)); }
+  .store-body:has(.mobile-tabbar) .product-purchase,
+  .store-body:has(.mobile-tabbar) [data-constructor-purchase] { bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom)); padding-bottom: 12px; }
+  .store-body:has(.mobile-tabbar) .product-purchase-action > a { display: none; }
+  .catalog-page { padding-top: 24px; }
+  .catalog-page h1 { font-size: 36px; }
+  .catalog-page > p { font-size: 14px; line-height: 1.6; }
+  .catalog-categories {
+    position: sticky; top: var(--mobile-header-height); z-index: 20;
+    margin-inline: -16px; margin-top: 20px; padding: 8px 16px;
+    background: var(--color-paper); border-block: 1px solid var(--color-line);
+    overscroll-behavior-inline: contain; scrollbar-width: thin;
+  }
+  .catalog-categories a { min-height: 44px; font-size: 13px; }
+  .catalog-toolbar { align-items: start; gap: 12px; }
+  .catalog-sorts { flex-wrap: nowrap; width: 100%; overflow-x: auto; gap: 8px; padding-bottom: 4px; scrollbar-width: thin; overscroll-behavior-inline: contain; }
+  .catalog-sorts a { flex: none; min-height: 44px; display: inline-flex; align-items: center; font-size: 12px; }
+  .store-body:has(.mobile-tabbar) .store-footer-bottom a { font-size: 12px; }
+}
+
+@media (max-width: 1000px) and (max-height: 500px) and (pointer: coarse) {
+  .store-body:has(.mobile-tabbar) .wp-slide,
+  .store-body:has(.mobile-tabbar) .wp-slide[data-active] { animation: none; transition: opacity .45s; }
+  .store-body:has(.mobile-tabbar) .wp-slide picture { inset: 0; transform: none; }
+  .store-body:has(.mobile-tabbar) .store-header-actions { margin-left: auto; }
+  .store-body:has(.mobile-tabbar) .store-mobile-menu a { display: flex; align-items: center; justify-content: space-between; min-height: 48px; border-bottom: 1px solid var(--color-line); }
+  .store-body:has(.mobile-tabbar) .wp-copy { align-self: start; padding: 16px 0 16px 20px; max-width: 49%; }
+  .store-body:has(.mobile-tabbar) .wp-copy h1 { font-size: 36px; }
+  .store-body:has(.mobile-tabbar) .wp-copy p { font-size: 13px; line-height: 1.4; margin-top: 12px; }
+  .store-body:has(.mobile-tabbar) .wp-actions { margin-top: 12px; gap: 8px; }
+  .store-body:has(.mobile-tabbar) .wp-btn { min-height: 44px; padding-inline: 12px; font-size: 12px; }
+}
+
+@media (max-width: 360px) {
+  .store-body:has(.mobile-tabbar) .wp-copy { padding-inline: 16px; }
+  .store-body:has(.mobile-tabbar) .wp-copy p { font-size: 13.5px; }
+  .store-body:has(.mobile-tabbar) .wp-actions { gap: 8px; }
+  .store-body:has(.mobile-tabbar) .wp-btn { padding-inline: 12px; font-size: 12px; }
+  .store-body:has(.mobile-tabbar) .wp-caption-name { font-size: 22px; }
+}

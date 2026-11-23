@@ -472,7 +472,7 @@ export function Constructor({
       </div>
 
       {/* Телефон: итог и кнопка всегда под пальцем. */}
-      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-paper/95 px-4 py-3 backdrop-blur lg:hidden">
+      <div data-constructor-purchase className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-paper/95 px-4 py-3 backdrop-blur lg:hidden">
         <div className="mx-auto flex max-w-7xl items-center gap-3">
           {/* Мини-превью: пока листаешь шаги, блокнот всё равно на виду. */}
           <NotebookPreview look={look} className="w-11 shrink-0" label="Мини-превью блокнота" />

@@ -1,0 +1,91 @@
+[
+  {
+    "name": "home",
+    "width": 375,
+    "overflow": false,
+    "tabbar": "grid",
+    "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  {
+    "name": "catalog",
+    "width": 375,
+    "overflow": false,
+    "tabbar": "grid",
+    "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  {
+    "name": "constructor",
+    "width": 375,
+    "overflow": false,
+    "tabbar": "grid",
+    "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  {
+    "name": "product",
+    "width": 375,
+    "overflow": false,
+    "tabbar": "grid",
+    "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  {
+    "name": "cart",
+    "width": 375,
+    "overflow": false,
+    "tabbar": "grid",
+    "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  {
+    "name": "account",
+    "width": 375,
+    "overflow": false,
+    "tabbar": "grid",
+    "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  {
+    "name": "home",
+    "width": 1366,
+    "overflow": false,
+    "tabbar": "none",
+    "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  {
+    "name": "catalog",
+    "width": 1366,
+    "overflow": false,
+    "tabbar": "none",
+    "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  {
+    "name": "constructor",
+    "width": 1366,
+    "overflow": false,
+    "tabbar": "none",
+    "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  {
+    "name": "product",
+    "width": 1366,
+    "overflow": false,
+    "tabbar": "none",
+    "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  {
+    "name": "cart",
+    "width": 1366,
+    "overflow": false,
+    "tabbar": "none",
+    "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  {
+    "name": "account",
+    "width": 1366,
+    "overflow": false,
+    "tabbar": "none",
+    "viewport": "width=device-width, initial-scale=1, viewport-fit=cover"
+  },
+  {
+    "name": "admin",
+    "width": 375,
+    "tabsAbsent": true
+  }
+]

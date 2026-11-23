@@ -1,0 +1,40 @@
+{
+  "home": {
+    "nav": "grid",
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 812,
+      "height": 65,
+      "top": 0,
+      "right": 812,
+      "bottom": 65,
+      "left": 0
+    },
+    "overflow": false,
+    "animation": "none"
+  },
+  "product": {
+    "panel": {
+      "x": 0,
+      "y": 225,
+      "width": 812,
+      "height": 78,
+      "top": 225,
+      "right": 812,
+      "bottom": 303,
+      "left": 0
+    },
+    "nav": {
+      "x": 0,
+      "y": 303,
+      "width": 812,
+      "height": 72,
+      "top": 303,
+      "right": 812,
+      "bottom": 375,
+      "left": 0
+    },
+    "overflow": false
+  }
+}

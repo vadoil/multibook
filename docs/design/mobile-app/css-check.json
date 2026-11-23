@@ -1,0 +1,96 @@
+[
+  {
+    "route": "/",
+    "bytes": 117907,
+    "styles": [
+      {
+        "href": "/_next/static/chunks/3lur4qx479a9g.css",
+        "bytes": 56569,
+        "concepts": false,
+        "wallpapers": true,
+        "mobileUI": true
+      },
+      {
+        "href": "/_next/static/chunks/2mfz3l592kyx3.css",
+        "bytes": 52917,
+        "concepts": true,
+        "wallpapers": false,
+        "mobileUI": false
+      },
+      {
+        "href": "/_next/static/chunks/0s5eye0kp3zwt.css",
+        "bytes": 6567,
+        "concepts": false,
+        "wallpapers": true,
+        "mobileUI": false
+      },
+      {
+        "href": "/_next/static/chunks/43idu7_879f9r.css",
+        "bytes": 1854,
+        "concepts": false,
+        "wallpapers": false,
+        "mobileUI": false
+      }
+    ]
+  },
+  {
+    "route": "/cart",
+    "bytes": 58423,
+    "styles": [
+      {
+        "href": "/_next/static/chunks/3lur4qx479a9g.css",
+        "bytes": 56569,
+        "concepts": false,
+        "wallpapers": true,
+        "mobileUI": true
+      },
+      {
+        "href": "/_next/static/chunks/43idu7_879f9r.css",
+        "bytes": 1854,
+        "concepts": false,
+        "wallpapers": false,
+        "mobileUI": false
+      }
+    ]
+  },
+  {
+    "route": "/account",
+    "bytes": 58423,
+    "styles": [
+      {
+        "href": "/_next/static/chunks/3lur4qx479a9g.css",
+        "bytes": 56569,
+        "concepts": false,
+        "wallpapers": true,
+        "mobileUI": true
+      },
+      {
+        "href": "/_next/static/chunks/43idu7_879f9r.css",
+        "bytes": 1854,
+        "concepts": false,
+        "wallpapers": false,
+        "mobileUI": false
+      }
+    ]
+  },
+  {
+    "route": "/constructor",
+    "bytes": 58423,
+    "styles": [
+      {
+        "href": "/_next/static/chunks/3lur4qx479a9g.css",
+        "bytes": 56569,
+        "concepts": false,
+        "wallpapers": true,
+        "mobileUI": true
+      },
+      {
+        "href": "/_next/static/chunks/43idu7_879f9r.css",
+        "bytes": 1854,
+        "concepts": false,
+        "wallpapers": false,
+        "mobileUI": false
+      }
+    ]
+  }
+]

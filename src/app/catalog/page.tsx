@@ -55,13 +55,13 @@ export default async function CatalogPage({
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
+    <div className="catalog-page mx-auto max-w-7xl px-4 pt-10 sm:px-6">
       <h1 className="font-display text-4xl font-bold sm:text-5xl">{type ? TYPE_LABELS.find((t) => t.type === type)!.label : "Каталог"}</h1>
       <p className="mt-3 max-w-2xl text-muted">
         Готовые тетради и блокноты — или части, чтобы собрать свой: обложки, блоки листов и диски совместимы между собой в формате А5.
       </p>
 
-      <nav aria-label="Категории" className="mt-8 flex gap-2 overflow-x-auto pb-2">
+      <nav aria-label="Категории" className="catalog-categories mt-8 flex gap-2 overflow-x-auto pb-2">
         <Link
           href={href({ type: undefined })}
           aria-current={!type ? "page" : undefined}
@@ -81,11 +81,11 @@ export default async function CatalogPage({
         ))}
       </nav>
 
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-sm">
+      <div className="catalog-toolbar mt-4 flex flex-wrap items-center justify-between gap-3 text-sm">
         <span className="text-muted">
           {all.length} {plural(all.length, ["товар", "товара", "товаров"])}
         </span>
-        <div className="flex flex-wrap gap-1">
+        <div className="catalog-sorts flex flex-wrap gap-1">
           {SORTS.map((s) => (
             <Link
               key={s.v}
