@@ -81,7 +81,7 @@ export function PrintWorkshopHero({
               <small>Готовый блокнот со сменными листами</small>
             </span>
             <strong>
-              {formatPrice(product.price)} <span aria-hidden="true">↗</span>
+              {formatPrice(product.price)} <span aria-hidden="true">→</span>
             </strong>
           </Link>
         )}

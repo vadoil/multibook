@@ -9,7 +9,7 @@ import { PrintWorkshopHero } from "./PrintWorkshopHero";
 import { BrandGlyph } from "./BrandGlyph";
 import { NotebookFilm } from "./NotebookFilm";
 import { ShopChoices } from "./ShopChoices";
-import { CategoryGlyph, type CategoryKind } from "./CategoryGlyph";
+import { CategoryGlyph } from "./CategoryGlyph";
 
 export type ConceptName = "paper" | "journal" | "play";
 const concepts = [
@@ -18,7 +18,7 @@ const concepts = [
   { id: "play", n: "03", name: "Конструктор идей" },
 ] as const;
 
-function Arrow({ diagonal = false }: { diagonal?: boolean }) {
+function Arrow() {
   return (
     <svg
       aria-hidden="true"
@@ -27,7 +27,7 @@ function Arrow({ diagonal = false }: { diagonal?: boolean }) {
       stroke="currentColor"
       strokeWidth="1.5"
     >
-      <path d={diagonal ? "M5 19 19 5M5 5h14v14" : "M4 12h16m-6-6 6 6-6 6"} />
+      <path d="M4 12h16m-6-6 6 6-6 6" />
     </svg>
   );
 }
@@ -207,7 +207,6 @@ function Gallery({
         <Photo
           key={product.id}
           product={product}
-          index={product.title.includes("Красные кони") ? 3 : 1}
           priority
         />
       </Link>
@@ -323,7 +322,6 @@ function ConstructorInvite({
         {product && (
           <Photo
             product={product}
-            index={product.title.includes("Красные кони") ? 3 : 1}
           />
         )}
       </div>
@@ -377,28 +375,21 @@ function Featured({
                 : "Готовые блокноты и ежедневники"}
           </h2>
         </div>
-        <Link className="mc-text-button" href="/catalog?type=Блокноты">
+        <Link className="mc-text-button" href="/catalog">
           Весь магазин
           <Arrow />
         </Link>
       </div>
       <div className="mc-product-grid">
-        {products.map((p, i) => (
+        {products.map((p) => (
           <Link key={p.id} className="mc-product" href={`/product/${p.slug}`}>
             <div className="mc-product-photo">
               <Photo
                 product={p}
-                index={
-                  p.title.includes("Красные кони")
-                    ? 3
-                    : p.title.includes("Весна")
-                      ? 2
-                      : 1
-                }
               />
-              {i === 0 && <span className="mc-product-label">Эко-замша</span>}
+              {p.attrs.material && <span className="mc-product-label">{p.attrs.material}</span>}
               <span className="mc-product-open" aria-hidden="true">
-                <Arrow diagonal />
+                <Arrow />
               </span>
             </div>
             <div className="mc-product-info">
@@ -408,91 +399,6 @@ function Featured({
             <p className="mc-product-detail">
               {p.attrs.format ?? "Блокнот"} · Сменные листы
             </p>
-          </Link>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function Categories({ concept }: { concept: ConceptName }) {
-  const categories: {
-    type: string;
-    title: string;
-    hint: string;
-    kind: CategoryKind;
-  }[] = [
-    {
-      type: "Тетради",
-      title: "Тетради",
-      hint: "Готовые модульные тетради",
-      kind: "notebooks",
-    },
-    {
-      type: "Блокноты",
-      title: "Блокноты",
-      hint: "Для идей и планов",
-      kind: "journals",
-    },
-    {
-      type: "Обложки",
-      title: "Обложки",
-      hint: "Снаружи — ваш характер",
-      kind: "covers",
-    },
-    {
-      type: "Блоки",
-      title: "Блоки листов",
-      hint: "Клетка, точка, линейка",
-      kind: "pages",
-    },
-    {
-      type: "Диски",
-      title: "Диски",
-      hint: "Соединяют всё вместе",
-      kind: "discs",
-    },
-    {
-      type: "Аксессуары",
-      title: "Аксессуары",
-      hint: "Нужные мелочи",
-      kind: "tools",
-    },
-    {
-      type: "Фотокниги",
-      title: "Фотоальбомы",
-      hint: "Для ваших историй",
-      kind: "albums",
-    },
-  ];
-  return (
-    <section
-      id="shop-details"
-      className={`mc-categories mc-categories-${concept}`}
-    >
-      <div className="mc-categories-heading">
-        <p className="mc-section-note">У каждой детали своё место</p>
-        <h2>
-          Блокнот,
-          <br />в котором всё ваше.
-        </h2>
-        <p>Начните с готового. Или подберите каждую деталь под себя.</p>
-      </div>
-      <div className="mc-category-list">
-        {categories.map((c) => (
-          <Link
-            key={c.type}
-            href={`/catalog?type=${encodeURIComponent(c.type)}`}
-            className={`mc-category-tile mc-category-tile-${c.kind}`}
-          >
-            <span className="mc-category-graphic">
-              <CategoryGlyph kind={c.kind} />
-            </span>
-            <div className="mc-category-caption">
-              <h3>{c.title}</h3>
-              <span>{c.hint}</span>
-            </div>
-            <Arrow diagonal />
           </Link>
         ))}
       </div>
@@ -538,7 +444,7 @@ function Footer() {
   );
 }
 
-function Paper({ products }: { products: Product[] }) {
+function Paper({ products, categories }: { products: Product[]; categories: React.ReactNode }) {
   return (
     <>
       <PrintWorkshopHero
@@ -583,13 +489,13 @@ function Paper({ products }: { products: Product[] }) {
         product={products.find((p) => p.title.includes("Красные кони"))}
         concept="paper"
       />
-      <Categories concept="paper" />
+      {categories}
       <ConstructorInvite product={products[0]} concept="paper" />
     </>
   );
 }
 
-function Journal({ products, hero }: { products: Product[]; hero?: React.ReactNode }) {
+function Journal({ products, hero, categories }: { products: Product[]; hero?: React.ReactNode; categories: React.ReactNode }) {
   const horse = products.find((p) => p.title.includes("Красные кони"));
   return hero ? (
     <>
@@ -598,7 +504,7 @@ function Journal({ products, hero }: { products: Product[]; hero?: React.ReactNo
       <PrintWorkshopHero product={horse} journal secondary />
       <ConstructorInvite product={products[0]} concept="journal" />
       <Mechanics concept="journal" />
-      <Categories concept="journal" />
+      {categories}
     </>
   ) : (
     <>
@@ -606,12 +512,12 @@ function Journal({ products, hero }: { products: Product[]; hero?: React.ReactNo
       <Featured products={products} concept="journal" />
       <ConstructorInvite product={products[0]} concept="journal" />
       <Mechanics concept="journal" />
-      <Categories concept="journal" />
+      {categories}
     </>
   );
 }
 
-function Play({ products }: { products: Product[] }) {
+function Play({ products, categories }: { products: Product[]; categories: React.ReactNode }) {
   const horse = products.find((p) => p.title.includes("Красные кони"));
   const spring = products.find((p) => p.title.includes("Весна"));
   return (
@@ -652,7 +558,7 @@ function Play({ products }: { products: Product[] }) {
           <div className="mc-play-small-photo">
             {spring && (
               <Link href={`/product/${spring.slug}`}>
-                <Photo product={spring} index={2} priority />
+                <Photo product={spring} priority />
               </Link>
             )}
           </div>
@@ -666,7 +572,7 @@ function Play({ products }: { products: Product[] }) {
               href="#how-it-works"
               aria-label="Посмотреть, как переставляются листы"
             >
-              <Arrow diagonal />
+              <Arrow />
             </a>
           </div>
           <span className="mc-play-sticker">
@@ -685,7 +591,7 @@ function Play({ products }: { products: Product[] }) {
         <i>✳</i>
         <span>повторяйте</span>
       </div>
-      <Categories concept="play" />
+      {categories}
       <Featured products={products} concept="play" />
       <Mechanics product={horse} concept="play" />
       <ConstructorInvite product={spring} concept="play" />
@@ -698,10 +604,12 @@ export function DesignConcept({
   products,
   embedded = false,
   hero,
+  categories,
 }: {
   concept: ConceptName;
   products: Product[];
   embedded?: boolean;
+  categories: React.ReactNode;
   /** Свой первый экран вместо видео-героя (на главной — обои). */
   hero?: React.ReactNode;
 }) {
@@ -711,11 +619,11 @@ export function DesignConcept({
       {!embedded && <Header concept={concept} />}
       <div className="mc-content">
         {concept === "paper" ? (
-          <Paper products={products} />
+          <Paper products={products} categories={categories} />
         ) : concept === "journal" ? (
-          <Journal products={products} hero={hero} />
+          <Journal products={products} hero={hero} categories={categories} />
         ) : (
-          <Play products={products} />
+          <Play products={products} categories={categories} />
         )}
       </div>
       {!embedded && <Footer />}

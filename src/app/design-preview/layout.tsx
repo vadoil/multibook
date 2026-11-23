@@ -1,3 +1,6 @@
+import "./concepts.css";
+import "./identity.css";
+import "./storefront.css";
 import { notFound } from "next/navigation";
 
 export const metadata = { robots: { index: false, follow: false } };

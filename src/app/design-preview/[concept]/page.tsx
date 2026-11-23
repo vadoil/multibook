@@ -5,6 +5,7 @@ import {
   type ConceptName,
 } from "@/components/design/DesignConcept";
 import { listProducts } from "@/lib/catalog";
+import { DesignCategories } from "@/components/design/DesignCategories";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
@@ -24,5 +25,5 @@ export default async function ConceptPage({
   const featured = ["БОТАНИКА", "Красные кони", "Весна", "Золотое время"]
     .map((title) => products.find((p) => p.title.includes(title)))
     .filter((p) => p !== undefined);
-  return <DesignConcept concept={concept as ConceptName} products={featured} />;
+  return <DesignConcept concept={concept as ConceptName} products={featured} categories={<DesignCategories concept={concept as ConceptName} />} />;
 }

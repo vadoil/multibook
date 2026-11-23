@@ -4,9 +4,6 @@ import { StoreHeader } from "@/components/store/StoreHeader";
 import { StoreFooter } from "@/components/store/StoreFooter";
 import { SITE } from "@/lib/site";
 import "./globals.css";
-import "./design-preview/concepts.css";
-import "./design-preview/identity.css";
-import "./design-preview/storefront.css";
 import "./store.css";
 
 const golos = Golos_Text({

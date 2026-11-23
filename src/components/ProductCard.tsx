@@ -11,7 +11,7 @@ export function ProductCard({ product }: { product: Product }) {
       className="group flex flex-col gap-3 rounded-[var(--radius-card)] p-2 transition hover:bg-card"
     >
       <div className="transition duration-300 group-hover:-translate-y-1">
-        <ProductVisual product={product} />
+        <ProductVisual product={product} index={1} />
       </div>
       <div className="flex flex-col gap-1 px-1 pb-1">
         <span className="text-xs uppercase tracking-wider text-muted">{product.type}</span>

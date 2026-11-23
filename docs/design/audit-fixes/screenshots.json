@@ -1,0 +1,110 @@
+[
+  {
+    "name": "product",
+    "width": 1366,
+    "overflow": false,
+    "heading": "Модульная тетрадь A5 с наборным блоком \"Multibook№7\", черная"
+  },
+  {
+    "name": "home",
+    "width": 1366,
+    "overflow": false,
+    "heading": "Блокноты,\nкоторые можно\nменять"
+  },
+  {
+    "name": "delivery",
+    "width": 1366,
+    "overflow": false,
+    "heading": "Оплата и доставка"
+  },
+  {
+    "name": "returns",
+    "width": 1366,
+    "overflow": false,
+    "heading": "Обмен и возврат"
+  },
+  {
+    "name": "contacts",
+    "width": 1366,
+    "overflow": false,
+    "heading": "Контакты"
+  },
+  {
+    "name": "privacy",
+    "width": 1366,
+    "overflow": false,
+    "heading": "Политика в отношении обработки персональных данных"
+  },
+  {
+    "name": "corporate",
+    "width": 1366,
+    "overflow": false,
+    "heading": "Multibook для вашего бренда"
+  },
+  {
+    "name": "404",
+    "width": 1366,
+    "overflow": false,
+    "heading": "Страница не найдена."
+  },
+  {
+    "name": "catalog",
+    "width": 1366,
+    "overflow": false,
+    "heading": "Каталог"
+  },
+  {
+    "name": "product",
+    "width": 375,
+    "overflow": false,
+    "heading": "Модульная тетрадь A5 с наборным блоком \"Multibook№7\", черная"
+  },
+  {
+    "name": "home",
+    "width": 375,
+    "overflow": false,
+    "heading": "Блокноты,\nкоторые можно\nменять"
+  },
+  {
+    "name": "delivery",
+    "width": 375,
+    "overflow": false,
+    "heading": "Оплата и доставка"
+  },
+  {
+    "name": "returns",
+    "width": 375,
+    "overflow": false,
+    "heading": "Обмен и возврат"
+  },
+  {
+    "name": "contacts",
+    "width": 375,
+    "overflow": false,
+    "heading": "Контакты"
+  },
+  {
+    "name": "privacy",
+    "width": 375,
+    "overflow": false,
+    "heading": "Политика в отношении обработки персональных данных"
+  },
+  {
+    "name": "corporate",
+    "width": 375,
+    "overflow": false,
+    "heading": "Multibook для вашего бренда"
+  },
+  {
+    "name": "404",
+    "width": 375,
+    "overflow": false,
+    "heading": "Страница не найдена."
+  },
+  {
+    "name": "catalog",
+    "width": 375,
+    "overflow": false,
+    "heading": "Каталог"
+  }
+]
