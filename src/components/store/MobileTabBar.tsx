@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useCallback, useEffect, useState } from "react";
 import { CartLink } from "../CartLink";
 
 function TabIcon({ kind }: { kind: "shop" | "constructor" | "account" }) {
@@ -17,6 +18,19 @@ function TabIcon({ kind }: { kind: "shop" | "constructor" | "account" }) {
 /** Persistent public-shop navigation. Reuses the existing reactive cart link. */
 export function MobileTabBar() {
   const pathname = usePathname();
+  const [constructorHref, setConstructorHref] = useState("/constructor");
+  const rememberConstructor = useCallback(() => {
+    if (window.location.pathname === "/constructor") setConstructorHref(window.location.pathname + window.location.search);
+  }, []);
+  useEffect(() => {
+    if (pathname !== "/constructor") return;
+    rememberConstructor();
+    const rememberBeforeNavigation = (event: MouseEvent) => {
+      if (event.target instanceof Element && event.target.closest("a[href]")) rememberConstructor();
+    };
+    document.addEventListener("click", rememberBeforeNavigation, true);
+    return () => document.removeEventListener("click", rememberBeforeNavigation, true);
+  }, [pathname, rememberConstructor]);
   if (pathname.startsWith("/admin")) return null;
   const shop = pathname === "/" || pathname.startsWith("/catalog") || pathname.startsWith("/product/");
   const constructor = pathname.startsWith("/constructor");
@@ -27,7 +41,19 @@ export function MobileTabBar() {
       <Link href="/catalog" aria-current={shop ? pathname === "/catalog" ? "page" : "location" : undefined}>
         <TabIcon kind="shop" /><span>Магазин</span>
       </Link>
-      <Link href="/constructor" aria-current={constructor ? "page" : undefined}>
+      <Link
+        href={constructorHref}
+        aria-current={constructor ? "page" : undefined}
+        onFocus={rememberConstructor}
+        onPointerEnter={rememberConstructor}
+        onPointerDown={rememberConstructor}
+        onClick={(event) => {
+          if (constructor && event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "auto" });
+          }
+        }}
+      >
         <TabIcon kind="constructor" /><span>Конструктор</span>
       </Link>
       <CartLink current={cart} />
