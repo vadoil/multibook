@@ -20,7 +20,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   const ship = deliveryMode();
   const tg = !!(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID);
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
+    <div data-admin-surface className="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
       <div className="flex flex-wrap items-center gap-2 border-b border-line pb-4">
         <span className="mr-2 font-display text-lg font-bold">Админка</span>
         <nav aria-label="Админка" className="flex flex-wrap gap-1">

@@ -1,18 +1,21 @@
 @import "tailwindcss";
 
-/* Базовые токены. Финальная палитра — по макетам Codex: меняется здесь, компоненты не трогаем. */
+/* Тёплая бумага, бордовые чернила и акцент выбранной журнальной концепции. */
 @theme {
-  --color-paper: #f5f1ea;
-  --color-card: #fffdf9;
-  --color-ink: #1d1c1a;
-  --color-muted: #716b62;
-  --color-line: #e3dcd0;
-  --color-accent: #c8302a;
-  --color-ok: #2f7d4f;
-  --color-warn: #b3541e;
-  --font-display: var(--font-unbounded), system-ui, sans-serif;
-  --font-sans: var(--font-manrope), system-ui, sans-serif;
-  --radius-card: 18px;
+  --color-paper: #eee7db;
+  --color-card: #faf5ec;
+  --color-ink: #462c2b;
+  --color-muted: #6f5b53;
+  --color-line: #d0c3b5;
+  --color-accent: #823a31;
+  --color-ok: #2b633f;
+  --color-warn: #93411e;
+  --font-display: var(--font-concept-serif), system-ui, sans-serif;
+  --font-sans: var(--font-concept-sans), system-ui, sans-serif;
+  --radius-card: 6px;
+  --radius-xl: 6px;
+  --radius-2xl: 10px;
+  --shadow-paper: 0 10px 34px #462c2b0b;
 }
 
 html {
@@ -26,7 +29,9 @@ body {
 }
 
 .ruling-grid {
-  background-image: linear-gradient(#cbd3da 1px, transparent 1px), linear-gradient(90deg, #cbd3da 1px, transparent 1px);
+  background-image:
+    linear-gradient(#cbd3da 1px, transparent 1px),
+    linear-gradient(90deg, #cbd3da 1px, transparent 1px);
   background-size: 10px 10px;
 }
 .ruling-dot {
@@ -38,10 +43,20 @@ body {
   background-size: 100% 10px;
 }
 .ruling-plan {
-  background-image: linear-gradient(#e6ded0 0 16px, transparent 16px),
-    linear-gradient(90deg, transparent 32%, #d7cfc1 32%, #d7cfc1 calc(32% + 1px), transparent 0),
+  background-image:
+    linear-gradient(#e6ded0 0 16px, transparent 16px),
+    linear-gradient(
+      90deg,
+      transparent 32%,
+      #d7cfc1 32%,
+      #d7cfc1 calc(32% + 1px),
+      transparent 0
+    ),
     linear-gradient(transparent 13px, #d9d2c6 13px, #d9d2c6 14px);
-  background-size: 100% 100%, 100% 100%, 100% 14px;
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 14px;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,0 +1,39 @@
+[
+  {
+    "path": "/admin",
+    "width": 1366,
+    "admin": {
+      "footer": "none",
+      "displayFont": "\"Golos Text\", \"Golos Text Fallback\", system-ui, sans-serif"
+    }
+  },
+  {
+    "path": "/admin",
+    "width": 375,
+    "admin": {
+      "footer": "none",
+      "displayFont": "\"Golos Text\", \"Golos Text Fallback\", system-ui, sans-serif"
+    }
+  },
+  {
+    "path": "/admin/products",
+    "width": 1366,
+    "admin": {
+      "footer": "none",
+      "displayFont": "\"Golos Text\", \"Golos Text Fallback\", system-ui, sans-serif"
+    }
+  },
+  {
+    "path": "/admin/products",
+    "width": 375,
+    "admin": {
+      "footer": "none",
+      "displayFont": "\"Golos Text\", \"Golos Text Fallback\", system-ui, sans-serif"
+    }
+  },
+  {
+    "adminProtected": true,
+    "videoReady": true,
+    "reducedMotion": true
+  }
+]

@@ -68,7 +68,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
                   В каталог
                 </Link>
                 <Link href="/constructor" className="rounded-full border border-ink px-5 py-2.5 font-semibold">
-                  Собрать блокнот
+                  Конструктор
                 </Link>
               </div>
             </div>

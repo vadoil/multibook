@@ -131,7 +131,7 @@ export function CartView({ profile }: { profile?: Record<string, string> }) {
             В каталог
           </Link>
           <Link href="/constructor" className="rounded-full border border-ink px-6 py-3 font-semibold">
-            Собрать блокнот
+            Конструктор
           </Link>
         </div>
       </div>
@@ -254,7 +254,7 @@ export function CartView({ profile }: { profile?: Record<string, string> }) {
           <input type="checkbox" name="consent" defaultChecked={v.consent === "on"} className="mt-1 accent-ink" aria-invalid={!!fe.consent} />
           <span>
             Согласен на обработку персональных данных по{" "}
-            <Link href="/privacy" className="underline underline-offset-2" target="_blank">
+            <Link href="https://multi-book.ru/privacy" rel="noopener noreferrer" className="underline underline-offset-2" target="_blank">
               политике конфиденциальности
             </Link>
           </span>

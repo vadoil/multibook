@@ -1,0 +1,192 @@
+[
+  {
+    "name": "home",
+    "width": 1366,
+    "scroll": 1366,
+    "h1": "Блокноты,\nкоторые можно\nменять.",
+    "h1size": "81.96px",
+    "headers": 1,
+    "broken": [],
+    "buttons": [
+      {
+        "text": "Выбрать готовый\nБлокноты, тетради, ежедневники\n↗",
+        "y": 544.421875,
+        "bottom": 626.421875,
+        "href": "/catalog"
+      },
+      {
+        "text": "Конструктор\nОбложка, листы и диски на ваш вкус\n↗",
+        "y": 636.421875,
+        "bottom": 718.421875,
+        "href": "/constructor"
+      }
+    ]
+  },
+  {
+    "name": "home",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Блокноты,\nкоторые можно\nменять.",
+    "h1size": "40px",
+    "headers": 1,
+    "broken": [],
+    "buttons": [
+      {
+        "text": "Выбрать готовый\nБлокноты, тетради, ежедневники",
+        "y": 587.3125,
+        "bottom": 663.3125,
+        "href": "/catalog"
+      },
+      {
+        "text": "Конструктор\nОбложка, листы и диски на ваш вкус",
+        "y": 587.3125,
+        "bottom": 663.3125,
+        "href": "/constructor"
+      }
+    ]
+  },
+  {
+    "name": "paper",
+    "width": 1366,
+    "scroll": 1366,
+    "h1": "Ваш блокнот.\nВаш порядок.",
+    "h1size": "77.862px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "paper",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Ваш блокнот.\nВаш порядок.",
+    "h1size": "39px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "journal",
+    "width": 1366,
+    "scroll": 1366,
+    "h1": "Блокноты,\nкоторые можно\nменять.",
+    "h1size": "81.96px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "journal",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Блокноты,\nкоторые можно\nменять.",
+    "h1size": "40px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "play",
+    "width": 1366,
+    "scroll": 1366,
+    "h1": "Порядок?\nПо-своему.",
+    "h1size": "91.522px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "play",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Порядок?\nПо-своему.",
+    "h1size": "40px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "catalog",
+    "width": 1366,
+    "scroll": 1366,
+    "h1": "Каталог",
+    "h1size": "48px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "catalog",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Каталог",
+    "h1size": "36px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "discs",
+    "width": 1366,
+    "scroll": 1366,
+    "h1": "Диски",
+    "h1size": "48px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "discs",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Диски",
+    "h1size": "36px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "constructor",
+    "width": 1366,
+    "scroll": 1366,
+    "h1": "Соберите свой блокнот",
+    "h1size": "48px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "constructor",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Соберите свой блокнот",
+    "h1size": "36px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "account",
+    "width": 1366,
+    "scroll": 1366,
+    "h1": "Кабинет",
+    "h1size": "48px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "account",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Кабинет",
+    "h1size": "36px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "product",
+    "width": 1366,
+    "scroll": 1366,
+    "h1": "Модульная тетрадь A5 с наборным блоком \"Multibook№7\", черная",
+    "h1size": "36px",
+    "headers": 1,
+    "broken": []
+  },
+  {
+    "name": "product",
+    "width": 375,
+    "scroll": 375,
+    "h1": "Модульная тетрадь A5 с наборным блоком \"Multibook№7\", черная",
+    "h1size": "30px",
+    "headers": 1,
+    "broken": []
+  }
+]
