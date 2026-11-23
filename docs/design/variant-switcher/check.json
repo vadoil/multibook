@@ -1,0 +1,620 @@
+{
+  "report": [
+    {
+      "width": 1366,
+      "path": "/",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 119.546875,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 185.03125,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 176.390625,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 160.015625,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/",
+          "w": 111.28125,
+          "h": 44,
+          "current": "page"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1366,
+      "path": "/design-preview/paper",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 119.546875,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 185.03125,
+          "h": 44,
+          "current": "page"
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 176.390625,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 160.015625,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/",
+          "w": 111.28125,
+          "h": 44,
+          "current": null
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1366,
+      "path": "/design-preview/journal",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 119.546875,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 185.03125,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 176.390625,
+          "h": 44,
+          "current": "page"
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 160.015625,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/",
+          "w": 111.28125,
+          "h": 44,
+          "current": null
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1366,
+      "path": "/design-preview/play",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 119.546875,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 185.03125,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 176.390625,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 160.015625,
+          "h": 44,
+          "current": "page"
+        },
+        {
+          "href": "/",
+          "w": 111.28125,
+          "h": 44,
+          "current": null
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1366,
+      "overview": true,
+      "returnedToShop": true
+    },
+    {
+      "width": 375,
+      "path": "/",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/",
+          "w": 100.109375,
+          "h": 44,
+          "current": "page"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "path": "/design-preview/paper",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 44,
+          "h": 44,
+          "current": "page"
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/",
+          "w": 100.109375,
+          "h": 44,
+          "current": null
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "path": "/design-preview/journal",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 44,
+          "h": 44,
+          "current": "page"
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/",
+          "w": 100.109375,
+          "h": 44,
+          "current": null
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "path": "/design-preview/play",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 44,
+          "h": 44,
+          "current": "page"
+        },
+        {
+          "href": "/",
+          "w": 100.109375,
+          "h": 44,
+          "current": null
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "overview": true,
+      "returnedToShop": true
+    },
+    {
+      "mobileMenuClear": true
+    },
+    {
+      "width": 320,
+      "path": "/",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/",
+          "w": 44,
+          "h": 44,
+          "current": "page"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "path": "/design-preview/paper",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 44,
+          "h": 44,
+          "current": "page"
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/",
+          "w": 44,
+          "h": 44,
+          "current": null
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "path": "/design-preview/journal",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 44,
+          "h": 44,
+          "current": "page"
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/",
+          "w": 44,
+          "h": 44,
+          "current": null
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "path": "/design-preview/play",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 44,
+          "h": 44,
+          "current": "page"
+        },
+        {
+          "href": "/",
+          "w": 44,
+          "h": 44,
+          "current": null
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "overview": true,
+      "returnedToShop": true
+    },
+    {
+      "width": 768,
+      "path": "/",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 185.03125,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 176.390625,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 160.015625,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/",
+          "w": 111.28125,
+          "h": 44,
+          "current": "page"
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "path": "/design-preview/paper",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 185.03125,
+          "h": 44,
+          "current": "page"
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 176.390625,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 160.015625,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/",
+          "w": 111.28125,
+          "h": 44,
+          "current": null
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "path": "/design-preview/journal",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 185.03125,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 176.390625,
+          "h": 44,
+          "current": "page"
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 160.015625,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/",
+          "w": 111.28125,
+          "h": 44,
+          "current": null
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "path": "/design-preview/play",
+      "links": [
+        {
+          "href": "/design-preview",
+          "w": 44,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/paper",
+          "w": 185.03125,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/journal",
+          "w": 176.390625,
+          "h": 44,
+          "current": null
+        },
+        {
+          "href": "/design-preview/play",
+          "w": 160.015625,
+          "h": 44,
+          "current": "page"
+        },
+        {
+          "href": "/",
+          "w": 111.28125,
+          "h": 44,
+          "current": null
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "overview": true,
+      "returnedToShop": true
+    }
+  ],
+  "errors": []
+}

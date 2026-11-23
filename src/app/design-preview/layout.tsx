@@ -2,8 +2,10 @@ import "./concepts.css";
 import "./identity.css";
 import "./storefront.css";
 import { notFound } from "next/navigation";
+import { DesignVariantNav } from "@/components/design/DesignVariantNav";
 
 export const metadata = { robots: { index: false, follow: false } };
+export const dynamic = "force-dynamic";
 
 /** Песочница концептов Codex. В продакшене закрыта; открыть — DESIGN_PREVIEW=1. */
 export default function PreviewLayout({
@@ -12,5 +14,5 @@ export default function PreviewLayout({
   children: React.ReactNode;
 }) {
   if (process.env.NODE_ENV === "production" && process.env.DESIGN_PREVIEW !== "1") notFound();
-  return <div className="mc-preview">{children}</div>;
+  return <div className="mc-preview"><DesignVariantNav />{children}</div>;
 }

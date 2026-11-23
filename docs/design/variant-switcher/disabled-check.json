@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/",
+    "status": 200
+  },
+  {
+    "path": "/design-preview",
+    "status": 404
+  },
+  {
+    "path": "/design-preview/paper",
+    "status": 404
+  },
+  {
+    "path": "/design-preview/journal",
+    "status": 404
+  },
+  {
+    "path": "/design-preview/play",
+    "status": 404
+  }
+]
