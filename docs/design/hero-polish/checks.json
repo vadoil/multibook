@@ -1,0 +1,39 @@
+{
+  "autoplay": "Обои «Весна»",
+  "pause": true,
+  "resume": true,
+  "hoverHolds": true,
+  "tooltip": {
+    "name": "Красные кони",
+    "opacity": "1",
+    "transform": "matrix(1.14, 0, 0, 1.14, 0, -5)"
+  },
+  "focusHolds": true,
+  "sheet": "inset(0px 22.7964% 0px 0px)",
+  "parallax": {
+    "x": 5.947291361639825,
+    "y": -3.7266100199656407
+  },
+  "reduced": {
+    "animation": "none",
+    "transition": "0s",
+    "clip": "none"
+  },
+  "swipe": true,
+  "phone": {
+    "overflow": false,
+    "animation": "none",
+    "photoTransform": "none",
+    "pauseRect": {
+      "x": 312,
+      "y": 747,
+      "width": 44,
+      "height": 44,
+      "top": 747,
+      "right": 356,
+      "bottom": 791,
+      "left": 312
+    },
+    "running": false
+  }
+}
