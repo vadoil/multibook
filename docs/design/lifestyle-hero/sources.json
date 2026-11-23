@@ -1,0 +1,23 @@
+{
+  "gold-lying": {
+    "uid": "556041946942",
+    "name": "Золотое время",
+    "url": "https://static.tildacdn.com/stor3936-3331-4361-a662-363261303433/cabc1d1e4d6ebb383c4be5ddf1d4ca7e.jpg",
+    "sha256": "8e2483a2bb850ad26964e5c390fa8d8540f3a06f75766f3836eda5b4105206b4",
+    "mask": "gold-lying.png"
+  },
+  "bird-open": {
+    "uid": "937894370012",
+    "name": "Важная птица",
+    "url": "https://static.tildacdn.com/stor3864-6662-4739-a165-343231663537/1cd5a4b945492a80750b3fa7cd7f8427.jpg",
+    "sha256": "fee262f756d4986b6025777a47308e1632f953cf909b6e1ae08d58e021491f72",
+    "mask": "bird-open.png"
+  },
+  "bird-standing": {
+    "uid": "937894370012",
+    "name": "Важная птица",
+    "url": "https://static.tildacdn.com/stor3433-3139-4532-a133-666131306635/fa57d291c21934bc6c985f0cbe13d876.jpg",
+    "sha256": "23ac923cb944d3560854f955d6c96bfcd7454e3da1a068ecf32bf35ad4ee2bd1",
+    "mask": "bird-standing.png"
+  }
+}

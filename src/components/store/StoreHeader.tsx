@@ -5,11 +5,12 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { CartLink } from "../CartLink";
 import { BrandGlyph } from "../design/BrandGlyph";
+import { StoreNavIcon, type StoreNavKind } from "./StoreNavIcon";
 
 const navigation = [
-  { href: "/catalog", label: "Магазин" },
-  { href: "/constructor", label: "Конструктор" },
-  { href: "/#how-it-works", label: "Как устроен блокнот" },
+  { href: "/catalog", label: "Магазин", icon: "shop" },
+  { href: "/constructor", label: "Конструктор", icon: "constructor" },
+  { href: "/#how-it-works", label: "Как устроен блокнот", icon: "binding" },
 ];
 
 export function StoreHeader() {
@@ -55,9 +56,10 @@ export function StoreHeader() {
             <Link
               key={link.href}
               href={link.href}
+              className={link.icon === "constructor" ? "store-nav-constructor" : undefined}
               aria-current={current(link.href) ? "page" : undefined}
             >
-              {link.label}
+              <StoreNavIcon kind={link.icon as StoreNavKind} />{link.label}
             </Link>
           ))}
         </nav>
@@ -97,6 +99,7 @@ export function StoreHeader() {
             >
               <path d={open ? "m5 5 14 14M5 19 19 5" : "M4 8h16M4 16h16"} />
             </svg>
+            <span>{open ? "Закрыть" : "Меню"}</span>
           </button>
         </div>
       </div>
@@ -110,18 +113,18 @@ export function StoreHeader() {
             <Link
               key={link.href}
               href={link.href}
+              className={link.icon === "constructor" ? "store-nav-constructor" : undefined}
               aria-current={current(link.href) ? "page" : undefined}
               onClick={() => setOpen(false)}
             >
-              {link.label}
-              <span aria-hidden="true">→</span>
+              <StoreNavIcon kind={link.icon as StoreNavKind} /><span>{link.label}</span>
             </Link>
           ))}
           <Link href="/account" onClick={() => setOpen(false)}>
-            Личный кабинет<span aria-hidden="true">→</span>
+            <StoreNavIcon kind="account" /><span>Личный кабинет</span>
           </Link>
           <Link href="/contacts" onClick={() => setOpen(false)}>
-            Контакты<span aria-hidden="true">→</span>
+            <StoreNavIcon kind="contacts" /><span>Контакты</span>
           </Link>
         </nav>
       )}
