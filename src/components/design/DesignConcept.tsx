@@ -7,6 +7,8 @@ import type { Product } from "@/db/schema";
 import { formatPrice } from "@/lib/money";
 import { PrintWorkshopHero } from "./PrintWorkshopHero";
 import { BrandGlyph } from "./BrandGlyph";
+import { NotebookFilm } from "./NotebookFilm";
+import { ShopChoices } from "./ShopChoices";
 import { CategoryGlyph, type CategoryKind } from "./CategoryGlyph";
 
 export type ConceptName = "paper" | "journal" | "play";
@@ -263,55 +265,93 @@ function ButtonLink({
   );
 }
 
-function Mechanics({
-  product,
-  concept,
-}: {
-  product?: Product;
-  concept: ConceptName;
-}) {
-  const [playing, setPlaying] = useState(false);
+function Mechanics({ concept }: { product?: Product; concept: ConceptName }) {
   return (
     <section
       id="how-it-works"
       className={`mc-mechanics mc-mechanics-${concept}`}
     >
       <div className="mc-mechanics-intro">
-        <p className="mc-section-note">Маленькая деталь. Большая свобода.</p>
+        <p className="mc-section-note">Как устроен модульный блокнот</p>
         <h2>
-          Всё держится
+          Лист меняет место.
           <br />
-          на дисках.
+          Блокнот остаётся.
         </h2>
         <p>
-          Потяните лист у корешка — он снимется. Поставьте в другое место — он
-          снова в блокноте. Планы меняются, и это нормально.
+          Потяните лист у корешка — он снимется с дисков. Прижмите к дискам в
+          другом месте — он снова в блокноте.
         </p>
-        <button
-          className="mc-text-button"
-          onClick={() => setPlaying(!playing)}
-          aria-pressed={playing}
-        >
-          {playing ? "Остановить движение" : "Посмотреть, как это работает"}
-          <Arrow />
-        </button>
-      </div>
-      <div className={`mc-mechanism ${playing ? "mc-is-playing" : ""}`}>
-        {product && (
-          <Photo product={product} index={4} className="mc-mechanism-photo" />
-        )}
-        <div className="mc-mechanism-copy">
-          <span className="mc-motion-label">
-            {playing ? "Лист меняет место" : "Листы можно переставлять"}
+        <div className="mc-mechanics-steps">
+          <span>
+            <CategoryGlyph kind="pages" />
+            Снимайте листы
           </span>
-          <div className="mc-motion-track" aria-hidden="true">
-            <span>Снять</span>
-            <i />
-            <span>Переставить</span>
-            <i />
-            <span>Продолжить</span>
-          </div>
+          <span>
+            <CategoryGlyph kind="discs" />
+            Меняйте порядок
+          </span>
+          <span>
+            <CategoryGlyph kind="journals" />
+            Добавляйте новые
+          </span>
         </div>
+        <Link className="mc-text-button" href="/constructor">
+          Попробовать конструктор
+          <Arrow />
+        </Link>
+      </div>
+      <div className="mc-mechanism-film">
+        <NotebookFilm />
+      </div>
+    </section>
+  );
+}
+
+function ConstructorInvite({
+  product,
+  concept,
+}: {
+  product?: Product;
+  concept: ConceptName;
+}) {
+  return (
+    <section
+      className={`mc-constructor-invite mc-constructor-invite-${concept}`}
+    >
+      <div className="mc-invite-photo">
+        {product && (
+          <Photo
+            product={product}
+            index={product.title.includes("Красные кони") ? 3 : 1}
+          />
+        )}
+      </div>
+      <div className="mc-invite-copy">
+        <p className="mc-section-note">Конструктор блокнота</p>
+        <h2>
+          Каждая деталь —<br />
+          ваш выбор.
+        </h2>
+        <p>
+          Обложка с вашим характером. Удобная линовка. Диски любимого цвета.
+          Посмотрите свою сборку и её стоимость до заказа.
+        </p>
+        <div className="mc-invite-parts" aria-label="Детали конструктора">
+          <span>
+            <CategoryGlyph kind="covers" />
+            Обложка
+          </span>
+          <span>
+            <CategoryGlyph kind="pages" />
+            Листы
+          </span>
+          <span>
+            <CategoryGlyph kind="discs" />
+            Диски
+          </span>
+        </div>
+        <ButtonLink href="/constructor">Открыть конструктор</ButtonLink>
       </div>
     </section>
   );
@@ -331,10 +371,10 @@ function Featured({
           <p className="mc-section-note">Уже собраны. Осталось выбрать.</p>
           <h2>
             {concept === "journal"
-              ? "Вещи с характером"
+              ? "Готовая коллекция"
               : concept === "play"
-                ? "Найдётся ваш."
-                : "Для ваших больших планов"}
+                ? "Готовые к вашим планам"
+                : "Готовые блокноты и ежедневники"}
           </h2>
         </div>
         <Link className="mc-text-button" href="/catalog?type=Блокноты">
@@ -505,11 +545,20 @@ function Paper({ products }: { products: Product[] }) {
         product={products.find((p) => p.title.includes("Красные кони"))}
       />
       <div className="mc-paper-promise">
-        <span>Один блокнот. Много возможностей.</span>
-        <span>Листы снимаются</span>
-        <span>Детали меняются</span>
-        <span>Идеи остаются</span>
+        <span>
+          <CategoryGlyph kind="pages" />
+          Листы снимаются и переставляются
+        </span>
+        <span>
+          <CategoryGlyph kind="covers" />
+          Обложку можно заменить
+        </span>
+        <span>
+          <CategoryGlyph kind="discs" />
+          Детали продаются отдельно
+        </span>
       </div>
+      <Featured products={products} concept="paper" />
       <section className="mc-print-story">
         <div>
           <p className="mc-section-note">Сделано у нас. Придумано вами.</p>
@@ -534,126 +583,21 @@ function Paper({ products }: { products: Product[] }) {
         product={products.find((p) => p.title.includes("Красные кони"))}
         concept="paper"
       />
-      <Featured products={products} concept="paper" />
       <Categories concept="paper" />
-      <section className="mc-paper-cta">
-        <span className="mc-section-note">Ваш следующий любимый блокнот</span>
-        <h2>
-          Начните с себя.
-          <br />
-          Остальное соберётся.
-        </h2>
-        <ButtonLink href="/constructor">Открыть конструктор</ButtonLink>
-        <span className="mc-handwriting">
-          Обложка + листы + диски = ваш Multibook
-        </span>
-      </section>
+      <ConstructorInvite product={products[0]} concept="paper" />
     </>
   );
 }
 
 function Journal({ products }: { products: Product[] }) {
   const horse = products.find((p) => p.title.includes("Красные кони"));
-  const botanic = products.find((p) => p.title.includes("БОТАНИКА"));
   return (
     <>
-      <section className="mc-journal-hero">
-        <div className="mc-journal-title">
-          <p>
-            Предметы для мыслей
-            <br />и повседневных ритуалов
-            <Link href="/catalog" className="mc-journal-head-cta">
-              Найти свой блокнот ↗
-            </Link>
-          </p>
-          <h1>
-            Свобода
-            <br />
-            между строк.
-          </h1>
-          <span className="mc-journal-edition">
-            Multibook
-            <br />
-            На дисках. По-вашему.
-          </span>
-        </div>
-        <div className="mc-journal-spread">
-          <div className="mc-journal-side">
-            <span className="mc-journal-side-note">
-              Блокнот подстраивается под жизнь.
-            </span>
-            {botanic && (
-              <Link href={`/product/${botanic.slug}`}>
-                <Photo product={botanic} index={4} priority />
-                <span>
-                  «Ботаника»<small>{formatPrice(botanic.price)}</small>
-                </span>
-              </Link>
-            )}
-            <p>
-              Листы можно переставить.
-              <br />
-              Мысли — отпустить.
-            </p>
-            <a
-              href="#how-it-works"
-              className="mc-round-link"
-              aria-label="Как работает переплёт"
-            >
-              <Arrow />
-            </a>
-          </div>
-          <div className="mc-journal-main">
-            {horse && (
-              <Link href={`/product/${horse.slug}`}>
-                <Photo product={horse} index={3} priority />
-                <span className="mc-journal-photo-label">
-                  «Красные кони»<span>{formatPrice(horse.price)}</span>
-                </span>
-              </Link>
-            )}
-            <span className="mc-journal-margin">
-              Тактильность. Характер. Ваш порядок.
-            </span>
-          </div>
-        </div>
-        <div className="mc-journal-bottom">
-          <p>
-            Меняйте страницы, обложки, планы.
-            <br />
-            Пусть любимый блокнот остаётся с вами.
-          </p>
-          <ButtonLink href="/catalog">Найти свой Multibook</ButtonLink>
-          <Link href="/constructor" className="mc-quiet-link">
-            Или собрать с нуля
-          </Link>
-        </div>
-      </section>
-      <section className="mc-journal-manifesto">
-        <span className="mc-section-note">Хорошие вещи дают свободу</span>
-        <p>
-          Для списков, которые растут.
-          <br />
-          Для идей, которым тесно.
-          <br />
-          Для жизни, у которой
-          <br />
-          <em>нет чистовика.</em>
-        </p>
-        <span>Multibook / Идея простого порядка</span>
-      </section>
+      <PrintWorkshopHero product={horse} journal />
       <Featured products={products} concept="journal" />
-      <Mechanics product={horse} concept="journal" />
+      <ConstructorInvite product={products[0]} concept="journal" />
+      <Mechanics concept="journal" />
       <Categories concept="journal" />
-      <section className="mc-journal-cta">
-        <p className="mc-section-note">Новая глава начинается с вас</p>
-        <h2>
-          Ничего лишнего.
-          <br />
-          Всё по-своему.
-        </h2>
-        <ButtonLink href="/constructor">Собрать свой блокнот</ButtonLink>
-      </section>
     </>
   );
 }
@@ -665,18 +609,17 @@ function Play({ products }: { products: Product[] }) {
     <>
       <section className="mc-play-hero">
         <div className="mc-play-heading">
-          <span className="mc-play-tag">Ваши мысли. Ваши правила.</span>
+          <span className="mc-play-tag">Модульные блокноты на дисках</span>
           <h1>
             Порядок?
             <br />
             По-своему.
           </h1>
           <p>
-            Блокнот — конструктор.
-            <br />
-            Для всего, что у вас в голове.
+            Выбирайте готовый блокнот или соберите свой. Листы легко снимать,
+            добавлять и переставлять.
           </p>
-          <ButtonLink href="/constructor">Давайте соберём</ButtonLink>
+          <ShopChoices />
         </div>
         <div className="mc-play-board">
           <div className="mc-play-red">
@@ -736,18 +679,7 @@ function Play({ products }: { products: Product[] }) {
       <Categories concept="play" />
       <Featured products={products} concept="play" />
       <Mechanics product={horse} concept="play" />
-      <section className="mc-play-cta">
-        <span aria-hidden="true">✳</span>
-        <div>
-          <p className="mc-section-note">Выбирайте. Сочетайте. Меняйте.</p>
-          <h2>
-            Ваш блокнот.
-            <br />
-            Ваша сборка.
-          </h2>
-        </div>
-        <ButtonLink href="/constructor">Попробовать конструктор</ButtonLink>
-      </section>
+      <ConstructorInvite product={spring} concept="play" />
     </>
   );
 }

@@ -1,0 +1,35 @@
+<template>
+<style>
+#root{position:absolute;inset:0;perspective:1400px}
+.object{position:absolute;inset:0;transform-style:preserve-3d}
+.paper{position:absolute;left:125px;top:198px;width:549px;height:648px;mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22549%22%20height%3D%22648%22%3E%3Crect%20width%3D%22549%22%20height%3D%22648%22%20fill%3D%22white%22%2F%3E%3Ccircle%20cx%3D%2214%22%20cy%3D%2255.667%22%20r%3D%2210%22%20fill%3D%22black%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%2252.167%22%20width%3D%2215%22%20height%3D%227%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%2214%22%20cy%3D%22131.4%22%20r%3D%2210%22%20fill%3D%22black%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22127.9%22%20width%3D%2215%22%20height%3D%227%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%2214%22%20cy%3D%22211.4%22%20r%3D%2210%22%20fill%3D%22black%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22207.9%22%20width%3D%2215%22%20height%3D%227%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%2214%22%20cy%3D%22452.467%22%20r%3D%2210%22%20fill%3D%22black%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22448.967%22%20width%3D%2215%22%20height%3D%227%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%2214%22%20cy%3D%22528.2%22%20r%3D%2210%22%20fill%3D%22black%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22524.7%22%20width%3D%2215%22%20height%3D%227%22%20fill%3D%22black%22%2F%3E%3Ccircle%20cx%3D%2214%22%20cy%3D%22607.134%22%20r%3D%2210%22%20fill%3D%22black%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22603.634%22%20width%3D%2215%22%20height%3D%227%22%20fill%3D%22black%22%2F%3E%3C%2Fsvg%3E");overflow:hidden;border-radius:7px;background:#fff;box-shadow:9px 18px 24px #302b2023}
+.paper img{position:absolute;max-width:none;width:710px;height:860.795px;left:-91.5px;top:-73.912px}
+.cover{position:absolute;inset:0;transform-origin:15% 50%;backface-visibility:hidden}
+.cover img,.disc img{position:absolute;inset:0;width:800px;height:1066.667px;max-width:none;top:-13px}
+.cover img{clip-path:polygon(13.8% 18.4%,85.1% 17.4%,86.9% 82.1%,14.6% 82.5%)}
+.disc{position:absolute;inset:0}
+.disc img{clip-path:ellipse(4.8% 2.2% at 13.2% var(--dy));mask-image:radial-gradient(ellipse 29px 14px at 15.2% calc(var(--dy) + .4%),transparent 97%,black 100%)}
+</style>
+<div id="root" data-composition-id="assembly" data-width="800" data-height="1000">
+<div id="parts" class="clip" data-start="0" data-duration="8" data-track-index="0" data-layout-allow-overflow><div class="object">
+<div class="paper paper-back"><img src="assets/paper.jpg" alt="Настоящие листы в клетку"></div>
+<div class="paper paper-front"><img src="assets/paper.jpg" alt=""></div>
+<div class="cover"><img src="assets/cover.jpg" alt="Обложка Красные кони"></div>
+<div class="disc disc-0" style="--dy:25%"><img src="assets/cover.jpg" alt=""></div><div class="disc disc-1" style="--dy:32.1%"><img src="assets/cover.jpg" alt=""></div><div class="disc disc-2" style="--dy:39.6%"><img src="assets/cover.jpg" alt=""></div><div class="disc disc-3" style="--dy:62.2%"><img src="assets/cover.jpg" alt=""></div><div class="disc disc-4" style="--dy:69.3%"><img src="assets/cover.jpg" alt=""></div><div class="disc disc-5" style="--dy:76.7%"><img src="assets/cover.jpg" alt=""></div>
+</div></div></div>
+<script>
+const tl=gsap.timeline({paused:true});
+tl.fromTo('.paper-back',{x:-25,y:18,rotation:-9},{x:0,y:0,rotation:0,duration:1.25,ease:'power3.inOut'},0.35);
+tl.fromTo('.paper-front',{x:32,y:-25,rotation:8},{x:0,y:0,rotation:0,duration:1.25,ease:'power3.inOut'},0.5);
+tl.fromTo('.disc',{x:-155,opacity:0},{x:0,opacity:1,stagger:0.08,duration:0.75,ease:'power4.out'},1.1);
+tl.fromTo('.cover',{rotationY:-95,opacity:0},{rotationY:0,opacity:1,duration:1.25,ease:'power3.inOut'},2.15);
+tl.to('.cover',{rotationY:-108,opacity:0,duration:0.8,ease:'power2.inOut'},4.1);
+tl.to('.paper-front',{x:100,y:-65,rotation:8,duration:0.65,ease:'power3.inOut'},4.7);
+tl.to('.paper-front',{x:0,y:0,rotation:0,duration:0.75,ease:'power3.inOut'},5.45);
+tl.to('.cover',{rotationY:0,opacity:1,duration:0.75,ease:'power3.inOut'},6.2);
+tl.to('.cover',{rotationY:-95,opacity:0,duration:0.35,ease:'power2.in'},7.1);
+tl.to('.disc',{x:-155,opacity:0,duration:0.35,ease:'power2.in'},7.1);
+tl.to('.paper-back',{x:-25,y:18,rotation:-9,duration:0.4,ease:'power2.inOut'},7.5);
+tl.to('.paper-front',{x:32,y:-25,rotation:8,duration:0.4,ease:'power2.inOut'},7.5);
+window.__timelines=window.__timelines||{};window.__timelines.assembly=tl;
+</script></template>
