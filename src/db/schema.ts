@@ -95,6 +95,7 @@ export const orders = sqliteTable(
     comment: text("comment"),
     subtotal: integer("subtotal").notNull(), // копейки
     deliveryPrice: integer("delivery_price"), // null — ещё не посчитана
+    deliveryEta: text("delivery_eta"), // «2–4 дн.» из расчёта СДЭК
     total: integer("total").notNull(),
     createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
     updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
@@ -133,6 +134,28 @@ export const orderEvents = sqliteTable(
     text: text("text").notNull(),
   },
   (t) => [index("order_events_order_idx").on(t.orderId)],
+);
+
+export const PAYMENT_STATUSES = ["pending", "succeeded", "canceled"] as const;
+export type PaymentStatus = (typeof PAYMENT_STATUSES)[number];
+
+/** Онлайн-оплаты заказа. provider "demo" — заглушка без денег, "yookassa" — настоящая. */
+export const payments = sqliteTable(
+  "payments",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    orderId: integer("order_id")
+      .notNull()
+      .references(() => orders.id, { onDelete: "cascade" }),
+    provider: text("provider").$type<"demo" | "yookassa">().notNull(),
+    externalId: text("external_id").unique(), // id платежа в ЮKassa
+    status: text("status").$type<PaymentStatus>().notNull().default("pending"),
+    amount: integer("amount").notNull(), // копейки
+    confirmationUrl: text("confirmation_url"),
+    createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
+    updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
+  },
+  (t) => [index("payments_order_idx").on(t.orderId)],
 );
 
 export const USER_ROLES = ["customer", "admin"] as const;

@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { ClearCart } from "@/components/ClearCart";
 import { formatPrice } from "@/lib/money";
 import { DELIVERY_LABELS, getOrderByToken, STATUS_LABELS } from "@/lib/orders";
+import { canPay, paymentMode } from "@/lib/payments";
+import { payOrder } from "../actions";
 
 export const metadata: Metadata = { title: "Заказ", robots: { index: false, follow: false } };
 export const dynamic = "force-dynamic";
@@ -14,12 +16,14 @@ export default async function OrderPage({
   searchParams,
 }: {
   params: Promise<{ token: string }>;
-  searchParams: Promise<{ new?: string }>;
+  searchParams: Promise<{ new?: string; paid?: string; payerror?: string }>;
 }) {
   const data = getOrderByToken((await params).token);
   if (!data) notFound();
   const { order, items } = data;
-  const fresh = (await searchParams).new === "1";
+  const sp = await searchParams;
+  const fresh = sp.new === "1";
+  const mode = paymentMode();
   const groups = [...new Set(items.map((i) => i.bundle ?? ""))];
 
   return (
@@ -30,8 +34,24 @@ export default async function OrderPage({
       <p className="mt-4 inline-flex rounded-full bg-card px-4 py-2 text-sm font-medium">{STATUS_LABELS[order.status]}</p>
       {fresh && (
         <p className="mt-4 text-lg text-ink/80">
-          Мы позвоним или напишем на {order.phone}, чтобы подтвердить заказ и посчитать доставку. Сохраните эту страницу — по ссылке всегда виден статус.
+          {canPay(order)
+            ? "Заказ принят. Можно оплатить сейчас — или дождаться звонка менеджера. Сохраните эту страницу — по ссылке всегда виден статус."
+            : `Мы позвоним или напишем на ${order.phone}, чтобы подтвердить заказ и посчитать доставку. Сохраните эту страницу — по ссылке всегда виден статус.`}
         </p>
+      )}
+      {order.status === "paid" && sp.paid === "1" && <p className="mt-4 rounded-xl bg-ok/10 px-4 py-3 text-ok">Оплата прошла. Спасибо! Соберём заказ и сообщим, когда передадим в доставку.</p>}
+      {sp.paid === "1" && order.status !== "paid" && (
+        <p className="mt-4 rounded-xl bg-paper px-4 py-3">Ждём подтверждения оплаты от банка — обычно это несколько секунд. Обновите страницу.</p>
+      )}
+      {sp.payerror === "1" && <p className="mt-4 rounded-xl bg-accent/10 px-4 py-3 text-accent">Не получилось начать оплату. Попробуйте ещё раз или дождитесь звонка менеджера.</p>}
+      {canPay(order) && (
+        <form action={payOrder.bind(null, order.token)} className="mt-6 flex flex-wrap items-center gap-4 rounded-[var(--radius-card)] bg-ink p-5 text-white">
+          <div className="min-w-0 flex-1">
+            <p className="font-semibold">Оплатить онлайн {formatPrice(order.total)}</p>
+            <p className="text-sm text-white/70">{mode === "demo" ? "Демо-режим: деньги не списываются" : "Карта, СБП, SberPay — через ЮKassa"}</p>
+          </div>
+          <button className="rounded-full bg-white px-6 py-3 font-semibold text-ink">Оплатить</button>
+        </form>
       )}
 
       <div className="mt-8 rounded-[var(--radius-card)] bg-card p-5">
@@ -59,7 +79,9 @@ export default async function OrderPage({
           <dt>Товары</dt>
           <dd className="tabular-nums">{formatPrice(order.subtotal)}</dd>
           <dt>Доставка</dt>
-          <dd className="text-muted">{order.deliveryPrice === null ? "посчитаем при подтверждении" : formatPrice(order.deliveryPrice)}</dd>
+          <dd className="text-right text-muted">
+            {order.deliveryPrice === null ? "посчитаем при подтверждении" : `${formatPrice(order.deliveryPrice)}${order.deliveryEta ? ` · ${order.deliveryEta}` : ""}`}
+          </dd>
           <dt className="pt-2 text-lg font-semibold">Итого</dt>
           <dd className="pt-2 text-lg font-bold tabular-nums">{formatPrice(order.total)}</dd>
         </dl>

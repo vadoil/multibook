@@ -46,6 +46,8 @@ export type OrderInput = {
   address: string | null;
   comment: string | null;
   userId: number | null;
+  deliveryPrice: number | null; // копейки, посчитано на сервере (СДЭК или демо)
+  deliveryEta: string | null;
   lines: { productId: number; qty: number; bundle: string | null }[];
 };
 
@@ -75,8 +77,9 @@ export function createOrder(input: OrderInput): { token: string; number: string;
         deliveryAddress: input.address,
         comment: input.comment,
         subtotal,
-        deliveryPrice: null,
-        total: subtotal,
+        deliveryPrice: input.deliveryPrice,
+        deliveryEta: input.deliveryEta,
+        total: subtotal + (input.deliveryPrice ?? 0),
         createdAt: now,
         updatedAt: now,
       })

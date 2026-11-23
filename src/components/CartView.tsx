@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useActionState, useEffect, useMemo, useState } from "react";
-import { placeOrder, quoteProducts, type CheckoutState } from "@/app/cart/actions";
+import { estimateDelivery, placeOrder, quoteProducts, type CheckoutState } from "@/app/cart/actions";
+import type { DeliveryQuote } from "@/lib/delivery";
 import type { QuotedProduct } from "@/lib/orders";
 import { cart, MAX_QTY, useCart, type CartLine } from "@/lib/cart";
 import { formatPrice } from "@/lib/money";
@@ -96,6 +97,28 @@ export function CartView({ profile }: { profile?: Record<string, string> }) {
   );
   const v = state.values ?? profile ?? {};
   const fe = state.fieldErrors ?? {};
+
+  // Предварительный расчёт доставки: город + способ + состав корзины. Сервер всё равно пересчитает при заказе.
+  const [city, setCity] = useState(v.city ?? "");
+  const [dq, setDq] = useState<DeliveryQuote | null>(null);
+  const linesKey = c.lines.map((l) => `${l.productId}x${l.qty}`).join(",");
+  useEffect(() => {
+    if (delivery === "other" || city.trim().length < 2 || !linesKey) {
+      setDq(null);
+      return;
+    }
+    let live = true;
+    const t = setTimeout(() => {
+      estimateDelivery(city, delivery, c.lines.map((l) => ({ productId: l.productId, qty: l.qty }))).then((r) => live && setDq(r));
+    }, 500);
+    return () => {
+      live = false;
+      clearTimeout(t);
+    };
+    // c.lines меняется вместе с linesKey
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [city, delivery, linesKey]);
+  const shipping = dq && "price" in dq ? dq : null;
 
   if (!ready) return <div className="mt-10 h-64 animate-pulse rounded-[var(--radius-card)] bg-card" />;
 
@@ -195,7 +218,7 @@ export function CartView({ profile }: { profile?: Record<string, string> }) {
           <div className="mt-3 grid gap-3">
             <label>
               <span className="text-sm text-muted">Город</span>
-              <input name="city" defaultValue={v.city} autoComplete="address-level2" className={field} aria-invalid={!!fe.city} />
+              <input name="city" value={city} onChange={(e) => setCity(e.target.value)} autoComplete="address-level2" className={field} aria-invalid={!!fe.city} />
               <Err m={fe.city} />
             </label>
             <label>
@@ -211,11 +234,21 @@ export function CartView({ profile }: { profile?: Record<string, string> }) {
           <textarea name="comment" defaultValue={v.comment} rows={2} className={field} />
         </label>
 
-        <div className="mt-5 flex items-baseline justify-between border-t border-line pt-4">
-          <span>Товары</span>
-          <b className="text-2xl tabular-nums">{loaded ? formatPrice(total) : "…"}</b>
-        </div>
-        <p className="mt-1 text-sm text-muted">Доставку посчитаем и согласуем, когда менеджер подтвердит заказ. Оплата — после подтверждения.</p>
+        <dl className="mt-5 grid grid-cols-[1fr_auto] gap-y-1 border-t border-line pt-4">
+          <dt>Товары</dt>
+          <dd className="tabular-nums">{loaded ? formatPrice(total) : "…"}</dd>
+          <dt>Доставка{shipping && <span className="text-sm text-muted"> · {shipping.eta}</span>}</dt>
+          <dd className="text-right tabular-nums">
+            {shipping ? formatPrice(shipping.price) : <span className="text-sm text-muted">{dq && "error" in dq ? "посчитает менеджер" : "укажите город"}</span>}
+          </dd>
+          <dt className="pt-2 text-lg font-semibold">Итого</dt>
+          <dd className="pt-2 text-2xl font-bold tabular-nums">{loaded ? formatPrice(total + (shipping?.price ?? 0)) : "…"}</dd>
+        </dl>
+        {dq && "error" in dq && delivery !== "other" && <p className="mt-1 text-sm text-warn">{dq.error}</p>}
+        {shipping?.demo && <p className="mt-1 text-xs text-muted">Демо-расчёт: СДЭК ещё не подключён, сумма примерная.</p>}
+        <p className="mt-2 text-sm text-muted">
+          {shipping ? "После оформления можно сразу оплатить онлайн." : "Доставку посчитаем и согласуем при подтверждении, после этого можно оплатить онлайн."}
+        </p>
 
         <label className="mt-4 flex items-start gap-3 text-sm">
           <input type="checkbox" name="consent" defaultChecked={v.consent === "on"} className="mt-1 accent-ink" aria-invalid={!!fe.consent} />

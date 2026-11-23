@@ -4,11 +4,29 @@ import { redirect } from "next/navigation";
 import { after } from "next/server";
 import { DELIVERY_METHODS, type DeliveryMethod } from "@/db/schema";
 import { currentUser } from "@/lib/auth";
+import { quoteDelivery, type DeliveryQuote } from "@/lib/delivery";
 import { newOrderText, notifyManager } from "@/lib/notify";
 import { createOrder, DELIVERY_LABELS, quote, type QuotedProduct } from "@/lib/orders";
 
 export async function quoteProducts(ids: number[]): Promise<Record<number, QuotedProduct>> {
   return quote(Array.isArray(ids) ? ids.map(Number) : []);
+}
+
+type Line = { productId: number; qty: number };
+
+async function deliveryFor(city: string, method: DeliveryMethod, lines: Line[]): Promise<DeliveryQuote> {
+  const q = quote(lines.map((l) => l.productId));
+  return quoteDelivery(city, method, lines.filter((l) => q[l.productId]).map((l) => ({ type: q[l.productId].type, qty: l.qty })));
+}
+
+/** Предварительный расчёт доставки в корзине. */
+export async function estimateDelivery(city: string, method: string, lines: Line[]): Promise<DeliveryQuote> {
+  const m = (DELIVERY_METHODS as readonly string[]).includes(method) ? (method as DeliveryMethod) : "cdek-pvz";
+  const clean = (Array.isArray(lines) ? lines : [])
+    .slice(0, 60)
+    .map((l) => ({ productId: Number(l?.productId), qty: Number(l?.qty) }))
+    .filter((l) => Number.isInteger(l.productId) && l.productId > 0 && Number.isInteger(l.qty) && l.qty > 0 && l.qty < 100);
+  return deliveryFor(String(city ?? ""), m, clean);
 }
 
 export type CheckoutState = {
@@ -64,7 +82,11 @@ export async function placeOrder(_prev: CheckoutState, fd: FormData): Promise<Ch
   if (Object.keys(fieldErrors).length) return { fieldErrors, values };
 
   const user = await currentUser();
+  // Доставку считаем заново на сервере: цифре из браузера не верим.
+  const dq = await deliveryFor(values.city, delivery, lines);
   const res = createOrder({
+    deliveryPrice: "price" in dq ? dq.price : null,
+    deliveryEta: "price" in dq ? dq.eta : null,
     name: values.name,
     phone: values.phone,
     email: values.email || null,
@@ -85,7 +107,7 @@ export async function placeOrder(_prev: CheckoutState, fd: FormData): Promise<Ch
         id: res.id,
         name: values.name,
         phone: values.phone,
-        subtotal: res.subtotal,
+        subtotal: res.subtotal + ("price" in dq ? dq.price : 0),
         delivery: DELIVERY_LABELS[delivery],
         city: values.city || null,
         items: lines.length,

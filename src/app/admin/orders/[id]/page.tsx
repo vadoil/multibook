@@ -18,6 +18,7 @@ export default async function AdminOrder({ params }: { params: Promise<{ id: str
   if (!order) notFound();
   const items = db.select().from(schema.orderItems).where(eq(schema.orderItems.orderId, id)).all();
   const events = db.select().from(schema.orderEvents).where(eq(schema.orderEvents.orderId, id)).orderBy(desc(schema.orderEvents.at)).all();
+  const pays = db.select().from(schema.payments).where(eq(schema.payments.orderId, id)).orderBy(desc(schema.payments.createdAt)).all();
   const customer = order.userId ? db.select({ email: schema.users.email }).from(schema.users).where(eq(schema.users.id, order.userId)).get() : null;
   const groups = [...new Set(items.map((i) => i.bundle ?? ""))];
   const tel = order.phone.replace(/[^\d+]/g, "");
@@ -84,11 +85,31 @@ export default async function AdminOrder({ params }: { params: Promise<{ id: str
               <dt>Товары</dt>
               <dd className="tabular-nums">{formatPrice(order.subtotal)}</dd>
               <dt>Доставка</dt>
-              <dd className="tabular-nums">{order.deliveryPrice === null ? <span className="text-warn">не посчитана</span> : formatPrice(order.deliveryPrice)}</dd>
+              <dd className="tabular-nums">
+                {order.deliveryPrice === null ? <span className="text-warn">не посчитана</span> : `${formatPrice(order.deliveryPrice)}${order.deliveryEta ? ` · ${order.deliveryEta}` : ""}`}
+              </dd>
               <dt className="pt-1 text-base font-semibold">Итого</dt>
               <dd className="pt-1 text-base font-bold tabular-nums">{formatPrice(order.total)}</dd>
             </dl>
           </section>
+
+          {pays.length > 0 && (
+            <section className="rounded-[var(--radius-card)] bg-card p-5">
+              <h2 className="font-semibold">Платежи</h2>
+              <ul className="mt-3 grid gap-2 text-sm">
+                {pays.map((p) => (
+                  <li key={p.id} className="flex flex-wrap items-center gap-x-3">
+                    <span className="w-28 text-muted">{fmtDate(p.createdAt)}</span>
+                    <b className="tabular-nums">{formatPrice(p.amount)}</b>
+                    <span className={p.status === "succeeded" ? "font-semibold text-ok" : p.status === "canceled" ? "text-muted" : "text-warn"}>
+                      {p.status === "succeeded" ? "оплачен" : p.status === "canceled" ? "отменён" : "ждёт оплаты"}
+                    </span>
+                    <span className="ml-auto text-muted">{p.provider === "demo" ? "демо, без денег" : `ЮKassa ${p.externalId ?? ""}`}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
 
           <section className="rounded-[var(--radius-card)] bg-card p-5">
             <h2 className="font-semibold">История</h2>
