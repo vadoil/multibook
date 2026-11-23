@@ -19,6 +19,9 @@ export type Wallpaper = {
 
 const HOLD = 7000; // сколько стоит один кадр, мс
 const SCENES: Record<string, string> = {
+  "lifestyle-desk": "За рабочим столом",
+  "lifestyle-writing": "Место для идей",
+  "lifestyle-gallery": "Предмет с характером",
   "premium-city": "Москва-Сити",
   "premium-meeting": "Переговоры",
   "premium-coaching": "С коучем",
@@ -124,14 +127,8 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
       </div>
 
       <div className="wp-copy">
-        <h1>
-          Ежедневники
-          <br />
-          для больших
-          <br />
-          планов.
-        </h1>
-        <p>Премиальная коллекция со сменными листами. Готовый ежедневник или ваша сборка в конструкторе.</p>
+        <h1><span>Ежедневники</span><span>для ваших планов.</span></h1>
+        <p><span>Готовая коллекция или ваша сборка.<br />Листы меняются. Любимые вещи остаются.</span></p>
         <div className="wp-actions">
           <Link href="/catalog?type=%D0%91%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82%D1%8B" className="wp-btn wp-btn-main">
             Готовые ежедневники

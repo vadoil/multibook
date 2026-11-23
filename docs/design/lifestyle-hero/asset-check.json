@@ -1,0 +1,86 @@
+[
+  {
+    "file": "lifestyle-desk-2048.webp",
+    "bytes": 316230,
+    "width": 2048,
+    "height": 1152,
+    "quality": 82
+  },
+  {
+    "file": "lifestyle-desk-1600.webp",
+    "bytes": 180328,
+    "width": 1600,
+    "height": 900,
+    "quality": 76
+  },
+  {
+    "file": "lifestyle-desk-mobile.webp",
+    "bytes": 196362,
+    "width": 1080,
+    "height": 1920,
+    "quality": 76
+  },
+  {
+    "file": "lifestyle-desk-thumb.webp",
+    "bytes": 28582,
+    "width": 400,
+    "height": 225,
+    "quality": 85
+  },
+  {
+    "file": "lifestyle-writing-2048.webp",
+    "bytes": 322252,
+    "width": 2048,
+    "height": 1152,
+    "quality": 85
+  },
+  {
+    "file": "lifestyle-writing-1600.webp",
+    "bytes": 237646,
+    "width": 1600,
+    "height": 900,
+    "quality": 85
+  },
+  {
+    "file": "lifestyle-writing-mobile.webp",
+    "bytes": 220530,
+    "width": 1080,
+    "height": 1920,
+    "quality": 85
+  },
+  {
+    "file": "lifestyle-writing-thumb.webp",
+    "bytes": 27710,
+    "width": 400,
+    "height": 225,
+    "quality": 85
+  },
+  {
+    "file": "lifestyle-gallery-2048.webp",
+    "bytes": 259000,
+    "width": 2048,
+    "height": 1152,
+    "quality": 85
+  },
+  {
+    "file": "lifestyle-gallery-1600.webp",
+    "bytes": 192402,
+    "width": 1600,
+    "height": 900,
+    "quality": 85
+  },
+  {
+    "file": "lifestyle-gallery-mobile.webp",
+    "bytes": 231382,
+    "width": 1080,
+    "height": 1920,
+    "quality": 85
+  },
+  {
+    "file": "lifestyle-gallery-thumb.webp",
+    "bytes": 23896,
+    "width": 400,
+    "height": 225,
+    "quality": 85
+  }
+]

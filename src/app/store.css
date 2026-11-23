@@ -42,7 +42,7 @@
 .store-navigation {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 6px;
   margin-left: auto;
   font-size: 13px;
 }
@@ -52,22 +52,24 @@
   min-height: 44px;
   position: relative;
   text-decoration: none;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: background-color .18s, border-color .18s, box-shadow .18s;
 }
-.store-navigation a::after {
-  content: "";
-  position: absolute;
-  bottom: 5px;
-  height: 1px;
-  background: currentColor;
-  left: 0;
-  right: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.2s;
+.store-navigation a > svg { width: 21px; height: 21px; flex: none; }
+.store-navigation a:is(:hover, [aria-current="page"]) {
+  border-color: var(--color-line);
+  background: var(--color-card);
 }
-.store-navigation a:is(:hover, [aria-current="page"])::after {
-  transform: scaleX(1);
+.store-navigation .store-nav-constructor {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-card);
 }
+.store-navigation .store-nav-constructor:hover { background: var(--color-ink); border-color: var(--color-ink); }
+.store-navigation .store-nav-constructor[aria-current] { background: var(--color-ink); color: var(--color-card); border-color: var(--color-ink); }
 .store-header-actions {
   display: flex;
   align-items: center;
@@ -80,7 +82,14 @@
   min-width: 44px;
   min-height: 44px;
   color: inherit;
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  background: var(--color-card);
+  transition: background-color .18s, border-color .18s;
 }
+.store-account:hover, .store-menu-toggle:hover { border-color: var(--color-ink); }
+.store-header-actions > .store-cart { padding-inline: 14px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-card); }
+.store-header-actions > .store-cart:hover { border-color: var(--color-ink); }
 .store-header-actions svg {
   width: 23px;
   height: 23px;
@@ -112,10 +121,12 @@
 }
 .store-menu-toggle {
   display: none;
-  border: 0;
-  background: transparent;
-  padding: 8px;
+  padding: 8px 12px;
+  grid-auto-flow: column;
+  gap: 7px;
+  font-size: 12px;
 }
+.store-menu-toggle[aria-expanded="true"] { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-card); }
 .store-mobile-menu {
   display: none;
 }
@@ -299,9 +310,11 @@
     gap: 9px;
   }
   .store-navigation {
-    gap: 20px;
+    gap: 4px;
     font-size: 12px;
   }
+  .store-navigation a { padding-inline: 9px; gap: 5px; }
+  .store-navigation a > svg { width: 18px; height: 18px; }
   .store-header-actions {
     gap: 5px;
   }
