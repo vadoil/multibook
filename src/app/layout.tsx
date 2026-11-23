@@ -7,6 +7,7 @@ import { SITE } from "@/lib/site";
 import "./globals.css";
 import "./store.css";
 import "./mobile-app.css";
+import "./store-tabs.css";
 
 const golos = Golos_Text({
   subsets: ["latin", "cyrillic"],

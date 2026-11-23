@@ -56,7 +56,7 @@ export function StoreHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className={link.icon === "constructor" ? "store-nav-constructor" : undefined}
+              className="store-tab"
               aria-current={current(link.href) ? "page" : undefined}
             >
               <StoreNavIcon kind={link.icon as StoreNavKind} />{link.label}
@@ -113,7 +113,7 @@ export function StoreHeader() {
             <Link
               key={link.href}
               href={link.href}
-              className={link.icon === "constructor" ? "store-nav-constructor" : undefined}
+              className="store-tab"
               aria-current={current(link.href) ? "page" : undefined}
               onClick={() => setOpen(false)}
             >

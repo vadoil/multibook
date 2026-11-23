@@ -63,13 +63,6 @@
   border-color: var(--color-line);
   background: var(--color-card);
 }
-.store-navigation .store-nav-constructor {
-  border-color: var(--color-accent);
-  background: var(--color-accent);
-  color: var(--color-card);
-}
-.store-navigation .store-nav-constructor:hover { background: var(--color-ink); border-color: var(--color-ink); }
-.store-navigation .store-nav-constructor[aria-current] { background: var(--color-ink); color: var(--color-card); border-color: var(--color-ink); }
 .store-header-actions {
   display: flex;
   align-items: center;
@@ -129,6 +122,13 @@
 .store-menu-toggle[aria-expanded="true"] { background: var(--color-ink); border-color: var(--color-ink); color: var(--color-card); }
 .store-mobile-menu {
   display: none;
+}
+@media (min-width: 761px) and (max-width: 960px) {
+  .store-navigation, .store-account { display: none; }
+  .store-header-actions { margin-left: auto; }
+  .store-menu-toggle { display: grid; }
+  .store-mobile-menu { position: absolute; inset: 100% 0 auto; display: grid; gap: 8px; padding: 16px 4%; max-height: calc(100svh - 96px); overflow-y: auto; background: var(--color-card); box-shadow: var(--shadow-paper); }
+  .store-mobile-menu a { justify-content: start; }
 }
 .store-skip {
   position: fixed;

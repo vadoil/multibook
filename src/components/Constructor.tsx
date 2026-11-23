@@ -8,6 +8,7 @@ import { FORMATS, type FormatKey } from "@/lib/formats";
 import { formatPrice } from "@/lib/money";
 import { NotebookPreview, type NotebookLook, type Ruling } from "./NotebookPreview";
 import { DiscSwatch, PageSwatch } from "./Swatches";
+import { StoreTabButton } from "./store/StoreTab";
 
 export type CoverOpt = {
   id: number;
@@ -263,11 +264,11 @@ export function Constructor({
       <aside className="lg:order-2 lg:sticky lg:top-20 lg:self-start">
         <div className="rounded-[28px] bg-[#ece5d9] p-5">
           <div className="flex items-center justify-between gap-2">
-            <div className="flex rounded-full bg-paper p-1 text-sm" role="group" aria-label="Вид">
+            <div className="store-tabs-row" role="group" aria-label="Вид">
               {(["closed", "open"] as const).map((v) => (
-                <button key={v} type="button" onClick={() => setView(v)} aria-pressed={view === v} className="min-h-11 rounded-full px-4 py-2 transition aria-pressed:bg-ink aria-pressed:text-white">
+                <StoreTabButton key={v} onClick={() => setView(v)} aria-pressed={view === v} className="store-tab-compact">
                   {v === "closed" ? "Обложка" : "Страница"}
-                </button>
+                </StoreTabButton>
               ))}
             </div>
             {cover?.image && (
@@ -331,9 +332,9 @@ export function Constructor({
                   ] as const
                 ).map(([k, l]) =>
                   kinds[k].length ? (
-                    <button key={k} type="button" onClick={() => setCoverKind(k)} aria-pressed={coverKind === k} className="rounded-full border border-line px-3 py-1.5 aria-pressed:border-ink aria-pressed:bg-ink aria-pressed:text-white">
+                    <StoreTabButton key={k} onClick={() => setCoverKind(k)} aria-pressed={coverKind === k} className="store-tab-compact">
                       {l}
-                    </button>
+                    </StoreTabButton>
                   ) : null,
                 )}
               </div>
@@ -416,19 +417,19 @@ export function Constructor({
           done={parts ? !!disc : true}
           aside={
             parts && (
-              <div className="flex rounded-full border border-line p-1" role="group" aria-label="Диаметр">
+              <div className="store-tabs-row" role="group" aria-label="Диаметр">
                 {([18, 24] as const).map((d) => (
-                  <button
+                  <StoreTabButton
                     key={d}
                     type="button"
                     onClick={() => setWantD(d)}
                     disabled={d === 18 && sheets > CAPACITY[18]}
                     aria-pressed={diameter === d}
-                    className="flex items-center gap-2 rounded-full px-3 py-1.5 text-sm transition disabled:opacity-30 aria-pressed:bg-ink aria-pressed:text-white"
+                    className="store-tab-compact"
                   >
                     <span className="rounded-full border-2 border-current" style={{ width: d * 0.75, height: d * 0.75 }} aria-hidden />
                     {d} мм · до {CAPACITY[d]} л.
-                  </button>
+                  </StoreTabButton>
                 ))}
               </div>
             )

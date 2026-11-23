@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Product } from "@/db/schema";
 import { formatPrice } from "@/lib/catalog";
 import { ProductVisual } from "./ProductVisual";
+import { CategoryTabIcon } from "./store/StoreTab";
 
 type Group = { key: string; rep: Product; packs: Product[] };
 
@@ -66,9 +67,9 @@ export function DiscCatalog({ products, d, m }: { products: Product[]; d?: strin
                   key={o.v}
                   href={href({ [f]: o.v || undefined })}
                   aria-current={cur === o.v ? "true" : undefined}
-                  className="rounded-full border border-line px-4 py-2 text-sm aria-[current=true]:border-ink aria-[current=true]:bg-ink aria-[current=true]:text-white"
+                  className="store-tab store-tab-compact"
                 >
-                  {o.label}
+                  <CategoryTabIcon type="Диски" />{o.label}
                 </Link>
               );
             })}
@@ -100,7 +101,7 @@ export function DiscCatalog({ products, d, m }: { products: Product[]; d?: strin
                     <Link
                       key={p.id}
                       href={`/product/${p.slug}`}
-                      className="inline-flex min-h-11 items-center rounded-full border border-line bg-card px-3 py-1.5 text-sm transition hover:border-ink"
+                      className="store-tab store-tab-compact"
                       title={p.attrs.inferred?.includes("pack") ? "Фасовка определена по цене — уточните в карточке" : undefined}
                     >
                       {p.attrs.pack ?? 8} шт · <b>{formatPrice(p.price)}</b>
