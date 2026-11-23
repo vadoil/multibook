@@ -28,6 +28,7 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
   const [still, setStill] = useState(false); // prefers-reduced-motion
   const [seen, setSeen] = useState<Set<number>>(() => new Set([0]));
   const swipe = useRef<{ x: number; y: number } | null>(null);
+  const hero = useRef<HTMLElement>(null);
   const n = slides.length;
 
   const go = useCallback(
@@ -41,7 +42,13 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const sync = () => setStill(mq.matches);
+    const sync = () => {
+      setStill(mq.matches);
+      if (mq.matches) {
+        hero.current?.style.setProperty("--wp-x", "0px");
+        hero.current?.style.setProperty("--wp-y", "0px");
+      }
+    };
     sync();
     mq.addEventListener("change", sync);
     // Следующий кадр подгружаем заранее, остальные — по мере показа.
@@ -64,11 +71,25 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
 
   return (
     <section
+      ref={hero}
       className="wp-hero"
       aria-roledescription="карусель"
       aria-label="Блокноты Multibook"
       data-running={running || undefined}
+      onPointerMove={(e) => {
+        if (still || e.pointerType !== "mouse" || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+        const r = e.currentTarget.getBoundingClientRect();
+        const x = Math.max(-6, Math.min(6, ((e.clientX - r.left) / r.width - 0.5) * 12));
+        const y = Math.max(-4, Math.min(4, ((e.clientY - r.top) / r.height - 0.5) * 8));
+        e.currentTarget.style.setProperty("--wp-x", `${x}px`);
+        e.currentTarget.style.setProperty("--wp-y", `${y}px`);
+      }}
+      onPointerLeave={(e) => {
+        e.currentTarget.style.setProperty("--wp-x", "0px");
+        e.currentTarget.style.setProperty("--wp-y", "0px");
+      }}
       onPointerDown={(e) => {
+        if (e.target instanceof Element && e.target.closest(".wp-dock")) return;
         if (e.pointerType !== "mouse") swipe.current = { x: e.clientX, y: e.clientY };
       }}
       onPointerUp={(e) => {
@@ -85,9 +106,9 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
           <div key={s.id} className="wp-slide" data-active={i === index || undefined} style={{ "--wp-tone": s.tone } as React.CSSProperties}>
             {seen.has(i) && (
               <picture>
-                <source media="(max-width: 700px)" srcSet={s.mobile} />
+                <source media="(max-width: 760px)" srcSet={s.mobile} />
                 <source media="(max-width: 1700px)" srcSet={s.desktopSmall} />
-                <img src={s.desktop} alt="" decoding="async" fetchPriority={i === 0 ? "high" : "low"} />
+                <img src={s.desktop} alt="" width={2560} height={1440} decoding="async" fetchPriority={i === 0 ? "high" : "low"} />
               </picture>
             )}
           </div>
@@ -141,6 +162,7 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
                 key={s.id}
                 type="button"
                 className="wp-thumb"
+                data-name={s.name}
                 aria-label={`Обои «${s.name}»`}
                 aria-current={i === index || undefined}
                 onClick={() => go(i)}

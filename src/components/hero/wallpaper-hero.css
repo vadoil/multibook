@@ -6,6 +6,7 @@
   isolation: isolate;
   min-height: clamp(560px, var(--wp-h), 980px);
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: 1fr auto;
   overflow: hidden;
   color: var(--wp-ink);
@@ -24,11 +25,25 @@
 }
 .wp-slide {
   opacity: 0;
-  transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0s 0.72s;
   background: var(--wp-tone);
 }
 .wp-slide[data-active] {
+  z-index: 1;
   opacity: 1;
+  transition: none;
+  animation: wp-sheet-in 0.72s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes wp-sheet-in {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0); }
+}
+.wp-slide picture {
+  display: block;
+  position: absolute;
+  inset: -8px;
+  transform: translate3d(var(--wp-x, 0px), var(--wp-y, 0px), 0);
+  transition: transform 0.4s ease-out;
 }
 .wp-slide img {
   width: 100%;
@@ -36,18 +51,6 @@
   object-fit: cover;
   object-position: 70% 50%;
   transform-origin: 72% 50%;
-}
-/* Медленный «наезд» камеры, пока кадр на экране. */
-.wp-hero[data-running] .wp-slide[data-active] img {
-  animation: wp-drift 8.5s linear both;
-}
-@keyframes wp-drift {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.055);
-  }
 }
 /* Светлая вуаль слева под текстом — тон берётся из самих обоев. */
 .wp-slide::after {
@@ -123,6 +126,7 @@
 
 /* ---------- нижняя полоса: подпись кадра и док ---------- */
 .wp-bar {
+  min-width: 0;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -154,6 +158,7 @@
 }
 
 .wp-dock {
+  min-width: 0;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -190,8 +195,32 @@
     opacity 0.2s,
     outline-color 0.2s;
 }
-.wp-thumb:hover {
-  transform: translateY(-3px);
+.wp-thumb:hover,
+.wp-thumb:focus-visible {
+  z-index: 2;
+  transform: translateY(-5px) scale(1.14);
+}
+.wp-thumb::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 180px;
+  padding: 7px 10px;
+  border-radius: var(--radius-card);
+  color: var(--color-card);
+  background: var(--color-ink);
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s;
+}
+.wp-thumb:hover::after,
+.wp-thumb:focus-visible::after {
+  opacity: 1;
 }
 .wp-thumb:hover img,
 .wp-thumb[aria-current] img {
@@ -265,6 +294,19 @@
     --wp-h: calc(100svh - 77px);
     min-height: clamp(600px, var(--wp-h), 860px);
   }
+  /* Phone: composite-only crossfade instead of clipping a full-screen bitmap. */
+  .wp-slide {
+    transition: opacity 0.45s ease;
+  }
+  .wp-slide[data-active] {
+    animation: none;
+    transition: opacity 0.45s ease;
+  }
+  .wp-slide picture {
+    inset: 0;
+    transform: none;
+    transition: none;
+  }
   .wp-slide img {
     object-position: 50% 100%;
     transform-origin: 50% 80%;
@@ -337,17 +379,31 @@
     max-width: 64px;
     height: 34px;
   }
-  .wp-thumb:hover {
+  .wp-thumb:hover,
+  .wp-thumb:focus-visible {
     transform: none;
+  }
+  .wp-thumb::after {
+    display: none;
   }
   .wp-pause {
     flex: 0 0 44px;
+    position: sticky;
+    right: 0;
+    z-index: 3;
+    background: var(--color-ink);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .wp-slide {
-    transition-duration: 0.01s;
+  .wp-slide,
+  .wp-slide[data-active] {
+    transition: none;
+    animation: none;
+  }
+  .wp-slide picture {
+    transform: none;
+    transition: none;
   }
   .wp-slide img,
   .wp-progress {
