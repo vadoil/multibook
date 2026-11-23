@@ -1,0 +1,170 @@
+[
+  {
+    "width": 1366,
+    "slide": 0,
+    "element": "h1",
+    "minimum": 9.1
+  },
+  {
+    "width": 1366,
+    "slide": 0,
+    "element": "p",
+    "minimum": 9.09
+  },
+  {
+    "width": 1366,
+    "slide": 1,
+    "element": "h1",
+    "minimum": 9.31
+  },
+  {
+    "width": 1366,
+    "slide": 1,
+    "element": "p",
+    "minimum": 9.31
+  },
+  {
+    "width": 1366,
+    "slide": 2,
+    "element": "h1",
+    "minimum": 7.48
+  },
+  {
+    "width": 1366,
+    "slide": 2,
+    "element": "p",
+    "minimum": 7.48
+  },
+  {
+    "width": 1366,
+    "slide": 3,
+    "element": "h1",
+    "minimum": 10.05
+  },
+  {
+    "width": 1366,
+    "slide": 3,
+    "element": "p",
+    "minimum": 10.05
+  },
+  {
+    "width": 1366,
+    "slide": 4,
+    "element": "h1",
+    "minimum": 9.16
+  },
+  {
+    "width": 1366,
+    "slide": 4,
+    "element": "p",
+    "minimum": 9.22
+  },
+  {
+    "width": 1366,
+    "slide": 5,
+    "element": "h1",
+    "minimum": 9.59
+  },
+  {
+    "width": 1366,
+    "slide": 5,
+    "element": "p",
+    "minimum": 9.8
+  },
+  {
+    "width": 1366,
+    "slide": 6,
+    "element": "h1",
+    "minimum": 7.48
+  },
+  {
+    "width": 1366,
+    "slide": 6,
+    "element": "p",
+    "minimum": 7.48
+  },
+  {
+    "width": 1920,
+    "slide": 0,
+    "element": "h1",
+    "minimum": 9.07
+  },
+  {
+    "width": 1920,
+    "slide": 0,
+    "element": "p",
+    "minimum": 9.07
+  },
+  {
+    "width": 1920,
+    "slide": 1,
+    "element": "h1",
+    "minimum": 9.29
+  },
+  {
+    "width": 1920,
+    "slide": 1,
+    "element": "p",
+    "minimum": 9.29
+  },
+  {
+    "width": 1920,
+    "slide": 2,
+    "element": "h1",
+    "minimum": 7.46
+  },
+  {
+    "width": 1920,
+    "slide": 2,
+    "element": "p",
+    "minimum": 7.48
+  },
+  {
+    "width": 1920,
+    "slide": 3,
+    "element": "h1",
+    "minimum": 9.97
+  },
+  {
+    "width": 1920,
+    "slide": 3,
+    "element": "p",
+    "minimum": 9.97
+  },
+  {
+    "width": 1920,
+    "slide": 4,
+    "element": "h1",
+    "minimum": 9.15
+  },
+  {
+    "width": 1920,
+    "slide": 4,
+    "element": "p",
+    "minimum": 9.16
+  },
+  {
+    "width": 1920,
+    "slide": 5,
+    "element": "h1",
+    "minimum": 9.41
+  },
+  {
+    "width": 1920,
+    "slide": 5,
+    "element": "p",
+    "minimum": 9.78
+  },
+  {
+    "width": 1920,
+    "slide": 6,
+    "element": "h1",
+    "minimum": 7.46
+  },
+  {
+    "width": 1920,
+    "slide": 6,
+    "element": "p",
+    "minimum": 7.48
+  }
+]

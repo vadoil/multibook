@@ -1,0 +1,2186 @@
+[
+  {
+    "width": 1366,
+    "height": 768,
+    "slide": 0,
+    "hero": {
+      "x": 0,
+      "y": 97,
+      "width": 1366,
+      "height": 673.03125,
+      "bottom": 770.03125,
+      "right": 1366
+    },
+    "copy": {
+      "x": 0,
+      "y": 97,
+      "width": 683,
+      "height": 536.3125,
+      "bottom": 633.3125,
+      "right": 683
+    },
+    "actions": {
+      "x": 71.03125,
+      "y": 557.3125,
+      "width": 611.96875,
+      "height": 52,
+      "bottom": 609.3125,
+      "right": 683
+    },
+    "caption": {
+      "x": 71.03125,
+      "y": 633.3125,
+      "width": 186.75,
+      "height": 108.71875,
+      "bottom": 742.03125,
+      "right": 257.78125
+    },
+    "dock": {
+      "x": 880.296875,
+      "y": 678.03125,
+      "width": 442,
+      "height": 64,
+      "bottom": 742.03125,
+      "right": 1322.296875
+    },
+    "h1": {
+      "x": 71.03125,
+      "y": 145,
+      "width": 611.96875,
+      "height": 272.90625,
+      "bottom": 417.90625,
+      "right": 683
+    },
+    "p": {
+      "x": 71.03125,
+      "y": 445.90625,
+      "width": 496,
+      "height": 79.40625,
+      "bottom": 525.3125,
+      "right": 567.03125
+    },
+    "font": "101.084px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/botanika-oak-1600.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-botanika-733322"
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "slide": 1,
+    "hero": {
+      "x": 0,
+      "y": 97,
+      "width": 1366,
+      "height": 673.03125,
+      "bottom": 770.03125,
+      "right": 1366
+    },
+    "copy": {
+      "x": 0,
+      "y": 97,
+      "width": 683,
+      "height": 536.3125,
+      "bottom": 633.3125,
+      "right": 683
+    },
+    "actions": {
+      "x": 71.03125,
+      "y": 557.3125,
+      "width": 611.96875,
+      "height": 52,
+      "bottom": 609.3125,
+      "right": 683
+    },
+    "caption": {
+      "x": 71.03125,
+      "y": 633.3125,
+      "width": 186.75,
+      "height": 108.71875,
+      "bottom": 742.03125,
+      "right": 257.78125
+    },
+    "dock": {
+      "x": 880.296875,
+      "y": 678.03125,
+      "width": 442,
+      "height": 64,
+      "bottom": 742.03125,
+      "right": 1322.296875
+    },
+    "h1": {
+      "x": 71.03125,
+      "y": 145,
+      "width": 611.96875,
+      "height": 272.90625,
+      "bottom": 417.90625,
+      "right": 683
+    },
+    "p": {
+      "x": 71.03125,
+      "y": 445.90625,
+      "width": 496,
+      "height": 79.40625,
+      "bottom": 525.3125,
+      "right": 567.03125
+    },
+    "font": "101.084px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/vesna-linen-1600.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-vesna-v-podarochnom-859732"
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "slide": 2,
+    "hero": {
+      "x": 0,
+      "y": 97,
+      "width": 1366,
+      "height": 673.03125,
+      "bottom": 770.03125,
+      "right": 1366
+    },
+    "copy": {
+      "x": 0,
+      "y": 97,
+      "width": 683,
+      "height": 536.3125,
+      "bottom": 633.3125,
+      "right": 683
+    },
+    "actions": {
+      "x": 71.03125,
+      "y": 557.3125,
+      "width": 611.96875,
+      "height": 52,
+      "bottom": 609.3125,
+      "right": 683
+    },
+    "caption": {
+      "x": 71.03125,
+      "y": 633.3125,
+      "width": 212.125,
+      "height": 108.71875,
+      "bottom": 742.03125,
+      "right": 283.15625
+    },
+    "dock": {
+      "x": 880.296875,
+      "y": 678.03125,
+      "width": 442,
+      "height": 64,
+      "bottom": 742.03125,
+      "right": 1322.296875
+    },
+    "h1": {
+      "x": 71.03125,
+      "y": 145,
+      "width": 611.96875,
+      "height": 272.90625,
+      "bottom": 417.90625,
+      "right": 683
+    },
+    "p": {
+      "x": 71.03125,
+      "y": 445.90625,
+      "width": 496,
+      "height": 79.40625,
+      "bottom": 525.3125,
+      "right": 567.03125
+    },
+    "font": "101.084px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/koni-walnut-1600.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-krasnye-koni-v-818122"
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "slide": 3,
+    "hero": {
+      "x": 0,
+      "y": 97,
+      "width": 1366,
+      "height": 673.03125,
+      "bottom": 770.03125,
+      "right": 1366
+    },
+    "copy": {
+      "x": 0,
+      "y": 97,
+      "width": 683,
+      "height": 536.3125,
+      "bottom": 633.3125,
+      "right": 683
+    },
+    "actions": {
+      "x": 71.03125,
+      "y": 557.3125,
+      "width": 611.96875,
+      "height": 52,
+      "bottom": 609.3125,
+      "right": 683
+    },
+    "caption": {
+      "x": 71.03125,
+      "y": 633.3125,
+      "width": 186.75,
+      "height": 108.71875,
+      "bottom": 742.03125,
+      "right": 257.78125
+    },
+    "dock": {
+      "x": 880.296875,
+      "y": 678.03125,
+      "width": 442,
+      "height": 64,
+      "bottom": 742.03125,
+      "right": 1322.296875
+    },
+    "h1": {
+      "x": 71.03125,
+      "y": 145,
+      "width": 611.96875,
+      "height": 272.90625,
+      "bottom": 417.90625,
+      "right": 683
+    },
+    "p": {
+      "x": 71.03125,
+      "y": 445.90625,
+      "width": 496,
+      "height": 79.40625,
+      "bottom": 525.3125,
+      "right": 567.03125
+    },
+    "font": "101.084px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/botanika-herbarium-1600.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-botanika-733322"
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "slide": 4,
+    "hero": {
+      "x": 0,
+      "y": 97,
+      "width": 1366,
+      "height": 673.03125,
+      "bottom": 770.03125,
+      "right": 1366
+    },
+    "copy": {
+      "x": 0,
+      "y": 97,
+      "width": 683,
+      "height": 536.3125,
+      "bottom": 633.3125,
+      "right": 683
+    },
+    "actions": {
+      "x": 71.03125,
+      "y": 557.3125,
+      "width": 611.96875,
+      "height": 52,
+      "bottom": 609.3125,
+      "right": 683
+    },
+    "caption": {
+      "x": 71.03125,
+      "y": 633.3125,
+      "width": 213.3125,
+      "height": 108.71875,
+      "bottom": 742.03125,
+      "right": 284.34375
+    },
+    "dock": {
+      "x": 880.296875,
+      "y": 678.03125,
+      "width": 442,
+      "height": 64,
+      "bottom": 742.03125,
+      "right": 1322.296875
+    },
+    "h1": {
+      "x": 71.03125,
+      "y": 145,
+      "width": 611.96875,
+      "height": 272.90625,
+      "bottom": 417.90625,
+      "right": 683
+    },
+    "p": {
+      "x": 71.03125,
+      "y": 445.90625,
+      "width": 496,
+      "height": 79.40625,
+      "bottom": 525.3125,
+      "right": 567.03125
+    },
+    "font": "101.084px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/gold-workshop-1600.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-multibook-zolotoe-vremya-v-podarochnom-nabore-946942"
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "slide": 5,
+    "hero": {
+      "x": 0,
+      "y": 97,
+      "width": 1366,
+      "height": 673.03125,
+      "bottom": 770.03125,
+      "right": 1366
+    },
+    "copy": {
+      "x": 0,
+      "y": 97,
+      "width": 683,
+      "height": 536.3125,
+      "bottom": 633.3125,
+      "right": 683
+    },
+    "actions": {
+      "x": 71.03125,
+      "y": 557.3125,
+      "width": 611.96875,
+      "height": 52,
+      "bottom": 609.3125,
+      "right": 683
+    },
+    "caption": {
+      "x": 71.03125,
+      "y": 633.3125,
+      "width": 186.75,
+      "height": 108.71875,
+      "bottom": 742.03125,
+      "right": 257.78125
+    },
+    "dock": {
+      "x": 880.296875,
+      "y": 678.03125,
+      "width": 442,
+      "height": 64,
+      "bottom": 742.03125,
+      "right": 1322.296875
+    },
+    "h1": {
+      "x": 71.03125,
+      "y": 145,
+      "width": 611.96875,
+      "height": 272.90625,
+      "bottom": 417.90625,
+      "right": 683
+    },
+    "p": {
+      "x": 71.03125,
+      "y": 445.90625,
+      "width": 496,
+      "height": 79.40625,
+      "bottom": 525.3125,
+      "right": 567.03125
+    },
+    "font": "101.084px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/vesna-winter-1600.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-vesna-v-podarochnom-859732"
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "slide": 6,
+    "hero": {
+      "x": 0,
+      "y": 97,
+      "width": 1366,
+      "height": 673.03125,
+      "bottom": 770.03125,
+      "right": 1366
+    },
+    "copy": {
+      "x": 0,
+      "y": 97,
+      "width": 683,
+      "height": 536.3125,
+      "bottom": 633.3125,
+      "right": 683
+    },
+    "actions": {
+      "x": 71.03125,
+      "y": 557.3125,
+      "width": 611.96875,
+      "height": 52,
+      "bottom": 609.3125,
+      "right": 683
+    },
+    "caption": {
+      "x": 71.03125,
+      "y": 633.3125,
+      "width": 209.375,
+      "height": 108.71875,
+      "bottom": 742.03125,
+      "right": 280.40625
+    },
+    "dock": {
+      "x": 880.296875,
+      "y": 678.03125,
+      "width": 442,
+      "height": 64,
+      "bottom": 742.03125,
+      "right": 1322.296875
+    },
+    "h1": {
+      "x": 71.03125,
+      "y": 145,
+      "width": 611.96875,
+      "height": 272.90625,
+      "bottom": 417.90625,
+      "right": 683
+    },
+    "p": {
+      "x": 71.03125,
+      "y": 445.90625,
+      "width": 496,
+      "height": 79.40625,
+      "bottom": 525.3125,
+      "right": 567.03125
+    },
+    "font": "101.084px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/bird-study-1600.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-vazhnaya-ptitsa-v-370012"
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "slide": 0,
+    "hero": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 735,
+      "bottom": 812,
+      "right": 375
+    },
+    "copy": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 288.640625,
+      "bottom": 365.640625,
+      "right": 375
+    },
+    "actions": {
+      "x": 20,
+      "y": 319.640625,
+      "width": 335,
+      "height": 46,
+      "bottom": 365.640625,
+      "right": 355
+    },
+    "caption": {
+      "x": 12,
+      "y": 669.125,
+      "width": 121.734375,
+      "height": 60.875,
+      "bottom": 730,
+      "right": 133.734375
+    },
+    "dock": {
+      "x": 12,
+      "y": 740,
+      "width": 351,
+      "height": 58,
+      "bottom": 798,
+      "right": 363
+    },
+    "h1": {
+      "x": 20,
+      "y": 107,
+      "width": 335,
+      "height": 116.4375,
+      "bottom": 223.4375,
+      "right": 355
+    },
+    "p": {
+      "x": 20,
+      "y": 235.4375,
+      "width": 335,
+      "height": 68.203125,
+      "bottom": 303.640625,
+      "right": 355
+    },
+    "font": "43.125px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/botanika-oak-mobile.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 169.84375,
+        "h": 46
+      },
+      {
+        "w": 136.890625,
+        "h": 46
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-botanika-733322"
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "slide": 1,
+    "hero": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 735,
+      "bottom": 812,
+      "right": 375
+    },
+    "copy": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 288.640625,
+      "bottom": 365.640625,
+      "right": 375
+    },
+    "actions": {
+      "x": 20,
+      "y": 319.640625,
+      "width": 335,
+      "height": 46,
+      "bottom": 365.640625,
+      "right": 355
+    },
+    "caption": {
+      "x": 12,
+      "y": 669.125,
+      "width": 90.9375,
+      "height": 60.875,
+      "bottom": 730,
+      "right": 102.9375
+    },
+    "dock": {
+      "x": 12,
+      "y": 740,
+      "width": 351,
+      "height": 58,
+      "bottom": 798,
+      "right": 363
+    },
+    "h1": {
+      "x": 20,
+      "y": 107,
+      "width": 335,
+      "height": 116.4375,
+      "bottom": 223.4375,
+      "right": 355
+    },
+    "p": {
+      "x": 20,
+      "y": 235.4375,
+      "width": 335,
+      "height": 68.203125,
+      "bottom": 303.640625,
+      "right": 355
+    },
+    "font": "43.125px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/vesna-linen-mobile.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 169.84375,
+        "h": 46
+      },
+      {
+        "w": 136.890625,
+        "h": 46
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-vesna-v-podarochnom-859732"
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "slide": 2,
+    "hero": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 735,
+      "bottom": 812,
+      "right": 375
+    },
+    "copy": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 288.640625,
+      "bottom": 365.640625,
+      "right": 375
+    },
+    "actions": {
+      "x": 20,
+      "y": 319.640625,
+      "width": 335,
+      "height": 46,
+      "bottom": 365.640625,
+      "right": 355
+    },
+    "caption": {
+      "x": 12,
+      "y": 669.125,
+      "width": 161.734375,
+      "height": 60.875,
+      "bottom": 730,
+      "right": 173.734375
+    },
+    "dock": {
+      "x": 12,
+      "y": 740,
+      "width": 351,
+      "height": 58,
+      "bottom": 798,
+      "right": 363
+    },
+    "h1": {
+      "x": 20,
+      "y": 107,
+      "width": 335,
+      "height": 116.4375,
+      "bottom": 223.4375,
+      "right": 355
+    },
+    "p": {
+      "x": 20,
+      "y": 235.4375,
+      "width": 335,
+      "height": 68.203125,
+      "bottom": 303.640625,
+      "right": 355
+    },
+    "font": "43.125px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/koni-walnut-mobile.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 169.84375,
+        "h": 46
+      },
+      {
+        "w": 136.890625,
+        "h": 46
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-krasnye-koni-v-818122"
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "slide": 3,
+    "hero": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 735,
+      "bottom": 812,
+      "right": 375
+    },
+    "copy": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 288.640625,
+      "bottom": 365.640625,
+      "right": 375
+    },
+    "actions": {
+      "x": 20,
+      "y": 319.640625,
+      "width": 335,
+      "height": 46,
+      "bottom": 365.640625,
+      "right": 355
+    },
+    "caption": {
+      "x": 12,
+      "y": 669.125,
+      "width": 121.734375,
+      "height": 60.875,
+      "bottom": 730,
+      "right": 133.734375
+    },
+    "dock": {
+      "x": 12,
+      "y": 740,
+      "width": 351,
+      "height": 58,
+      "bottom": 798,
+      "right": 363
+    },
+    "h1": {
+      "x": 20,
+      "y": 107,
+      "width": 335,
+      "height": 116.4375,
+      "bottom": 223.4375,
+      "right": 355
+    },
+    "p": {
+      "x": 20,
+      "y": 235.4375,
+      "width": 335,
+      "height": 68.203125,
+      "bottom": 303.640625,
+      "right": 355
+    },
+    "font": "43.125px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/botanika-herbarium-mobile.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 169.84375,
+        "h": 46
+      },
+      {
+        "w": 136.890625,
+        "h": 46
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-botanika-733322"
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "slide": 4,
+    "hero": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 735,
+      "bottom": 812,
+      "right": 375
+    },
+    "copy": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 288.640625,
+      "bottom": 365.640625,
+      "right": 375
+    },
+    "actions": {
+      "x": 20,
+      "y": 319.640625,
+      "width": 335,
+      "height": 46,
+      "bottom": 365.640625,
+      "right": 355
+    },
+    "caption": {
+      "x": 12,
+      "y": 669.125,
+      "width": 162.640625,
+      "height": 60.875,
+      "bottom": 730,
+      "right": 174.640625
+    },
+    "dock": {
+      "x": 12,
+      "y": 740,
+      "width": 351,
+      "height": 58,
+      "bottom": 798,
+      "right": 363
+    },
+    "h1": {
+      "x": 20,
+      "y": 107,
+      "width": 335,
+      "height": 116.4375,
+      "bottom": 223.4375,
+      "right": 355
+    },
+    "p": {
+      "x": 20,
+      "y": 235.4375,
+      "width": 335,
+      "height": 68.203125,
+      "bottom": 303.640625,
+      "right": 355
+    },
+    "font": "43.125px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/gold-workshop-mobile.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 169.84375,
+        "h": 46
+      },
+      {
+        "w": 136.890625,
+        "h": 46
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-multibook-zolotoe-vremya-v-podarochnom-nabore-946942"
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "slide": 5,
+    "hero": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 735,
+      "bottom": 812,
+      "right": 375
+    },
+    "copy": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 288.640625,
+      "bottom": 365.640625,
+      "right": 375
+    },
+    "actions": {
+      "x": 20,
+      "y": 319.640625,
+      "width": 335,
+      "height": 46,
+      "bottom": 365.640625,
+      "right": 355
+    },
+    "caption": {
+      "x": 12,
+      "y": 669.125,
+      "width": 90.9375,
+      "height": 60.875,
+      "bottom": 730,
+      "right": 102.9375
+    },
+    "dock": {
+      "x": 12,
+      "y": 740,
+      "width": 351,
+      "height": 58,
+      "bottom": 798,
+      "right": 363
+    },
+    "h1": {
+      "x": 20,
+      "y": 107,
+      "width": 335,
+      "height": 116.4375,
+      "bottom": 223.4375,
+      "right": 355
+    },
+    "p": {
+      "x": 20,
+      "y": 235.4375,
+      "width": 335,
+      "height": 68.203125,
+      "bottom": 303.640625,
+      "right": 355
+    },
+    "font": "43.125px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/vesna-winter-mobile.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 169.84375,
+        "h": 46
+      },
+      {
+        "w": 136.890625,
+        "h": 46
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-vesna-v-podarochnom-859732"
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "slide": 6,
+    "hero": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 735,
+      "bottom": 812,
+      "right": 375
+    },
+    "copy": {
+      "x": 0,
+      "y": 77,
+      "width": 375,
+      "height": 288.640625,
+      "bottom": 365.640625,
+      "right": 375
+    },
+    "actions": {
+      "x": 20,
+      "y": 319.640625,
+      "width": 335,
+      "height": 46,
+      "bottom": 365.640625,
+      "right": 355
+    },
+    "caption": {
+      "x": 12,
+      "y": 669.125,
+      "width": 159.625,
+      "height": 60.875,
+      "bottom": 730,
+      "right": 171.625
+    },
+    "dock": {
+      "x": 12,
+      "y": 740,
+      "width": 351,
+      "height": 58,
+      "bottom": 798,
+      "right": 363
+    },
+    "h1": {
+      "x": 20,
+      "y": 107,
+      "width": 335,
+      "height": 116.4375,
+      "bottom": 223.4375,
+      "right": 355
+    },
+    "p": {
+      "x": 20,
+      "y": 235.4375,
+      "width": 335,
+      "height": 68.203125,
+      "bottom": 303.640625,
+      "right": 355
+    },
+    "font": "43.125px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/bird-study-mobile.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 169.84375,
+        "h": 46
+      },
+      {
+        "w": 136.890625,
+        "h": 46
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      },
+      {
+        "w": 44,
+        "h": 44
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-vazhnaya-ptitsa-v-370012"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "slide": 0,
+    "hero": {
+      "x": 120,
+      "y": 97,
+      "width": 1680,
+      "height": 980,
+      "bottom": 1077,
+      "right": 1800
+    },
+    "copy": {
+      "x": 120,
+      "y": 138.234375,
+      "width": 736,
+      "height": 760.8125,
+      "bottom": 899.046875,
+      "right": 856
+    },
+    "actions": {
+      "x": 219.828125,
+      "y": 823.046875,
+      "width": 636.171875,
+      "height": 52,
+      "bottom": 875.046875,
+      "right": 856
+    },
+    "caption": {
+      "x": 219.828125,
+      "y": 940.28125,
+      "width": 186.75,
+      "height": 108.71875,
+      "bottom": 1049,
+      "right": 406.578125
+    },
+    "dock": {
+      "x": 1296.5625,
+      "y": 985,
+      "width": 442,
+      "height": 64,
+      "bottom": 1049,
+      "right": 1738.5625
+    },
+    "h1": {
+      "x": 219.828125,
+      "y": 186.234375,
+      "width": 636.171875,
+      "height": 483.8125,
+      "bottom": 670.046875,
+      "right": 856
+    },
+    "p": {
+      "x": 219.828125,
+      "y": 698.046875,
+      "width": 496,
+      "height": 93,
+      "bottom": 791.046875,
+      "right": 715.828125
+    },
+    "font": "134.4px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/botanika-oak-2560.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-botanika-733322"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "slide": 1,
+    "hero": {
+      "x": 120,
+      "y": 97,
+      "width": 1680,
+      "height": 980,
+      "bottom": 1077,
+      "right": 1800
+    },
+    "copy": {
+      "x": 120,
+      "y": 138.234375,
+      "width": 736,
+      "height": 760.8125,
+      "bottom": 899.046875,
+      "right": 856
+    },
+    "actions": {
+      "x": 219.828125,
+      "y": 823.046875,
+      "width": 636.171875,
+      "height": 52,
+      "bottom": 875.046875,
+      "right": 856
+    },
+    "caption": {
+      "x": 219.828125,
+      "y": 940.28125,
+      "width": 186.75,
+      "height": 108.71875,
+      "bottom": 1049,
+      "right": 406.578125
+    },
+    "dock": {
+      "x": 1296.5625,
+      "y": 985,
+      "width": 442,
+      "height": 64,
+      "bottom": 1049,
+      "right": 1738.5625
+    },
+    "h1": {
+      "x": 219.828125,
+      "y": 186.234375,
+      "width": 636.171875,
+      "height": 483.8125,
+      "bottom": 670.046875,
+      "right": 856
+    },
+    "p": {
+      "x": 219.828125,
+      "y": 698.046875,
+      "width": 496,
+      "height": 93,
+      "bottom": 791.046875,
+      "right": 715.828125
+    },
+    "font": "134.4px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/vesna-linen-2560.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-vesna-v-podarochnom-859732"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "slide": 2,
+    "hero": {
+      "x": 120,
+      "y": 97,
+      "width": 1680,
+      "height": 980,
+      "bottom": 1077,
+      "right": 1800
+    },
+    "copy": {
+      "x": 120,
+      "y": 138.234375,
+      "width": 736,
+      "height": 760.8125,
+      "bottom": 899.046875,
+      "right": 856
+    },
+    "actions": {
+      "x": 219.828125,
+      "y": 823.046875,
+      "width": 636.171875,
+      "height": 52,
+      "bottom": 875.046875,
+      "right": 856
+    },
+    "caption": {
+      "x": 219.828125,
+      "y": 940.28125,
+      "width": 212.125,
+      "height": 108.71875,
+      "bottom": 1049,
+      "right": 431.953125
+    },
+    "dock": {
+      "x": 1296.5625,
+      "y": 985,
+      "width": 442,
+      "height": 64,
+      "bottom": 1049,
+      "right": 1738.5625
+    },
+    "h1": {
+      "x": 219.828125,
+      "y": 186.234375,
+      "width": 636.171875,
+      "height": 483.8125,
+      "bottom": 670.046875,
+      "right": 856
+    },
+    "p": {
+      "x": 219.828125,
+      "y": 698.046875,
+      "width": 496,
+      "height": 93,
+      "bottom": 791.046875,
+      "right": 715.828125
+    },
+    "font": "134.4px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/koni-walnut-2560.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-krasnye-koni-v-818122"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "slide": 3,
+    "hero": {
+      "x": 120,
+      "y": 97,
+      "width": 1680,
+      "height": 980,
+      "bottom": 1077,
+      "right": 1800
+    },
+    "copy": {
+      "x": 120,
+      "y": 138.234375,
+      "width": 736,
+      "height": 760.8125,
+      "bottom": 899.046875,
+      "right": 856
+    },
+    "actions": {
+      "x": 219.828125,
+      "y": 823.046875,
+      "width": 636.171875,
+      "height": 52,
+      "bottom": 875.046875,
+      "right": 856
+    },
+    "caption": {
+      "x": 219.828125,
+      "y": 940.28125,
+      "width": 186.75,
+      "height": 108.71875,
+      "bottom": 1049,
+      "right": 406.578125
+    },
+    "dock": {
+      "x": 1296.5625,
+      "y": 985,
+      "width": 442,
+      "height": 64,
+      "bottom": 1049,
+      "right": 1738.5625
+    },
+    "h1": {
+      "x": 219.828125,
+      "y": 186.234375,
+      "width": 636.171875,
+      "height": 483.8125,
+      "bottom": 670.046875,
+      "right": 856
+    },
+    "p": {
+      "x": 219.828125,
+      "y": 698.046875,
+      "width": 496,
+      "height": 93,
+      "bottom": 791.046875,
+      "right": 715.828125
+    },
+    "font": "134.4px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/botanika-herbarium-2560.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-botanika-733322"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "slide": 4,
+    "hero": {
+      "x": 120,
+      "y": 97,
+      "width": 1680,
+      "height": 980,
+      "bottom": 1077,
+      "right": 1800
+    },
+    "copy": {
+      "x": 120,
+      "y": 138.234375,
+      "width": 736,
+      "height": 760.8125,
+      "bottom": 899.046875,
+      "right": 856
+    },
+    "actions": {
+      "x": 219.828125,
+      "y": 823.046875,
+      "width": 636.171875,
+      "height": 52,
+      "bottom": 875.046875,
+      "right": 856
+    },
+    "caption": {
+      "x": 219.828125,
+      "y": 940.28125,
+      "width": 213.3125,
+      "height": 108.71875,
+      "bottom": 1049,
+      "right": 433.140625
+    },
+    "dock": {
+      "x": 1296.5625,
+      "y": 985,
+      "width": 442,
+      "height": 64,
+      "bottom": 1049,
+      "right": 1738.5625
+    },
+    "h1": {
+      "x": 219.828125,
+      "y": 186.234375,
+      "width": 636.171875,
+      "height": 483.8125,
+      "bottom": 670.046875,
+      "right": 856
+    },
+    "p": {
+      "x": 219.828125,
+      "y": 698.046875,
+      "width": 496,
+      "height": 93,
+      "bottom": 791.046875,
+      "right": 715.828125
+    },
+    "font": "134.4px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/gold-workshop-2560.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-multibook-zolotoe-vremya-v-podarochnom-nabore-946942"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "slide": 5,
+    "hero": {
+      "x": 120,
+      "y": 97,
+      "width": 1680,
+      "height": 980,
+      "bottom": 1077,
+      "right": 1800
+    },
+    "copy": {
+      "x": 120,
+      "y": 138.234375,
+      "width": 736,
+      "height": 760.8125,
+      "bottom": 899.046875,
+      "right": 856
+    },
+    "actions": {
+      "x": 219.828125,
+      "y": 823.046875,
+      "width": 636.171875,
+      "height": 52,
+      "bottom": 875.046875,
+      "right": 856
+    },
+    "caption": {
+      "x": 219.828125,
+      "y": 940.28125,
+      "width": 186.75,
+      "height": 108.71875,
+      "bottom": 1049,
+      "right": 406.578125
+    },
+    "dock": {
+      "x": 1296.5625,
+      "y": 985,
+      "width": 442,
+      "height": 64,
+      "bottom": 1049,
+      "right": 1738.5625
+    },
+    "h1": {
+      "x": 219.828125,
+      "y": 186.234375,
+      "width": 636.171875,
+      "height": 483.8125,
+      "bottom": 670.046875,
+      "right": 856
+    },
+    "p": {
+      "x": 219.828125,
+      "y": 698.046875,
+      "width": 496,
+      "height": 93,
+      "bottom": 791.046875,
+      "right": 715.828125
+    },
+    "font": "134.4px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/vesna-winter-2560.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-vesna-v-podarochnom-859732"
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "slide": 6,
+    "hero": {
+      "x": 120,
+      "y": 97,
+      "width": 1680,
+      "height": 980,
+      "bottom": 1077,
+      "right": 1800
+    },
+    "copy": {
+      "x": 120,
+      "y": 138.234375,
+      "width": 736,
+      "height": 760.8125,
+      "bottom": 899.046875,
+      "right": 856
+    },
+    "actions": {
+      "x": 219.828125,
+      "y": 823.046875,
+      "width": 636.171875,
+      "height": 52,
+      "bottom": 875.046875,
+      "right": 856
+    },
+    "caption": {
+      "x": 219.828125,
+      "y": 940.28125,
+      "width": 209.375,
+      "height": 108.71875,
+      "bottom": 1049,
+      "right": 429.203125
+    },
+    "dock": {
+      "x": 1296.5625,
+      "y": 985,
+      "width": 442,
+      "height": 64,
+      "bottom": 1049,
+      "right": 1738.5625
+    },
+    "h1": {
+      "x": 219.828125,
+      "y": 186.234375,
+      "width": 636.171875,
+      "height": 483.8125,
+      "bottom": 670.046875,
+      "right": 856
+    },
+    "p": {
+      "x": 219.828125,
+      "y": 698.046875,
+      "width": 496,
+      "height": 93,
+      "bottom": 791.046875,
+      "right": 715.828125
+    },
+    "font": "134.4px",
+    "ink": "rgb(70, 44, 43)",
+    "src": "http://127.0.0.1:3001/hero/bird-study-2560.webp",
+    "overflow": false,
+    "targets": [
+      {
+        "w": 194.09375,
+        "h": 52
+      },
+      {
+        "w": 159.078125,
+        "h": 52
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      },
+      {
+        "w": 56,
+        "h": 50
+      }
+    ],
+    "href": "/product/bloknot-ezhenedelnik-iz-eko-zamshi-vazhnaya-ptitsa-v-370012"
+  }
+]

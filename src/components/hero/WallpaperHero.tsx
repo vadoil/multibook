@@ -108,7 +108,7 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
             Выбрать готовый
           </Link>
           <Link href="/constructor" className="wp-btn">
-            Собрать свой
+            Конструктор
           </Link>
         </div>
       </div>
