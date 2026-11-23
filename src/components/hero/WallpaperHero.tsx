@@ -128,7 +128,7 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
 
       <div className="wp-copy">
         <h1><span>Ежедневники</span><span>для ваших планов.</span></h1>
-        <p><span>Готовая коллекция или ваша сборка.<br />Листы меняются. Любимые вещи остаются.</span></p>
+        <p><span>Готовый ежедневник или своя сборка.<br />Листы можно снимать и переставлять.</span></p>
         <div className="wp-actions">
           <Link href="/catalog?type=%D0%91%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82%D1%8B" className="wp-btn wp-btn-main">
             Готовые ежедневники

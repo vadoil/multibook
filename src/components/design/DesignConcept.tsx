@@ -495,15 +495,14 @@ function Paper({ products, categories }: { products: Product[]; categories: Reac
   );
 }
 
-function Journal({ products, hero, categories }: { products: Product[]; hero?: React.ReactNode; categories: React.ReactNode }) {
+function Journal({ products, hero, shop, categories }: { products: Product[]; hero?: React.ReactNode; shop?: React.ReactNode; categories: React.ReactNode }) {
   const horse = products.find((p) => p.title.includes("Красные кони"));
   return hero ? (
     <>
       {hero}
-      <Featured products={products} concept="journal" />
-      <PrintWorkshopHero product={horse} journal secondary />
-      <ConstructorInvite product={products[0]} concept="journal" />
+      {shop ?? <Featured products={products} concept="journal" />}
       <Mechanics concept="journal" />
+      <ConstructorInvite product={products[0]} concept="journal" />
       {categories}
     </>
   ) : (
@@ -604,6 +603,7 @@ export function DesignConcept({
   products,
   embedded = false,
   hero,
+  shop,
   categories,
 }: {
   concept: ConceptName;
@@ -612,6 +612,7 @@ export function DesignConcept({
   categories: React.ReactNode;
   /** Свой первый экран вместо видео-героя (на главной — обои). */
   hero?: React.ReactNode;
+  shop?: React.ReactNode;
 }) {
   return (
     <div className={`mc-root mc-${concept}`}>
@@ -621,7 +622,7 @@ export function DesignConcept({
         {concept === "paper" ? (
           <Paper products={products} categories={categories} />
         ) : concept === "journal" ? (
-          <Journal products={products} hero={hero} categories={categories} />
+          <Journal products={products} hero={hero} shop={shop} categories={categories} />
         ) : (
           <Play products={products} categories={categories} />
         )}
