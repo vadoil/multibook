@@ -13,6 +13,8 @@ export type Wallpaper = {
   desktopSmall: string;
   mobile: string;
   thumb: string;
+  product?: string;
+  pose?: "table" | "stand";
   href?: string;
   price?: string;
 };
@@ -20,7 +22,6 @@ export type Wallpaper = {
 const HOLD = 7000; // сколько стоит один кадр, мс
 const SCENES: Record<string, string> = {
   "lifestyle-desk": "За рабочим столом",
-  "lifestyle-writing": "Место для идей",
   "lifestyle-gallery": "Предмет с характером",
   "premium-city": "Москва-Сити",
   "premium-meeting": "Переговоры",
@@ -114,19 +115,21 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
     >
       <div className="wp-stage" aria-hidden="true">
         {slides.map((s, i) => (
-          <div key={s.id} className="wp-slide" data-active={i === index || undefined} style={{ "--wp-tone": s.tone } as React.CSSProperties}>
+          <div key={s.id} className="wp-slide" data-pose={s.pose} data-active={i === index || undefined} style={{ "--wp-tone": s.tone } as React.CSSProperties}>
             {seen.has(i) && (
-              <picture>
+              <><picture>
                 <source media="(max-width: 760px)" srcSet={s.mobile} />
                 <source media="(max-width: 1700px)" srcSet={s.desktopSmall} />
                 <img src={s.desktop} alt="" width={2560} height={1440} decoding="async" fetchPriority={i === 0 ? "high" : "low"} />
               </picture>
+              {s.product && <div className="wp-product"><img src={s.product} alt="" width={1100} height={1100} decoding="async" fetchPriority={i === 0 ? "high" : "low"} /></div>}</>
             )}
           </div>
         ))}
       </div>
 
       <div className="wp-copy">
+        <div className="wp-paper">
         <h1><span>Ежедневники</span><span>для ваших планов.</span></h1>
         <p><span>Готовый ежедневник или своя сборка.<br />Листы можно снимать и переставлять.</span></p>
         <div className="wp-actions">
@@ -136,6 +139,7 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
           <Link href="/constructor" className="wp-btn">
             Конструктор
           </Link>
+        </div>
         </div>
       </div>
 
@@ -167,7 +171,6 @@ export function WallpaperHero({ slides }: { slides: Wallpaper[] }) {
                 key={s.id}
                 type="button"
                 className="wp-thumb"
-                data-name={SCENES[s.id] ?? s.name}
                 aria-label={`${SCENES[s.id] ?? "Коллекция"}: ежедневник «${s.name}»`}
                 aria-current={i === index || undefined}
                 onClick={() => go(i)}

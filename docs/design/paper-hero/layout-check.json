@@ -1,0 +1,3652 @@
+{
+  "report": [
+    {
+      "width": 1366,
+      "height": 768,
+      "touch": false,
+      "slide": 0,
+      "overflow": false,
+      "paper": {
+        "x": 68.21520233154297,
+        "y": 114.29340362548828,
+        "width": 485.632080078125,
+        "height": 504.6007080078125,
+        "top": 114.29340362548828,
+        "right": 553.847282409668,
+        "bottom": 618.8941116333008,
+        "left": 68.21520233154297
+      },
+      "product": {
+        "left": 730.6299252717391,
+        "right": 1284.229449728261,
+        "top": 121,
+        "bottom": 660.90625,
+        "width": 553.5995244565217,
+        "height": 539.90625
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-desk-product.webp",
+      "caption": {
+        "x": 71.03125,
+        "y": 638.1875,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 638.1875,
+        "right": 288.625,
+        "bottom": 746.90625,
+        "left": 71.03125
+      },
+      "hero": {
+        "x": 0,
+        "y": 97,
+        "width": 1366,
+        "height": 677.90625,
+        "top": 97,
+        "right": 1366,
+        "bottom": 774.90625,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 193.1087646484375,
+          "height": 54.180816650390625
+        },
+        {
+          "width": 128.7222900390625,
+          "height": 53.4503173828125
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 124.25365447998047,
+          "y": 473.2229919433594,
+          "width": 193.1087646484375,
+          "height": 54.180816650390625,
+          "top": 473.2229919433594,
+          "right": 317.36241912841797,
+          "bottom": 527.40380859375,
+          "left": 124.25365447998047
+        },
+        {
+          "x": 328.771728515625,
+          "y": 471.6331787109375,
+          "width": 128.7222900390625,
+          "height": 53.4503173828125,
+          "top": 471.6331787109375,
+          "right": 457.4940185546875,
+          "bottom": 525.08349609375,
+          "left": 328.771728515625
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "touch": false,
+      "slide": 1,
+      "overflow": false,
+      "paper": {
+        "x": 68.21520233154297,
+        "y": 114.29340362548828,
+        "width": 485.632080078125,
+        "height": 504.6007080078125,
+        "top": 114.29340362548828,
+        "right": 553.847282409668,
+        "bottom": 618.8941116333008,
+        "left": 68.21520233154297
+      },
+      "product": {
+        "left": 809.5314708480565,
+        "right": 1205.3279041519436,
+        "top": 121,
+        "bottom": 598.65625,
+        "width": 395.79643330388694,
+        "height": 477.65625
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-gallery-product.webp",
+      "caption": {
+        "x": 71.03125,
+        "y": 638.1875,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 638.1875,
+        "right": 288.625,
+        "bottom": 746.90625,
+        "left": 71.03125
+      },
+      "hero": {
+        "x": 0,
+        "y": 97,
+        "width": 1366,
+        "height": 677.90625,
+        "top": 97,
+        "right": 1366,
+        "bottom": 774.90625,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 193.1087646484375,
+          "height": 54.180816650390625
+        },
+        {
+          "width": 128.7222900390625,
+          "height": 53.4503173828125
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 124.25365447998047,
+          "y": 473.2229919433594,
+          "width": 193.1087646484375,
+          "height": 54.180816650390625,
+          "top": 473.2229919433594,
+          "right": 317.36241912841797,
+          "bottom": 527.40380859375,
+          "left": 124.25365447998047
+        },
+        {
+          "x": 328.771728515625,
+          "y": 471.6331787109375,
+          "width": 128.7222900390625,
+          "height": 53.4503173828125,
+          "top": 471.6331787109375,
+          "right": 457.4940185546875,
+          "bottom": 525.08349609375,
+          "left": 328.771728515625
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "touch": false,
+      "slide": 2,
+      "overflow": false,
+      "paper": {
+        "x": 68.21520233154297,
+        "y": 114.29340362548828,
+        "width": 485.632080078125,
+        "height": 504.6007080078125,
+        "top": 114.29340362548828,
+        "right": 553.847282409668,
+        "bottom": 618.8941116333008,
+        "left": 68.21520233154297
+      },
+      "product": {
+        "left": 769.6706189266785,
+        "right": 1245.1887560733217,
+        "top": 121,
+        "bottom": 660.90625,
+        "width": 475.5181371466431,
+        "height": 539.90625
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-coaching-product.webp",
+      "caption": {
+        "x": 71.03125,
+        "y": 638.1875,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 638.1875,
+        "right": 288.625,
+        "bottom": 746.90625,
+        "left": 71.03125
+      },
+      "hero": {
+        "x": 0,
+        "y": 97,
+        "width": 1366,
+        "height": 677.90625,
+        "top": 97,
+        "right": 1366,
+        "bottom": 774.90625,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 193.1087646484375,
+          "height": 54.180816650390625
+        },
+        {
+          "width": 128.7222900390625,
+          "height": 53.4503173828125
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 124.25365447998047,
+          "y": 473.2229919433594,
+          "width": 193.1087646484375,
+          "height": 54.180816650390625,
+          "top": 473.2229919433594,
+          "right": 317.36241912841797,
+          "bottom": 527.40380859375,
+          "left": 124.25365447998047
+        },
+        {
+          "x": 328.771728515625,
+          "y": 471.6331787109375,
+          "width": 128.7222900390625,
+          "height": 53.4503173828125,
+          "top": 471.6331787109375,
+          "right": 457.4940185546875,
+          "bottom": 525.08349609375,
+          "left": 328.771728515625
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "touch": false,
+      "slide": 3,
+      "overflow": false,
+      "paper": {
+        "x": 68.21520233154297,
+        "y": 114.29340362548828,
+        "width": 485.632080078125,
+        "height": 504.6007080078125,
+        "top": 114.29340362548828,
+        "right": 553.847282409668,
+        "bottom": 618.8941116333008,
+        "left": 68.21520233154297
+      },
+      "product": {
+        "left": 749.8772360865725,
+        "right": 1264.9821389134277,
+        "top": 121,
+        "bottom": 660.90625,
+        "width": 515.1049028268551,
+        "height": 539.90625
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-academy-product.webp",
+      "caption": {
+        "x": 71.03125,
+        "y": 638.1875,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 638.1875,
+        "right": 288.625,
+        "bottom": 746.90625,
+        "left": 71.03125
+      },
+      "hero": {
+        "x": 0,
+        "y": 97,
+        "width": 1366,
+        "height": 677.90625,
+        "top": 97,
+        "right": 1366,
+        "bottom": 774.90625,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 193.1087646484375,
+          "height": 54.180816650390625
+        },
+        {
+          "width": 128.7222900390625,
+          "height": 53.4503173828125
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 124.25365447998047,
+          "y": 473.2229919433594,
+          "width": 193.1087646484375,
+          "height": 54.180816650390625,
+          "top": 473.2229919433594,
+          "right": 317.36241912841797,
+          "bottom": 527.40380859375,
+          "left": 124.25365447998047
+        },
+        {
+          "x": 328.771728515625,
+          "y": 471.6331787109375,
+          "width": 128.7222900390625,
+          "height": 53.4503173828125,
+          "top": 471.6331787109375,
+          "right": 457.4940185546875,
+          "bottom": 525.08349609375,
+          "left": 328.771728515625
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "touch": false,
+      "slide": 4,
+      "overflow": false,
+      "paper": {
+        "x": 68.21520233154297,
+        "y": 114.29340362548828,
+        "width": 485.632080078125,
+        "height": 504.6007080078125,
+        "top": 114.29340362548828,
+        "right": 553.847282409668,
+        "bottom": 618.8941116333008,
+        "left": 68.21520233154297
+      },
+      "product": {
+        "left": 765.6165525618375,
+        "right": 1249.2428224381624,
+        "top": 121,
+        "bottom": 660.90625,
+        "width": 483.62626987632507,
+        "height": 539.90625
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-city-night-product.webp",
+      "caption": {
+        "x": 71.03125,
+        "y": 638.1875,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 638.1875,
+        "right": 288.625,
+        "bottom": 746.90625,
+        "left": 71.03125
+      },
+      "hero": {
+        "x": 0,
+        "y": 97,
+        "width": 1366,
+        "height": 677.90625,
+        "top": 97,
+        "right": 1366,
+        "bottom": 774.90625,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 193.1087646484375,
+          "height": 54.180816650390625
+        },
+        {
+          "width": 128.7222900390625,
+          "height": 53.4503173828125
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 124.25365447998047,
+          "y": 473.2229919433594,
+          "width": 193.1087646484375,
+          "height": 54.180816650390625,
+          "top": 473.2229919433594,
+          "right": 317.36241912841797,
+          "bottom": 527.40380859375,
+          "left": 124.25365447998047
+        },
+        {
+          "x": 328.771728515625,
+          "y": 471.6331787109375,
+          "width": 128.7222900390625,
+          "height": 53.4503173828125,
+          "top": 471.6331787109375,
+          "right": 457.4940185546875,
+          "bottom": 525.08349609375,
+          "left": 328.771728515625
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "touch": true,
+      "slide": 0,
+      "overflow": false,
+      "paper": {
+        "x": 12,
+        "y": 79,
+        "width": 351,
+        "height": 212.0625,
+        "top": 79,
+        "right": 363,
+        "bottom": 291.0625,
+        "left": 12
+      },
+      "product": {
+        "left": 39.33514492753622,
+        "right": 335.66485507246375,
+        "top": 309,
+        "bottom": 598,
+        "width": 296.32971014492756,
+        "height": 289
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-desk-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 606,
+        "width": 351,
+        "height": 52,
+        "top": 606,
+        "right": 363,
+        "bottom": 658,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 375,
+        "height": 675,
+        "top": 65,
+        "right": 375,
+        "bottom": 740,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 173.484375,
+          "height": 46
+        },
+        {
+          "width": 113.703125,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 227.0625,
+          "width": 173.484375,
+          "height": 46,
+          "top": 227.0625,
+          "right": 219.484375,
+          "bottom": 273.0625,
+          "left": 46
+        },
+        {
+          "x": 227.484375,
+          "y": 227.0625,
+          "width": 113.703125,
+          "height": 46,
+          "top": 227.0625,
+          "right": 341.1875,
+          "bottom": 273.0625,
+          "left": 227.484375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "touch": true,
+      "slide": 1,
+      "overflow": false,
+      "paper": {
+        "x": 12,
+        "y": 79,
+        "width": 351,
+        "height": 212.0625,
+        "top": 79,
+        "right": 363,
+        "bottom": 291.0625,
+        "left": 12
+      },
+      "product": {
+        "left": 67.76413427561839,
+        "right": 307.2358657243816,
+        "top": 309,
+        "bottom": 598,
+        "width": 239.47173144876322,
+        "height": 289
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-gallery-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 606,
+        "width": 351,
+        "height": 52,
+        "top": 606,
+        "right": 363,
+        "bottom": 658,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 375,
+        "height": 675,
+        "top": 65,
+        "right": 375,
+        "bottom": 740,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 173.484375,
+          "height": 46
+        },
+        {
+          "width": 113.703125,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 227.0625,
+          "width": 173.484375,
+          "height": 46,
+          "top": 227.0625,
+          "right": 219.484375,
+          "bottom": 273.0625,
+          "left": 46
+        },
+        {
+          "x": 227.484375,
+          "y": 227.0625,
+          "width": 113.703125,
+          "height": 46,
+          "top": 227.0625,
+          "right": 341.1875,
+          "bottom": 273.0625,
+          "left": 227.484375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "touch": true,
+      "slide": 2,
+      "overflow": false,
+      "paper": {
+        "x": 12,
+        "y": 79,
+        "width": 351,
+        "height": 212.0625,
+        "top": 79,
+        "right": 363,
+        "bottom": 291.0625,
+        "left": 12
+      },
+      "product": {
+        "left": 60.23277385159011,
+        "right": 314.7672261484099,
+        "top": 309,
+        "bottom": 598,
+        "width": 254.53445229681978,
+        "height": 289
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-coaching-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 606,
+        "width": 351,
+        "height": 52,
+        "top": 606,
+        "right": 363,
+        "bottom": 658,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 375,
+        "height": 675,
+        "top": 65,
+        "right": 375,
+        "bottom": 740,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 173.484375,
+          "height": 46
+        },
+        {
+          "width": 113.703125,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 227.0625,
+          "width": 173.484375,
+          "height": 46,
+          "top": 227.0625,
+          "right": 219.484375,
+          "bottom": 273.0625,
+          "left": 46
+        },
+        {
+          "x": 227.484375,
+          "y": 227.0625,
+          "width": 113.703125,
+          "height": 46,
+          "top": 227.0625,
+          "right": 341.1875,
+          "bottom": 273.0625,
+          "left": 227.484375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "touch": true,
+      "slide": 3,
+      "overflow": false,
+      "paper": {
+        "x": 12,
+        "y": 79,
+        "width": 351,
+        "height": 212.0625,
+        "top": 79,
+        "right": 363,
+        "bottom": 291.0625,
+        "left": 12
+      },
+      "product": {
+        "left": 49.637809187279174,
+        "right": 325.3621908127208,
+        "top": 309,
+        "bottom": 598,
+        "width": 275.72438162544165,
+        "height": 289
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-academy-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 606,
+        "width": 351,
+        "height": 52,
+        "top": 606,
+        "right": 363,
+        "bottom": 658,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 375,
+        "height": 675,
+        "top": 65,
+        "right": 375,
+        "bottom": 740,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 173.484375,
+          "height": 46
+        },
+        {
+          "width": 113.703125,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 227.0625,
+          "width": 173.484375,
+          "height": 46,
+          "top": 227.0625,
+          "right": 219.484375,
+          "bottom": 273.0625,
+          "left": 46
+        },
+        {
+          "x": 227.484375,
+          "y": 227.0625,
+          "width": 113.703125,
+          "height": 46,
+          "top": 227.0625,
+          "right": 341.1875,
+          "bottom": 273.0625,
+          "left": 227.484375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "touch": true,
+      "slide": 4,
+      "overflow": false,
+      "paper": {
+        "x": 12,
+        "y": 79,
+        "width": 351,
+        "height": 212.0625,
+        "top": 79,
+        "right": 363,
+        "bottom": 291.0625,
+        "left": 12
+      },
+      "product": {
+        "left": 58.06272084805656,
+        "right": 316.93727915194347,
+        "top": 309,
+        "bottom": 598,
+        "width": 258.8745583038869,
+        "height": 289
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-city-night-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 606,
+        "width": 351,
+        "height": 52,
+        "top": 606,
+        "right": 363,
+        "bottom": 658,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 375,
+        "height": 675,
+        "top": 65,
+        "right": 375,
+        "bottom": 740,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 173.484375,
+          "height": 46
+        },
+        {
+          "width": 113.703125,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 227.0625,
+          "width": 173.484375,
+          "height": 46,
+          "top": 227.0625,
+          "right": 219.484375,
+          "bottom": 273.0625,
+          "left": 46
+        },
+        {
+          "x": 227.484375,
+          "y": 227.0625,
+          "width": 113.703125,
+          "height": 46,
+          "top": 227.0625,
+          "right": 341.1875,
+          "bottom": 273.0625,
+          "left": 227.484375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "reducedMotion": {
+        "running": false,
+        "animation": "none",
+        "transition": "0s"
+      }
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "touch": true,
+      "slide": 0,
+      "overflow": false,
+      "paper": {
+        "x": 16,
+        "y": 79,
+        "width": 288,
+        "height": 293.4375,
+        "top": 79,
+        "right": 304,
+        "bottom": 372.4375,
+        "left": 16
+      },
+      "product": {
+        "left": 33.8804347826087,
+        "right": 286.1195652173913,
+        "top": 397,
+        "bottom": 643,
+        "width": 252.2391304347826,
+        "height": 246
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-desk-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 651,
+        "width": 296,
+        "height": 52,
+        "top": 651,
+        "right": 308,
+        "bottom": 703,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 720,
+        "top": 65,
+        "right": 320,
+        "bottom": 785,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 242,
+          "height": 46
+        },
+        {
+          "width": 242,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 256.4375,
+          "width": 242,
+          "height": 46,
+          "top": 256.4375,
+          "right": 288,
+          "bottom": 302.4375,
+          "left": 46
+        },
+        {
+          "x": 46,
+          "y": 310.4375,
+          "width": 242,
+          "height": 46,
+          "top": 310.4375,
+          "right": 288,
+          "bottom": 356.4375,
+          "left": 46
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "touch": true,
+      "slide": 1,
+      "overflow": false,
+      "paper": {
+        "x": 16,
+        "y": 79,
+        "width": 288,
+        "height": 293.4375,
+        "top": 79,
+        "right": 304,
+        "bottom": 372.4375,
+        "left": 16
+      },
+      "product": {
+        "left": 58.07950530035336,
+        "right": 261.9204946996466,
+        "top": 397,
+        "bottom": 643,
+        "width": 203.84098939929328,
+        "height": 246
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-gallery-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 651,
+        "width": 296,
+        "height": 52,
+        "top": 651,
+        "right": 308,
+        "bottom": 703,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 720,
+        "top": 65,
+        "right": 320,
+        "bottom": 785,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 242,
+          "height": 46
+        },
+        {
+          "width": 242,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 256.4375,
+          "width": 242,
+          "height": 46,
+          "top": 256.4375,
+          "right": 288,
+          "bottom": 302.4375,
+          "left": 46
+        },
+        {
+          "x": 46,
+          "y": 310.4375,
+          "width": 242,
+          "height": 46,
+          "top": 310.4375,
+          "right": 288,
+          "bottom": 356.4375,
+          "left": 46
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "touch": true,
+      "slide": 2,
+      "overflow": false,
+      "paper": {
+        "x": 16,
+        "y": 79,
+        "width": 288,
+        "height": 293.4375,
+        "top": 79,
+        "right": 304,
+        "bottom": 372.4375,
+        "left": 16
+      },
+      "product": {
+        "left": 51.66872791519435,
+        "right": 268.3312720848056,
+        "top": 397,
+        "bottom": 643,
+        "width": 216.6625441696113,
+        "height": 246
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-coaching-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 651,
+        "width": 296,
+        "height": 52,
+        "top": 651,
+        "right": 308,
+        "bottom": 703,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 720,
+        "top": 65,
+        "right": 320,
+        "bottom": 785,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 242,
+          "height": 46
+        },
+        {
+          "width": 242,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 256.4375,
+          "width": 242,
+          "height": 46,
+          "top": 256.4375,
+          "right": 288,
+          "bottom": 302.4375,
+          "left": 46
+        },
+        {
+          "x": 46,
+          "y": 310.4375,
+          "width": 242,
+          "height": 46,
+          "top": 310.4375,
+          "right": 288,
+          "bottom": 356.4375,
+          "left": 46
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "touch": true,
+      "slide": 3,
+      "overflow": false,
+      "paper": {
+        "x": 16,
+        "y": 79,
+        "width": 288,
+        "height": 293.4375,
+        "top": 79,
+        "right": 304,
+        "bottom": 372.4375,
+        "left": 16
+      },
+      "product": {
+        "left": 42.650176678445234,
+        "right": 277.34982332155477,
+        "top": 397,
+        "bottom": 643,
+        "width": 234.69964664310953,
+        "height": 246
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-academy-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 651,
+        "width": 296,
+        "height": 52,
+        "top": 651,
+        "right": 308,
+        "bottom": 703,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 720,
+        "top": 65,
+        "right": 320,
+        "bottom": 785,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 242,
+          "height": 46
+        },
+        {
+          "width": 242,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 256.4375,
+          "width": 242,
+          "height": 46,
+          "top": 256.4375,
+          "right": 288,
+          "bottom": 302.4375,
+          "left": 46
+        },
+        {
+          "x": 46,
+          "y": 310.4375,
+          "width": 242,
+          "height": 46,
+          "top": 310.4375,
+          "right": 288,
+          "bottom": 356.4375,
+          "left": 46
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "touch": true,
+      "slide": 4,
+      "overflow": false,
+      "paper": {
+        "x": 16,
+        "y": 79,
+        "width": 288,
+        "height": 293.4375,
+        "top": 79,
+        "right": 304,
+        "bottom": 372.4375,
+        "left": 16
+      },
+      "product": {
+        "left": 49.82155477031803,
+        "right": 270.178445229682,
+        "top": 397,
+        "bottom": 643,
+        "width": 220.35689045936394,
+        "height": 246
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-city-night-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 651,
+        "width": 296,
+        "height": 52,
+        "top": 651,
+        "right": 308,
+        "bottom": 703,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 320,
+        "height": 720,
+        "top": 65,
+        "right": 320,
+        "bottom": 785,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 242,
+          "height": 46
+        },
+        {
+          "width": 242,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 256.4375,
+          "width": 242,
+          "height": 46,
+          "top": 256.4375,
+          "right": 288,
+          "bottom": 302.4375,
+          "left": 46
+        },
+        {
+          "x": 46,
+          "y": 310.4375,
+          "width": 242,
+          "height": 46,
+          "top": 310.4375,
+          "right": 288,
+          "bottom": 356.4375,
+          "left": 46
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "touch": true,
+      "slide": 0,
+      "overflow": false,
+      "paper": {
+        "x": 12,
+        "y": 79,
+        "width": 406,
+        "height": 219.1875,
+        "top": 79,
+        "right": 418,
+        "bottom": 298.1875,
+        "left": 12
+      },
+      "product": {
+        "left": 34.390625,
+        "right": 395.609375,
+        "top": 365.7159893992933,
+        "bottom": 718,
+        "width": 361.21875,
+        "height": 352.2840106007067
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-desk-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 726,
+        "width": 406,
+        "height": 52,
+        "top": 726,
+        "right": 418,
+        "bottom": 778,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 430,
+        "height": 795,
+        "top": 65,
+        "right": 430,
+        "bottom": 860,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 173.484375,
+          "height": 46
+        },
+        {
+          "width": 113.703125,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 234.1875,
+          "width": 173.484375,
+          "height": 46,
+          "top": 234.1875,
+          "right": 219.484375,
+          "bottom": 280.1875,
+          "left": 46
+        },
+        {
+          "x": 227.484375,
+          "y": 234.1875,
+          "width": 113.703125,
+          "height": 46,
+          "top": 234.1875,
+          "right": 341.1875,
+          "bottom": 280.1875,
+          "left": 227.484375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "touch": true,
+      "slide": 1,
+      "overflow": false,
+      "paper": {
+        "x": 12,
+        "y": 79,
+        "width": 406,
+        "height": 219.1875,
+        "top": 79,
+        "right": 418,
+        "bottom": 298.1875,
+        "left": 12
+      },
+      "product": {
+        "left": 45.54681978798587,
+        "right": 384.4531802120141,
+        "top": 309,
+        "bottom": 718,
+        "width": 338.90636042402826,
+        "height": 409
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-gallery-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 726,
+        "width": 406,
+        "height": 52,
+        "top": 726,
+        "right": 418,
+        "bottom": 778,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 430,
+        "height": 795,
+        "top": 65,
+        "right": 430,
+        "bottom": 860,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 173.484375,
+          "height": 46
+        },
+        {
+          "width": 113.703125,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 234.1875,
+          "width": 173.484375,
+          "height": 46,
+          "top": 234.1875,
+          "right": 219.484375,
+          "bottom": 280.1875,
+          "left": 46
+        },
+        {
+          "x": 227.484375,
+          "y": 234.1875,
+          "width": 113.703125,
+          "height": 46,
+          "top": 234.1875,
+          "right": 341.1875,
+          "bottom": 280.1875,
+          "left": 227.484375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "touch": true,
+      "slide": 2,
+      "overflow": false,
+      "paper": {
+        "x": 12,
+        "y": 79,
+        "width": 406,
+        "height": 219.1875,
+        "top": 79,
+        "right": 418,
+        "bottom": 298.1875,
+        "left": 12
+      },
+      "product": {
+        "left": 34.88825088339223,
+        "right": 395.11174911660777,
+        "top": 309,
+        "bottom": 718,
+        "width": 360.22349823321554,
+        "height": 409
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-coaching-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 726,
+        "width": 406,
+        "height": 52,
+        "top": 726,
+        "right": 418,
+        "bottom": 778,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 430,
+        "height": 795,
+        "top": 65,
+        "right": 430,
+        "bottom": 860,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 173.484375,
+          "height": 46
+        },
+        {
+          "width": 113.703125,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 234.1875,
+          "width": 173.484375,
+          "height": 46,
+          "top": 234.1875,
+          "right": 219.484375,
+          "bottom": 280.1875,
+          "left": 46
+        },
+        {
+          "x": 227.484375,
+          "y": 234.1875,
+          "width": 113.703125,
+          "height": 46,
+          "top": 234.1875,
+          "right": 341.1875,
+          "bottom": 280.1875,
+          "left": 227.484375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "touch": true,
+      "slide": 3,
+      "overflow": false,
+      "paper": {
+        "x": 12,
+        "y": 79,
+        "width": 406,
+        "height": 219.1875,
+        "top": 79,
+        "right": 418,
+        "bottom": 298.1875,
+        "left": 12
+      },
+      "product": {
+        "left": 34.390625,
+        "right": 395.609375,
+        "top": 339.38923611111113,
+        "bottom": 718,
+        "width": 361.21875,
+        "height": 378.61076388888887
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-academy-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 726,
+        "width": 406,
+        "height": 52,
+        "top": 726,
+        "right": 418,
+        "bottom": 778,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 430,
+        "height": 795,
+        "top": 65,
+        "right": 430,
+        "bottom": 860,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 173.484375,
+          "height": 46
+        },
+        {
+          "width": 113.703125,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 234.1875,
+          "width": 173.484375,
+          "height": 46,
+          "top": 234.1875,
+          "right": 219.484375,
+          "bottom": 280.1875,
+          "left": 46
+        },
+        {
+          "x": 227.484375,
+          "y": 234.1875,
+          "width": 113.703125,
+          "height": 46,
+          "top": 234.1875,
+          "right": 341.1875,
+          "bottom": 280.1875,
+          "left": 227.484375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "touch": true,
+      "slide": 4,
+      "overflow": false,
+      "paper": {
+        "x": 12,
+        "y": 79,
+        "width": 406,
+        "height": 219.1875,
+        "top": 79,
+        "right": 418,
+        "bottom": 298.1875,
+        "left": 12
+      },
+      "product": {
+        "left": 34.390625,
+        "right": 395.609375,
+        "top": 314.7459319526628,
+        "bottom": 718,
+        "width": 361.21875,
+        "height": 403.2540680473372
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-city-night-product.webp",
+      "caption": {
+        "x": 12,
+        "y": 726,
+        "width": 406,
+        "height": 52,
+        "top": 726,
+        "right": 418,
+        "bottom": 778,
+        "left": 12
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 430,
+        "height": 795,
+        "top": 65,
+        "right": 430,
+        "bottom": 860,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 173.484375,
+          "height": 46
+        },
+        {
+          "width": 113.703125,
+          "height": 46
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 46,
+          "y": 234.1875,
+          "width": 173.484375,
+          "height": 46,
+          "top": 234.1875,
+          "right": 219.484375,
+          "bottom": 280.1875,
+          "left": 46
+        },
+        {
+          "x": 227.484375,
+          "y": 234.1875,
+          "width": 113.703125,
+          "height": 46,
+          "top": 234.1875,
+          "right": 341.1875,
+          "bottom": 280.1875,
+          "left": 227.484375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask-mobile.svg\")"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "touch": false,
+      "slide": 0,
+      "overflow": false,
+      "paper": {
+        "x": 20.603818893432617,
+        "y": 274.1069641113281,
+        "width": 365.8236083984375,
+        "height": 434.0673522949219,
+        "top": 274.1069641113281,
+        "right": 386.4274272918701,
+        "bottom": 708.17431640625,
+        "left": 20.603818893432617
+      },
+      "product": {
+        "left": 391.671875,
+        "right": 741.125,
+        "top": 569.1905918727915,
+        "bottom": 910,
+        "width": 349.453125,
+        "height": 340.8094081272085
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-desk-product.webp",
+      "caption": {
+        "x": 39.921875,
+        "y": 887.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 887.28125,
+        "right": 257.515625,
+        "bottom": 996,
+        "left": 39.921875
+      },
+      "hero": {
+        "x": 0,
+        "y": 97,
+        "width": 768,
+        "height": 927,
+        "top": 97,
+        "right": 768,
+        "bottom": 1024,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 159.0328369140625,
+          "height": 53.79425048828125
+        },
+        {
+          "width": 103.84889221191406,
+          "height": 53.16815185546875
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 65.70629119873047,
+          "y": 549.6290283203125,
+          "width": 159.0328369140625,
+          "height": 53.79425048828125,
+          "top": 549.6290283203125,
+          "right": 224.73912811279297,
+          "bottom": 603.4232788085938,
+          "left": 65.70629119873047
+        },
+        {
+          "x": 232.14869689941406,
+          "y": 548.3668212890625,
+          "width": 103.84889221191406,
+          "height": 53.16815185546875,
+          "top": 548.3668212890625,
+          "right": 335.9975891113281,
+          "bottom": 601.5349731445312,
+          "left": 232.14869689941406
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "touch": false,
+      "slide": 1,
+      "overflow": false,
+      "paper": {
+        "x": 20.603818893432617,
+        "y": 274.1069641113281,
+        "width": 365.8236083984375,
+        "height": 434.0673522949219,
+        "top": 274.1069641113281,
+        "right": 386.4274272918701,
+        "bottom": 708.17431640625,
+        "left": 20.603818893432617
+      },
+      "product": {
+        "left": 391.671875,
+        "right": 741.125,
+        "top": 361.25629664179104,
+        "bottom": 782.984375,
+        "width": 349.453125,
+        "height": 421.72807835820896
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-gallery-product.webp",
+      "caption": {
+        "x": 39.921875,
+        "y": 887.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 887.28125,
+        "right": 257.515625,
+        "bottom": 996,
+        "left": 39.921875
+      },
+      "hero": {
+        "x": 0,
+        "y": 97,
+        "width": 768,
+        "height": 927,
+        "top": 97,
+        "right": 768,
+        "bottom": 1024,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 159.0328369140625,
+          "height": 53.79425048828125
+        },
+        {
+          "width": 103.84889221191406,
+          "height": 53.16815185546875
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 65.70629119873047,
+          "y": 549.6290283203125,
+          "width": 159.0328369140625,
+          "height": 53.79425048828125,
+          "top": 549.6290283203125,
+          "right": 224.73912811279297,
+          "bottom": 603.4232788085938,
+          "left": 65.70629119873047
+        },
+        {
+          "x": 232.14869689941406,
+          "y": 548.3668212890625,
+          "width": 103.84889221191406,
+          "height": 53.16815185546875,
+          "top": 548.3668212890625,
+          "right": 335.9975891113281,
+          "bottom": 601.5349731445312,
+          "left": 232.14869689941406
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "touch": false,
+      "slide": 2,
+      "overflow": false,
+      "paper": {
+        "x": 20.603818893432617,
+        "y": 274.1069641113281,
+        "width": 365.8236083984375,
+        "height": 434.0673522949219,
+        "top": 274.1069641113281,
+        "right": 386.4274272918701,
+        "bottom": 708.17431640625,
+        "left": 20.603818893432617
+      },
+      "product": {
+        "left": 391.671875,
+        "right": 741.125,
+        "top": 513.2287487462387,
+        "bottom": 910,
+        "width": 349.453125,
+        "height": 396.7712512537613
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-coaching-product.webp",
+      "caption": {
+        "x": 39.921875,
+        "y": 887.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 887.28125,
+        "right": 257.515625,
+        "bottom": 996,
+        "left": 39.921875
+      },
+      "hero": {
+        "x": 0,
+        "y": 97,
+        "width": 768,
+        "height": 927,
+        "top": 97,
+        "right": 768,
+        "bottom": 1024,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 159.0328369140625,
+          "height": 53.79425048828125
+        },
+        {
+          "width": 103.84889221191406,
+          "height": 53.16815185546875
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 65.70629119873047,
+          "y": 549.6290283203125,
+          "width": 159.0328369140625,
+          "height": 53.79425048828125,
+          "top": 549.6290283203125,
+          "right": 224.73912811279297,
+          "bottom": 603.4232788085938,
+          "left": 65.70629119873047
+        },
+        {
+          "x": 232.14869689941406,
+          "y": 548.3668212890625,
+          "width": 103.84889221191406,
+          "height": 53.16815185546875,
+          "top": 548.3668212890625,
+          "right": 335.9975891113281,
+          "bottom": 601.5349731445312,
+          "left": 232.14869689941406
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "touch": false,
+      "slide": 3,
+      "overflow": false,
+      "paper": {
+        "x": 20.603818893432617,
+        "y": 274.1069641113281,
+        "width": 365.8236083984375,
+        "height": 434.0673522949219,
+        "top": 274.1069641113281,
+        "right": 386.4274272918701,
+        "bottom": 708.17431640625,
+        "left": 20.603818893432617
+      },
+      "product": {
+        "left": 391.671875,
+        "right": 741.125,
+        "top": 543.7213541666667,
+        "bottom": 910,
+        "width": 349.453125,
+        "height": 366.2786458333333
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-academy-product.webp",
+      "caption": {
+        "x": 39.921875,
+        "y": 887.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 887.28125,
+        "right": 257.515625,
+        "bottom": 996,
+        "left": 39.921875
+      },
+      "hero": {
+        "x": 0,
+        "y": 97,
+        "width": 768,
+        "height": 927,
+        "top": 97,
+        "right": 768,
+        "bottom": 1024,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 159.0328369140625,
+          "height": 53.79425048828125
+        },
+        {
+          "width": 103.84889221191406,
+          "height": 53.16815185546875
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 65.70629119873047,
+          "y": 549.6290283203125,
+          "width": 159.0328369140625,
+          "height": 53.79425048828125,
+          "top": 549.6290283203125,
+          "right": 224.73912811279297,
+          "bottom": 603.4232788085938,
+          "left": 65.70629119873047
+        },
+        {
+          "x": 232.14869689941406,
+          "y": 548.3668212890625,
+          "width": 103.84889221191406,
+          "height": 53.16815185546875,
+          "top": 548.3668212890625,
+          "right": 335.9975891113281,
+          "bottom": 601.5349731445312,
+          "left": 232.14869689941406
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "touch": false,
+      "slide": 4,
+      "overflow": false,
+      "paper": {
+        "x": 20.603818893432617,
+        "y": 274.1069641113281,
+        "width": 365.8236083984375,
+        "height": 434.0673522949219,
+        "top": 274.1069641113281,
+        "right": 386.4274272918701,
+        "bottom": 708.17431640625,
+        "left": 20.603818893432617
+      },
+      "product": {
+        "left": 391.671875,
+        "right": 741.125,
+        "top": 519.8807322485208,
+        "bottom": 910,
+        "width": 349.453125,
+        "height": 390.11926775147924
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-city-night-product.webp",
+      "caption": {
+        "x": 39.921875,
+        "y": 887.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 887.28125,
+        "right": 257.515625,
+        "bottom": 996,
+        "left": 39.921875
+      },
+      "hero": {
+        "x": 0,
+        "y": 97,
+        "width": 768,
+        "height": 927,
+        "top": 97,
+        "right": 768,
+        "bottom": 1024,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 159.0328369140625,
+          "height": 53.79425048828125
+        },
+        {
+          "width": 103.84889221191406,
+          "height": 53.16815185546875
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 65.70629119873047,
+          "y": 549.6290283203125,
+          "width": 159.0328369140625,
+          "height": 53.79425048828125,
+          "top": 549.6290283203125,
+          "right": 224.73912811279297,
+          "bottom": 603.4232788085938,
+          "left": 65.70629119873047
+        },
+        {
+          "x": 232.14869689941406,
+          "y": 548.3668212890625,
+          "width": 103.84889221191406,
+          "height": 53.16815185546875,
+          "top": 548.3668212890625,
+          "right": 335.9975891113281,
+          "bottom": 601.5349731445312,
+          "left": 232.14869689941406
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "touch": false,
+      "slide": 0,
+      "overflow": false,
+      "paper": {
+        "x": 216.95074462890625,
+        "y": 259.93438720703125,
+        "width": 485.7547607421875,
+        "height": 515.4124755859375,
+        "top": 259.93438720703125,
+        "right": 702.7055053710938,
+        "bottom": 775.3468627929688,
+        "left": 216.95074462890625
+      },
+      "product": {
+        "left": 976.796875,
+        "right": 1741.203125,
+        "top": 217.50132508833929,
+        "bottom": 963,
+        "width": 764.40625,
+        "height": 745.4986749116607
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-desk-product.webp",
+      "caption": {
+        "x": 219.828125,
+        "y": 940.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 940.28125,
+        "right": 437.421875,
+        "bottom": 1049,
+        "left": 219.828125
+      },
+      "hero": {
+        "x": 120,
+        "y": 97,
+        "width": 1680,
+        "height": 980,
+        "top": 97,
+        "right": 1800,
+        "bottom": 1077,
+        "left": 120
+      },
+      "targets": [
+        {
+          "width": 193.10873413085938,
+          "height": 54.1807861328125
+        },
+        {
+          "width": 128.7222900390625,
+          "height": 53.4503173828125
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 273.1951904296875,
+          "y": 637.01904296875,
+          "width": 193.10873413085938,
+          "height": 54.1807861328125,
+          "top": 637.01904296875,
+          "right": 466.3039245605469,
+          "bottom": 691.1998291015625,
+          "left": 273.1951904296875
+        },
+        {
+          "x": 477.7132568359375,
+          "y": 635.42919921875,
+          "width": 128.7222900390625,
+          "height": 53.4503173828125,
+          "top": 635.42919921875,
+          "right": 606.435546875,
+          "bottom": 688.8795166015625,
+          "left": 477.7132568359375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "touch": false,
+      "slide": 1,
+      "overflow": false,
+      "paper": {
+        "x": 216.95074462890625,
+        "y": 259.93438720703125,
+        "width": 485.7547607421875,
+        "height": 515.4124755859375,
+        "top": 259.93438720703125,
+        "right": 702.7055053710938,
+        "bottom": 775.3468627929688,
+        "left": 216.95074462890625
+      },
+      "product": {
+        "left": 1068.4838642888692,
+        "right": 1649.5161357111308,
+        "top": 121,
+        "bottom": 822.203125,
+        "width": 581.0322714222615,
+        "height": 701.203125
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-gallery-product.webp",
+      "caption": {
+        "x": 219.828125,
+        "y": 940.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 940.28125,
+        "right": 437.421875,
+        "bottom": 1049,
+        "left": 219.828125
+      },
+      "hero": {
+        "x": 120,
+        "y": 97,
+        "width": 1680,
+        "height": 980,
+        "top": 97,
+        "right": 1800,
+        "bottom": 1077,
+        "left": 120
+      },
+      "targets": [
+        {
+          "width": 193.10873413085938,
+          "height": 54.1807861328125
+        },
+        {
+          "width": 128.7222900390625,
+          "height": 53.4503173828125
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 273.1951904296875,
+          "y": 637.01904296875,
+          "width": 193.10873413085938,
+          "height": 54.1807861328125,
+          "top": 637.01904296875,
+          "right": 466.3039245605469,
+          "bottom": 691.1998291015625,
+          "left": 273.1951904296875
+        },
+        {
+          "x": 477.7132568359375,
+          "y": 635.42919921875,
+          "width": 128.7222900390625,
+          "height": 53.4503173828125,
+          "top": 635.42919921875,
+          "right": 606.435546875,
+          "bottom": 688.8795166015625,
+          "left": 477.7132568359375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "touch": false,
+      "slide": 2,
+      "overflow": false,
+      "paper": {
+        "x": 216.95074462890625,
+        "y": 259.93438720703125,
+        "width": 485.7547607421875,
+        "height": 515.4124755859375,
+        "top": 259.93438720703125,
+        "right": 702.7055053710938,
+        "bottom": 775.3468627929688,
+        "left": 216.95074462890625
+      },
+      "product": {
+        "left": 988.2075971731449,
+        "right": 1729.792402826855,
+        "top": 121,
+        "bottom": 963,
+        "width": 741.5848056537102,
+        "height": 842
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-coaching-product.webp",
+      "caption": {
+        "x": 219.828125,
+        "y": 940.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 940.28125,
+        "right": 437.421875,
+        "bottom": 1049,
+        "left": 219.828125
+      },
+      "hero": {
+        "x": 120,
+        "y": 97,
+        "width": 1680,
+        "height": 980,
+        "top": 97,
+        "right": 1800,
+        "bottom": 1077,
+        "left": 120
+      },
+      "targets": [
+        {
+          "width": 193.10873413085938,
+          "height": 54.1807861328125
+        },
+        {
+          "width": 128.7222900390625,
+          "height": 53.4503173828125
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 273.1951904296875,
+          "y": 637.01904296875,
+          "width": 193.10873413085938,
+          "height": 54.1807861328125,
+          "top": 637.01904296875,
+          "right": 466.3039245605469,
+          "bottom": 691.1998291015625,
+          "left": 273.1951904296875
+        },
+        {
+          "x": 477.7132568359375,
+          "y": 635.42919921875,
+          "width": 128.7222900390625,
+          "height": 53.4503173828125,
+          "top": 635.42919921875,
+          "right": 606.435546875,
+          "bottom": 688.8795166015625,
+          "left": 477.7132568359375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "touch": false,
+      "slide": 3,
+      "overflow": false,
+      "paper": {
+        "x": 216.95074462890625,
+        "y": 259.93438720703125,
+        "width": 485.7547607421875,
+        "height": 515.4124755859375,
+        "top": 259.93438720703125,
+        "right": 702.7055053710938,
+        "bottom": 775.3468627929688,
+        "left": 216.95074462890625
+      },
+      "product": {
+        "left": 976.796875,
+        "right": 1741.203125,
+        "top": 161.78900462962963,
+        "bottom": 963,
+        "width": 764.40625,
+        "height": 801.2109953703704
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-academy-product.webp",
+      "caption": {
+        "x": 219.828125,
+        "y": 940.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 940.28125,
+        "right": 437.421875,
+        "bottom": 1049,
+        "left": 219.828125
+      },
+      "hero": {
+        "x": 120,
+        "y": 97,
+        "width": 1680,
+        "height": 980,
+        "top": 97,
+        "right": 1800,
+        "bottom": 1077,
+        "left": 120
+      },
+      "targets": [
+        {
+          "width": 193.10873413085938,
+          "height": 54.1807861328125
+        },
+        {
+          "width": 128.7222900390625,
+          "height": 53.4503173828125
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 273.1951904296875,
+          "y": 637.01904296875,
+          "width": 193.10873413085938,
+          "height": 54.1807861328125,
+          "top": 637.01904296875,
+          "right": 466.3039245605469,
+          "bottom": 691.1998291015625,
+          "left": 273.1951904296875
+        },
+        {
+          "x": 477.7132568359375,
+          "y": 635.42919921875,
+          "width": 128.7222900390625,
+          "height": 53.4503173828125,
+          "top": 635.42919921875,
+          "right": 606.435546875,
+          "bottom": 688.8795166015625,
+          "left": 477.7132568359375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "touch": false,
+      "slide": 4,
+      "overflow": false,
+      "paper": {
+        "x": 216.95074462890625,
+        "y": 259.93438720703125,
+        "width": 485.7547607421875,
+        "height": 515.4124755859375,
+        "top": 259.93438720703125,
+        "right": 702.7055053710938,
+        "bottom": 775.3468627929688,
+        "left": 216.95074462890625
+      },
+      "product": {
+        "left": 981.8851590106008,
+        "right": 1736.1148409893992,
+        "top": 121,
+        "bottom": 963,
+        "width": 754.2296819787986,
+        "height": 842
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-city-night-product.webp",
+      "caption": {
+        "x": 219.828125,
+        "y": 940.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 940.28125,
+        "right": 437.421875,
+        "bottom": 1049,
+        "left": 219.828125
+      },
+      "hero": {
+        "x": 120,
+        "y": 97,
+        "width": 1680,
+        "height": 980,
+        "top": 97,
+        "right": 1800,
+        "bottom": 1077,
+        "left": 120
+      },
+      "targets": [
+        {
+          "width": 193.10873413085938,
+          "height": 54.1807861328125
+        },
+        {
+          "width": 128.7222900390625,
+          "height": 53.4503173828125
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 273.1951904296875,
+          "y": 637.01904296875,
+          "width": 193.10873413085938,
+          "height": 54.1807861328125,
+          "top": 637.01904296875,
+          "right": 466.3039245605469,
+          "bottom": 691.1998291015625,
+          "left": 273.1951904296875
+        },
+        {
+          "x": 477.7132568359375,
+          "y": 635.42919921875,
+          "width": 128.7222900390625,
+          "height": 53.4503173828125,
+          "top": 635.42919921875,
+          "right": 606.435546875,
+          "bottom": 688.8795166015625,
+          "left": 477.7132568359375
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 812,
+      "height": 375,
+      "touch": true,
+      "slide": 0,
+      "overflow": false,
+      "paper": {
+        "x": 18.74371337890625,
+        "y": 78.86381530761719,
+        "width": 380.3875732421875,
+        "height": 227.89735412597656,
+        "top": 78.86381530761719,
+        "right": 399.13128662109375,
+        "bottom": 306.76116943359375,
+        "left": 18.74371337890625
+      },
+      "product": {
+        "left": 422.234375,
+        "right": 783.59375,
+        "top": 218.57884275618375,
+        "bottom": 571,
+        "width": 361.359375,
+        "height": 352.42115724381625
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-desk-product.webp",
+      "caption": {
+        "x": 42.21875,
+        "y": 548.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 548.28125,
+        "right": 259.8125,
+        "bottom": 657,
+        "left": 42.21875
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 812,
+        "height": 620,
+        "top": 65,
+        "right": 812,
+        "bottom": 685,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 158.94207763671875,
+          "height": 45.79472351074219
+        },
+        {
+          "width": 103.75813293457031,
+          "height": 45.16865539550781
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 54.506996154785156,
+          "y": 236.58229064941406,
+          "width": 158.94207763671875,
+          "height": 45.79472351074219,
+          "top": 236.58229064941406,
+          "right": 213.4490737915039,
+          "bottom": 282.37701416015625,
+          "left": 54.506996154785156
+        },
+        {
+          "x": 220.9494171142578,
+          "y": 235.32005310058594,
+          "width": 103.75813293457031,
+          "height": 45.16865539550781,
+          "top": 235.32005310058594,
+          "right": 324.7075500488281,
+          "bottom": 280.48870849609375,
+          "left": 220.9494171142578
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 812,
+      "height": 375,
+      "touch": true,
+      "slide": 1,
+      "overflow": false,
+      "paper": {
+        "x": 18.74371337890625,
+        "y": 78.86381530761719,
+        "width": 380.3875732421875,
+        "height": 227.89735412597656,
+        "top": 78.86381530761719,
+        "right": 399.13128662109375,
+        "bottom": 306.76116943359375,
+        "left": 18.74371337890625
+      },
+      "product": {
+        "left": 422.76648078621906,
+        "right": 783.0616442137809,
+        "top": 89,
+        "bottom": 523.8125,
+        "width": 360.2951634275619,
+        "height": 434.8125
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-lifestyle-gallery-product.webp",
+      "caption": {
+        "x": 42.21875,
+        "y": 548.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 548.28125,
+        "right": 259.8125,
+        "bottom": 657,
+        "left": 42.21875
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 812,
+        "height": 620,
+        "top": 65,
+        "right": 812,
+        "bottom": 685,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 158.94207763671875,
+          "height": 45.79472351074219
+        },
+        {
+          "width": 103.75813293457031,
+          "height": 45.16865539550781
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 54.506996154785156,
+          "y": 236.58229064941406,
+          "width": 158.94207763671875,
+          "height": 45.79472351074219,
+          "top": 236.58229064941406,
+          "right": 213.4490737915039,
+          "bottom": 282.37701416015625,
+          "left": 54.506996154785156
+        },
+        {
+          "x": 220.9494171142578,
+          "y": 235.32005310058594,
+          "width": 103.75813293457031,
+          "height": 45.16865539550781,
+          "top": 235.32005310058594,
+          "right": 324.7075500488281,
+          "bottom": 280.48870849609375,
+          "left": 220.9494171142578
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 812,
+      "height": 375,
+      "touch": true,
+      "slide": 2,
+      "overflow": false,
+      "paper": {
+        "x": 18.74371337890625,
+        "y": 78.86381530761719,
+        "width": 380.3875732421875,
+        "height": 227.89735412597656,
+        "top": 78.86381530761719,
+        "right": 399.13128662109375,
+        "bottom": 306.76116943359375,
+        "left": 18.74371337890625
+      },
+      "product": {
+        "left": 422.234375,
+        "right": 783.59375,
+        "top": 160.71031845536612,
+        "bottom": 571,
+        "width": 361.359375,
+        "height": 410.2896815446339
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-coaching-product.webp",
+      "caption": {
+        "x": 42.21875,
+        "y": 548.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 548.28125,
+        "right": 259.8125,
+        "bottom": 657,
+        "left": 42.21875
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 812,
+        "height": 620,
+        "top": 65,
+        "right": 812,
+        "bottom": 685,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 158.94207763671875,
+          "height": 45.79472351074219
+        },
+        {
+          "width": 103.75813293457031,
+          "height": 45.16865539550781
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 54.506996154785156,
+          "y": 236.58229064941406,
+          "width": 158.94207763671875,
+          "height": 45.79472351074219,
+          "top": 236.58229064941406,
+          "right": 213.4490737915039,
+          "bottom": 282.37701416015625,
+          "left": 54.506996154785156
+        },
+        {
+          "x": 220.9494171142578,
+          "y": 235.32005310058594,
+          "width": 103.75813293457031,
+          "height": 45.16865539550781,
+          "top": 235.32005310058594,
+          "right": 324.7075500488281,
+          "bottom": 280.48870849609375,
+          "left": 220.9494171142578
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 812,
+      "height": 375,
+      "touch": true,
+      "slide": 3,
+      "overflow": false,
+      "paper": {
+        "x": 18.74371337890625,
+        "y": 78.86381530761719,
+        "width": 380.3875732421875,
+        "height": 227.89735412597656,
+        "top": 78.86381530761719,
+        "right": 399.13128662109375,
+        "bottom": 306.76116943359375,
+        "left": 18.74371337890625
+      },
+      "product": {
+        "left": 422.234375,
+        "right": 783.59375,
+        "top": 192.24184027777778,
+        "bottom": 571,
+        "width": 361.359375,
+        "height": 378.7581597222222
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-academy-product.webp",
+      "caption": {
+        "x": 42.21875,
+        "y": 548.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 548.28125,
+        "right": 259.8125,
+        "bottom": 657,
+        "left": 42.21875
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 812,
+        "height": 620,
+        "top": 65,
+        "right": 812,
+        "bottom": 685,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 158.94207763671875,
+          "height": 45.79472351074219
+        },
+        {
+          "width": 103.75813293457031,
+          "height": 45.16865539550781
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 54.506996154785156,
+          "y": 236.58229064941406,
+          "width": 158.94207763671875,
+          "height": 45.79472351074219,
+          "top": 236.58229064941406,
+          "right": 213.4490737915039,
+          "bottom": 282.37701416015625,
+          "left": 54.506996154785156
+        },
+        {
+          "x": 220.9494171142578,
+          "y": 235.32005310058594,
+          "width": 103.75813293457031,
+          "height": 45.16865539550781,
+          "top": 235.32005310058594,
+          "right": 324.7075500488281,
+          "bottom": 280.48870849609375,
+          "left": 220.9494171142578
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    },
+    {
+      "width": 812,
+      "height": 375,
+      "touch": true,
+      "slide": 4,
+      "overflow": false,
+      "paper": {
+        "x": 18.74371337890625,
+        "y": 78.86381530761719,
+        "width": 380.3875732421875,
+        "height": 227.89735412597656,
+        "top": 78.86381530761719,
+        "right": 399.13128662109375,
+        "bottom": 306.76116943359375,
+        "left": 18.74371337890625
+      },
+      "product": {
+        "left": 422.234375,
+        "right": 783.59375,
+        "top": 167.58894230769232,
+        "bottom": 571,
+        "width": 361.359375,
+        "height": 403.4110576923077
+      },
+      "fit": "contain",
+      "src": "http://127.0.0.1:3001/hero/paper-premium-city-night-product.webp",
+      "caption": {
+        "x": 42.21875,
+        "y": 548.28125,
+        "width": 217.59375,
+        "height": 108.71875,
+        "top": 548.28125,
+        "right": 259.8125,
+        "bottom": 657,
+        "left": 42.21875
+      },
+      "hero": {
+        "x": 0,
+        "y": 65,
+        "width": 812,
+        "height": 620,
+        "top": 65,
+        "right": 812,
+        "bottom": 685,
+        "left": 0
+      },
+      "targets": [
+        {
+          "width": 158.94207763671875,
+          "height": 45.79472351074219
+        },
+        {
+          "width": 103.75813293457031,
+          "height": 45.16865539550781
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 56,
+          "height": 50
+        },
+        {
+          "width": 44,
+          "height": 44
+        }
+      ],
+      "buttons": [
+        {
+          "x": 54.506996154785156,
+          "y": 236.58229064941406,
+          "width": 158.94207763671875,
+          "height": 45.79472351074219,
+          "top": 236.58229064941406,
+          "right": 213.4490737915039,
+          "bottom": 282.37701416015625,
+          "left": 54.506996154785156
+        },
+        {
+          "x": 220.9494171142578,
+          "y": 235.32005310058594,
+          "width": 103.75813293457031,
+          "height": 45.16865539550781,
+          "top": 235.32005310058594,
+          "right": 324.7075500488281,
+          "bottom": 280.48870849609375,
+          "left": 220.9494171142578
+        }
+      ],
+      "mask": "url(\"http://127.0.0.1:3001/hero/sheet-mask.svg\")"
+    }
+  ],
+  "errors": []
+}

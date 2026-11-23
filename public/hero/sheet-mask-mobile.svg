@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 250" preserveAspectRatio="none">
+  <defs><mask id="paper"><rect width="375" height="250" rx="3" fill="white"/><g fill="black">
+    <circle cx="10" cy="30" r="5"/><path d="M0 28h10v4H0z"/>
+    <circle cx="10" cy="57" r="5"/><path d="M0 55h10v4H0z"/>
+    <circle cx="10" cy="84" r="5"/><path d="M0 82h10v4H0z"/>
+    <circle cx="10" cy="166" r="5"/><path d="M0 164h10v4H0z"/>
+    <circle cx="10" cy="193" r="5"/><path d="M0 191h10v4H0z"/>
+    <circle cx="10" cy="220" r="5"/><path d="M0 218h10v4H0z"/>
+  </g></mask></defs><rect width="375" height="250" fill="white" mask="url(#paper)"/>
+</svg>

@@ -1,0 +1,37 @@
+{
+  "zolotoe-vremya": {
+    "uid": "556041946942",
+    "name": "Золотое время",
+    "url": "https://static.tildacdn.com/stor3936-3331-4361-a662-363261303433/cabc1d1e4d6ebb383c4be5ddf1d4ca7e.jpg",
+    "sha256": "8e2483a2bb850ad26964e5c390fa8d8540f3a06f75766f3836eda5b4105206b4",
+    "mask": "docs/design/lifestyle-hero/masks/gold-lying.png"
+  },
+  "vazhnaya-ptitsa": {
+    "uid": "937894370012",
+    "name": "Важная птица",
+    "url": "https://static.tildacdn.com/stor3937-3535-4635-b962-366364396166/b3be0c43ac6b6c3fde3c11029f9ce5a3.jpg",
+    "sha256": "2a6c919f6885e44848fbbce28cfa54cc69968d907041ab27885fd2fb250233ac",
+    "mask": "docs/design/paper-hero/masks/bird-front.png"
+  },
+  "botanika": {
+    "uid": "760853733322",
+    "name": "Ботаника",
+    "url": "https://static.tildacdn.com/stor3361-6135-4739-a638-306237373065/f5c9fa685143fc9a9f2eda1417e89cb5.jpg",
+    "sha256": "51766b3b5c6d4cc82682c518e40eea701634359948db4a904ada2f7e5d888127",
+    "mask": "docs/design/wallpapers/masks/botanika.png"
+  },
+  "vesna": {
+    "uid": "725111859732",
+    "name": "Весна",
+    "url": "https://static.tildacdn.com/stor3237-6664-4764-b136-353830393732/21b79bc02db40c37c8d95a3f005784e6.jpg",
+    "sha256": "a1abeba0a46cc0bfdfdf5884b8bf8bd03686f457a16057c7121c4f503e4b5428",
+    "mask": "docs/design/wallpapers/masks/vesna.png"
+  },
+  "krasnye-koni": {
+    "uid": "763698818122",
+    "name": "Красные кони",
+    "url": "https://static.tildacdn.com/stor3035-6530-4761-a362-343663636332/22272e7bd0c8f545179c2a5f178388c4.jpg",
+    "sha256": "df3265f95b30a7997fd3523b20c638ddc675b36d1e15235d9a2c23fb3f5fd3ff",
+    "mask": "docs/design/wallpapers/masks/krasnye-koni.png"
+  }
+}

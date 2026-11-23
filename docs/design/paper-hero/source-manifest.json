@@ -1,0 +1,68 @@
+[
+  {
+    "id": "lifestyle-desk",
+    "uid": "556041946942",
+    "name": "Золотое время",
+    "alt": "Настоящий ежедневник «Золотое время» лежит на столе у окна с видом на Москва-Сити, рядом лампа и живопись",
+    "tone": "#6e492f",
+    "desktop": "/hero/lifestyle-desk-2048.webp",
+    "desktopSmall": "/hero/lifestyle-desk-1600.webp",
+    "mobile": "/hero/lifestyle-desk-mobile.webp",
+    "thumb": "/hero/lifestyle-desk-thumb.webp"
+  },
+  {
+    "id": "lifestyle-writing",
+    "uid": "937894370012",
+    "name": "Важная птица",
+    "alt": "Раскрытый ежедневник «Важная птица» на рабочем столе, рука с ручкой над страницей",
+    "tone": "#6e492f",
+    "desktop": "/hero/lifestyle-writing-2048.webp",
+    "desktopSmall": "/hero/lifestyle-writing-1600.webp",
+    "mobile": "/hero/lifestyle-writing-mobile.webp",
+    "thumb": "/hero/lifestyle-writing-thumb.webp"
+  },
+  {
+    "id": "lifestyle-gallery",
+    "uid": "937894370012",
+    "name": "Важная птица",
+    "alt": "Ежедневник «Важная птица» на зелёной мраморной подставке в кабинете с живописью",
+    "tone": "#634530",
+    "desktop": "/hero/lifestyle-gallery-2048.webp",
+    "desktopSmall": "/hero/lifestyle-gallery-1600.webp",
+    "mobile": "/hero/lifestyle-gallery-mobile.webp",
+    "thumb": "/hero/lifestyle-gallery-thumb.webp"
+  },
+  {
+    "id": "premium-coaching",
+    "uid": "760853733322",
+    "name": "Ботаника",
+    "alt": "Ежедневник «Ботаника» в светлом кабинете для работы с коучем",
+    "tone": "#b39b88",
+    "desktop": "/hero/premium-coaching-2560.webp",
+    "desktopSmall": "/hero/premium-coaching-1600.webp",
+    "mobile": "/hero/premium-coaching-mobile.webp",
+    "thumb": "/hero/premium-coaching-thumb.webp"
+  },
+  {
+    "id": "premium-academy",
+    "uid": "725111859732",
+    "name": "Весна",
+    "alt": "Ежедневник «Весна» в современном пространстве корпоративного обучения",
+    "tone": "#ac8c72",
+    "desktop": "/hero/premium-academy-2560.webp",
+    "desktopSmall": "/hero/premium-academy-1600.webp",
+    "mobile": "/hero/premium-academy-mobile.webp",
+    "thumb": "/hero/premium-academy-thumb.webp"
+  },
+  {
+    "id": "premium-city-night",
+    "uid": "763698818122",
+    "name": "Красные кони",
+    "alt": "Ежедневник «Красные кони» на рабочем столе с вечерней панорамой Москва-Сити",
+    "tone": "#6c564c",
+    "desktop": "/hero/premium-city-night-2560.webp",
+    "desktopSmall": "/hero/premium-city-night-1600.webp",
+    "mobile": "/hero/premium-city-night-mobile.webp",
+    "thumb": "/hero/premium-city-night-thumb.webp"
+  }
+]

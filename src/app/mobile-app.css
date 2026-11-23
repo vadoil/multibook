@@ -93,6 +93,7 @@
 }
 
 @media (max-width: 360px) {
+  .store-body:has(.mobile-tabbar) .wp-hero { min-height: max(720px, var(--wp-h)); }
   .store-body:has(.mobile-tabbar) .wp-copy { padding-inline: 16px; }
   .store-body:has(.mobile-tabbar) .wp-copy p { font-size: 13.5px; }
   .store-body:has(.mobile-tabbar) .wp-actions { gap: 8px; }
