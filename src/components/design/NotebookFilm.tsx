@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 export function NotebookFilm() {
   const video = useRef<HTMLVideoElement>(null);
   const [paused, setPaused] = useState(false);
+  const [manualPlayback, setManualPlayback] = useState(false);
   const [reduced, setReduced] = useState(true);
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
@@ -26,7 +27,15 @@ export function NotebookFilm() {
       observer.disconnect();
     };
   }, []);
-  const stopped = paused || reduced || hovered || focused || !visible;
+  const stopped =
+    paused || reduced || !visible || (!manualPlayback && (hovered || focused));
+  const togglePlayback = () => {
+    const nextPaused = !paused;
+    setPaused(nextPaused);
+    setManualPlayback(!nextPaused);
+    if (nextPaused) video.current?.pause();
+    else void video.current?.play().catch(() => {});
+  };
   useEffect(() => {
     if (!video.current) return;
     let cancelled = false;
@@ -72,7 +81,7 @@ export function NotebookFilm() {
               : "Приостановить сборку блокнота"
           }
           aria-pressed={paused}
-          onClick={() => setPaused(!paused)}
+          onClick={togglePlayback}
         >
           <svg
             viewBox="0 0 24 24"
