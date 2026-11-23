@@ -18,4 +18,4 @@
  html:has(.store-header .design-variant-nav) { scroll-padding-top: 141px; }
  .store-body:has(.mobile-tabbar):has(.store-header .design-variant-nav) .wp-hero { --wp-h: calc(100svh - var(--mobile-header-height) - var(--mobile-nav-height) - env(safe-area-inset-bottom)); }
 }
-@media (max-width: 360px) { .design-variant-store > span { display: none; } }
+@media (max-width: 360px) { .design-variant-store > svg { display: none; } }
