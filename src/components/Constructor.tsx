@@ -9,8 +9,10 @@ import { formatPrice } from "@/lib/money";
 import { NotebookPreview, type NotebookLook, type Ruling } from "./NotebookPreview";
 import { PageSwatch } from "./Swatches";
 import { CategoryTabIcon, StoreTabButton, StoreTabLink } from "./store/StoreTab";
-import coverArtwork from "./constructor/cover-artwork.json";
 import discPhotos from "./constructor/disc-photos.json";
+import { getCoverArtwork as artwork } from "./constructor/coverArt";
+import { CoverCarousel } from "./constructor/CoverCarousel";
+import { AccessoryCarousel, type AccessoryOpt } from "./constructor/AccessoryCarousel";
 
 export type CoverOpt = {
   id: number;
@@ -57,8 +59,21 @@ const RULING: Record<Ruling, string> = { grid: "клетка", dot: "точка"
 const PRINT_HEX = "#33403f";
 const KIT_DISCS = { hex: "#2f2f30", diameter: 18 };
 const MINI_SHEETS = 40; // для толщины превью, у мини-блоков нет числа листов в данных
-type Artwork = { front: string; back?: string; binding?: "top"; discs?: number; accessory?: string };
-const artwork = (image: string | null | undefined): Artwork | undefined => image ? (coverArtwork as Record<string, Artwork>)[image] : undefined;
+
+/** Restore the choice for this history entry when Next reuses an older page snapshot. */
+function restoreChoice(format: FormatKey, initial: Initial, covers: CoverOpt[], blocks: BlockOpt[], discs: DiscOpt[]): Initial {
+  if (typeof window === "undefined") return initial;
+  const saved = window.history.state?.multibookConstructor;
+  if (saved?.format !== format || saved?.query !== window.location.search.slice(1)) return initial;
+  const choice = saved.selection as Initial | undefined;
+  if (!choice || !choice.blocks || typeof choice.blocks !== "object" || Array.isArray(choice.blocks)) return initial;
+  if (choice.cover !== undefined && !covers.some(item => item.id === choice.cover)) return initial;
+  if (choice.back !== undefined && !covers.some(item => item.id === choice.back && !item.isSet)) return initial;
+  if (choice.disc !== undefined && choice.disc !== null && !discs.some(item => item.id === choice.disc)) return initial;
+  const maximum = FORMATS[format].mode === "parts" ? MAX_A5_BLOCKS : MAX_MINI_BLOCKS;
+  if (!Object.entries(choice.blocks).every(([id, quantity]) => blocks.some(item => item.id === Number(id)) && Number.isInteger(quantity) && quantity > 0 && quantity <= maximum)) return initial;
+  return choice;
+}
 
 function Step({ n, title, hint, done, children, aside }: { n: number; title: string; hint?: string; done: boolean; children: React.ReactNode; aside?: React.ReactNode }) {
   return (
@@ -111,25 +126,27 @@ export function Constructor({
   covers,
   blocks,
   discs,
+  accessories,
   initial,
 }: {
   format: FormatKey;
   covers: CoverOpt[];
   blocks: BlockOpt[];
   discs: DiscOpt[];
+  accessories: AccessoryOpt[];
   initial: Initial;
 }) {
   const F = FORMATS[format];
   const parts = F.mode === "parts";
 
-  const [coverId, setCoverId] = useState(initial.cover);
-  const [backId, setBackId] = useState(initial.back);
-  const [blockQty, setBlockQty] = useState<Record<number, number>>(initial.blocks);
-  const startDisc = initial.disc ? discs.find((d) => d.id === initial.disc) : undefined;
+  const [start] = useState(() => restoreChoice(format, initial, covers, blocks, discs));
+  const [coverId, setCoverId] = useState(start.cover);
+  const [backId, setBackId] = useState(start.back);
+  const [blockQty, setBlockQty] = useState<Record<number, number>>(start.blocks);
+  const startDisc = start.disc ? discs.find((d) => d.id === start.disc) : undefined;
   const [variant, setVariant] = useState<string | null>(startDisc?.variant ?? (parts ? (discs[0]?.variant ?? null) : null));
   const [wantD, setWantD] = useState<18 | 24>(startDisc?.diameter ?? (parts ? 24 : 18));
   const [view, setView] = useState<"closed" | "open" | "back">("closed");
-  const [allCovers, setAllCovers] = useState(false);
   const [coverKind, setCoverKind] = useState<"all" | "set" | "print" | "soft">("all");
   const [added, setAdded] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -139,7 +156,7 @@ export function Constructor({
   const cover = covers.find((c) => c.id === coverId);
   const backIncluded = !parts || !!cover?.isSet;
   const back = backIncluded ? undefined : covers.find((c) => c.id === backId && !c.isSet);
-  const rearOptions = covers.filter((c) => !c.isSet);
+  const rearOptions = covers.filter((c) => !c.isSet).sort((a, b) => Number(!!artwork(b.image)?.back) - Number(!!artwork(a.image)?.back));
   const frontArt = artwork(cover?.image);
   const rearArt = artwork(back?.image);
   const chosen = blocks.filter((b) => blockQty[b.id]).map((b) => ({ ...b, qty: blockQty[b.id] }));
@@ -178,7 +195,7 @@ export function Constructor({
   const ruling = parts ? main?.ruling : (cover?.ruling ?? chosen[0]?.ruling);
   const look: NotebookLook = {
     front: cover ? { hex: cover.hex ?? PRINT_HEX, print: cover.print, artwork: frontArt?.front } : undefined,
-    back: back ? { hex: back.hex ?? PRINT_HEX, artwork: rearArt?.front } : backIncluded && cover ? { hex: cover.hex ?? PRINT_HEX, artwork: frontArt?.back } : undefined,
+    back: back ? { hex: back.hex ?? PRINT_HEX, artwork: rearArt?.back } : backIncluded && cover ? { hex: cover.hex ?? PRINT_HEX, artwork: frontArt?.back } : undefined,
     discs: disc ? { hex: disc.hex, diameter: disc.diameter, metal: disc.metal || disc.finishKind === "metal" } : !parts && cover ? KIT_DISCS : undefined,
     sheets,
     paper: (main ?? chosen[0])?.paper,
@@ -200,7 +217,11 @@ export function Constructor({
     return q.toString();
   }, [format, cover, back, chosen, disc]);
   useEffect(() => {
-    window.history.replaceState(null, "", `/constructor?${query}`);
+    window.history.replaceState({ multibookConstructor: {
+      format,
+      query,
+      selection: { cover: cover?.id, back: back?.id, blocks: Object.fromEntries(chosen.map(item => [item.id, item.qty])), disc: disc?.id ?? null },
+    } }, "", `/constructor?${query}`);
     setAdded(false);
   }, [query]);
 
@@ -211,8 +232,6 @@ export function Constructor({
     soft: covers.filter((c) => !c.isSet),
   };
   const coverList = parts ? kinds[coverKind] : covers;
-  const visibleCovers = allCovers || coverList.length <= 9 ? [...coverList] : coverList.slice(0, 8);
-  if (cover && !visibleCovers.includes(cover) && coverList.includes(cover)) visibleCovers[visibleCovers.length - 1] = cover;
 
   const setQty = (id: number, n: number) =>
     setBlockQty((q) => {
@@ -340,7 +359,7 @@ export function Constructor({
         </div>
       </aside>
 
-      <div className="grid gap-12 lg:order-1">
+      <div className="constructor-steps grid gap-12 lg:order-1">
         <Step
           n={1}
           title={parts ? "Передняя обложка" : "Блокнот"}
@@ -348,7 +367,7 @@ export function Constructor({
           done={!!cover}
           aside={
             parts && (
-              <div className="flex flex-wrap gap-1 text-sm">
+              <div className="store-tabs-row" role="group" aria-label="Категории обложек">
                 {(
                   [
                     ["all", "Все"],
@@ -367,38 +386,21 @@ export function Constructor({
             )
           }
         >
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
-            {visibleCovers.map((c) => (
-              <button key={c.id} type="button" onClick={() => { setCoverId(c.id); if (c.isSet) setBackId(undefined); }} disabled={!c.available} aria-pressed={coverId === c.id} className={`constructor-cover group relative p-1.5 text-left ${pick}`}>
-                <div className="relative aspect-square overflow-hidden rounded-2xl bg-[#efe9df]">
-                  {c.image && <Image src={artwork(c.image)?.front ?? c.image} alt="" fill sizes="(min-width:1280px) 200px, 45vw" className="object-contain transition duration-500 group-hover:scale-105" />}
-                  {c.hex && <span className="absolute bottom-2 left-2 size-4 rounded-full ring-2 ring-white" style={{ background: c.hex }} />}
-                </div>
-                <Check />
-                <span className="mt-2 block px-1 text-sm font-medium leading-snug">{c.title}</span>
-                <span className="block px-1 text-sm text-muted">
-                  {c.note} · <b className="text-ink">{formatPrice(c.price)}</b>
-                </span>
-              </button>
-            ))}
-          </div>
-          {coverList.length > 9 && (
-            <StoreTabButton onClick={() => setAllCovers((v) => !v)} aria-expanded={allCovers} className="mt-4 store-tab-compact">
-              {allCovers ? "Свернуть" : `Показать все ${coverList.length}`}
-            </StoreTabButton>
-          )}
+          <CoverCarousel covers={coverList} selectedId={coverId} side="front" onSelect={c => { setCoverId(c.id); setView("closed"); if (c.isSet) setBackId(undefined); }} />
         </Step>
 
         {parts && <Step n={2} title="Задняя обложка" hint={backIncluded ? "В выбранном комплекте уже две обложки" : "Нужна для полной сборки. Можно выбрать ту же модель или сочетать разные"} done={backIncluded || !!back?.available}>
-          {backIncluded ? <div className="constructor-included">
-            <NotebookPreview look={look} view="back" className="w-24 shrink-0" label="Задняя обложка из комплекта" />
-            <div><b>Входит в комплект</b><p className="mt-1 text-sm text-muted">Передняя и задняя обложки уже учтены в цене. Доплачивать за вторую не нужно.</p></div>
-          </div> : <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
-            {rearOptions.map(c => <button key={c.id} type="button" onClick={() => { setBackId(c.id); setView("back"); }} disabled={!c.available} aria-pressed={back?.id === c.id} className={`constructor-cover group relative p-1.5 text-left ${pick}`}>
-              <div className="relative aspect-square overflow-hidden rounded-2xl bg-card">{c.image && <Image src={artwork(c.image)?.front ?? c.image} alt="" fill sizes="(min-width:1280px) 200px, 45vw" className="object-contain" />}</div>
-              <Check /><span className="mt-2 block px-1 text-sm font-medium leading-snug">{c.title}</span><b className="block px-1 text-sm">{formatPrice(c.price)}</b>
-            </button>)}
-          </div>}
+          {backIncluded ? <div className="constructor-kit-covers">
+            <div className="constructor-kit-faces">
+              {([['closed', 'Передняя', frontArt?.front], ['back', 'Задняя', frontArt?.back]] as const).map(([face, title, image]) => (
+                <button key={face} type="button" onClick={() => setView(face)} aria-pressed={view === face} aria-label={`Показать: ${title.toLowerCase()} обложка из комплекта`} className="constructor-kit-face">
+                  <span className="constructor-cover-photo">{image ? <Image src={image} alt="" fill sizes="(max-width:760px) 40vw, 200px" className="object-contain" /> : <span className="constructor-no-photo"><CategoryTabIcon type="Обложки" /><span>Фото этой стороны нет</span></span>}</span>
+                  <span>{title}</span>
+                </button>
+              ))}
+            </div>
+            <p className="mt-3 text-sm text-muted">Обе обложки входят в комплект и уже учтены в цене.</p>
+          </div> : <CoverCarousel covers={rearOptions} selectedId={back?.id} side="back" onSelect={c => { setBackId(c.id); setView("back"); }} />}
         </Step>}
 
         <Step
@@ -503,7 +505,12 @@ export function Constructor({
           </StoreTabLink>
         </Step>
 
-        <section className="border-t border-line pt-6" aria-labelledby="constructor-extra"><h2 id="constructor-extra" className="flex items-center gap-2 font-display text-2xl"><CategoryTabIcon type="Аксессуары" />Что ещё добавить?</h2><p className="mt-2 text-sm text-muted">Ручки, держатель для ручки, дырокол и коробка — по желанию, отдельно от сборки.</p><div className="store-tabs-row mt-4"><StoreTabLink href="/catalog?type=Аксессуары" icon={<CategoryTabIcon type="Аксессуары" />}>Аксессуары</StoreTabLink><StoreTabLink href={`/catalog?type=Блоки&format=${encodeURIComponent(F.db)}`} icon={<CategoryTabIcon type="Блоки" />}>Блоки {F.label}</StoreTabLink></div></section>
+        <section className="constructor-extras border-t border-line pt-6" aria-labelledby="constructor-extra">
+          <h2 id="constructor-extra" className="flex items-center gap-2 font-display text-2xl"><CategoryTabIcon type="Аксессуары" />Что ещё добавить?</h2>
+          <p className="mt-2 text-sm text-muted">Все аксессуары из каталога — отдельно от сборки.</p>
+          {accessories.length > 0 && <AccessoryCarousel accessories={accessories} />}
+          <StoreTabLink href="/catalog?type=Аксессуары" icon={<CategoryTabIcon type="Аксессуары" />} className="mt-4 store-tab-compact">Открыть раздел аксессуаров</StoreTabLink>
+        </section>
       </div>
 
       {/* Телефон: итог и кнопка всегда под пальцем. */}

@@ -5,6 +5,37 @@
 .constructor-composition li > span:first-child { white-space: normal; overflow: visible; }
 .constructor-cover, .constructor-block, .constructor-disc { border-radius: 10px; }
 .constructor-cover > div { border-radius: 8px; }
+.constructor-steps, .constructor-carousel { min-width: 0; }
+.constructor-steps { grid-template-columns: minmax(0, 1fr); }
+.constructor-steps > section { min-width: 0; }
+.constructor-carousel { width: 100%; }
+.constructor-carousel-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.constructor-carousel-count { color: var(--color-muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.constructor-carousel-arrow { width: 44px; padding: 8px; }
+.constructor-carousel-track { position: relative; display: grid; grid-auto-flow: column; grid-auto-columns: clamp(172px, 58vw, 232px); gap: 16px; width: 100%; max-width: 100%; margin: 0; padding: 8px 8px 16px; list-style: none; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scroll-padding-inline: 8px; scrollbar-width: thin; scrollbar-color: var(--color-line) transparent; }
+.constructor-carousel-track > li { min-width: 0; display: flex; scroll-snap-align: start; }
+.constructor-carousel-track:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 10px; }
+.constructor-cover-card, .constructor-accessory-card { position: relative; display: flex; flex: 1; flex-direction: column; align-items: stretch; gap: 6px; width: 100%; padding: 8px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-card); color: var(--color-ink); text-align: left; text-decoration: none; }
+.constructor-cover-card:hover, .constructor-accessory-card:hover { border-color: var(--color-ink); }
+.constructor-cover-card[aria-pressed="true"] { border-color: var(--color-accent); box-shadow: inset 0 0 0 1px var(--color-accent); }
+.constructor-cover-card:disabled { opacity: .4; }
+.constructor-cover-photo { position: relative; display: flex; align-items: stretch; gap: 5px; aspect-ratio: 1; width: 100%; padding: 8px; border-radius: 7px; background: var(--color-paper); }
+.constructor-cover-image { position: relative; display: block; flex: 1; min-width: 0; }
+.constructor-cover-photo > .constructor-no-photo { flex: 1; height: auto; text-align: center; }
+.constructor-cover-pair-photo { gap: 8px; }
+.constructor-cover-check { position: absolute; top: 8px; right: 8px; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--color-ink); color: var(--color-card); }
+.constructor-cover-name { display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; font-size: 14px; line-height: 1.4; font-weight: 500; }
+.constructor-cover-note { font-size: 12px; line-height: 1.4; color: var(--color-muted); }
+.constructor-cover-card > b, .constructor-accessory-card > b { margin-top: auto; font-size: 15px; }
+.constructor-accessory-photo { position: relative; display: block; aspect-ratio: 1; width: 100%; border-radius: 7px; overflow: hidden; background: var(--color-paper); }
+.constructor-accessory-open { display: flex; justify-content: space-between; align-items: center; min-height: 32px; font-size: 12px; color: var(--color-muted); }
+.constructor-kit-covers { padding: 16px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-card); }
+.constructor-kit-faces { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 480px; }
+.constructor-kit-face { display: grid; gap: 8px; padding: 8px; border: 1px solid var(--color-line); border-radius: 10px; text-align: center; font-size: 14px; }
+.constructor-kit-face[aria-pressed="true"] { border-color: var(--color-accent); box-shadow: inset 0 0 0 1px var(--color-accent); }
+.constructor-extras h2 > svg { width: 28px; height: 28px; flex: none; }
+.constructor-extras > .constructor-carousel { margin-top: 20px; }
+.constructor-accessory-card:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
 .constructor-no-photo { display: grid; height: 100%; place-content: center; justify-items: center; gap: 6px; font-size: 12px; color: var(--color-muted); }
 .constructor-no-photo svg { width: 30px; height: 30px; }
 .constructor-qty { display: flex; align-items: center; justify-content: space-between; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-card); }

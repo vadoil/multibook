@@ -49,11 +49,25 @@
     "sha256": "adb111708de26d82aa939bbe15eaef4f0b3c38cf4ad906f7bfbbdaf24cf2cb0f"
   },
   {
+    "uid": "476653632312",
+    "face": "back",
+    "file": "public/constructor-assets/covers/476653632312-back.webp",
+    "bytes": 402540,
+    "sha256": "ec8b9bbf064d850070e9299098be134e2e9bf52763a14e7a53065a66d9a433d4"
+  },
+  {
     "uid": "207343502342",
     "face": "front",
     "file": "public/constructor-assets/covers/207343502342-front.webp",
     "bytes": 394658,
     "sha256": "225445d3256e9005a82d2d483bef83d6680dd677e1c5a1713bdec6c708fb9189"
+  },
+  {
+    "uid": "207343502342",
+    "face": "back",
+    "file": "public/constructor-assets/covers/207343502342-back.webp",
+    "bytes": 400774,
+    "sha256": "30c7ba3c7f0edd33f4e3bc40deb720279e427fe49565fd9c974c920272b25d51"
   },
   {
     "uid": "486206522782",
@@ -63,6 +77,13 @@
     "sha256": "50fc71613ab0ba6e90c43cb67f2bd8efdb867d23f77b9e0484e02fced0244240"
   },
   {
+    "uid": "486206522782",
+    "face": "back",
+    "file": "public/constructor-assets/covers/486206522782-back.webp",
+    "bytes": 365970,
+    "sha256": "7d568284f14639c7971b1440551dc1c4d94047102b5d4cd6d80c00bf46c138c6"
+  },
+  {
     "uid": "178439980972",
     "face": "front",
     "file": "public/constructor-assets/covers/178439980972-front.webp",
@@ -70,11 +91,25 @@
     "sha256": "04c368da94974381b8053f9a0481108ca1d2893c100070510718295f34c5ab4d"
   },
   {
+    "uid": "178439980972",
+    "face": "back",
+    "file": "public/constructor-assets/covers/178439980972-back.webp",
+    "bytes": 406296,
+    "sha256": "391868925b95cc1c06e93b2f16fb9123071a59e7cfe3fa8aa97f3551fb49694f"
+  },
+  {
     "uid": "176145010382",
     "face": "front",
     "file": "public/constructor-assets/covers/176145010382-front.webp",
     "bytes": 360458,
     "sha256": "c4094652f8a6e190238f4f465aeb01dc6b256ab3e82f27f76cddeebd9236cdc2"
+  },
+  {
+    "uid": "176145010382",
+    "face": "back",
+    "file": "public/constructor-assets/covers/176145010382-back.webp",
+    "bytes": 336426,
+    "sha256": "b814e4637df4d2d48fb99a9a67ee4f3adb0b05130dfdd445d2b8b28ce0ec94cd"
   },
   {
     "uid": "258162974583",

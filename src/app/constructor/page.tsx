@@ -5,6 +5,7 @@ import { getProduct, listProducts } from "@/lib/catalog";
 import { FORMAT_KEYS, FORMATS, formatByDb, type FormatKey } from "@/lib/formats";
 import type { Product } from "@/db/schema";
 import { StoreTabLink } from "@/components/store/StoreTab";
+import type { AccessoryOpt } from "@/components/constructor/AccessoryCarousel";
 
 export const metadata: Metadata = {
   title: "Конструктор блокнота",
@@ -135,6 +136,7 @@ export default async function ConstructorPage({ searchParams }: { searchParams: 
   const f: FormatKey =
     (FORMAT_KEYS as string[]).includes(sp.f ?? "") ? (sp.f as FormatKey) : (formatByDb(fromProduct?.attrs.format) ?? "a5");
   const o = { covers: covers(f), blocks: blocks(f), discs: discs() };
+  const accessories: AccessoryOpt[] = listProducts({ type: "Аксессуары" }).map(p => ({ id: p.id, title: p.shortTitle, href: `/product/${p.slug}`, price: p.price, image: p.images[0] ?? null, available: ok(p) }));
   const available = FORMAT_KEYS.filter((k) => k === f || covers(k).length > 0);
 
   return (
@@ -166,7 +168,7 @@ export default async function ConstructorPage({ searchParams }: { searchParams: 
         })}
       </nav>
 
-      <Constructor key={f} format={f} {...o} initial={initial(f, sp, o)} />
+      <Constructor key={f} format={f} {...o} accessories={accessories} initial={initial(f, sp, o)} />
     </div>
   );
 }

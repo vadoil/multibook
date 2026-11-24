@@ -1,0 +1,68 @@
+{
+  "report": [
+    {
+      "width": 1366,
+      "frontCovers": 26,
+      "accessories": 24,
+      "rearPhoto": "/constructor-assets/covers/476653632312-back.webp",
+      "arrows": true,
+      "keyboard": true,
+      "filters": true,
+      "kitFacesDifferent": true,
+      "priceUnchanged": true,
+      "multipleBlocks": true,
+      "accessoryLink": true,
+      "selectionPreserved": true,
+      "overflow": false
+    },
+    {
+      "touchSwipe": true
+    },
+    {
+      "width": 375,
+      "frontCovers": 26,
+      "accessories": 24,
+      "rearPhoto": "/constructor-assets/covers/476653632312-back.webp",
+      "arrows": true,
+      "keyboard": true,
+      "filters": true,
+      "kitFacesDifferent": true,
+      "priceUnchanged": true,
+      "multipleBlocks": true,
+      "accessoryLink": true,
+      "selectionPreserved": true,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "frontCovers": 26,
+      "accessories": 24,
+      "rearPhoto": "/constructor-assets/covers/476653632312-back.webp",
+      "arrows": true,
+      "keyboard": true,
+      "filters": true,
+      "kitFacesDifferent": true,
+      "priceUnchanged": true,
+      "multipleBlocks": true,
+      "accessoryLink": true,
+      "selectionPreserved": true,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "frontCovers": 26,
+      "accessories": 24,
+      "rearPhoto": "/constructor-assets/covers/476653632312-back.webp",
+      "arrows": true,
+      "keyboard": true,
+      "filters": true,
+      "kitFacesDifferent": true,
+      "priceUnchanged": true,
+      "multipleBlocks": true,
+      "accessoryLink": true,
+      "selectionPreserved": true,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}
