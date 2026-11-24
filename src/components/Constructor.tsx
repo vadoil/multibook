@@ -13,6 +13,7 @@ import discPhotos from "./constructor/disc-photos.json";
 import { getCoverArtwork as artwork } from "./constructor/coverArt";
 import { CoverCarousel } from "./constructor/CoverCarousel";
 import { AccessoryCarousel, type AccessoryOpt } from "./constructor/AccessoryCarousel";
+import { ViewportPhoto } from "./constructor/ViewportPhoto";
 
 export type CoverOpt = {
   id: number;
@@ -423,7 +424,7 @@ export function Constructor({
                     className="group flex flex-1 flex-col text-left"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-[#efe9df]">
-                      {b.image && <Image src={b.image} alt="" fill sizes="(min-width:768px) 260px, 45vw" className="object-cover transition duration-500 group-hover:scale-105" />}
+                      {b.image && <ViewportPhoto src={b.image} alt="" fill sizes="(min-width:768px) 260px, 45vw" className="object-cover transition duration-500 group-hover:scale-105" />}
                       <PageSwatch ruling={b.ruling} paper={b.paper} className="absolute -bottom-3 right-3 h-24 w-[72px] rotate-[4deg] transition duration-300 group-hover:rotate-0 sm:h-28 sm:w-20" />
                     </div>
                     <Check />
@@ -492,7 +493,7 @@ export function Constructor({
                   className={`constructor-disc group flex flex-col items-center gap-2 p-2 text-center ${pick}`}
                 >
                   <span className="relative aspect-square w-full overflow-hidden rounded-lg bg-card">
-                    {d.image ? <Image src={(discPhotos as Record<string,string>)[d.image] ?? d.image} alt="" fill sizes="(min-width:1280px) 120px, 30vw" className="object-contain transition duration-300 group-hover:scale-105" /> : <span className="constructor-no-photo"><CategoryTabIcon type="Диски" /><span>Нет фото</span></span>}
+                    {d.image ? <ViewportPhoto src={(discPhotos as Record<string,string>)[d.image] ?? d.image} alt="" fill sizes="(min-width:1280px) 120px, 30vw" className="object-contain transition duration-300 group-hover:scale-105" /> : <span className="constructor-no-photo"><CategoryTabIcon type="Диски" /><span>Нет фото</span></span>}
                   </span>
                   <span className="text-sm font-medium leading-tight">{v.title}</span>
                   <b className="text-sm">{formatPrice(d.price)}</b>

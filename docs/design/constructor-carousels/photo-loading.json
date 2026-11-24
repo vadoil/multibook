@@ -1,0 +1,8 @@
+{
+  "width": 375,
+  "initialFrontPhotoElements": 7,
+  "initialDistantBlockPhotos": 0,
+  "frontPhotoAtEnd": true,
+  "blockPhotoOnScroll": true,
+  "accessoryPhotoAtEnd": true
+}

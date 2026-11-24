@@ -8,6 +8,7 @@
 .constructor-steps, .constructor-carousel { min-width: 0; }
 .constructor-steps { grid-template-columns: minmax(0, 1fr); }
 .constructor-steps > section { min-width: 0; }
+.constructor-viewport-photo { position: absolute; inset: 0; display: block; }
 .constructor-carousel { width: 100%; }
 .constructor-carousel-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
 .constructor-carousel-count { color: var(--color-muted); font-size: 13px; font-variant-numeric: tabular-nums; }
