@@ -1,0 +1,16 @@
+{
+  "sourcePage": "https://multi-book.ru/video",
+  "sourceVideo": "https://vk.com/video-219099749_456239045",
+  "title": "Мультибук - как использовать дисковый переплет",
+  "publisher": "Артворк#381",
+  "sourceFormat": "url720",
+  "file": "public/media/disc-binding-original.mp4",
+  "bytes": 7807278,
+  "sha256": "4788160bc84964544b936fc669c817ab4ea2e66e99cc01e99170c987896108f6",
+  "width": 1280,
+  "height": 720,
+  "durationSeconds": 42.538667,
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "edited": false
+}

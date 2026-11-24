@@ -1,0 +1,24 @@
+[
+  {
+    "width": 1366,
+    "oneClickPlayback": true,
+    "timeAdvanced": true,
+    "duration": 42.538667,
+    "time": 0.224943,
+    "paused": false,
+    "videoWidth": 1280,
+    "videoHeight": 720,
+    "readyState": 4
+  },
+  {
+    "width": 375,
+    "oneClickPlayback": true,
+    "timeAdvanced": true,
+    "duration": 42.538667,
+    "time": 0.22042,
+    "paused": false,
+    "videoWidth": 1280,
+    "videoHeight": 720,
+    "readyState": 4
+  }
+]

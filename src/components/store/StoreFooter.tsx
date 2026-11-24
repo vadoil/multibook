@@ -17,7 +17,7 @@ export function StoreFooter() {
         <nav aria-label="Меню в подвале">
           <Link href="/catalog">Магазин</Link>
           <Link href="/constructor">Конструктор</Link>
-          <Link href="/#how-it-works">Как устроен блокнот</Link>
+          <Link href="/video">Как устроен блокнот</Link>
           <Link href="/delivery">Оплата и доставка</Link>
           <Link href="/returns">Обмен и возврат</Link>
           <Link href="/corporate">Корпоративным</Link>

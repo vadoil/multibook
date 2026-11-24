@@ -1,0 +1,67 @@
+{
+  "report": [
+    {
+      "width": 1366,
+      "sourceVideo": true,
+      "loadedOnRequest": true,
+      "closeAndFocus": true,
+      "schemes": 5,
+      "fullSize": true,
+      "keyboard": true,
+      "printNotes": true,
+      "menu": true,
+      "overflow": false,
+      "targets44": true
+    },
+    {
+      "width": 375,
+      "sourceVideo": true,
+      "loadedOnRequest": true,
+      "closeAndFocus": true,
+      "schemes": 5,
+      "fullSize": true,
+      "keyboard": true,
+      "printNotes": true,
+      "menu": true,
+      "overflow": false,
+      "targets44": true
+    },
+    {
+      "width": 320,
+      "sourceVideo": true,
+      "loadedOnRequest": true,
+      "closeAndFocus": true,
+      "schemes": 5,
+      "fullSize": true,
+      "keyboard": true,
+      "printNotes": true,
+      "menu": true,
+      "overflow": false,
+      "targets44": true
+    },
+    {
+      "width": 768,
+      "sourceVideo": true,
+      "loadedOnRequest": true,
+      "closeAndFocus": true,
+      "schemes": 5,
+      "fullSize": true,
+      "keyboard": true,
+      "printNotes": true,
+      "menu": true,
+      "overflow": false,
+      "targets44": true
+    },
+    {
+      "width": 1366,
+      "homeOriginalVideo": true,
+      "homeInstructionLink": true
+    },
+    {
+      "width": 375,
+      "homeOriginalVideo": true,
+      "homeInstructionLink": true
+    }
+  ],
+  "errors": []
+}

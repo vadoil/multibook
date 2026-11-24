@@ -7,7 +7,7 @@ import type { Product } from "@/db/schema";
 import { formatPrice } from "@/lib/money";
 import { PrintWorkshopHero } from "./PrintWorkshopHero";
 import { BrandGlyph } from "./BrandGlyph";
-import { NotebookFilm } from "./NotebookFilm";
+import { BindingVideo } from "../guide/BindingVideo";
 import { ShopChoices } from "./ShopChoices";
 import { CategoryGlyph } from "./CategoryGlyph";
 
@@ -243,14 +243,14 @@ function Mechanics({ concept }: { product?: Product; concept: ConceptName }) {
   return (
     <section
       id="how-it-works"
-      className={`mc-mechanics mc-mechanics-${concept}`}
+      className={`mc-mechanics mc-mechanics-${concept} mc-mechanics-source`}
     >
       <div className="mc-mechanics-intro">
         <p className="mc-section-note">Как устроен модульный блокнот</p>
         <h2>
-          Лист меняет место.
+          Как снять
           <br />
-          Блокнот остаётся.
+          и вернуть лист
         </h2>
         <p>
           Потяните лист у корешка — он снимется с дисков. Прижмите к дискам в
@@ -270,13 +270,13 @@ function Mechanics({ concept }: { product?: Product; concept: ConceptName }) {
             Добавляйте новые
           </span>
         </div>
-        <Link className="mc-text-button" href="/constructor">
-          Попробовать конструктор
+        <Link className="mc-text-button" href="/video">
+          Видео, инструкция и схемы
           <Arrow />
         </Link>
       </div>
-      <div className="mc-mechanism-film">
-        <NotebookFilm />
+      <div className="mc-mechanism-film mc-source-film">
+        <BindingVideo />
       </div>
     </section>
   );
