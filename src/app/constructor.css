@@ -30,6 +30,10 @@
 .constructor-cover-card > b, .constructor-accessory-card > b { margin-top: auto; font-size: 15px; }
 .constructor-accessory-photo { position: relative; display: block; aspect-ratio: 1; width: 100%; border-radius: 7px; overflow: hidden; background: var(--color-paper); }
 .constructor-accessory-open { display: flex; justify-content: space-between; align-items: center; min-height: 32px; font-size: 12px; color: var(--color-muted); }
+.constructor-accessory-link { display: flex; flex: 1; flex-direction: column; gap: 6px; min-width: 0; border-radius: 7px; }
+.constructor-accessory-link > b { margin-top: auto; padding-top: 4px; font-size: 15px; }
+.constructor-accessory-link:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+.constructor-accessory-controls { display: grid; gap: 6px; padding-top: 8px; border-top: 1px solid var(--color-line); }
 .constructor-kit-covers { padding: 16px; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-card); }
 .constructor-kit-faces { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 480px; }
 .constructor-kit-face { display: grid; gap: 8px; padding: 8px; border: 1px solid var(--color-line); border-radius: 10px; text-align: center; font-size: 14px; }
