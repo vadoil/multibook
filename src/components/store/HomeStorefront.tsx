@@ -1,14 +1,15 @@
 import Link from "next/link";
 import type { Product } from "@/db/schema";
 import { TYPE_LABELS } from "@/lib/catalog";
-import { ProductCard, PRODUCT_PHOTO_INDEX } from "../ProductCard";
+import { ProductCard } from "../ProductCard";
+import { PREMIUM_NOTEBOOK_UIDS } from "../product/photos";
 import { CategoryTabIcon, StoreTabLink } from "./StoreTab";
 import "./shop.css";
 
 
 /** A real shop shelf replaces the second explanatory hero. No invented items. */
 export function HomeStorefront({ products }: { products: Product[] }) {
-  const notebooks = products.filter((p) => p.type === "Блокноты" && p.images.length && p.tildaUid in PRODUCT_PHOTO_INDEX);
+  const notebooks = products.filter((p) => p.type === "Блокноты" && p.images.length && PREMIUM_NOTEBOOK_UIDS.has(p.tildaUid));
   const exerciseBooks = products.filter((p) => p.type === "Тетради" && p.images.length);
   const marked = products.filter((p) => p.featured && (p.type === "Тетради" || p.type === "Блокноты") && p.images.length);
   const ready = [...new Map([...marked, ...notebooks.slice(0, 4), ...exerciseBooks.slice(0, 4)].map((p) => [p.id, p])).values()].slice(0, 8);
