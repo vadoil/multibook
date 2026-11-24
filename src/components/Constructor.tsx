@@ -14,6 +14,7 @@ import { getCoverArtwork as artwork } from "./constructor/coverArt";
 import { CoverCarousel } from "./constructor/CoverCarousel";
 import { AccessoryCarousel, type AccessoryOpt } from "./constructor/AccessoryCarousel";
 import { ViewportPhoto } from "./constructor/ViewportPhoto";
+import { QuantityControl as Qty } from "./constructor/QuantityControl";
 
 export type CoverOpt = {
   id: number;
@@ -96,22 +97,6 @@ function Step({ n, title, hint, done, children, aside }: { n: number; title: str
       </div>
       <div className="mt-5">{children}</div>
     </section>
-  );
-}
-
-function Qty({ value, min, max, onChange, label }: { value: number; min: number; max: number; onChange: (n: number) => void; label: string }) {
-  return (
-    <div className="constructor-qty" role="group" aria-label={`Количество: ${label}`}>
-      <button type="button" onClick={() => onChange(value - 1)} disabled={value <= min} aria-label={`Меньше: ${label}`}>
-        −
-      </button>
-      <output aria-label={`Количество: ${label}`} aria-live="polite">
-        {value}
-      </output>
-      <button type="button" onClick={() => onChange(value + 1)} disabled={value >= max} aria-label={`Больше: ${label}`}>
-        +
-      </button>
-    </div>
   );
 }
 
@@ -508,7 +493,7 @@ export function Constructor({
 
         <section className="constructor-extras border-t border-line pt-6" aria-labelledby="constructor-extra">
           <h2 id="constructor-extra" className="flex items-center gap-2 font-display text-2xl"><CategoryTabIcon type="Аксессуары" />Что ещё добавить?</h2>
-          <p className="mt-2 text-sm text-muted">Все аксессуары из каталога — отдельно от сборки.</p>
+          <p className="mt-2 text-sm text-muted">Добавляйте аксессуары в корзину кнопками − и +. Они продаются отдельно от сборки.</p>
           {accessories.length > 0 && <AccessoryCarousel accessories={accessories} />}
           <StoreTabLink href="/catalog?type=Аксессуары" icon={<CategoryTabIcon type="Аксессуары" />} className="mt-4 store-tab-compact">Открыть раздел аксессуаров</StoreTabLink>
         </section>

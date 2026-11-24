@@ -1,0 +1,37 @@
+{
+  "report": [
+    {
+      "width": 1366,
+      "accessories": 24,
+      "step": 1,
+      "minimum": 0,
+      "maximum": 99,
+      "persistsReload": true,
+      "persistsProductReturn": true,
+      "cartPrice": true,
+      "bundlePreserved": true,
+      "blockControl": true,
+      "keyboard": true,
+      "targets44": true,
+      "nestedButtons": false,
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "accessories": 24,
+      "step": 1,
+      "minimum": 0,
+      "maximum": 99,
+      "persistsReload": true,
+      "persistsProductReturn": true,
+      "cartPrice": true,
+      "bundlePreserved": true,
+      "blockControl": true,
+      "keyboard": true,
+      "targets44": true,
+      "nestedButtons": false,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}
