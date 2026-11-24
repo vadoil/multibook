@@ -1,9 +1,11 @@
 import Image from "next/image";
 import type { Product } from "@/db/schema";
+import { productPhotos, showsCover } from "./product/photos";
 
-/** Фото товара из каталога (первое из галереи). Финальные картинки пользователь подготовит сам. */
+/** The card and gallery share the same cover-first catalogue photographs. */
 export function ProductVisual({ product, size = "card", index = 0 }: { product: Product; size?: "card" | "large"; index?: number }) {
-  const img = product.images[index] ?? product.images[0];
+  const images = productPhotos(product);
+  const img = images[index] ?? images[0];
   return (
     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[var(--radius-card)] bg-[#efe9df]">
       {img ? (
@@ -12,7 +14,7 @@ export function ProductVisual({ product, size = "card", index = 0 }: { product: 
           alt={product.title}
           fill
           sizes={size === "large" ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 25vw, 50vw"}
-          className="object-cover"
+          className={showsCover(product) ? "object-contain" : "object-cover"}
           priority={size === "large"}
         />
       ) : (

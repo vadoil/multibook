@@ -1,0 +1,71 @@
+{
+  "report": [
+    {
+      "width": 1366,
+      "catalogueCards": 101,
+      "galleries": [
+        {
+          "id": 1,
+          "firstIsCover": true,
+          "allOriginalPhotosRetained": true,
+          "selection": true,
+          "keyboard": true,
+          "uncropped": true,
+          "overflow": false
+        },
+        {
+          "id": 9,
+          "firstIsCover": true,
+          "allOriginalPhotosRetained": true,
+          "selection": true,
+          "keyboard": true,
+          "uncropped": true,
+          "overflow": false
+        },
+        {
+          "id": 17,
+          "firstIsCover": true,
+          "allOriginalPhotosRetained": true,
+          "selection": true,
+          "keyboard": true,
+          "uncropped": true,
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "catalogueCards": 101,
+      "galleries": [
+        {
+          "id": 1,
+          "firstIsCover": true,
+          "allOriginalPhotosRetained": true,
+          "selection": true,
+          "keyboard": true,
+          "uncropped": true,
+          "overflow": false
+        },
+        {
+          "id": 9,
+          "firstIsCover": true,
+          "allOriginalPhotosRetained": true,
+          "selection": true,
+          "keyboard": true,
+          "uncropped": true,
+          "overflow": false
+        },
+        {
+          "id": 17,
+          "firstIsCover": true,
+          "allOriginalPhotosRetained": true,
+          "selection": true,
+          "keyboard": true,
+          "uncropped": true,
+          "overflow": false
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
