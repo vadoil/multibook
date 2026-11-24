@@ -34,6 +34,7 @@
 .guide-format-sizes dd { margin: 4px 0 0; font-size: 13px; color: var(--color-muted); font-variant-numeric: tabular-nums; }
 .guide-print { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 64px; margin-top: 64px; border-top: 1px solid var(--color-line); padding-top: 38px; }
 .guide-print-notes details { border-bottom: 1px solid var(--color-line); }
+.guide-corporate-photo { position: relative; display: block; width: 100%; max-width: 400px; aspect-ratio: 4 / 3; margin-bottom: 16px; overflow: hidden; border: 1px solid var(--color-line); border-radius: 10px; background: var(--color-card); }
 .guide-print-notes summary { display: flex; align-items: center; gap: 12px; min-height: 60px; cursor: pointer; font-size: 15px; font-weight: 500; }
 .guide-print-notes summary::-webkit-details-marker { display: none; }
 .guide-print-notes summary::after { content: "+"; margin-left: auto; font-size: 22px; }

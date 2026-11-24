@@ -1,0 +1,227 @@
+[
+  {
+    "id": 0,
+    "group": "portfolio",
+    "title": "Обложка и фирменные страницы",
+    "src": "/corporate/00-full.webp",
+    "preview": "/corporate/00-preview.webp",
+    "width": 1680,
+    "height": 1120
+  },
+  {
+    "id": 1,
+    "group": "portfolio",
+    "title": "Обложка с объёмной аппликацией",
+    "src": "/corporate/01-full.webp",
+    "preview": "/corporate/01-preview.webp",
+    "width": 1606,
+    "height": 1080
+  },
+  {
+    "id": 2,
+    "group": "portfolio",
+    "title": "Страницы с разделителями",
+    "src": "/corporate/02-full.webp",
+    "preview": "/corporate/02-preview.webp",
+    "width": 1606,
+    "height": 1080
+  },
+  {
+    "id": 3,
+    "group": "portfolio",
+    "title": "Два формата для одного бренда",
+    "src": "/corporate/03-full.webp",
+    "preview": "/corporate/03-preview.webp",
+    "width": 1680,
+    "height": 1120
+  },
+  {
+    "id": 4,
+    "group": "portfolio",
+    "title": "Оформление обложки",
+    "src": "/corporate/04-full.webp",
+    "preview": "/corporate/04-preview.webp",
+    "width": 1606,
+    "height": 1080
+  },
+  {
+    "id": 5,
+    "group": "portfolio",
+    "title": "Сменные блоки страниц",
+    "src": "/corporate/05-full.webp",
+    "preview": "/corporate/05-preview.webp",
+    "width": 1606,
+    "height": 1080
+  },
+  {
+    "id": 6,
+    "group": "portfolio",
+    "title": "Настольный блокнот",
+    "src": "/corporate/06-full.webp",
+    "preview": "/corporate/06-preview.webp",
+    "width": 1680,
+    "height": 1120
+  },
+  {
+    "id": 7,
+    "group": "portfolio",
+    "title": "Деталь на обложке",
+    "src": "/corporate/07-full.webp",
+    "preview": "/corporate/07-preview.webp",
+    "width": 1606,
+    "height": 1080
+  },
+  {
+    "id": 8,
+    "group": "portfolio",
+    "title": "Форма под задачу",
+    "src": "/corporate/08-full.webp",
+    "preview": "/corporate/08-preview.webp",
+    "width": 1680,
+    "height": 1120
+  },
+  {
+    "id": 9,
+    "group": "portfolio",
+    "title": "Фирменная линовка страниц",
+    "src": "/corporate/09-full.webp",
+    "preview": "/corporate/09-preview.webp",
+    "width": 1680,
+    "height": 1120
+  },
+  {
+    "id": 10,
+    "group": "portfolio",
+    "title": "Сочетание материалов",
+    "src": "/corporate/10-full.webp",
+    "preview": "/corporate/10-preview.webp",
+    "width": 1680,
+    "height": 1120
+  },
+  {
+    "id": 11,
+    "group": "portfolio",
+    "title": "Обложка крупным планом",
+    "src": "/corporate/11-full.webp",
+    "preview": "/corporate/11-preview.webp",
+    "width": 1606,
+    "height": 1080
+  },
+  {
+    "id": 12,
+    "group": "portfolio",
+    "title": "Подарочное оформление",
+    "src": "/corporate/12-full.webp",
+    "preview": "/corporate/12-preview.webp",
+    "width": 1680,
+    "height": 945
+  },
+  {
+    "id": 13,
+    "group": "details",
+    "title": "Обложка с аппликацией",
+    "src": "/corporate/13-full.webp",
+    "preview": "/corporate/13-preview.webp",
+    "width": 1606,
+    "height": 1080
+  },
+  {
+    "id": 14,
+    "group": "details",
+    "title": "Золото на тёмной обложке",
+    "src": "/corporate/14-full.webp",
+    "preview": "/corporate/14-preview.webp",
+    "width": 1680,
+    "height": 1120
+  },
+  {
+    "id": 15,
+    "group": "details",
+    "title": "Фотоальбом на дисках",
+    "src": "/corporate/15-full.webp",
+    "preview": "/corporate/15-preview.webp",
+    "width": 1606,
+    "height": 1080
+  },
+  {
+    "id": 16,
+    "group": "details",
+    "title": "Блокнот для конференции",
+    "src": "/corporate/16-full.webp",
+    "preview": "/corporate/16-preview.webp",
+    "width": 1680,
+    "height": 1120
+  },
+  {
+    "id": 17,
+    "group": "details",
+    "title": "Программа и фирменные страницы",
+    "src": "/corporate/17-full.webp",
+    "preview": "/corporate/17-preview.webp",
+    "width": 1680,
+    "height": 1120
+  },
+  {
+    "id": 18,
+    "group": "details",
+    "title": "Фирменный блокнот в упаковке",
+    "src": "/corporate/18-full.webp",
+    "preview": "/corporate/18-preview.webp",
+    "width": 1680,
+    "height": 1120
+  },
+  {
+    "id": 19,
+    "group": "details",
+    "title": "Полноцветная обложка",
+    "src": "/corporate/19-full.webp",
+    "preview": "/corporate/19-preview.webp",
+    "width": 1680,
+    "height": 1120
+  },
+  {
+    "id": 20,
+    "group": "details",
+    "title": "Печать на обложке",
+    "src": "/corporate/20-full.webp",
+    "preview": "/corporate/20-preview.webp",
+    "width": 1606,
+    "height": 1080
+  },
+  {
+    "id": 21,
+    "group": "details",
+    "title": "Линовка и наполнение",
+    "src": "/corporate/21-full.webp",
+    "preview": "/corporate/21-preview.webp",
+    "width": 1606,
+    "height": 1080
+  },
+  {
+    "id": 22,
+    "group": "details",
+    "title": "Свой сюжет на обложке",
+    "src": "/corporate/22-full.webp",
+    "preview": "/corporate/22-preview.webp",
+    "width": 1606,
+    "height": 1080
+  },
+  {
+    "id": 23,
+    "group": "details",
+    "title": "Листы на дисках",
+    "src": "/corporate/23-full.webp",
+    "preview": "/corporate/23-preview.webp",
+    "width": 1606,
+    "height": 1080
+  },
+  {
+    "id": 24,
+    "group": "details",
+    "title": "Прозрачная обложка",
+    "src": "/corporate/24-full.webp",
+    "preview": "/corporate/24-preview.webp",
+    "width": 1606,
+    "height": 1080
+  }
+]
