@@ -261,9 +261,13 @@ export function CartView({ profile }: { profile?: Record<string, string> }) {
         <label className="mt-4 flex items-start gap-3 text-sm">
           <input type="checkbox" name="consent" defaultChecked={v.consent === "on"} className="mt-1 accent-ink" aria-invalid={!!fe.consent} />
           <span>
-            Согласен на обработку персональных данных по{" "}
+            Даю{" "}
+            <Link href="/consent" className="underline underline-offset-2" target="_blank">
+              согласие на обработку персональных данных
+            </Link>{" "}
+            и ознакомлен с{" "}
             <Link href="/privacy" className="underline underline-offset-2" target="_blank">
-              политике конфиденциальности
+              политикой обработки данных
             </Link>
           </span>
         </label>

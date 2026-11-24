@@ -17,7 +17,7 @@ export function StoreFooter() {
         <nav aria-label="Меню в подвале">
           <Link href="/catalog">Магазин</Link>
           <Link href="/constructor">Конструктор</Link>
-          <Link href="/#how-it-works">Как устроен блокнот</Link>
+          <Link href="/how-it-works">Как устроен блокнот</Link>
           <Link href="/delivery">Оплата и доставка</Link>
           <Link href="/returns">Обмен и возврат</Link>
           <Link href="/corporate">Корпоративным</Link>
@@ -39,7 +39,8 @@ export function StoreFooter() {
         <span>
           {SITE.seller.short} · ОГРНИП {SITE.seller.ogrnip} · ИНН {SITE.seller.inn}
         </span>
-        <Link href="/privacy">Политика конфиденциальности</Link>
+        <Link href="/privacy">Политика обработки данных</Link>
+        <Link href="/consent">Согласие на обработку</Link>
       </div>
     </footer>
   );

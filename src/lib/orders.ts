@@ -80,6 +80,7 @@ export function createOrder(input: OrderInput): { token: string; number: string;
         deliveryPrice: input.deliveryPrice,
         deliveryEta: input.deliveryEta,
         total: subtotal + (input.deliveryPrice ?? 0),
+        consentAt: now, // заказ создаётся только после отметки согласия в форме
         createdAt: now,
         updatedAt: now,
       })

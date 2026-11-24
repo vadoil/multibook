@@ -106,6 +106,7 @@ export const orders = sqliteTable(
     subtotal: integer("subtotal").notNull(), // копейки
     deliveryPrice: integer("delivery_price"), // null — ещё не посчитана
     deliveryEta: text("delivery_eta"), // «2–4 дн.» из расчёта СДЭК
+    consentAt: integer("consent_at", { mode: "timestamp" }), // когда покупатель дал согласие на обработку данных (152-ФЗ)
     total: integer("total").notNull(),
     createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
     updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
@@ -180,6 +181,7 @@ export const users = sqliteTable("users", {
   phone: text("phone"),
   city: text("city"),
   address: text("address"),
+  consentAt: integer("consent_at", { mode: "timestamp" }), // согласие на обработку данных при регистрации
   createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
 });
 

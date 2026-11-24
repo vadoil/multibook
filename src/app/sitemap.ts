@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export default function sitemap(): MetadataRoute.Sitemap {
   const u = (p: string) => `${SITE.url}${p}`;
   const counts = countByType();
-  const pages = ["/", "/catalog", "/constructor", "/delivery", "/returns", "/contacts", "/corporate", "/privacy"].map((p) => ({
+  const pages = ["/", "/catalog", "/constructor", "/delivery", "/returns", "/contacts", "/corporate", "/how-it-works", "/privacy", "/consent"].map((p) => ({
     url: u(p),
     changeFrequency: "weekly" as const,
     priority: p === "/" ? 1 : p === "/catalog" || p === "/constructor" ? 0.9 : 0.4,

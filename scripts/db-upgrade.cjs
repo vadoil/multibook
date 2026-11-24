@@ -18,6 +18,8 @@ add("products", "wb_url", "text");
 add("products", "wb_nm_id", "text");
 add("products", "wb_stock", "integer");
 add("products", "market_synced_at", "integer");
+add("orders", "consent_at", "integer");
+add("users", "consent_at", "integer");
 
 db.exec(`
 CREATE TABLE IF NOT EXISTS content_items (

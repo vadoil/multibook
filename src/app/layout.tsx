@@ -32,6 +32,8 @@ export const viewport: Viewport = {
   themeColor: "#eee7db",
 };
 
+import { CookieNotice } from "@/components/store/CookieNotice";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
@@ -69,6 +71,7 @@ export default function RootLayout({
         </main>
         <StoreFooter />
         <MobileTabBar />
+        <CookieNotice />
       </body>
     </html>
   );

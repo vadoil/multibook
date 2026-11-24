@@ -12,8 +12,8 @@ const sections: { href: string; label: string; kind: ServiceKind }[] = [
 ];
 
 /** Shared presentation only; the supplied article copy is preserved. */
-export function InfoPage({ title, lead, children }: { title: string; lead?: React.ReactNode; children: React.ReactNode }) {
-  const kind: ServiceKind = title.includes("доставка") ? "delivery" : title.includes("возврат") ? "returns" : title.includes("Контакты") ? "contacts" : title.includes("Политика") ? "privacy" : "corporate";
+export function InfoPage({ title, lead, children, kind: given }: { title: string; lead?: React.ReactNode; children: React.ReactNode; kind?: ServiceKind }) {
+  const kind: ServiceKind = given ?? (title.includes("доставка") ? "delivery" : title.includes("возврат") ? "returns" : title.includes("Контакты") ? "contacts" : title.includes("Политика") ? "privacy" : "corporate");
   return (
     <article className="info-page page-shell"><Breadcrumbs items={[{ label: title }]} />
       <header className="info-heading">

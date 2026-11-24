@@ -43,7 +43,7 @@ export async function register(_: AuthState, fd: FormData): Promise<AuthState> {
 
   const user = db
     .insert(schema.users)
-    .values({ email, passwordHash: await hashPassword(password), name: name || null, createdAt: new Date() })
+    .values({ email, passwordHash: await hashPassword(password), name: name || null, consentAt: new Date(), createdAt: new Date() })
     .returning({ id: schema.users.id })
     .get();
   await startSession(user.id);

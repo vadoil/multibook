@@ -495,3 +495,53 @@ body:has([data-admin-surface]) .store-main .font-display {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Уведомление о cookie: только необходимые, поэтому одна кнопка. */
+.cookie-notice {
+  position: fixed;
+  z-index: 70;
+  left: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: min(560px, calc(100vw - 32px));
+  padding: 14px 16px 14px 18px;
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  background: var(--color-card);
+  box-shadow: 0 14px 40px #462c2b24;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.cookie-notice a { text-decoration: underline; text-underline-offset: 3px; }
+.cookie-notice button {
+  flex: none;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--color-ink);
+  color: var(--color-card);
+  font-weight: 600;
+  cursor: pointer;
+}
+.cookie-notice :is(a, button):focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+@media (max-width: 760px) {
+  .cookie-notice { left: 12px; right: 12px; bottom: calc(var(--mobile-nav-height, 0px) + env(safe-area-inset-bottom) + 12px); max-width: none; }
+}
+@media print { .cookie-notice { display: none; } }
+
+/* Видео по нажатию и галерея работ на сервисных страницах. */
+.video-facade { margin: 0 0 18px; }
+.video-facade-frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 10px; background: var(--color-ink); }
+.video-facade-frame :is(iframe, button) { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-facade-frame button { cursor: pointer; }
+.video-facade-frame img { object-fit: cover; }
+.video-facade-play { position: absolute; left: 50%; top: 50%; display: grid; place-items: center; width: 84px; height: 84px; margin: -42px 0 0 -42px; padding-left: 4px; border-radius: 50%; background: var(--color-card); color: var(--color-accent); box-shadow: 0 10px 30px #462c2b55; transition: transform .2s; }
+.video-facade-frame button:hover .video-facade-play { transform: scale(1.06); }
+.video-facade figcaption { margin-top: 8px; font-size: 12px; color: var(--color-muted); }
+.work-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; list-style: none; padding: 0; margin: 0 0 8px; }
+.info-section-body .work-gallery li { position: relative; aspect-ratio: 1; overflow: hidden; border-radius: 6px; background: var(--color-line); margin: 0; padding: 0; }
+.work-gallery li::before, .work-gallery li::marker { content: none; }
+.work-gallery img { object-fit: cover; }
+@media (prefers-reduced-motion: reduce) { .video-facade-play { transition: none; } }

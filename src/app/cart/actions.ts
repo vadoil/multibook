@@ -78,7 +78,7 @@ export async function placeOrder(_prev: CheckoutState, fd: FormData): Promise<Ch
     if (values.city.length < 2) fieldErrors.city = "Укажите город";
     if (values.address.length < 3) fieldErrors.address = delivery === "cdek-pvz" ? "Укажите адрес пункта СДЭК, например: ул. Ленина, 5" : "Укажите улицу, дом и квартиру";
   }
-  if (values.consent !== "on") fieldErrors.consent = "Без согласия мы не сможем связаться с вами по заказу";
+  if (values.consent !== "on") fieldErrors.consent = "Отметьте согласие на обработку данных: без него мы не можем принять заказ";
   if (Object.keys(fieldErrors).length) return { fieldErrors, values };
 
   const user = await currentUser();

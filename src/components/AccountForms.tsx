@@ -80,9 +80,13 @@ export function AuthForms({ next }: { next?: string }) {
           <label className="flex items-start gap-3 text-sm">
             <input type="checkbox" name="consent" className="mt-1 accent-ink" />
             <span>
-              Согласен на обработку персональных данных по{" "}
+              Даю{" "}
+              <Link href="/consent" target="_blank" className="underline underline-offset-2">
+                согласие на обработку персональных данных
+              </Link>{" "}
+              и ознакомлен с{" "}
               <Link href="/privacy" target="_blank" className="underline underline-offset-2">
-                политике конфиденциальности
+                политикой обработки данных
               </Link>
             </span>
           </label>
