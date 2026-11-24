@@ -1,0 +1,44 @@
+[
+  {
+    "file": "public/guides/disc-binding.webp",
+    "width": 1600,
+    "height": 865,
+    "bytes": 150688
+  },
+  {
+    "file": "public/guides/remove-sheet.webp",
+    "width": 481,
+    "height": 375,
+    "bytes": 10434
+  },
+  {
+    "file": "public/guides/covers-and-tabs.webp",
+    "width": 1680,
+    "height": 862,
+    "bytes": 42140
+  },
+  {
+    "file": "public/guides/paper-formats.webp",
+    "width": 1680,
+    "height": 862,
+    "bytes": 45048
+  },
+  {
+    "file": "public/guides/sizes-together.webp",
+    "width": 1680,
+    "height": 862,
+    "bytes": 29914
+  },
+  {
+    "file": "public/guides/perforation.webp",
+    "width": 1680,
+    "height": 862,
+    "bytes": 39272
+  },
+  {
+    "file": "public/guides/disc-sizes.webp",
+    "width": 1680,
+    "height": 862,
+    "bytes": 48478
+  }
+]

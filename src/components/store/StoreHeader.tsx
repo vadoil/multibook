@@ -11,7 +11,7 @@ import { DesignVariantNav } from "../design/DesignVariantNav";
 const navigation = [
   { href: "/catalog", label: "Магазин", icon: "shop" },
   { href: "/constructor", label: "Конструктор", icon: "constructor" },
-  { href: "/#how-it-works", label: "Как устроен блокнот", icon: "binding" },
+  { href: "/video", label: "Как устроен блокнот", icon: "binding" },
 ];
 
 export function StoreHeader({ previewEnabled = false }: { previewEnabled?: boolean }) {
