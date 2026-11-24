@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Breadcrumbs } from "./store/Breadcrumbs";
 import { ServiceIcon, type ServiceKind } from "./store/ServiceIcon";
 import "./info-page.css";
 
@@ -14,7 +15,7 @@ const sections: { href: string; label: string; kind: ServiceKind }[] = [
 export function InfoPage({ title, lead, children }: { title: string; lead?: React.ReactNode; children: React.ReactNode }) {
   const kind: ServiceKind = title.includes("доставка") ? "delivery" : title.includes("возврат") ? "returns" : title.includes("Контакты") ? "contacts" : title.includes("Политика") ? "privacy" : "corporate";
   return (
-    <article className="info-page">
+    <article className="info-page page-shell"><Breadcrumbs items={[{ label: title }]} />
       <header className="info-heading">
         <span className="info-symbol"><ServiceIcon kind={kind} /></span>
         <h1>{title}</h1>

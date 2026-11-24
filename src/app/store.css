@@ -436,3 +436,62 @@ body:has([data-admin-surface]) .store-main .font-display {
   color: var(--color-muted);
   opacity: 1;
 }
+
+/* Единая ширина страниц: совпадает с шапкой и главной (1680 − поля 3.8%). */
+.page-shell {
+  width: 100%;
+  max-width: 1680px;
+  margin-inline: auto;
+  padding-inline: 3.8%;
+}
+@media (max-width: 760px) {
+  .page-shell {
+    padding-inline: 20px;
+  }
+}
+.breadcrumbs {
+  font-size: 13px;
+  color: var(--color-muted);
+  margin-bottom: 18px;
+}
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+.breadcrumbs li + li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin: 0 10px 0 8px;
+  border-top: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+  transform: rotate(45deg);
+  opacity: 0.6;
+  flex: none;
+}
+.store-main .breadcrumbs a {
+  min-height: 32px;
+  text-decoration: none;
+}
+.store-main .breadcrumbs a:hover {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.breadcrumbs [aria-current="page"] {
+  color: var(--color-ink);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

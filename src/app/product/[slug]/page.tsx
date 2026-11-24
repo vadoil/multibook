@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/store/Breadcrumbs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -42,13 +43,11 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const specs = Object.entries(p.specs).filter(([k]) => k !== "Тип");
 
   return (
-    <div className="product-page mx-auto max-w-7xl px-4 pt-8 sm:px-6">
+    <div className="product-page page-shell pt-8">
       <JsonLd data={productJsonLd(p)} />
-      <nav aria-label="Навигация" className="text-sm text-muted">
-        <Link href="/catalog">Каталог</Link> / <Link href={`/catalog?type=${encodeURIComponent(p.type)}`}>{typeLabel(p.type)}</Link>
-      </nav>
+      <Breadcrumbs items={[{ label: "Каталог", href: "/catalog" }, { label: typeLabel(p.type), href: `/catalog?type=${encodeURIComponent(p.type)}` }, { label: p.shortTitle || p.title }]} />
 
-      <div className="product-layout mt-6 grid gap-10 lg:grid-cols-2">
+      <div className="product-layout grid gap-10 lg:grid-cols-2">
         <ProductGallery key={p.id} product={p} />
 
         <div className="lg:sticky lg:top-24 lg:self-start">
@@ -69,6 +68,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               </Link>
             )}
           </div>
+
+          {(p.ozonUrl || p.wbUrl) && (
+            <div className="product-markets">
+              <span>Удобнее на маркетплейсе?</span>
+              {p.ozonUrl && <a href={p.ozonUrl} target="_blank" rel="noopener nofollow">Купить на Ozon</a>}
+              {p.wbUrl && <a href={p.wbUrl} target="_blank" rel="noopener nofollow">Купить на Wildberries</a>}
+            </div>
+          )}
 
           <ul className="product-delivery" aria-label="Доставка и оплата">
             <li><ServiceIcon kind="delivery" /><span>Доставка СДЭК по России — в пункт выдачи или курьером; самовывоз из Глухово (Красногорский район)</span></li>

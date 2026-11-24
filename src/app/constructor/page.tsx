@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/store/Breadcrumbs";
 import type { Metadata } from "next";
 import { Constructor, type BlockOpt, type CoverOpt, type DiscOpt, type Initial } from "@/components/Constructor";
 import type { Ruling } from "@/components/NotebookPreview";
@@ -140,7 +141,7 @@ export default async function ConstructorPage({ searchParams }: { searchParams: 
   const available = FORMAT_KEYS.filter((k) => k === f || covers(k).length > 0);
 
   return (
-    <div className="constructor-page mx-auto max-w-7xl px-4 pt-6 sm:px-6 sm:pt-8">
+    <div className="constructor-page page-shell pt-6 sm:pt-8"><Breadcrumbs items={[{ label: "Конструктор" }]} />
       <p className="text-sm uppercase tracking-[0.18em] text-muted">Конструктор</p>
       <h1 className="mt-2 font-display text-4xl font-bold sm:text-5xl">Соберите свой блокнот</h1>
       <p className="mt-3 max-w-2xl text-muted">

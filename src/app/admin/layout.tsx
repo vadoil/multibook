@@ -11,6 +11,8 @@ const NAV = [
   { href: "/admin", label: "Сводка" },
   { href: "/admin/orders", label: "Заказы" },
   { href: "/admin/products", label: "Товары" },
+  { href: "/admin/content", label: "Контент-завод" },
+  { href: "/admin/marketplaces", label: "Ozon и Wildberries" },
   { href: "/admin/import", label: "Импорт из Tilda" },
 ];
 
@@ -20,7 +22,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   const ship = deliveryMode();
   const tg = !!(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID);
   return (
-    <div data-admin-surface className="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
+    <div data-admin-surface className="page-shell pt-6">
       <div className="flex flex-wrap items-center gap-2 border-b border-line pb-4">
         <span className="mr-2 font-display text-lg font-bold">Админка</span>
         <nav aria-label="Админка" className="flex flex-wrap gap-1">
@@ -29,9 +31,6 @@ export default async function AdminLayout({ children }: { children: React.ReactN
               {n.label}
             </Link>
           ))}
-          <span className="rounded-full px-3 py-1.5 text-sm text-muted" title="Этап 4: нужен ключ ИИ-роутера">
-            Контент-завод · скоро
-          </span>
         </nav>
         <span className="ml-auto text-sm text-muted">{admin.email}</span>
       </div>

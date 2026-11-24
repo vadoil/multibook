@@ -2,7 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
-  serverExternalPackages: ["better-sqlite3"],
+  serverExternalPackages: ["better-sqlite3", "sharp"],
+  // Шрифты для картинок контент-завода читаются с диска — кладём их в standalone-сборку.
+  outputFileTracingIncludes: { "/admin/content/**": ["./assets/fonts/*"] },
   experimental: {
     // Keep native image processing within the preview server's memory budget.
     imgOptConcurrency: 1,

@@ -23,6 +23,7 @@ function item(id: number, patch: Partial<Product> = {}): Product {
     isActive: true,
     sortOrder: id,
     featured: false,
+    ozonUrl: null, ozonSku: null, ozonStock: null, wbUrl: null, wbNmId: null, wbStock: null, marketSyncedAt: null,
     lockedAt: null,
     importedAt: new Date(0),
     updatedAt: new Date(0),

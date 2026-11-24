@@ -1,4 +1,4 @@
-.info-page { width: min(100% - 8%, 1180px); margin-inline: auto; padding: 64px 0 32px; }
+.info-page { padding-top: 32px; padding-bottom: 32px; }
 .info-heading { max-width: 850px; padding-bottom: 44px; }
 .info-symbol {
   display: grid; place-items: center; width: 70px; height: 70px; margin-bottom: 24px;

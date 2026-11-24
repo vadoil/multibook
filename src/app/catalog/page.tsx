@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/store/Breadcrumbs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DiscCatalog } from "@/components/DiscCatalog";
@@ -5,6 +6,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { countByType, listProducts, TYPE_LABELS } from "@/lib/catalog";
 import type { ProductType } from "@/db/schema";
 import { plural } from "@/lib/plural";
+import { typeLabel } from "@/lib/seo";
 import { StoreNavIcon } from "@/components/store/StoreNavIcon";
 import { CategoryTabIcon } from "@/components/store/StoreTab";
 import "@/components/store/shop.css";
@@ -17,7 +19,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const t = TYPE_LABELS.find((x) => x.type === sp.type);
   const page = Math.max(1, Number(sp.page) || 1);
   const path = t ? `/catalog?type=${encodeURIComponent(t.type)}${page > 1 ? `&page=${page}` : ""}` : page > 1 ? `/catalog?page=${page}` : "/catalog";
-  const title = t ? `${t.label} на дисках — купить` : "Каталог модульных блокнотов на дисках";
+  const title = t ? (t.type === "Диски" ? "Диски для блокнотов и тетрадей — купить" : `${t.label} на дисках — купить`) : "Каталог модульных блокнотов на дисках";
   const description = t
     ? `${t.label} Multibook: ${t.hint.toLowerCase()}. Совместимы с блокнотами на дисках, доставка СДЭК по России.`
     : "Тетради, блокноты, обложки, блоки листов и диски для дискового переплёта Multibook. Готовые блокноты и детали, чтобы собрать свой.";
@@ -80,7 +82,7 @@ export default async function CatalogPage({
   };
 
   return (
-    <div className="catalog-page mx-auto max-w-7xl px-4 pt-10 sm:px-6">
+    <div className="catalog-page page-shell pt-8"><Breadcrumbs items={type ? [{ label: "Каталог", href: "/catalog" }, { label: typeLabel(type) }] : [{ label: "Каталог" }]} />
       <h1 className="font-display text-4xl font-bold sm:text-5xl">{type ? TYPE_LABELS.find((t) => t.type === type)!.label : "Каталог"}</h1>
       <p className="mt-3 max-w-2xl text-muted">
         Готовые тетради и блокноты — или части, чтобы собрать свой: обложки, блоки листов и диски совместимы между собой в формате А5.
@@ -155,7 +157,7 @@ export default async function CatalogPage({
       {type === "Диски" ? (
         <DiscCatalog products={items} d={sp.d} m={sp.m} />
       ) : items.length ? (
-        <div className="mt-6 grid grid-cols-2 gap-x-3 gap-y-6 md:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-2 gap-x-3 gap-y-6 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
           {items.map((p) => (
             <ProductCard key={p.id} product={p} />
           ))}

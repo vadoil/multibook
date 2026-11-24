@@ -1,4 +1,4 @@
-.not-found { max-width: 1366px; margin: auto; padding: 48px 4% 24px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px 6%; align-items: center; }
+.not-found { max-width: 1680px; margin: auto; padding: 48px 3.8% 24px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px 6%; align-items: center; }
 .not-found-code { font-family: var(--font-display); font-size: clamp(100px, 14vw, 200px); font-weight: 400; line-height: .8; letter-spacing: -.06em; color: var(--color-accent); margin-bottom: 24px; }
 .not-found h1 { font-family: var(--font-display); font-size: clamp(40px, 4vw, 62px); line-height: 1; letter-spacing: -.035em; }
 .not-found-copy > p:not(.not-found-code) { max-width: 400px; margin-top: 22px; color: var(--color-muted); font-size: 15px; line-height: 1.75; }

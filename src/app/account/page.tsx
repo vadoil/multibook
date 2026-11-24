@@ -1,3 +1,4 @@
+import { Breadcrumbs } from "@/components/store/Breadcrumbs";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { desc, eq } from "drizzle-orm";
@@ -17,7 +18,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
 
   if (!user)
     return (
-      <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
+      <div className="page-shell pt-8"><Breadcrumbs items={[{ label: "Кабинет" }]} />
         <h1 className="text-center font-display text-4xl font-bold sm:text-5xl">Кабинет</h1>
         <AuthForms next={next} />
       </div>
@@ -26,7 +27,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
   const orders = db.select().from(schema.orders).where(eq(schema.orders.userId, user.id)).orderBy(desc(schema.orders.createdAt)).all();
 
   return (
-    <div className="mx-auto max-w-7xl px-4 pt-10 sm:px-6">
+    <div className="page-shell pt-8"><Breadcrumbs items={[{ label: "Кабинет" }]} />
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <p className="text-sm text-muted">{user.email}</p>

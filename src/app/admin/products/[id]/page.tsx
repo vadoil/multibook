@@ -6,6 +6,7 @@ import { db, schema } from "@/db";
 import { fmtDate, input } from "@/components/admin";
 import { requireAdmin } from "@/lib/auth";
 import { saveProduct, unlockProduct } from "../../actions";
+import { saveMarketLinks } from "../../marketplaces/actions";
 
 const INFERRED: Record<string, string> = { diameter: "диаметр", pack: "фасовка" };
 
@@ -89,6 +90,29 @@ export default async function AdminProduct({ params, searchParams }: { params: P
               <Image src={p.images[0]} alt="" fill sizes="320px" className="object-cover" />
             </div>
           )}
+          <div className="grid gap-2 rounded-[var(--radius-card)] bg-card p-5 text-sm">
+            <p className="font-semibold">Контент для соцсетей</p>
+            <p className="text-muted">Пост, карусель или рилс из этой карточки: фото настоящие, текст по фактам.</p>
+            <Link href={`/admin/content?product=${p.id}`} className="justify-self-start rounded-full bg-ink px-5 py-2.5 font-semibold text-white">
+              Сделать пост или рилс
+            </Link>
+          </div>
+          <form id="market" action={saveMarketLinks.bind(null, p.id)} className="grid gap-3 rounded-[var(--radius-card)] bg-card p-5 text-sm">
+            <p className="font-semibold">Ozon и Wildberries</p>
+            <label>
+              <span className="text-muted">Ozon: ссылка на товар или SKU</span>
+              <input name="ozon" defaultValue={p.ozonUrl ?? p.ozonSku ?? ""} placeholder="https://www.ozon.ru/product/…" className={input} />
+            </label>
+            <label>
+              <span className="text-muted">Wildberries: ссылка или артикул WB</span>
+              <input name="wb" defaultValue={p.wbUrl ?? p.wbNmId ?? ""} placeholder="https://www.wildberries.ru/catalog/…" className={input} />
+            </label>
+            <p className="text-muted">
+              Остаток: сайт {p.stock ?? "без ограничения"} · Ozon {p.ozonStock ?? "—"} · WB {p.wbStock ?? "—"}
+              {p.marketSyncedAt ? ` · обновлено ${fmtDate(p.marketSyncedAt)}` : ""}
+            </p>
+            <button className="justify-self-start rounded-full border border-ink px-5 py-2.5 font-semibold">Сохранить ссылки</button>
+          </form>
           <div className="rounded-[var(--radius-card)] bg-card p-5 text-sm">
             <p>
               <span className="text-muted">Тип:</span> {p.type}

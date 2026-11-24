@@ -54,6 +54,14 @@ export const products = sqliteTable(
     sortOrder: integer("sort_order").notNull().default(0),
     // Показывать в «Готовой коллекции» на главной (ставится в админке, импорт не трогает).
     featured: integer("featured", { mode: "boolean" }).notNull().default(false),
+    // Маркетплейсы: связь с карточками Ozon и Wildberries и остатки оттуда (src/lib/marketplaces.ts).
+    ozonUrl: text("ozon_url"),
+    ozonSku: text("ozon_sku"),
+    ozonStock: integer("ozon_stock"),
+    wbUrl: text("wb_url"),
+    wbNmId: text("wb_nm_id"),
+    wbStock: integer("wb_stock"),
+    marketSyncedAt: integer("market_synced_at", { mode: "timestamp" }),
     // Товар правили в админке: импорт из Tilda не перезаписывает цену, название, наличие и описание.
     lockedAt: integer("locked_at", { mode: "timestamp" }),
     importedAt: integer("imported_at", { mode: "timestamp" }).notNull(),
@@ -195,3 +203,41 @@ export type OrderItem = typeof orderItems.$inferSelect;
 
 export type Product = typeof products.$inferSelect;
 export type NewProduct = typeof products.$inferInsert;
+
+export const CONTENT_KINDS = ["post", "carousel", "reel"] as const;
+export type ContentKind = (typeof CONTENT_KINDS)[number];
+export const CONTENT_STATUSES = ["draft", "review", "approved", "published"] as const;
+export type ContentStatus = (typeof CONTENT_STATUSES)[number];
+
+/** Содержимое единицы контента: тексты, слайды карусели, сцены рилса. */
+export type ContentData = {
+  hook: string; // первая строка / заголовок обложки
+  caption: string; // текст поста или подпись
+  cta: string;
+  hashtags: string[];
+  template: "photo" | "paper" | "ink";
+  slides: { title: string; text: string; image: number }[]; // карусель и пост (1 слайд)
+  scenes: { seconds: number; image: number; overlay: string; voice: string }[]; // рилс
+  music?: string;
+};
+
+/** Контент-завод: пост, карусель или рилс, собранный из карточки товара. */
+export const contentItems = sqliteTable(
+  "content_items",
+  {
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    productId: integer("product_id").references(() => products.id, { onDelete: "set null" }),
+    kind: text("kind").$type<ContentKind>().notNull(),
+    status: text("status").$type<ContentStatus>().notNull().default("draft"),
+    title: text("title").notNull(),
+    angle: text("angle"),
+    data: text("data", { mode: "json" }).$type<ContentData>().notNull(),
+    publishedTo: text("published_to", { mode: "json" }).$type<string[]>().notNull().default(sql`'[]'`),
+    source: text("source"), // какая модель писала текст; "шаблон" — без ИИ
+    createdBy: text("created_by"),
+    createdAt: integer("created_at", { mode: "timestamp" }).notNull(),
+    updatedAt: integer("updated_at", { mode: "timestamp" }).notNull(),
+  },
+  (t) => [index("content_items_status_idx").on(t.status)],
+);
+export type ContentItem = typeof contentItems.$inferSelect;
